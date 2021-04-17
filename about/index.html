@@ -312,142 +312,11 @@
 </aside>
 
   
-  
-<main class="main">
-    <div class="container">
-        <div class="post-warp archive">
-            <h2 class="post-title" style="text-align:left;padding-bottom:2em"><font size=6>About</font></h2>
-            <div class="post-content">
-                <style>
-                    @import url('https://fonts.googleapis.com/css?family=Katibeh&display=swap');
+  <%- partial('_partial/sidebar-about', {post: page}) %>
+<main class="main" role="main">
+  <%- partial('_partial/article-about', {post: page}) %>
+</main>
 
-                    .about-info {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    }
-
-                    .about-info-left li {
-                    list-style-type: none;
-                    }
-
-                    .about-info-right {
-                    margin: .5em 1.25em;
-                    }
-
-                    .about-info-right img {
-                    width: 130px;
-                    }
-
-                    .about-info-right .left-ear,
-                    .about-info-right .left-hand,
-                    .about-info-right .right-ear,
-                    .about-info-right .right-hand {
-                    display: none;
-                    }
-
-                    @media only screen and (min-device-width: 2000px) and (max-device-width: 2000px) {
-                    .about-info {
-                        flex-direction: column-reverse;
-                        align-items: center;
-                    }
-
-                    .about-info-right {
-                        margin: auto auto 2em;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: left;
-                        align-items: left;
-                    }
-
-                    .about-info-right img {
-                        border-radius: 50%;
-                        -webkit-border-radius: 50%;
-                    }
-
-                    .about-info-right .left-hand {
-                        font-family: 'Katibeh';
-                        display: inline;
-                        font-size: 5em;
-                        transform: translate(20px);
-                        -moz-transform: translate(20px);
-                        -webkit-transform: translate(20px);
-                        -o-transform: translate(20px);
-                    }
-
-                    .about-info-right .right-hand {
-                        font-family: 'Katibeh';
-                        display: inline;
-                        font-size: 5em;
-                        transform: translate(-18px);
-                        -moz-transform: translate(-18px);
-                        -webkit-transform: translate(-18px);
-                        -o-transform: translate(-18px);
-                    }
-
-                    .about-info-right .left-ear {
-                        display: inline;
-                        font-size: 1.2em;
-                        align-self: flex-start;
-                        transform: rotate(-40deg) translate(20px, 15px);
-                        -moz-transform: rotate(-40deg) translate(20px, 15px);
-                        -webkit-transform: rotate(-40deg) translate(20px, 15px);
-                        -o-transform: rotate(-40deg) translate(20px, 15px);
-                    }
-
-                    .about-info-right .right-ear {
-                        display: inline;
-                        font-size: 1.2em;
-                        align-self: flex-start;
-                        transform: rotate(45deg) translate(-13px, 15px);
-                        -moz-transform: rotate(45deg) translate(-13px, 15px);
-                        -webkit-transform: rotate(45deg) translate(-13px, 15px);
-                        -o-transform: rotate(45deg) translate(-13px, 15px);
-                    }
-                    }
-                </style>
-
-                <div class="about-info">
-                    <div class="about-info-left">
-                        <p><font size=4>&emsp;&emsp;&emsp;&emsp;明者因时而变，知者随事而制。&emsp;&emsp;&emsp;&emsp;——桓宽
-                            <br>
-                            <br>
-                        </font></p>
-                        <p><font size=5>Contact me:</font></p>
-                        <ul>
-                            <li>
-                                <p><span class="icon icon-email"></span> Email: <a href="mailto:tuoxiao95827@gmail.com" rel="nofollow noreferrer" target="_blank"><font color=skyblue>tuoxiao95827@outlook.com</font></a></p>
-                            </li>
-                            <li>
-                                <p><span class="icon icon-github"></span> GitHub: <a href="https://github.com/tuoxiao" rel="nofollow noreferrer" target="_blank"><font color=skyblue>Tuoxiao</font></a></p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="about-info-right">
-                        <div class="left-hand">
-                            <span style="font-size: 0.5em">&ensp;</span>
-                            ٩
-                        </div>
-                        <div class="left-ear">▲</div>
-                            <div class="right-ear">▲</div>
-                            <div class="right-hand">
-                                و
-                                <span style="font-size: 0.5em">✧</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p>
-                        <br>
-                        <br><font size=5>My Github chart:</font>
-                        <br>
-                    </p>
-                    <p>
-                        <img src="https://ghchart.rshah.org/458B74/tuoxiao" alt="tuoxiao's Github chart" style="width: 80%;">
-                    </p>
-                </div>
-            </div>
-        </div>
-    </main>
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 	
 	
@@ -525,6 +394,6 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
