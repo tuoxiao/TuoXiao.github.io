@@ -18,12 +18,12 @@
   
   
   <title>Matlab数据分析 | TuTo&#39;Blog</title>
-  <meta name="description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  多项式及其函数      多项式的创建于表达· 输入多项式2x4-85x3+15x2+100   1a&#x3D;ploy2sym([2 -85 15 100]) 多项式的四则运算· 加、减法 12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a+b;cpol">
+  <meta name="description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  多项式及其函数     多项式的创建于表达· 输入多项式2x4-85x3+15x2+100   1a&#x3D;ploy2sym([2 -85 15 100])  多项式的四则运算· 加、减法 12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a+b;cpol">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matlab数据分析">
 <meta property="og:url" content="http://example.com/2021/04/01/matlab4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  多项式及其函数      多项式的创建于表达· 输入多项式2x4-85x3+15x2+100   1a&#x3D;ploy2sym([2 -85 15 100]) 多项式的四则运算· 加、减法 12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a+b;cpol">
+<meta property="og:description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  多项式及其函数     多项式的创建于表达· 输入多项式2x4-85x3+15x2+100   1a&#x3D;ploy2sym([2 -85 15 100])  多项式的四则运算· 加、减法 12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a+b;cpol">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/matlab/6-1.png">
 <meta property="og:image" content="http://example.com/images/matlab/6-2.png">
@@ -370,45 +370,35 @@
 <li><a href="#6">假设检验</a></li>
 <li><a href="#7">回归分析</a></li>
 </ul>
-<h2 id="1"></h2><font size=5 color=red><center>多项式及其函数 </center></font>  
-
+<p><h2 id="1"></h2><font size=5 color=red><center>多项式及其函数 </center></font>  </p>
 <ul>
 <li><p>多项式的创建于表达<br>· 输入多项式2x<sup>4</sup>-85x<sup>3</sup>+15x<sup>2</sup>+100  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;ploy2sym([2 -85 15 100])</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;ploy2sym([2 -85 15 100])</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>多项式的四则运算<br>· 加、减法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[1 2 3 4 5];</span><br><span class="line">b&#x3D;[2 3 4 0 5];</span><br><span class="line">c&#x3D;a+b;</span><br><span class="line">c</span><br><span class="line">poly2sym(c)        %显示多项式</span><br></pre></td></tr></table></figure>
-<center><img src="/images/matlab/6-1.png" width=80%" height=80%" align=center /></center></li>
-</ul>
-<br>
+<center><img src="/images/matlab/6-1.png" width=80%" height=80%" align=center /></center>
 
-<p>· 乘法  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[1 2];</span><br><span class="line">b&#x3D;[3 4];</span><br><span class="line">c&#x3D;poly2sym(conv(a,b))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<p>· 乘法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[1 2];</span><br><span class="line">b&#x3D;[3 4];</span><br><span class="line">c&#x3D;poly2sym(conv(a,b))</span><br></pre></td></tr></table></figure></p>
 <center><img src="/images/matlab/6-2.png" width=80%" height=80%" align=center /></center>  
 
-<br>
-
-<p>· 除法  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[1 4 9 15];</span><br><span class="line">b&#x3D;[1 2 -3 20 -16 21];</span><br><span class="line">[q,r]&#x3D;deconv(b,a)</span><br><span class="line">poly2sym(q)</span><br><span class="line">poly2sym(r)</span><br></pre></td></tr></table></figure>
-<p>[q,r]=deconv(b,a):q为多项式b除以a的商户式；r为多项式b除以a的余式。返回的<code>q,r</code>仍为多项式系数向量。  </p>
+<p><br></p>
+<p>· 除法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[1 4 9 15];</span><br><span class="line">b&#x3D;[1 2 -3 20 -16 21];</span><br><span class="line">[q,r]&#x3D;deconv(b,a)</span><br><span class="line">poly2sym(q)</span><br><span class="line">poly2sym(r)</span><br></pre></td></tr></table></figure><br>[q,r]=deconv(b,a):q为多项式b除以a的商户式；r为多项式b除以a的余式。返回的<code>q,r</code>仍为多项式系数向量。  </p>
 <center><img src="/images/matlab/6-3.png" width=80%" height=80%" align=center /></center>  
 
-<br>  
-
-<p>· 多项式求导  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[2 4 6 -8 10]</span><br><span class="line">poly2sym(a)</span><br><span class="line">b&#x3D;polyder(a)</span><br><span class="line">poly2sym(b)</span><br></pre></td></tr></table></figure>
+<p><br>  </p>
+<p>· 多项式求导<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[2 4 6 -8 10]</span><br><span class="line">poly2sym(a)</span><br><span class="line">b&#x3D;polyder(a)</span><br><span class="line">poly2sym(b)</span><br></pre></td></tr></table></figure></p>
 <center><img src="/images/matlab/6-4.png" width=80%" height=80%" align=center /></center>
 
-<h2 id="2"></h2><font size=5 color=red><center>数值插值 </center></font>
-
-<h2 id="3"></h2><font size=5 color=red><center>函数的极限 </center></font>
-
-<h2 id="4"></h2><font size=5 color=red><center>数值积分</center></font>
-
-<h2 id="5"></h2><font size=5 color=red><center>多元统计分析 </center></font>
-
-<h2 id="6"></h2><font size=5 color=red><center>假设检验</center></font>
-
-<h2 id="7"></h2><font size=5 color=red><center>回归分析 </center></font>
+<p><h2 id="2"></h2><font size=5 color=red><center>数值插值 </center></font></p>
+<p><h2 id="3"></h2><font size=5 color=red><center>函数的极限 </center></font></p>
+<p><h2 id="4"></h2><font size=5 color=red><center>数值积分</center></font></p>
+<p><h2 id="5"></h2><font size=5 color=red><center>多元统计分析 </center></font></p>
+<p><h2 id="6"></h2><font size=5 color=red><center>假设检验</center></font></p>
+<p><h2 id="7"></h2><font size=5 color=red><center>回归分析 </center></font></p>
 
       
     </div>
@@ -577,5 +567,20 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

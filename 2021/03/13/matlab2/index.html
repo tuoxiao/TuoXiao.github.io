@@ -18,12 +18,12 @@
   
   
   <title>MATLAB程序设计 | TuTo&#39;Blog</title>
-  <meta name="description" content="目录12341、脚本文件2、程序控制语句3、函数文件4、程序调试      脚本文件特点：   1、是一串按用户意图排列而成的MATLAB指令集；   2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。   脚本文件结构：   1、在线帮文本(help text): 以%开头的注释行,它包含对对本文件的功能的简要描">
+  <meta name="description" content="目录12341、脚本文件2、程序控制语句3、函数文件4、程序调试   脚本文件特点：   1、是一串按用户意图排列而成的MATLAB指令集；   2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。   脚本文件结构：   1、在线帮文本(help text): 以%开头的注释行,它包含对对本文件的功能的简要描述，供">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MATLAB程序设计">
 <meta property="og:url" content="http://example.com/2021/03/13/matlab2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="目录12341、脚本文件2、程序控制语句3、函数文件4、程序调试      脚本文件特点：   1、是一串按用户意图排列而成的MATLAB指令集；   2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。   脚本文件结构：   1、在线帮文本(help text): 以%开头的注释行,它包含对对本文件的功能的简要描">
+<meta property="og:description" content="目录12341、脚本文件2、程序控制语句3、函数文件4、程序调试   脚本文件特点：   1、是一串按用户意图排列而成的MATLAB指令集；   2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。   脚本文件结构：   1、在线帮文本(help text): 以%开头的注释行,它包含对对本文件的功能的简要描述，供">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-12T16:00:00.000Z">
 <meta property="article:modified_time" content="2021-04-17T11:50:41.074Z">
@@ -357,11 +357,8 @@
     <div class="article-entry marked-body" itemprop="articleBody">
       
         <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、脚本文件</span><br><span class="line">2、程序控制语句</span><br><span class="line">3、函数文件</span><br><span class="line">4、程序调试</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<br>
-
+<p><br></p>
+<p><br></p>
 <h2 id="脚本文件"><a href="#脚本文件" class="headerlink" title="脚本文件"></a>脚本文件</h2><p><strong>特点：</strong>  </p>
 <p>1、是一串按用户意图排列而成的MATLAB指令集；  </p>
 <p>2、脚本文件运行后，所产生的变量都驻留在MATLAB工作空间中。故一般脚本文件的正文部分都以clear命令开头，已清空当前的工作空间。  </p>
@@ -538,5 +535,20 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
