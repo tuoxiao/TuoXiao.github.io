@@ -29,8 +29,9 @@
 <meta property="og:image" content="http://example.com/images/matlab/6-2.png">
 <meta property="og:image" content="http://example.com/images/matlab/6-3.png">
 <meta property="og:image" content="http://example.com/images/matlab/6-4.png">
+<meta property="og:image" content="http://example.com/images/matlab/6-5.png">
 <meta property="article:published_time" content="2021-03-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-04-17T11:52:15.554Z">
+<meta property="article:modified_time" content="2021-04-21T15:26:23.637Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="matlab">
 <meta name="twitter:card" content="summary">
@@ -390,8 +391,17 @@
 <center><img src="/images/matlab/6-3.png" width=80%" height=80%" align=center /></center>  
 
 <p><br>  </p>
-<p>· 多项式求导<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[2 4 6 -8 10]</span><br><span class="line">poly2sym(a)</span><br><span class="line">b&#x3D;polyder(a)</span><br><span class="line">poly2sym(b)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>多项式求导<br>  1、k = polyder(p) : 求多项式p的导函数多项式。<br>  2、k = polyder(a,b) : 求多项式a和b 乘积的导函数多项式。<br>  3、[p,q] =polyder(a,b):求多项式b与多项式a相除的导函数多项式，导函数的分子存在p中，分母存在q中。其中，参数a,b是多项式的系数向量，返回结果p,q也是多项式的系数向量。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[2 4 6 -8 10]</span><br><span class="line">poly2sym(a)</span><br><span class="line">b&#x3D;polyder(a)</span><br><span class="line">poly2sym(b)</span><br></pre></td></tr></table></figure>
 <center><img src="/images/matlab/6-4.png" width=80%" height=80%" align=center /></center>
+
+<p><br></p>
+<p><br></p>
+<p> · 已知多项式p(x)=2x<sup>3</sup>-x<sup>2</sup>+3和q(x)=2x=1，求如下导数：p’、(p·q)’、(p/q)’。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">k1&#x3D;polyder([2,-1,0,3]);</span><br><span class="line">poly2sym(k1)</span><br><span class="line">k2&#x3D;polyder([2,-1,0,3],[2,1]);</span><br><span class="line">poly2sym(k2)</span><br><span class="line">[k3,d]&#x3D;polyder([2,-1,0,3],[2,1])</span><br></pre></td></tr></table></figure>
+<center><img src="/images/matlab/6-5.png" width=80%" height=80%" align=center /></center>
 
 <p><h2 id="2"></h2><font size=5 color=red><center>数值插值 </center></font></p>
 <p><h2 id="3"></h2><font size=5 color=red><center>函数的极限 </center></font></p>
@@ -571,20 +581,5 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
   <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="/js/clipboard_use.js"></script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
