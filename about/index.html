@@ -312,9 +312,53 @@
 </aside>
 
   
-  <%- partial('_partial/sidebar-about', {post: page}) %>
+  <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+    <div class="widget">
+      <h3 class="widget-title">Links</h3>
+      <div class="widget-body">
+        <ul class="link-list lh-2x">
+          
+          <li>
+            Github:
+            <a href="https://github.com/tuoxiao" target="_blank">https://github.com/tuoxiao</a>
+          </li>
+          
+          <li>
+            微博:
+            <a href="http://weibo.com/6573256711" target="_blank">http://weibo.com/6573256711</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+  </div>
+</aside>
 <main class="main" role="main">
-  <%- partial('_partial/article-about', {post: page}) %>
+  <article class="article archives-about article-type-normal" itemscope="">
+  <header class="article-header">
+    <h1 itemprop="title">关于</h1>
+    
+    <p class="text-muted">一个不甘平庸的准机械工程师，学习机械，爱好计算机，目前能力尚浅！</p>
+    
+  </header>
+  <div class="article-body">
+    <p><img src="/images/avatar.jpg" width="25%" height="25%" align=right /><br><br>  </p>
+<p><br></p>
+<p><code>年龄</code>：21<br><code>性别</code>：男<br><code>职业</code>：学生<br><code>大学</code>：长江大学<br><code>年级</code>：机械工程大二在修<br><code>邮箱</code>：tuoxiao95827@outlook.com</p>
+
+  </div>
+</article>
+
+  
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
