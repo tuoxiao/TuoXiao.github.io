@@ -27,8 +27,9 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/zatan/2-1.png">
 <meta property="og:image" content="http://example.com/images/zatan/2-2.png">
+<meta property="og:image" content="http://example.com/images/zatan/2-3.png">
 <meta property="article:published_time" content="2021-05-01T10:54:23.000Z">
-<meta property="article:modified_time" content="2021-05-01T16:10:29.582Z">
+<meta property="article:modified_time" content="2021-05-01T16:41:43.781Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="机械运动分析">
 <meta name="twitter:card" content="summary">
@@ -368,30 +369,517 @@
 <h2 id="建立模型"><a href="#建立模型" class="headerlink" title="建立模型"></a>建立模型</h2><p><img src="/images/zatan/2-2.png" width=50%" height=50%" align=right /></p>
 <p>1、首先要将运动机构简化为数学模型，可以很轻易得出如右图所示模型；<br>2、求出 $\theta_3$ ： </p>
 <center>
-
 $\frac{cos\theta_3}{\iota_1}$=$\frac{sin(\theta_3-\theta_1)}{\iota_4}$  
 
+</center>
+<center>
+
  $\Downarrow$  
+
+</center>
+<center>
 
 2cos$\theta_3$=sin($\theta_3-\theta_1$)  
 
+</center>
+<center>
+
  $\Downarrow$  
+
+</center>
+<center>
 
 $2cos\theta_3 =sin\theta_3cos\theta_1-sin\theta_1cos\theta_3$  
 
+</center>
+<center>
+
 $\Downarrow$  
+
+</center>
+<center>
 
 $tan\theta_3 = \frac{2+sin\theta_1}{cos\theta_1}$  
 
+</center>
+<center>
+
 $\Downarrow$  
+
+</center>
+<center>
 
 $\theta_3 = arctan\frac{2+sin\theta_1}{cos\theta_1}$
 
 </center>
 
-<p>3、因为$\theta_3$要满足如此条件 ： ($\frac{\pi}{3} \leqslant \theta_3 \leqslant \frac{2\pi}{3}$)。且用反三角函数解出来的 $\theta_3$ 有一跃变的过程。<br>故，对 $\theta_3$ 对弧度值小于0的 $\theta_3$ 进行 $\theta_3$ = $\theta_3$ +$\pi$ 处理，可以得到正确的 $\theta_3$ 值。</p>
-<p>4、</p>
+<p><br></p>
+<p><img src="/images/zatan/2-3.png" width=50%" height=50%" align=right /></p>
+<p>3、因为$\theta_3$要满足如此条件 ： ($\frac{\pi}{3} \leqslant \theta_3 \leqslant \frac{2\pi}{3}$)。且用反三角函数解出来的 $\theta_3$ 有一跃变的过程。  故，对 $\theta_3$ 对弧度值小于0的 $\theta_3$ 进行 $\theta_3$ = $\theta_3$ +$\pi$ 处理，可以得到正确的 $\theta_3$ 值。</p>
+<p>4、求出 $\theta_3$ 后，则 $\omega_3$ 、$\alpha_3$ 求法就简单：</p>
+<center>
 
+$\omega_3 = \omega_1 * cos (\theta_3-\theta_1)$
+
+</center>
+<center>
+
+$\alpha_3 = \omega_1 * sin (\theta_3-\theta_1)$
+
+</center>
+
+
+<p><br></p>
+<p><br></p>
+<h2 id="Excel计算数据"><a href="#Excel计算数据" class="headerlink" title="Excel计算数据"></a>Excel计算数据</h2><table>
+   <tr>
+      <td>\theta_1 (\cric)</td>
+      <td>\theta_3 (rad)</td>
+      <td>\omega_3 (rad/s)</td>
+      <td>\alpha_3 (rad/s^-2)</td>
+   </tr>
+   <tr>
+      <td>0</td>
+      <td>1.107148718</td>
+      <td>1.341640786</td>
+      <td>2.683281573</td>
+   </tr>
+   <tr>
+      <td>5</td>
+      <td>1.125474919</td>
+      <td>1.523293436</td>
+      <td>2.584487784</td>
+   </tr>
+   <tr>
+      <td>10</td>
+      <td>1.145395003</td>
+      <td>1.693764615</td>
+      <td>2.476118218</td>
+   </tr>
+   <tr>
+      <td>15</td>
+      <td>1.166705008</td>
+      <td>1.8532794</td>
+      <td>2.359100563</td>
+   </tr>
+   <tr>
+      <td>20</td>
+      <td>1.189228628</td>
+      <td>2.002024817</td>
+      <td>2.234255275</td>
+   </tr>
+   <tr>
+      <td>25</td>
+      <td>1.212812651</td>
+      <td>2.140153305</td>
+      <td>2.10231868</td>
+   </tr>
+   <tr>
+      <td>30</td>
+      <td>1.237323155</td>
+      <td>2.267786838</td>
+      <td>1.963961012</td>
+   </tr>
+   <tr>
+      <td>35</td>
+      <td>1.262642349</td>
+      <td>2.385021177</td>
+      <td>1.819800535</td>
+   </tr>
+   <tr>
+      <td>40</td>
+      <td>1.288665945</td>
+      <td>2.491929983</td>
+      <td>1.670414607</td>
+   </tr>
+   <tr>
+      <td>45</td>
+      <td>1.315300953</td>
+      <td>2.588568628</td>
+      <td>1.516348395</td>
+   </tr>
+   <tr>
+      <td>50</td>
+      <td>1.342463822</td>
+      <td>2.674977634</td>
+      <td>1.358121738</td>
+   </tr>
+   <tr>
+      <td>55</td>
+      <td>1.370078875</td>
+      <td>2.751185712</td>
+      <td>1.196234584</td>
+   </tr>
+   <tr>
+      <td>60</td>
+      <td>1.398076962</td>
+      <td>2.817212405</td>
+      <td>1.031171308</td>
+   </tr>
+   <tr>
+      <td>65</td>
+      <td>1.426394312</td>
+      <td>2.873070353</td>
+      <td>0.863404163</td>
+   </tr>
+   <tr>
+      <td>70</td>
+      <td>1.45497152</td>
+      <td>2.918767192</td>
+      <td>0.693396048</td>
+   </tr>
+   <tr>
+      <td>75</td>
+      <td>1.48375266</td>
+      <td>2.954307121</td>
+      <td>0.521602754</td>
+   </tr>
+   <tr>
+      <td>80</td>
+      <td>1.512684489</td>
+      <td>2.979692149</td>
+      <td>0.348474818</td>
+   </tr>
+   <tr>
+      <td>85</td>
+      <td>1.541715716</td>
+      <td>2.994923043</td>
+      <td>0.174459074</td>
+   </tr>
+   <tr>
+      <td>90</td>
+      <td>1.570796327</td>
+      <td>3</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>95</td>
+      <td>1.599876938</td>
+      <td>2.994923043</td>
+      <td>-0.174459074</td>
+   </tr>
+   <tr>
+      <td>100</td>
+      <td>1.628908165</td>
+      <td>2.979692149</td>
+      <td>-0.348474818</td>
+   </tr>
+   <tr>
+      <td>105</td>
+      <td>1.657839993</td>
+      <td>2.954307121</td>
+      <td>-0.521602754</td>
+   </tr>
+   <tr>
+      <td>110</td>
+      <td>1.686621134</td>
+      <td>2.918767192</td>
+      <td>-0.693396048</td>
+   </tr>
+   <tr>
+      <td>115</td>
+      <td>1.715198341</td>
+      <td>2.873070353</td>
+      <td>-0.863404163</td>
+   </tr>
+   <tr>
+      <td>120</td>
+      <td>1.743515692</td>
+      <td>2.817212405</td>
+      <td>-1.031171308</td>
+   </tr>
+   <tr>
+      <td>125</td>
+      <td>1.771513779</td>
+      <td>2.751185712</td>
+      <td>-1.196234584</td>
+   </tr>
+   <tr>
+      <td>130</td>
+      <td>1.799128831</td>
+      <td>2.674977634</td>
+      <td>-1.358121738</td>
+   </tr>
+   <tr>
+      <td>135</td>
+      <td>1.8262917</td>
+      <td>2.588568628</td>
+      <td>-1.516348395</td>
+   </tr>
+   <tr>
+      <td>140</td>
+      <td>1.852926708</td>
+      <td>2.491929983</td>
+      <td>-1.670414607</td>
+   </tr>
+   <tr>
+      <td>145</td>
+      <td>1.878950305</td>
+      <td>2.385021177</td>
+      <td>-1.819800535</td>
+   </tr>
+   <tr>
+      <td>150</td>
+      <td>1.904269499</td>
+      <td>2.267786838</td>
+      <td>-1.963961012</td>
+   </tr>
+   <tr>
+      <td>155</td>
+      <td>1.928780002</td>
+      <td>2.140153305</td>
+      <td>-2.10231868</td>
+   </tr>
+   <tr>
+      <td>160</td>
+      <td>1.952364025</td>
+      <td>2.002024817</td>
+      <td>-2.234255275</td>
+   </tr>
+   <tr>
+      <td>165</td>
+      <td>1.974887646</td>
+      <td>1.8532794</td>
+      <td>-2.359100563</td>
+   </tr>
+   <tr>
+      <td>170</td>
+      <td>1.99619765</td>
+      <td>1.693764615</td>
+      <td>-2.476118218</td>
+   </tr>
+   <tr>
+      <td>175</td>
+      <td>2.016117734</td>
+      <td>1.523293436</td>
+      <td>-2.584487784</td>
+   </tr>
+   <tr>
+      <td>180</td>
+      <td>2.034443936</td>
+      <td>1.341640786</td>
+      <td>-2.683281573</td>
+   </tr>
+   <tr>
+      <td>185</td>
+      <td>2.050939135</td>
+      <td>1.148541591</td>
+      <td>-2.771435046</td>
+   </tr>
+   <tr>
+      <td>190</td>
+      <td>2.065326477</td>
+      <td>0.943691779</td>
+      <td>-2.847708873</td>
+   </tr>
+   <tr>
+      <td>195</td>
+      <td>2.077281554</td>
+      <td>0.726754602</td>
+      <td>-2.910640436</td>
+   </tr>
+   <tr>
+      <td>200</td>
+      <td>2.086423264</td>
+      <td>0.497376043</td>
+      <td>-2.958482224</td>
+   </tr>
+   <tr>
+      <td>205</td>
+      <td>2.092303368</td>
+      <td>0.255215338</td>
+      <td>-2.989124476</td>
+   </tr>
+   <tr>
+      <td>210</td>
+      <td>2.094395102</td>
+      <td>-1.1485E-15</td>
+      <td>-3</td>
+   </tr>
+   <tr>
+      <td>215</td>
+      <td>2.092081706</td>
+      <td>-0.268380304</td>
+      <td>-2.98797122</td>
+   </tr>
+   <tr>
+      <td>220</td>
+      <td>2.084646809</td>
+      <td>-0.549719909</td>
+      <td>-2.949204642</td>
+   </tr>
+   <tr>
+      <td>225</td>
+      <td>2.071270364</td>
+      <td>-0.843253913</td>
+      <td>-2.879048947</td>
+   </tr>
+   <tr>
+      <td>230</td>
+      <td>2.051036647</td>
+      <td>-1.147288675</td>
+      <td>-2.771953949</td>
+   </tr>
+   <tr>
+      <td>235</td>
+      <td>2.022965068</td>
+      <td>-1.458669382</td>
+      <td>-2.621504079</td>
+   </tr>
+   <tr>
+      <td>240</td>
+      <td>1.986079566</td>
+      <td>-1.772071484</td>
+      <td>-2.420694664</td>
+   </tr>
+   <tr>
+      <td>245</td>
+      <td>1.939536273</td>
+      <td>-2.07917744</td>
+      <td>-2.162642174</td>
+   </tr>
+   <tr>
+      <td>250</td>
+      <td>1.882826066</td>
+      <td>-2.367960099</td>
+      <td>-1.841945974</td>
+   </tr>
+   <tr>
+      <td>255</td>
+      <td>1.816048477</td>
+      <td>-2.622540252</td>
+      <td>-1.456805623</td>
+   </tr>
+   <tr>
+      <td>260</td>
+      <td>1.740206377</td>
+      <td>-2.824297227</td>
+      <td>-1.011605247</td>
+   </tr>
+   <tr>
+      <td>265</td>
+      <td>1.657404473</td>
+      <td>-2.954765565</td>
+      <td>-0.518999474</td>
+   </tr>
+   <tr>
+      <td>270</td>
+      <td>1.570796327</td>
+      <td>-3</td>
+      <td>-3.67545E-16</td>
+   </tr>
+   <tr>
+      <td>275</td>
+      <td>1.484188181</td>
+      <td>-2.954765565</td>
+      <td>0.518999474</td>
+   </tr>
+   <tr>
+      <td>280</td>
+      <td>1.401386276</td>
+      <td>-2.824297227</td>
+      <td>1.011605247</td>
+   </tr>
+   <tr>
+      <td>285</td>
+      <td>1.325544177</td>
+      <td>-2.622540252</td>
+      <td>1.456805623</td>
+   </tr>
+   <tr>
+      <td>290</td>
+      <td>1.258766587</td>
+      <td>-2.367960099</td>
+      <td>1.841945974</td>
+   </tr>
+   <tr>
+      <td>295</td>
+      <td>1.202056381</td>
+      <td>-2.07917744</td>
+      <td>2.162642174</td>
+   </tr>
+   <tr>
+      <td>300</td>
+      <td>1.155513088</td>
+      <td>-1.772071484</td>
+      <td>2.420694664</td>
+   </tr>
+   <tr>
+      <td>305</td>
+      <td>1.118627586</td>
+      <td>-1.458669382</td>
+      <td>2.621504079</td>
+   </tr>
+   <tr>
+      <td>310</td>
+      <td>1.090556007</td>
+      <td>-1.147288675</td>
+      <td>2.771953949</td>
+   </tr>
+   <tr>
+      <td>315</td>
+      <td>1.07032229</td>
+      <td>-0.843253913</td>
+      <td>2.879048947</td>
+   </tr>
+   <tr>
+      <td>320</td>
+      <td>1.056945844</td>
+      <td>-0.549719909</td>
+      <td>2.949204642</td>
+   </tr>
+   <tr>
+      <td>325</td>
+      <td>1.049510948</td>
+      <td>-0.268380304</td>
+      <td>2.98797122</td>
+   </tr>
+   <tr>
+      <td>330</td>
+      <td>1.047197551</td>
+      <td>-5.51317E-16</td>
+      <td>3</td>
+   </tr>
+   <tr>
+      <td>335</td>
+      <td>1.049289285</td>
+      <td>0.255215338</td>
+      <td>2.989124476</td>
+   </tr>
+   <tr>
+      <td>340</td>
+      <td>1.05516939</td>
+      <td>0.497376043</td>
+      <td>2.958482224</td>
+   </tr>
+   <tr>
+      <td>345</td>
+      <td>1.064311099</td>
+      <td>0.726754602</td>
+      <td>2.910640436</td>
+   </tr>
+   <tr>
+      <td>350</td>
+      <td>1.076266177</td>
+      <td>0.943691779</td>
+      <td>2.847708873</td>
+   </tr>
+   <tr>
+      <td>355</td>
+      <td>1.090653519</td>
+      <td>1.148541591</td>
+      <td>2.771435046</td>
+   </tr>
+   <tr>
+      <td>360</td>
+      <td>1.107148718</td>
+      <td>1.341640786</td>
+      <td>2.683281573</td>
+   </tr>
+   <tr>
+      <td></td>
+   </tr>
+</table>
       
     </div>
     <div class="article-footer">
