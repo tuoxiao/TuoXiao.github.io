@@ -18,12 +18,12 @@
   
   
   <title>Matlab数据分析 | TuTo&#39;Blog</title>
-  <meta name="description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  多项式及其函数    多项式的创建与表达· 输入多项式2x4-85x3+15x2+1001a&#x3D;ploy2sym([2 -85 15 100]) 多项式的四则运算· 加、减法12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a+b;cpoly2sym(">
+  <meta name="description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  多项式及其函数    多项式的创建与表达· 输入多项式2x4-85x3+15x2+1001a&#x3D;ploy2sym([2 -85 15 100]) 多项式的四则运算加、减法12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a+b;cpoly2sym(c)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matlab数据分析">
 <meta property="og:url" content="http://example.com/2021/04/01/matlab/matlab4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  多项式及其函数    多项式的创建与表达· 输入多项式2x4-85x3+15x2+1001a&#x3D;ploy2sym([2 -85 15 100]) 多项式的四则运算· 加、减法12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a+b;cpoly2sym(">
+<meta property="og:description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  多项式及其函数    多项式的创建与表达· 输入多项式2x4-85x3+15x2+1001a&#x3D;ploy2sym([2 -85 15 100]) 多项式的四则运算加、减法12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a+b;cpoly2sym(c)">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/matlab/6-1.png">
 <meta property="og:image" content="http://example.com/images/matlab/6-2.png">
@@ -32,8 +32,10 @@
 <meta property="og:image" content="http://example.com/images/matlab/6-5.png">
 <meta property="og:image" content="http://example.com/images/matlab/6-6.png">
 <meta property="og:image" content="http://example.com/images/matlab/6-7.png">
+<meta property="og:image" content="http://example.com/images/matlab/6-8.png">
+<meta property="og:image" content="http://example.com/images/matlab/6-9.png">
 <meta property="article:published_time" content="2021-03-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-03T04:14:34.980Z">
+<meta property="article:modified_time" content="2021-05-03T06:21:39.274Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="matlab">
 <meta name="twitter:card" content="summary">
@@ -375,7 +377,8 @@
 </ul>
 <p><h2 id="1"></h2><font size=5 color=red><center>多项式及其函数 </center></font>  </p>
 <h2 id="多项式的创建与表达"><a href="#多项式的创建与表达" class="headerlink" title="多项式的创建与表达"></a>多项式的创建与表达</h2><p>· 输入多项式2x<sup>4</sup>-85x<sup>3</sup>+15x<sup>2</sup>+100<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;ploy2sym([2 -85 15 100])</span><br></pre></td></tr></table></figure></p>
-<h2 id="多项式的四则运算"><a href="#多项式的四则运算" class="headerlink" title="多项式的四则运算"></a>多项式的四则运算</h2><p>· 加、减法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[1 2 3 4 5];</span><br><span class="line">b&#x3D;[2 3 4 0 5];</span><br><span class="line">c&#x3D;a+b;</span><br><span class="line">c</span><br><span class="line">poly2sym(c)        %显示多项式</span><br></pre></td></tr></table></figure><br><img src="/images/matlab/6-1.png" alt="6-1"></p>
+<h2 id="多项式的四则运算"><a href="#多项式的四则运算" class="headerlink" title="多项式的四则运算"></a>多项式的四则运算</h2><h4 id="加、减法"><a href="#加、减法" class="headerlink" title="加、减法"></a>加、减法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[1 2 3 4 5];</span><br><span class="line">b&#x3D;[2 3 4 0 5];</span><br><span class="line">c&#x3D;a+b;</span><br><span class="line">c</span><br><span class="line">poly2sym(c)        %显示多项式</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/6-1.png" alt="6-1"></p>
 <p><br></p>
 <h4 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[1 2];</span><br><span class="line">b&#x3D;[3 4];</span><br><span class="line">c&#x3D;poly2sym(conv(a,b))</span><br></pre></td></tr></table></figure>
 <p><img src="/images/matlab/6-2.png" alt="6-2">  </p>
@@ -384,9 +387,9 @@
 <p>[q,r]=deconv(b,a):q为多项式b除以a的商户式；r为多项式b除以a的余式。返回的<code>q,r</code>仍为多项式系数向量。  </p>
 <p><img src="/images/matlab/6-3.png" alt="6-3">  </p>
 <p><br>  </p>
-<h2 id="多项式求导"><a href="#多项式求导" class="headerlink" title="多项式求导"></a>多项式求导</h2><pre><code>1、k = polyder(p) : 求多项式p的导函数多项式。
-2、k = polyder(a,b) : 求多项式a和b 乘积的导函数多项式。
-3、[p,q] =polyder(a,b):求多项式b与多项式a相除的导函数多项式，导函数的分子存在p中，分母存在q中。其中，参数a,b是多项式的系数向量，返回结果p,q也是多项式的系数向量。
+<h2 id="多项式求导"><a href="#多项式求导" class="headerlink" title="多项式求导"></a>多项式求导</h2><pre><code>k = polyder(p) : 求多项式p的导函数多项式。
+k = polyder(a,b) : 求多项式a和b 乘积的导函数多项式。
+[p,q] =polyder(a,b):求多项式b与多项式a相除的导函数多项式，导函数的分子存在p中，分母存在q中。其中，参数a,b是多项式的系数向量，返回结果p,q也是多项式的系数向量。
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[2 4 6 -8 10]</span><br><span class="line">poly2sym(a)</span><br><span class="line">b&#x3D;polyder(a)</span><br><span class="line">poly2sym(b)</span><br></pre></td></tr></table></figure>
 <p><img src="/images/matlab/6-4.png" alt="6-4"></p>
 <p><br></p>
@@ -401,6 +404,9 @@
 <p> · 调用此函数时，有两种形式：<br>&emsp;&emsp;y=poluval(A，x)—其中x为单独的自变量<br>&emsp;&emsp;y=poluval(A，B)—其中B为一个自变量矩阵<br><img src="/images/matlab/6-6.png" alt="6-6"></p>
 <p><br></p>
 <h4 id="polyvalm函数"><a href="#polyvalm函数" class="headerlink" title="polyvalm函数"></a>polyvalm函数</h4><p>· 已知多项式p(x)=3<sup>3</sup>-x<sup>2</sup>+5，求矩阵A=$\begin{pmatrix} -1 &amp; 2 \ -2 &amp; 1 \end{pmatrix}$的多项式的值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">p&#x3D;[3 -1 0 5];</span><br><span class="line">x&#x3D;[-1 2; -2 1];</span><br><span class="line">polyval(p,x)</span><br><span class="line">polyvalm(p,x)</span><br></pre></td></tr></table></figure><br><img src="/images/matlab/6-7.png" alt="6-7"></p>
+<p><br></p>
+<h2 id="多项式求根"><a href="#多项式求根" class="headerlink" title="多项式求根"></a>多项式求根</h2><p>· 已知多项式x<sup>3</sup>-6x<sup>2</sup>-72x-27的根。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">p&#x3D;[1 -6 -72 -27];</span><br><span class="line">k&#x3D;poly2sym(p)</span><br><span class="line">r&#x3D;roots(p)</span><br></pre></td></tr></table></figure><br><img src="/images/matlab/6-8.png" alt="6-8"></p>
+<p>· 若已知多项式的根，可以反求多项式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">r&#x3D;[2 5 8 7];    %已知根</span><br><span class="line">p&#x3D;poly(r)       %反求多项式系数</span><br><span class="line">k&#x3D;poly2sym(p)   %导出多项式</span><br><span class="line">r&#x3D;roots(p)      %再次求出多项式的根验证正确性</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>· 注意有根才能求根！<br><img src="/images/matlab/6-9.png" alt="6-9"></p>
 <p><h2 id="2"></h2><font size=5 color=red><center>数值插值 </center></font></p>
 <p><h2 id="3"></h2><font size=5 color=red><center>函数的极限 </center></font></p>
 <p><h2 id="4"></h2><font size=5 color=red><center>数值积分</center></font></p>
