@@ -36,7 +36,7 @@
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6-9.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6-10.png">
 <meta property="article:published_time" content="2021-03-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-12T12:32:34.742Z">
+<meta property="article:modified_time" content="2021-05-12T12:36:47.799Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="matlab">
 <meta name="twitter:card" content="summary">
@@ -409,13 +409,8 @@ k = polyder(a,b) : 求多项式a和b 乘积的导函数多项式。
 <h2 id="多项式求根"><a href="#多项式求根" class="headerlink" title="多项式求根"></a>多项式求根</h2><p>· 已知多项式x<sup>3</sup>-6x<sup>2</sup>-72x-27的根。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">p&#x3D;[1 -6 -72 -27];</span><br><span class="line">k&#x3D;poly2sym(p)</span><br><span class="line">r&#x3D;roots(p)</span><br></pre></td></tr></table></figure><br><img src="/images/matlab/6-8.png" alt="6-8"></p>
 <p>· 若已知多项式的根，可以反求多项式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">r&#x3D;[2 5 8 7];    %已知根</span><br><span class="line">p&#x3D;poly(r)       %反求多项式系数</span><br><span class="line">k&#x3D;poly2sym(p)   %导出多项式</span><br><span class="line">r&#x3D;roots(p)      %再次求出多项式的根验证正确性</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>· 注意有根才能求根！<br><img src="/images/matlab/6-9.png" alt="6-9"></p>
 <p><br></p>
-<h2 id="部分分式展开"><a href="#部分分式展开" class="headerlink" title="部分分式展开"></a>部分分式展开</h2><p>· 对有理多项式 $\frac{10(s+2)}{(s+1)(s+3)(s+4)}$ 进行展开<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">num&#x3D;10*[1 2];</span><br><span class="line">den&#x3D;poly([-1;-3;-4]);</span><br><span class="line">[res,poles,k]&#x3D;residue(num,den)</span><br></pre></td></tr></table></figure><br>结果是余数、极点和部分分式展开的常数项，如下：</p>
-<center>
-
-$\frac{10(s+2)}{(s+1)(s+3)(s+3)}=\frac{-6.66667}{s+4}+\frac{5}{s+3}+\frac{1.6667}{s+1}$  
-
-</center>
-
+<h2 id="部分分式展开"><a href="#部分分式展开" class="headerlink" title="部分分式展开"></a>部分分式展开</h2><p>对有理多项式 $\frac{10(s+2)}{(s+1)(s+3)(s+4)}$ 进行展开<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">num&#x3D;10*[1 2];</span><br><span class="line">den&#x3D;poly([-1;-3;-4]);</span><br><span class="line">[res,poles,k]&#x3D;residue(num,den)</span><br></pre></td></tr></table></figure><br>结果是余数、极点和部分分式展开的常数项，如下：</p>
+<p>$\frac{10(s+2)}{(s+1)(s+3)(s+3)}=\frac{-6.66667}{s+4}+\frac{5}{s+3}+\frac{1.6667}{s+1}$  </p>
 <p><img src="/images/matlab/6-10.png" alt="6-10"></p>
 <p><br></p>
 <h2 id="最小二乘拟合"><a href="#最小二乘拟合" class="headerlink" title="最小二乘拟合"></a>最小二乘拟合</h2><p>· 某地一煤矿，为估计其储量便于开采，先在该地进行开采，先在该地进行勘探。假设该地是一长方形区域，长为4km，宽为5km.勘探得到如下表所示数据：</p>
@@ -705,5 +700,20 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
   <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="/js/clipboard_use.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
