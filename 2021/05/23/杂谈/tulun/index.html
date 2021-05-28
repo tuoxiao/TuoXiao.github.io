@@ -26,7 +26,7 @@
 <meta property="og:description" content="题目某直动尖顶推杆盘型凸轮机构，已知:   &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;基圆半径：&amp;emsp;&amp;ensp;&amp;ensp;$r_0 &#x3D;50mm$&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;偏心距：&amp;emsp;&amp;ensp;&amp;ensp;&amp;emsp;$e&#x3D; 15mm$&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;推程运动角：&amp;emsp;$\delta_0 &#x3D;150^\circ$&amp;e">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-05-23T15:28:52.000Z">
-<meta property="article:modified_time" content="2021-05-26T09:49:33.185Z">
+<meta property="article:modified_time" content="2021-05-28T11:41:09.165Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
@@ -348,6 +348,61 @@
         <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>某直动尖顶推杆盘型凸轮机构，已知:  </p>
 <p>&emsp;&emsp;&emsp;&emsp;基圆半径：&emsp;&ensp;&ensp;$r_0 =50mm$<br>&emsp;&emsp;&emsp;&emsp;偏心距：&emsp;&ensp;&ensp;&emsp;$e= 15mm$<br>&emsp;&emsp;&emsp;&emsp;推程运动角：&emsp;$\delta_0 =150^\circ$<br>&emsp;&emsp;&emsp;&emsp;远休止角：&emsp;&ensp;&ensp;$\delta_1 =30^ \circ$<br>&emsp;&emsp;&emsp;&emsp;回程运动角：&emsp;$\delta_2 =90 ^\circ$<br>&emsp;&emsp;&emsp;&emsp;近休止角：&emsp;&ensp;&ensp;$\delta_3 = 90 ^\circ$  </p>
 <p>推程阶段运动规律为<code>等加速等减速</code>。回程阶段为<code>简谐运动</code>，凸轮转向为顺时针，偏置方式为正偏置。<br>用解析法设置此凸轮机构，推导凸轮轮廓线数学方程，并绘制运动线图和凸轮轮廓图。  </p>
+<h2 id="建立数学模型"><a href="#建立数学模型" class="headerlink" title="建立数学模型"></a>建立数学模型</h2><center><font size=5 color=red>运动规律</font></center>  
+
+<h4 id="等加速等减速运动过程"><a href="#等加速等减速运动过程" class="headerlink" title="等加速等减速运动过程"></a>等加速等减速运动过程</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&emsp;&emsp;待求量&emsp;&emsp;</th>
+<th style="text-align:center">&emsp;&emsp;&emsp;&emsp;推程&emsp;&emsp;&emsp;&emsp;</th>
+<th style="text-align:center">&emsp;&emsp;&emsp;&emsp;回程&emsp;&emsp;&emsp;&emsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">加速阶段</td>
+<td style="text-align:center">$0\le\delta\le \frac{\delta_0}{2}$</td>
+<td style="text-align:center">$0\le\delta\le \frac{\delta_0’}{2}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$s=$</td>
+<td style="text-align:center">$2h\frac{\delta^2}{\delta_0^2}$</td>
+<td style="text-align:center">$h-2h\frac{\delta^2}{\delta_0’^2}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$v=$</td>
+<td style="text-align:center">$4h\omega\frac{\delta}{\delta_0^2}$</td>
+<td style="text-align:center">$-4h\omega\frac{\delta}{\delta_0’^2}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\alpha=$</td>
+<td style="text-align:center">$4h\frac{\omega^2}{\delta_0^2}$</td>
+<td style="text-align:center">$-4h\frac{\omega^2}{\delta_0’^2}$</td>
+</tr>
+<tr>
+<td style="text-align:center">减速阶段</td>
+<td style="text-align:center">$\frac{\delta_0}{2}\le\delta\le\delta_0$</td>
+<td style="text-align:center">$\frac{\delta_0’}{2}\le\delta\le\delta’_0$</td>
+</tr>
+<tr>
+<td style="text-align:center">$s=$</td>
+<td style="text-align:center">$h-2h\frac{(\delta_0-\delta)^2}{\delta_0’^2}$</td>
+<td style="text-align:center">$2h\frac{(\delta_0’-\delta)^2}{\delta_0^2}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$v=$</td>
+<td style="text-align:center">$4h\omega\frac{(\delta_0-\delta)}{\delta_0^2}$</td>
+<td style="text-align:center">$-4h\omega\frac{(\delta_0’-\delta)}{\delta_0’^2}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\alpha=$</td>
+<td style="text-align:center">$-4h\frac{\omega^2}{\delta_0’^2}$</td>
+<td style="text-align:center">$4h\frac{\omega^2}{\delta_0^2}$</td>
+</tr>
+</tbody>
+</table>
+</div>
 
       
     </div>
