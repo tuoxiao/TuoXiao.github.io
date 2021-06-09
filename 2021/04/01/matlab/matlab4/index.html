@@ -18,12 +18,12 @@
   
   
   <title>Matlab数据分析 | TuTo&#39;Blog</title>
-  <meta name="description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  多项式及其函数    多项式的创建与表达· 输入多项式2x4-85x3+15x2+1001a&#x3D;ploy2sym([2 -85 15 100]) 多项式的四则运算加、减法12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a+b;cpoly2sym(c)">
+  <meta name="description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  多项式及其函数    多项式的创建与表达· 输入多项式 $2x^4-85x^3+15x^2+100$1a&#x3D;ploy2sym([2 -85 15 100]) 多项式的四则运算加、减法12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a+b;cpoly2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matlab数据分析">
 <meta property="og:url" content="http://tuoxiao.github.io/2021/04/01/matlab/matlab4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  多项式及其函数    多项式的创建与表达· 输入多项式2x4-85x3+15x2+1001a&#x3D;ploy2sym([2 -85 15 100]) 多项式的四则运算加、减法12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a+b;cpoly2sym(c)">
+<meta property="og:description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  多项式及其函数    多项式的创建与表达· 输入多项式 $2x^4-85x^3+15x^2+100$1a&#x3D;ploy2sym([2 -85 15 100]) 多项式的四则运算加、减法12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a+b;cpoly2">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6-1.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6-2.png">
@@ -36,7 +36,7 @@
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6-9.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6-10.png">
 <meta property="article:published_time" content="2021-03-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-09T13:20:39.768Z">
+<meta property="article:modified_time" content="2021-06-09T14:08:20.614Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="matlab应用">
 <meta name="twitter:card" content="summary">
@@ -377,7 +377,7 @@
 <li><a href="#7">回归分析</a></li>
 </ul>
 <p><h2 id="1"></h2><font size=5 color=red><center>多项式及其函数 </center></font>  </p>
-<h2 id="多项式的创建与表达"><a href="#多项式的创建与表达" class="headerlink" title="多项式的创建与表达"></a>多项式的创建与表达</h2><p>· 输入多项式2x<sup>4</sup>-85x<sup>3</sup>+15x<sup>2</sup>+100<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;ploy2sym([2 -85 15 100])</span><br></pre></td></tr></table></figure></p>
+<h2 id="多项式的创建与表达"><a href="#多项式的创建与表达" class="headerlink" title="多项式的创建与表达"></a>多项式的创建与表达</h2><p>· 输入多项式 $2x^4-85x^3+15x^2+100$<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;ploy2sym([2 -85 15 100])</span><br></pre></td></tr></table></figure></p>
 <h2 id="多项式的四则运算"><a href="#多项式的四则运算" class="headerlink" title="多项式的四则运算"></a>多项式的四则运算</h2><h4 id="加、减法"><a href="#加、减法" class="headerlink" title="加、减法"></a>加、减法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[1 2 3 4 5];</span><br><span class="line">b&#x3D;[2 3 4 0 5];</span><br><span class="line">c&#x3D;a+b;</span><br><span class="line">c</span><br><span class="line">poly2sym(c)        %显示多项式</span><br></pre></td></tr></table></figure>
 <p><img src="/images/matlab/6-1.png" alt="6-1"></p>
 <p><br></p>
@@ -385,7 +385,7 @@
 <p><img src="/images/matlab/6-2.png" alt="6-2">  </p>
 <p><br></p>
 <h4 id="除法"><a href="#除法" class="headerlink" title="除法"></a>除法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[1 4 9 15];</span><br><span class="line">b&#x3D;[1 2 -3 20 -16 21];</span><br><span class="line">[q,r]&#x3D;deconv(b,a)</span><br><span class="line">poly2sym(q)</span><br><span class="line">poly2sym(r)</span><br></pre></td></tr></table></figure>
-<p>[q,r]=deconv(b,a):q为多项式b除以a的商户式；r为多项式b除以a的余式。返回的<code>q,r</code>仍为多项式系数向量。  </p>
+<p>$[q,r]=deconv(b,a)$:<br>&emsp;&emsp;q为多项式b除以a的商户式；r为多项式b除以a的余式。返回的<code>q,r</code>仍为多项式系数向量。  </p>
 <p><img src="/images/matlab/6-3.png" alt="6-3">  </p>
 <p><br>  </p>
 <h2 id="多项式求导"><a href="#多项式求导" class="headerlink" title="多项式求导"></a>多项式求导</h2><pre><code>k = polyder(p) : 求多项式p的导函数多项式。
@@ -395,18 +395,18 @@ k = polyder(a,b) : 求多项式a和b 乘积的导函数多项式。
 <p><img src="/images/matlab/6-4.png" alt="6-4"></p>
 <p><br></p>
 <p><br></p>
-<p> · 已知多项式p(x)=2x<sup>3</sup>-x<sup>2</sup>+3和q(x)=2x=1，求如下导数：p’、(p·q)’、(p/q)’。  </p>
+<p> · 已知多项式$p(x)=2x^3-x^2+3$和$q(x)=2x=1$，求如下导数：$p’、(p·q)’、(p/q)’$。  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">k1&#x3D;polyder([2,-1,0,3]);</span><br><span class="line">poly2sym(k1)</span><br><span class="line">k2&#x3D;polyder([2,-1,0,3],[2,1]);</span><br><span class="line">poly2sym(k2)</span><br><span class="line">[k3,d]&#x3D;polyder([2,-1,0,3],[2,1])</span><br></pre></td></tr></table></figure>
 <p><img src="/images/matlab/6-5.png" alt="6-5"></p>
 <p><br></p>
 <p><br></p>
-<h2 id="多项式求值"><a href="#多项式求值" class="headerlink" title="多项式求值"></a>多项式求值</h2><h4 id="polyval函数"><a href="#polyval函数" class="headerlink" title="polyval函数"></a>polyval函数</h4><p> · 已知多项式x<sup>4</sup>+6x<sup>3</sup>-9，分别取x=1.3和一个给定的矩阵2x3个元素为自变量，计算该多项式的值。</p>
+<h2 id="多项式求值"><a href="#多项式求值" class="headerlink" title="多项式求值"></a>多项式求值</h2><h4 id="polyval函数"><a href="#polyval函数" class="headerlink" title="polyval函数"></a>polyval函数</h4><p> · 已知多项式 $x^4+6x^3-9$ ，分别取$x=1.3$和一个给定的矩阵2x3个元素为自变量，计算该多项式的值。</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">A&#x3D;[1 6 0 0 -9];     %定义的多项式</span><br><span class="line">x&#x3D;1.3;              %定义的自变量</span><br><span class="line">y1&#x3D;polyval(A,x);    </span><br><span class="line">y1</span><br><span class="line">B&#x3D;[-1 1.3 1.5;2 -1.8 1.6];      %定义的矩阵为自变量</span><br><span class="line">y2&#x3D;polyval(A,B);</span><br><span class="line">y2</span><br></pre></td></tr></table></figure>
-<p> · 调用此函数时，有两种形式：<br>&emsp;&emsp;y=poluval(A，x)—其中x为单独的自变量<br>&emsp;&emsp;y=poluval(A，B)—其中B为一个自变量矩阵<br><img src="/images/matlab/6-6.png" alt="6-6"></p>
+<p> · 调用此函数时，有两种形式：<br> &emsp;&emsp;$y=poluval(A，x)$ —其中x为单独的自变量<br>&emsp;&emsp;$y=poluval(A，B)$ —其中B为一个自变量矩阵<br><img src="/images/matlab/6-6.png" alt="6-6"></p>
 <p><br></p>
-<h4 id="polyvalm函数"><a href="#polyvalm函数" class="headerlink" title="polyvalm函数"></a>polyvalm函数</h4><p>· 已知多项式p(x)=3<sup>3</sup>-x<sup>2</sup>+5，求矩阵A=$\begin{pmatrix} -1 &amp; 2 \\ -2 &amp; 1 \end{pmatrix}$的多项式的值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">p&#x3D;[3 -1 0 5];</span><br><span class="line">x&#x3D;[-1 2; -2 1];</span><br><span class="line">polyval(p,x)</span><br><span class="line">polyvalm(p,x)</span><br></pre></td></tr></table></figure><br><img src="/images/matlab/6-7.png" alt="6-7"></p>
+<h4 id="polyvalm函数"><a href="#polyvalm函数" class="headerlink" title="polyvalm函数"></a>polyvalm函数</h4><p>· 已知多项式 $p(x)=3^3-x^2+5$ ，求矩阵 A=$\begin{pmatrix} -1 &amp; 2 \\ -2 &amp; 1 \end{pmatrix}$ 的多项式的值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">p&#x3D;[3 -1 0 5];</span><br><span class="line">x&#x3D;[-1 2; -2 1];</span><br><span class="line">polyval(p,x)</span><br><span class="line">polyvalm(p,x)</span><br></pre></td></tr></table></figure><br><img src="/images/matlab/6-7.png" alt="6-7"></p>
 <p><br></p>
-<h2 id="多项式求根"><a href="#多项式求根" class="headerlink" title="多项式求根"></a>多项式求根</h2><p>· 已知多项式x<sup>3</sup>-6x<sup>2</sup>-72x-27的根。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">p&#x3D;[1 -6 -72 -27];</span><br><span class="line">k&#x3D;poly2sym(p)</span><br><span class="line">r&#x3D;roots(p)</span><br></pre></td></tr></table></figure><br><img src="/images/matlab/6-8.png" alt="6-8"></p>
+<h2 id="多项式求根"><a href="#多项式求根" class="headerlink" title="多项式求根"></a>多项式求根</h2><p>· 已知多项式 $x^3-6x^2-72x-27$ 的根。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">p&#x3D;[1 -6 -72 -27];</span><br><span class="line">k&#x3D;poly2sym(p)</span><br><span class="line">r&#x3D;roots(p)</span><br></pre></td></tr></table></figure><br><img src="/images/matlab/6-8.png" alt="6-8"></p>
 <p>· 若已知多项式的根，可以反求多项式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">r&#x3D;[2 5 8 7];    %已知根</span><br><span class="line">p&#x3D;poly(r)       %反求多项式系数</span><br><span class="line">k&#x3D;poly2sym(p)   %导出多项式</span><br><span class="line">r&#x3D;roots(p)      %再次求出多项式的根验证正确性</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>· 注意有根才能求根！<br><img src="/images/matlab/6-9.png" alt="6-9"></p>
 <p><br></p>
 <h2 id="部分分式展开"><a href="#部分分式展开" class="headerlink" title="部分分式展开"></a>部分分式展开</h2><p>对有理多项式 $\frac{10(s+2)}{(s+1)(s+3)(s+4)}$ 进行展开<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">num&#x3D;10*[1 2];</span><br><span class="line">den&#x3D;poly([-1;-3;-4]);</span><br><span class="line">[res,poles,k]&#x3D;residue(num,den)</span><br></pre></td></tr></table></figure><br>结果是余数、极点和部分分式展开的常数项，如下：</p>
@@ -415,13 +415,37 @@ k = polyder(a,b) : 求多项式a和b 乘积的导函数多项式。
 <p><br></p>
 <h2 id="求解线性方程组"><a href="#求解线性方程组" class="headerlink" title="求解线性方程组"></a>求解线性方程组</h2><center>
 
-<p>$\begin{cases} 2x+3y-z=2 \\8x-2y-3z=4 \\ 45x+3y+9z=23 \end{cases}$</p>
-<p>&lt;/center&gt;<br>方法一、</p>
+$\begin{cases} 2x+3y-z=2 \\8x-2y-3z=4 \\ 45x+3y+9z=23 \end{cases}$  
+
+
+
+
+
+</center>
+
+
+<p>方法一、</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[2 3 -1;8 2 3;45 3 9];</span><br><span class="line">b&#x3D;[2;4;23];</span><br><span class="line">z&#x3D;rats(inv(a)*b)</span><br></pre></td></tr></table></figure>
 <p>方法二：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">syms x y z</span><br><span class="line">[x y z]&#x3D;solve(2*x+3*y-z-2,8*x+2*y+3*z-4,45*x+3*y+9*z-23)</span><br></pre></td></tr></table></figure>
 <p><br></p>
-<h2 id="解定积分"><a href="#解定积分" class="headerlink" title="解定积分"></a>解定积分</h2><p><h2 id="2"></h2><font size=5 color=red><center>数值插值 </center></font></p>
+<h2 id="解定积分"><a href="#解定积分" class="headerlink" title="解定积分"></a>解定积分</h2><center>
+
+$I= \int_0^1 xlin(1+x)d_x$
+
+
+
+
+
+
+
+
+
+
+</center>
+
+<p>· 方法一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quad(&#39;x.*log(1+x)&#39;,0,1)</span><br></pre></td></tr></table></figure><br>· 方法二：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">syms x</span><br><span class="line">int(x*log(1+x),0,1)</span><br></pre></td></tr></table></figure></p>
+<p><h2 id="2"></h2><font size=5 color=red><center>数值插值 </center></font></p>
 <p><h2 id="3"></h2><font size=5 color=red><center>函数的极限 </center></font></p>
 <p><h2 id="4"></h2><font size=5 color=red><center>数值积分</center></font></p>
 <p><h2 id="5"></h2><font size=5 color=red><center>多元统计分析 </center></font></p>
