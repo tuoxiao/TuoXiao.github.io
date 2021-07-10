@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://tuoxiao.github.io/images/jixieyuanli/1-14.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/jixieyuanli/1-15.png">
 <meta property="article:published_time" content="2021-06-24T14:52:07.000Z">
-<meta property="article:modified_time" content="2021-07-10T15:39:05.171Z">
+<meta property="article:modified_time" content="2021-07-10T15:50:38.918Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="机械原理">
 <meta property="article:tag" content="机械设计">
@@ -561,24 +561,40 @@
 <p><br></p>
 <p><img src="/images/jixieyuanli/1-112.png" alt="1-112"></p>
 <p><br></p>
-<h3 id="2-2-设计图"><a href="#2-2-设计图" class="headerlink" title="2.2  设计图"></a>2.2  设计图</h3><p><img src="/images/jixieyuanli/1-12.png" alt="1-12"><br><img src="/images/jixieyuanli/1-13.png" alt="1-13"><br><img src="/images/jixieyuanli/1-14.png" alt="1-14"><br><img src="/images/jixieyuanli/1-15.png" alt="1-15"></p>
-<p>传动比  </p>
-<p>$i_皮=\frac{900}{300}=3$  </p>
-<p>$i_{21}=\frac{300}{75}=4$  </p>
-<p>$i_{32}=\frac{75}{25} =3$  </p>
-<p>$i_{43} =\frac{25}{11} =2.2$  </p>
-<p>$\frac{i_{23}}{i_{43}}=1.36$  </p>
-<p>$\frac{i_{21}}{i_{32}}=1.33$</p>
-<p>$i_{齿’}=\frac{i_轮 i_2 i_3i_4}{i_转 i_1 i_{1’}i_{3’}}=89.09$</p>
-<p>$i_齿=\frac{980}{11}=89.09$</p>
+<h3 id="2-2-设计图"><a href="#2-2-设计图" class="headerlink" title="2.2  设计图"></a>2.2  设计图</h3><p><br></p>
+<p><img src="/images/jixieyuanli/1-12.png" alt="1-12"><br><br></p>
+<p><img src="/images/jixieyuanli/1-13.png" alt="1-13"><br><br></p>
+<p><img src="/images/jixieyuanli/1-14.png" alt="1-14"><br><br></p>
+<p><img src="/images/jixieyuanli/1-15.png" alt="1-15"></p>
+<p><br></p>
+<p><br></p>
+<h2 id="三、连杆机构的尺度综合"><a href="#三、连杆机构的尺度综合" class="headerlink" title="三、连杆机构的尺度综合"></a>三、连杆机构的尺度综合</h2><h3 id="3-1-建立模型"><a href="#3-1-建立模型" class="headerlink" title="3.1  建立模型"></a>3.1  建立模型</h3><p>由已知条件可以得出：<br><br></p>
 <p>$k=\sqrt{H^2+I^2}=4.89$</p>
+<p><br></p>
 <p>$\psi=\frac{S}{A}·\frac{180}{\pi}=38.85^\circ$</p>
-<p>$cos\Phi_1=\frac{2C^2-(D_1D_2)^2}{2C^2}$</p>
+<p><br></p>
+<p>在$\Delta{D_2D_1O_2}$中：</p>
+<p><br><br>$cos\Phi_1=\frac{2C^2-(D_1D_2)^2}{2C^2}$</p>
+<p><br></p>
+<p>在$\Delta{D_2D_1O_1}$中：</p>
+<p><br></p>
 <p>$cos\Phi_2=\frac{(P+R)^2+(P-R)^2-D_1D_2}{2C^2}$</p>
+<p><br></p>
+<p>由上述两个式子化简得到:</p>
+<p><br></p>
 <p>${D_1D_2}^2=(P+R)^2+(P-R)^2-2(P^2-R^2)cos\theta=2C^2-2C^2(1-cos\theta)$</p>
+<p><br></p>
+<p>进一步化简得到：  </p>
+<p><br>  </p>
 <p>$C=\sqrt{\frac{P^2(1-cos\theta)-R^2(1+cos\theta)}{2sin^2{\frac{\theta}{2}}}}$</p>
+<p><br></p>
 <p>$P=\begin{Bmatrix} \frac{K^2-R^2\begin{bmatrix}\frac{1+cos\theta}{2sin^2\frac{\psi}{2}}-\frac{sin\theta}{tan\frac{\psi}{2}}-cos\theta\end{bmatrix}}{\frac{1-cos\theta}{2sin^2\frac{\psi}{2}}+\frac{sin\theta}{tan\frac{\psi}{2}}+cos\theta}\end{Bmatrix}^\frac{1}{2}$</p>
+<p><br></p>
+<p>根据机构极限位置可以求出2个传动角公式：</p>
+<p><br></p>
 <p>$\gamma_1=arccos(\frac{C^2+P^2-(K+R)^2}{2CP})$</p>
+<p><br></p>
+<p>$\gamma_2=arccos(\frac{C^2+P^2-(K+R)^2}{2CP})$</p>
 <p>$\overrightarrow{P}=\overrightarrow{K}+\overrightarrow{C}-\overrightarrow{R}$</p>
 <p>$\alpha_3=\frac{\omega_1Rcos(\theta_1-\theta_3)(\omega_2-\omega_1)sin(\theta_2-\theta_3)-sin(\theta_2-\theta_1)(\omega_2-\omega_3)cos(\theta_2-\theta_3)}{Psin(\theta_2-\theta_3)^2}$</p>
 <p>$\alpha_2=\frac{\omega_1Rcos(\theta_2-\theta_1)(\omega_1-\omega_3)sin(\theta_3-\theta_2)-sin(\theta_1-\theta_3)(\omega_3-\omega_2)cos(\theta_3-\theta_2)}{Psin(\theta_3-\theta_2)^2}$</p>
