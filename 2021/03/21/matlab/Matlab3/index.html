@@ -18,19 +18,19 @@
   
   
   <title>MATLAB绘图 | TuTo&#39;Blog</title>
-  <meta name="description" content="目录 函数注释 数据拟合 绘制二维曲线 特殊函数调用 绘制三维曲线  函数注释  常用绘图函数    函数 功能     plot 建立向量或矩阵的图形   line 将数组中各点用线段链接起来   semilogx x轴用于对数标度，y轴线性标度绘制图形   semilogy y轴用于对数标度，x轴线性标度绘制图形   loglog x,y轴都取对数标度建立图形   plotyy 在图形左右侧同">
+  <meta name="description" content="目录 函数注释 绘制二维曲线 特殊函数调用 绘制三维曲线   函数注释  常用绘图函数    函数 功能     plot 建立向量或矩阵的图形   line 将数组中各点用线段链接起来   semilogx x轴用于对数标度，y轴线性标度绘制图形   semilogy y轴用于对数标度，x轴线性标度绘制图形   loglog x,y轴都取对数标度建立图形   plotyy 在图形左右侧同时建立纵">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MATLAB绘图">
 <meta property="og:url" content="http://tuoxiao.github.io/2021/03/21/matlab/Matlab3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="目录 函数注释 数据拟合 绘制二维曲线 特殊函数调用 绘制三维曲线  函数注释  常用绘图函数    函数 功能     plot 建立向量或矩阵的图形   line 将数组中各点用线段链接起来   semilogx x轴用于对数标度，y轴线性标度绘制图形   semilogy y轴用于对数标度，x轴线性标度绘制图形   loglog x,y轴都取对数标度建立图形   plotyy 在图形左右侧同">
+<meta property="og:description" content="目录 函数注释 绘制二维曲线 特殊函数调用 绘制三维曲线   函数注释  常用绘图函数    函数 功能     plot 建立向量或矩阵的图形   line 将数组中各点用线段链接起来   semilogx x轴用于对数标度，y轴线性标度绘制图形   semilogy y轴用于对数标度，x轴线性标度绘制图形   loglog x,y轴都取对数标度建立图形   plotyy 在图形左右侧同时建立纵">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/4-5.png">
-<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6-11.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/4-1.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/4-4.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/4-2.png">
+<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/5-16.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/4-3.png">
+<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/5-15.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/5-5.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/5-6.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/5-7.png">
@@ -38,14 +38,15 @@
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/5-9.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/5-10.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/5-11.png">
+<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/5-14.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/5-12.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/5-13.png">
 <meta property="article:published_time" content="2021-03-20T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-07-15T06:51:03.198Z">
+<meta property="article:modified_time" content="2021-07-21T08:55:55.302Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="matlab绘图">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://tuoxiao.github.io/images/matlab/4-5.png">
+<meta name="twitter:image" content="http://tuoxiao.github.io/images/matlab/4-1.png">
   <!-- Canonical links -->
   <link rel="canonical" href="http://tuoxiao.github.io/2021/03/21/matlab/Matlab3/index.html">
   
@@ -364,10 +365,10 @@
       
         <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
 <li><a href="#1">函数注释</a></li>
-<li><a href="#5">数据拟合</a></li>
 <li><a href="#2">绘制二维曲线</a></li>
 <li><a href="#3">特殊函数调用</a></li>
 <li><a href="#4">绘制三维曲线</a></li>
+<li><a href="#5"></a></li>
 </ul>
 <p><h2 id='1'></h2><font size=5 color=red><center>函数注释 </center></font></p>
 <h3 id="常用绘图函数"><a href="#常用绘图函数" class="headerlink" title="常用绘图函数"></a>常用绘图函数</h3><div class="table-container">
@@ -601,122 +602,6 @@
 </div>
 <p><br></p>
 <p><br></p>
-<p><h2 id='5'></h2><font size=5 color=red><center>数据拟合 </center></font></p>
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">x&#x3D;[1 2 3 4 5 6 7 8 9 10]</span><br><span class="line">y&#x3D;[1 2 3 4 4 4.7 5 5.2 6 7.2 ]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">%尝试一次多项式拟合  </span><br><span class="line">p1&#x3D;polyfit(x,y,1)</span><br><span class="line"></span><br><span class="line">%尝试第二次拟合  </span><br><span class="line">p3&#x3D;polyfit(x,y,3)</span><br><span class="line"></span><br><span class="line">%对拟合曲线进行比较</span><br><span class="line">x2&#x3D;1:0.1:10</span><br><span class="line">y1&#x3D;polyval(p1,x2)</span><br><span class="line">y3&#x3D;polyval(p3,x2)</span><br><span class="line">plot(x,y,&#39;*&#39;,x2,y1,&#39;b&#39;,x2,y3,&#39;r&#39;)</span><br></pre></td></tr></table></figure>
-<h4 id="拟合效果"><a href="#拟合效果" class="headerlink" title="拟合效果"></a>拟合效果</h4><p><img src="/images/matlab/4-5.png" alt="4-5"></p>
-<h4 id="最小二乘拟合"><a href="#最小二乘拟合" class="headerlink" title="最小二乘拟合"></a>最小二乘拟合</h4><p>· 某地一煤矿，为估计其储量便于开采，先在该地进行开采，先在该地进行勘探。假设该地是一长方形区域，长为4km，宽为5km.勘探得到如下表所示数据：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">编号</th>
-<th style="text-align:center">坐标/km</th>
-<th style="text-align:center">煤层厚度/km</th>
-<th style="text-align:center">*</th>
-<th style="text-align:center">编号</th>
-<th style="text-align:center">坐标/km</th>
-<th style="text-align:center">煤层厚度/km</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">(1,1)</td>
-<td style="text-align:center">13.2</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">11</td>
-<td style="text-align:center">(3,1)</td>
-<td style="text-align:center">23.28</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">(1,2)</td>
-<td style="text-align:center">25.80</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">12</td>
-<td style="text-align:center">(3,2)</td>
-<td style="text-align:center">26.48</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">(1,3)</td>
-<td style="text-align:center">8.47</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">13</td>
-<td style="text-align:center">(3,3)</td>
-<td style="text-align:center">29.14</td>
-</tr>
-<tr>
-<td style="text-align:center">4</td>
-<td style="text-align:center">(1,4)</td>
-<td style="text-align:center">25.27</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">14</td>
-<td style="text-align:center">(3,4)</td>
-<td style="text-align:center">12.04</td>
-</tr>
-<tr>
-<td style="text-align:center">5</td>
-<td style="text-align:center">(1,5)</td>
-<td style="text-align:center">22.32</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">15</td>
-<td style="text-align:center">(3,5)</td>
-<td style="text-align:center">14.58</td>
-</tr>
-<tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">(2,1)</td>
-<td style="text-align:center">15.47</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">16</td>
-<td style="text-align:center">(4,1)</td>
-<td style="text-align:center">19.95</td>
-</tr>
-<tr>
-<td style="text-align:center">7</td>
-<td style="text-align:center">(2,2)</td>
-<td style="text-align:center">21.33</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">17</td>
-<td style="text-align:center">(4,2)</td>
-<td style="text-align:center">23.73</td>
-</tr>
-<tr>
-<td style="text-align:center">8</td>
-<td style="text-align:center">(2,3)</td>
-<td style="text-align:center">14.49</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">18</td>
-<td style="text-align:center">(4,3)</td>
-<td style="text-align:center">15.35</td>
-</tr>
-<tr>
-<td style="text-align:center">9</td>
-<td style="text-align:center">(2,4)</td>
-<td style="text-align:center">24.83</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">19</td>
-<td style="text-align:center">(4,4)</td>
-<td style="text-align:center">18.01</td>
-</tr>
-<tr>
-<td style="text-align:center">10</td>
-<td style="text-align:center">(2,5)</td>
-<td style="text-align:center">26.19</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">20</td>
-<td style="text-align:center">(4,5)</td>
-<td style="text-align:center">16.29</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">clc</span><br><span class="line">x&#x3D;1:4;</span><br><span class="line">y&#x3D;1:5;</span><br><span class="line">[X,Y]&#x3D;meshgrid(x,y)</span><br><span class="line">Z&#x3D;-[13.72 25.80 8.47 25.27 22.32;15.47 21.33 14.49 24.83 26.19;23.28 26.48 29.14 12.04 14.58;19.95 23.73 15.35 18.01 16.29]&#39;</span><br><span class="line">surf(X,Y,Z)</span><br></pre></td></tr></table></figure>
-<p><img src="/images/matlab/6-11.png" alt="6-11"></p>
-<p><br></p>
-<h4 id="采用拟合的方法"><a href="#采用拟合的方法" class="headerlink" title="采用拟合的方法"></a>采用拟合的方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  clc;</span><br><span class="line"> x&#x3D;1:4;</span><br><span class="line"> y&#x3D;1:5;</span><br><span class="line"> [X,Y]&#x3D;meshgrid(x,y);</span><br><span class="line"> Z&#x3D;-[13.72 25.80 8.47 25.27 22.32;15.47 21.33 14.49 24.83 26.19;23.28 26.48 29.14 12.04 14.58;19.95 23.73 15.35 18.01 16.29]&#39;;</span><br><span class="line"> surf(X,Y,Z);</span><br><span class="line"> x&#x3D;reshape(X,20,1);</span><br><span class="line"> y&#x3D;reshape(Y,20,1);</span><br><span class="line"> z&#x3D;reshape(Z,20,1);</span><br><span class="line"> p&#x3D;4;</span><br><span class="line"> q&#x3D;5;</span><br><span class="line"> U&#x3D;leftmatrix(x,p,y,q);</span><br><span class="line"> V&#x3D;rightmatrix(x,p,y,q,z);</span><br><span class="line"> a_n&#x3D;U\V;</span><br><span class="line"> aa&#x3D;zeros();</span><br><span class="line"> for i&#x3D;1:length(a_n)</span><br><span class="line">     ii&#x3D;quotient(i-1,q)+1;</span><br><span class="line">     jj&#x3D;mod(i-1,q)+1;</span><br><span class="line">     aa(ii,jj)&#x3D;a_n(i,1);</span><br><span class="line"> end</span><br><span class="line"> </span><br><span class="line"> aa;</span><br><span class="line"> </span><br><span class="line"> m&#x3D;31;n&#x3D;41;</span><br><span class="line"> [X1,Y1]&#x3D;meshgrid(linspace(1,4,m),linspace(1,5,n));</span><br><span class="line"> xx&#x3D;reshape(X1,m*n,1);</span><br><span class="line"> yy&#x3D;reshape(Y1,m*n,1);</span><br><span class="line"> zz&#x3D;zeros(m*n,1);</span><br><span class="line"> xy&#x3D;zeros(m*n,1);</span><br><span class="line"> xt&#x3D;zeros(m*n,1);</span><br><span class="line"> yt&#x3D;zeros(m*n,1);</span><br><span class="line"> for i&#x3D;1:p</span><br><span class="line">     for j&#x3D;1:q</span><br><span class="line">         xt&#x3D;xx.^(i-1);</span><br><span class="line">         yt&#x3D;yy.^(j-1);</span><br><span class="line">         xy&#x3D;xt.*yt;</span><br><span class="line">         zz&#x3D;zz+aa(i,j).*xy;</span><br><span class="line">     end</span><br><span class="line"> end</span><br><span class="line"> Z1&#x3D;reshape(zz,n,m);</span><br><span class="line"> surf(X1,Y1,Z1);</span><br><span class="line"> p&#x3D;sum(Z);</span><br><span class="line"> q&#x3D;p(:,[2,3,4]);</span><br><span class="line"> h&#x3D;sum(q&#39;)&#x2F;15;</span><br><span class="line"> v&#x3D;2000*4000*h;</span><br><span class="line"> </span><br><span class="line"> function U &#x3D;leftmatrix(x,p,y,q)</span><br><span class="line">     %U*a&#x3D;V,a为系数列矩阵，长度为p*q;</span><br><span class="line">     %U为q*p矩阵；</span><br><span class="line">     %x,y为长度一致的列矩阵,给定点的坐标；</span><br><span class="line">     %p,q为拟合的函数的x,y的幂的最高次数；</span><br><span class="line">     m&#x3D;length(x);</span><br><span class="line">     if(nargin~&#x3D;4)&amp;(m~&#x3D;length(y))</span><br><span class="line">         error(&#39;错误，检查错误！！&#39;);</span><br><span class="line">     end</span><br><span class="line">     U_L&#x3D;p*q;%U为p*q阶方程</span><br><span class="line">     U&#x3D;zeros(U_L,U_L);</span><br><span class="line">     for i&#x3D;1:p*q</span><br><span class="line">         for j&#x3D;1:p*q</span><br><span class="line">             x_z&#x3D;quotient(j-1,q)+quotient(i-1,q); %x的幂的次数，quotient为求商</span><br><span class="line">             y_z&#x3D;mod(j-1,q)+mod(i-1,q);</span><br><span class="line">             U(i,j)&#x3D;qiuhe(x,x_z,y,y_z);</span><br><span class="line">         end</span><br><span class="line">     end</span><br><span class="line"> end</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"> function V&#x3D;rightmatrix(x,p,y,q,z)</span><br><span class="line">     %U*a&#x3D;V</span><br><span class="line">     %V为一个列向量，长为p*q</span><br><span class="line">     %x,y,z为点的坐标</span><br><span class="line">     %p,q分别为x,y的幂的最高次数</span><br><span class="line"></span><br><span class="line">     if nargin~&#x3D;5</span><br><span class="line">         error(&#39;错误，检查检查rightmatrix&#39;);</span><br><span class="line">     end</span><br><span class="line">     V&#x3D;zeros(p*q,1);</span><br><span class="line">     for i&#x3D;1:p*q</span><br><span class="line">         x_z&#x3D;quotient(i-1,q);</span><br><span class="line">         y_z&#x3D;mod(i-1,q);</span><br><span class="line">         V(i,1)&#x3D;qiuhe(x,x_z,y,y_z,z);</span><br><span class="line">     end</span><br><span class="line"> end</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">function sh &#x3D;quotient(x,y)</span><br><span class="line">    %sh为x&#x2F;y的商</span><br><span class="line">    sh&#x3D;(x-mod(x,y)&#x2F;y);</span><br><span class="line">end</span><br><span class="line">    </span><br><span class="line">function he &#x3D;qiuhe(x,p,y,q,z)</span><br><span class="line">    %x,y向量长度相同</span><br><span class="line">    %p,q分别为x,y的幂的次数</span><br><span class="line">    m&#x3D;length(x);</span><br><span class="line">    if (nargin&lt;4)&amp;&amp;(m~&#x3D;length(y))</span><br><span class="line">        error(&#39;错误，检查!!&#39;)</span><br><span class="line">    end</span><br><span class="line">    if nargin &#x3D;&#x3D;4</span><br><span class="line">        z&#x3D;ones(m,1);</span><br><span class="line">    end</span><br><span class="line">    he&#x3D;0;</span><br><span class="line">    for i&#x3D;1:m</span><br><span class="line">        he&#x3D;he+x(i)^p*y(i)^q*z(i);</span><br><span class="line">    end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<p><code>出了问题，暂时搁置，以后解决！！</code></p>
 <p><br></p>
 <p><br></p>
 <p><h2 id='2'></h2><font size=5 color=red><center>绘制二维曲线 </center></font> </p>
@@ -738,40 +623,40 @@
 <li>用不同标度在同一坐标系中绘制曲线y1=200e<sup>-0.05x</sup>sinx 以及 y2=0.8e<sup>-0.5x</sup>sin10x  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x&#x3D;0:0.01:20;</span><br><span class="line">y1&#x3D;200*exp(-0.05*x).*sin(x);</span><br><span class="line">y2&#x3D;0.8*exp(-0.5*x).*sin(10*x);</span><br><span class="line">plotyy(x,y1,x,y2)</span><br></pre></td></tr></table></figure>
 输出效果：<br><img src="/images/matlab/4-2.png" alt="4-2"><br><br></li>
 </ul>
-<h2 id="特殊的二维图形"><a href="#特殊的二维图形" class="headerlink" title="特殊的二维图形"></a>特殊的二维图形</h2><ul>
-<li>条形图  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x&#x3D;-2.9:0.2:2.9;</span><br><span class="line">subplot(1,2,1);bar(x,exp(-x.*x),&#39;r&#39;);</span><br><span class="line">xlabel(x);ylabel(&#39;,exp(-x.*x)&#39;);</span><br><span class="line">title(&#39;垂直条形图&#39;);</span><br><span class="line">subplot(1,2,2);barh(x,exp(-x.*x),&#39;y&#39;);</span><br><span class="line">xlabel(x);ylabel(&#39;,exp(-x.*x)&#39;);</span><br><span class="line">title(&#39;水平条形图&#39;);</span><br></pre></td></tr></table></figure>
-· bar:以x轴为横坐标，y轴为纵坐标；<br>· barh:以y轴为横坐标，x轴为纵坐标；<br>· 括号内可添加(width/style/bar_color/Name/Value/axes_handle)<br><img src="/images/matlab/4-3.png" alt="4-3"><br><br></li>
-</ul>
 <p><br></p>
+<h3 id="误差图"><a href="#误差图" class="headerlink" title="误差图"></a>误差图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">% 误差相同情况</span><br><span class="line">x &#x3D; 1:10:100;</span><br><span class="line">y &#x3D; [20 30 45 40 60 65 80 75 95 90];</span><br><span class="line">err &#x3D; 8*ones(size(y));</span><br><span class="line">subplot(2,2,1);</span><br><span class="line">errorbar(x,y,err)</span><br><span class="line">% 误差变化情况</span><br><span class="line">x &#x3D; 1:10:100;</span><br><span class="line">y &#x3D; [20 30 45 40 60 65 80 75 95 90]; </span><br><span class="line">err &#x3D; [5 8 2 9 3 3 8 3 9 3];</span><br><span class="line">subplot(2,2,2);</span><br><span class="line">errorbar(x,y,err)</span><br><span class="line"></span><br><span class="line">% 水平方向误差</span><br><span class="line">x &#x3D; 1:10:100;</span><br><span class="line">y &#x3D; [20 30 45 40 60 65 80 75 95 90];</span><br><span class="line">err &#x3D; [1 3 5 3 5 3 6 4 3 3];</span><br><span class="line">subplot(2,2,3);</span><br><span class="line">errorbar(x,y,err,&#39;horizontal&#39;)</span><br><span class="line">% 双方向误差</span><br><span class="line">x &#x3D; 1:10:100;</span><br><span class="line">y &#x3D; [20 30 45 40 60 65 80 75 95 90];</span><br><span class="line">err &#x3D; [4 3 5 3 5 3 6 4 3 3];</span><br><span class="line">errorbar(x,y,err,&#39;both&#39;)</span><br><span class="line">% 双方向误差，没有线情况</span><br><span class="line">x &#x3D; 1:10:100;</span><br><span class="line">y &#x3D; [20 30 45 40 60 65 80 75 95 90];</span><br><span class="line">err &#x3D; [4 3 5 3 5 3 6 4 3 3];</span><br><span class="line">subplot(2,2,4);</span><br><span class="line">errorbar(x,y,err,&#39;both&#39;,&#39;o&#39;)</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/5-16.png" alt="5-16">  </p>
+<h3 id="条形图"><a href="#条形图" class="headerlink" title="条形图"></a>条形图</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x&#x3D;-2.9:0.2:2.9;</span><br><span class="line">subplot(1,2,1);bar(x,exp(-x.*x),&#39;r&#39;);</span><br><span class="line">xlabel(x);ylabel(&#39;,exp(-x.*x)&#39;);</span><br><span class="line">title(&#39;垂直条形图&#39;);</span><br><span class="line">subplot(1,2,2);barh(x,exp(-x.*x),&#39;y&#39;);</span><br><span class="line">xlabel(x);ylabel(&#39;,exp(-x.*x)&#39;);</span><br><span class="line">title(&#39;水平条形图&#39;);</span><br></pre></td></tr></table></figure>
 <ul>
-<li>饼状图<code>--pie</code>函数  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    X&#x3D;[19.3 21.6 51.6;34.2 70.3 82.4;61.4 82.9 90.8;50.5 54.9 59.1;29.4 36.3 3.47]</span><br><span class="line">x&#x3D;sum(X);</span><br><span class="line">explode&#x3D;zeros(size(x));</span><br><span class="line">    [c,offest]&#x3D;max(x);</span><br><span class="line">    explode(offest)&#x3D;1;</span><br><span class="line">    h&#x3D;pie(x,explode);</span><br><span class="line">    colormap summer</span><br></pre></td></tr></table></figure>
-<img src="/images/matlab/5-5.png" alt="5-5"> </li>
+<li>bar:以x轴为横坐标，y轴为纵坐标；  </li>
+<li>barh:以y轴为横坐标，x轴为纵坐标；</li>
+<li>括号内可添加(width/style/bar_color/Name/Value/axes_handle)<br><img src="/images/matlab/4-3.png" alt="4-3">  </li>
 </ul>
 <p><br></p>
 <p><br></p>
-<ul>
-<li>极坐标图<code>--polar</code>函数  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">theta&#x3D;0:0.01:2*pi;</span><br><span class="line">rho&#x3D;2-2*sin(theta);</span><br><span class="line">figure</span><br><span class="line">polar(theta,rho,&#39;r--&#39;)</span><br></pre></td></tr></table></figure>
-· theta:极角；rho:极径<br>· polar(theta,rho,LineSpec)：用LineSpec来指定极坐标图像中绘图的符号及颜色</li>
-</ul>
+<h3 id="直方图-histogram函数"><a href="#直方图-histogram函数" class="headerlink" title="直方图--histogram函数"></a>直方图<code>--histogram</code>函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; -4:0.1:4;</span><br><span class="line">y &#x3D; randn(10000,1);</span><br><span class="line">histogram(y,x)</span><br><span class="line">h &#x3D; findobj(gca,&#39;Type&#39;,&#39;Histogram&#39;);</span><br><span class="line">set(h,&#39;FaceColor&#39;,&#39;r&#39;,&#39;EdgeColor&#39;,&#39;b&#39;)         %  设置边界和填充颜色</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/5-15.png" alt="5-9">  </p>
+<p><br></p>
+<p><br></p>
+<h3 id="饼状图-pie函数"><a href="#饼状图-pie函数" class="headerlink" title="饼状图--pie函数"></a>饼状图<code>--pie</code>函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    X&#x3D;[19.3 21.6 51.6;34.2 70.3 82.4;61.4 82.9 90.8;50.5 54.9 59.1;29.4 36.3 3.47]</span><br><span class="line">x&#x3D;sum(X);</span><br><span class="line">explode&#x3D;zeros(size(x));</span><br><span class="line">    [c,offest]&#x3D;max(x);</span><br><span class="line">    explode(offest)&#x3D;1;</span><br><span class="line">    h&#x3D;pie(x,explode);</span><br><span class="line">    colormap summer</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/5-5.png" alt="5-5"> </p>
+<p><br></p>
+<p><br></p>
+<h3 id="极坐标图-polar函数"><a href="#极坐标图-polar函数" class="headerlink" title="极坐标图--polar函数"></a>极坐标图<code>--polar</code>函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">theta&#x3D;0:0.01:2*pi;</span><br><span class="line">rho&#x3D;2-2*sin(theta);</span><br><span class="line">figure</span><br><span class="line">polar(theta,rho,&#39;r--&#39;)</span><br></pre></td></tr></table></figure>
+<p>· theta:极角；rho:极径<br>· polar(theta,rho,LineSpec)：用LineSpec来指定极坐标图像中绘图的符号及颜色</p>
 <p><img src="/images/matlab/5-6.png" alt="5-6"></p>
 <p><br></p>
 <p><br></p>
-<ul>
-<li>误差条形图<code>--errorbar</code>函数  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x&#x3D;0:pi&#x2F;10:pi;</span><br><span class="line">y&#x3D;sin(x);</span><br><span class="line">e&#x3D;std(y)*ones(size(x));</span><br><span class="line">figure</span><br><span class="line">errorbar(x,y,e)</span><br></pre></td></tr></table></figure>
-<img src="/images/matlab/5-7.png" alt="5-7"></li>
-</ul>
+<h3 id="误差条形图-errorbar函数"><a href="#误差条形图-errorbar函数" class="headerlink" title="误差条形图--errorbar函数"></a>误差条形图<code>--errorbar</code>函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x&#x3D;0:pi&#x2F;10:pi;</span><br><span class="line">y&#x3D;sin(x);</span><br><span class="line">e&#x3D;std(y)*ones(size(x));</span><br><span class="line">figure</span><br><span class="line">errorbar(x,y,e)</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/5-7.png" alt="5-7"></p>
 <p><br></p>
 <p><br></p>
-<ul>
-<li>火柴杆图<code>--stem</code>函数  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x&#x3D;0:25;</span><br><span class="line">y&#x3D;[exp(-.07*x).*cos(x);exp(.05*x).*cos(x)]&#39;;</span><br><span class="line">h&#x3D;stem(x,y);</span><br><span class="line">set(h(1),&#39;MarkerFaceColor&#39;,&#39;blue&#39;)</span><br><span class="line">set(h(2),&#39;MarkerFaceColor&#39;,&#39;red&#39;,&#39;Marker&#39;,&#39;square&#39;)</span><br></pre></td></tr></table></figure>
-<img src="/images/matlab/5-8.png" alt="5-8"></li>
-</ul>
+<h3 id="火柴杆图-stem函数"><a href="#火柴杆图-stem函数" class="headerlink" title="火柴杆图--stem函数"></a>火柴杆图<code>--stem</code>函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x&#x3D;0:25;</span><br><span class="line">y&#x3D;[exp(-.07*x).*cos(x);exp(.05*x).*cos(x)]&#39;;</span><br><span class="line">h&#x3D;stem(x,y);</span><br><span class="line">set(h(1),&#39;MarkerFaceColor&#39;,&#39;blue&#39;)</span><br><span class="line">set(h(2),&#39;MarkerFaceColor&#39;,&#39;red&#39;,&#39;Marker&#39;,&#39;square&#39;)</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/5-8.png" alt="5-8"></p>
 <p><br></p>
 <p><br></p>
-<ul>
-<li>阶梯图<code>--stairs</code>函数  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">X&#x3D;linespace(0,1,30)&#39;;</span><br><span class="line">Y&#x3D;[cos(10*x),exp(X).*sin(10*X)];</span><br><span class="line">h&#x3D;stairs(X,Y);</span><br><span class="line">set(h(1),&#39;Marker&#39;,&#39;o&#39;,&#39;MarkerSize&#39;,4)</span><br><span class="line">set(h(2),&#39;Marker&#39;,&#39;o&#39;,MarkerFaceColor&#39;,&#39;m&#39;)</span><br></pre></td></tr></table></figure>
-<img src="/images/matlab/5-9.png" alt="5-9">  </li>
-</ul>
+<h3 id="阶梯图-stairs函数"><a href="#阶梯图-stairs函数" class="headerlink" title="阶梯图--stairs函数"></a>阶梯图<code>--stairs</code>函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">X&#x3D;linespace(0,1,30)&#39;;</span><br><span class="line">Y&#x3D;[cos(10*x),exp(X).*sin(10*X)];</span><br><span class="line">h&#x3D;stairs(X,Y);</span><br><span class="line">set(h(1),&#39;Marker&#39;,&#39;o&#39;,&#39;MarkerSize&#39;,4)</span><br><span class="line">set(h(2),&#39;Marker&#39;,&#39;o&#39;,MarkerFaceColor&#39;,&#39;m&#39;)</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/5-9.png" alt="5-9">  </p>
 <p><br></p>
 <p><br></p>
 <p><h2 id='3'></h2><font size=5 color=red><center>特殊函数调用 </center></font>  </p>
@@ -784,12 +669,18 @@
 <img src="/images/matlab/5-11.png" alt="5-11"></li>
 </ul>
 <p><br></p>
+<h3 id="绘制小幅一图多像"><a href="#绘制小幅一图多像" class="headerlink" title="绘制小幅一图多像"></a>绘制小幅一图多像</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">% 同时绘制变量dv1-dv4的柱状分布图</span><br><span class="line">figure</span><br><span class="line">subplot(2,2,1);</span><br><span class="line">hist(X(:,2));</span><br><span class="line">title(&#39;dv1柱状分布图&#39;,&#39;fontsize&#39;,12)</span><br><span class="line">subplot(2,2,2);</span><br><span class="line">hist(X(:,3));</span><br><span class="line">title(&#39;dv2柱状分布图&#39;,&#39;fontsize&#39;,12)</span><br><span class="line">subplot(2,2,3);</span><br><span class="line">hist(X(:,4));</span><br><span class="line">title(&#39;dv3柱状分布图&#39;,&#39;fontsize&#39;,12)</span><br><span class="line">subplot(2,2,4);</span><br><span class="line">hist(X(:,5));</span><br><span class="line">title(&#39;dv4柱状分布图&#39;,&#39;fontsize&#39;,12)</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/5-14.png" alt="5-11"></p>
+<p><br></p>
 <p><br></p>
 <p><h2 id='4'></h2><font size=5 color=red><center>绘制三维曲线 </center></font>  </p>
 <h3 id="1、例1"><a href="#1、例1" class="headerlink" title="1、例1"></a>1、例1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x&#x3D;20*t;</span><br><span class="line">z&#x3D;100-0.5*9.781*t.^2;</span><br><span class="line">y&#x3D;3*t;</span><br><span class="line">plot3(x,y,z,&#39;rD&#39;);</span><br><span class="line">grid on;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/matlab/5-12.png" alt="5-12"></p>
 <h3 id="2、例2"><a href="#2、例2" class="headerlink" title="2、例2"></a>2、例2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">figure(3)</span><br><span class="line">x&#x3D;linspace(-2,2,500)</span><br><span class="line">y&#x3D;linspace(-2,2,500)</span><br><span class="line">[xx,yy]&#x3D;meshgrid(x,y)</span><br><span class="line">zz&#x3D;xx.*exp(-xx.^2-yy.^2)</span><br><span class="line">mesh(xx,yy,zz)</span><br></pre></td></tr></table></figure>
 <p><img src="/images/matlab/5-13.png" alt="5-13"></p>
+<p><br></p>
+<p><br></p>
+<p><h2 id='5'></h2><font size=5 color=red><center> </center></font></p>
 
       
     </div>
