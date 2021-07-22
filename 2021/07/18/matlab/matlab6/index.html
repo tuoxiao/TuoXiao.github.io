@@ -18,12 +18,12 @@
   
   
   <title>Matlab案例分析 | TuTo&#39;Blog</title>
-  <meta name="description" content="[目录] 找出10万以内的所有亲和数 编写猜数字游戏 钻井问题 BP网络预测 M&#x2F;M&#x2F;1排队问题 利用相关系数修复碎纸条 多元统计分析  一、  找出10万以内的所有亲和数  1.1  题目介绍&amp;emsp;&amp;emsp;亲和数是这样一对正整数a和b，使得a的所有真因子的和等于b，而b的所有真因子的和等于a。亲和数问题最早由毕达哥拉斯学派发现和研究的。他们在研究数字的规律的时候发现有以下的性点的两个数">
+  <meta name="description" content="[目录] 找出10万以内的所有亲和数 编写猜数字游戏 钻井问题 BP网络预测 M&#x2F;M&#x2F;1排队问题 利用相关系数修复碎纸条 多元统计分析 主成分回归估计  一、  找出10万以内的所有亲和数  1.1  题目介绍&amp;emsp;&amp;emsp;亲和数是这样一对正整数a和b，使得a的所有真因子的和等于b，而b的所有真因子的和等于a。亲和数问题最早由毕达哥拉斯学派发现和研究的。他们在研究数字的规律的时候发现有以">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matlab案例分析">
 <meta property="og:url" content="http://tuoxiao.github.io/2021/07/18/matlab/matlab6/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="[目录] 找出10万以内的所有亲和数 编写猜数字游戏 钻井问题 BP网络预测 M&#x2F;M&#x2F;1排队问题 利用相关系数修复碎纸条 多元统计分析  一、  找出10万以内的所有亲和数  1.1  题目介绍&amp;emsp;&amp;emsp;亲和数是这样一对正整数a和b，使得a的所有真因子的和等于b，而b的所有真因子的和等于a。亲和数问题最早由毕达哥拉斯学派发现和研究的。他们在研究数字的规律的时候发现有以下的性点的两个数">
+<meta property="og:description" content="[目录] 找出10万以内的所有亲和数 编写猜数字游戏 钻井问题 BP网络预测 M&#x2F;M&#x2F;1排队问题 利用相关系数修复碎纸条 多元统计分析 主成分回归估计  一、  找出10万以内的所有亲和数  1.1  题目介绍&amp;emsp;&amp;emsp;亲和数是这样一对正整数a和b，使得a的所有真因子的和等于b，而b的所有真因子的和等于a。亲和数问题最早由毕达哥拉斯学派发现和研究的。他们在研究数字的规律的时候发现有以">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6/6-1.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6/6-3.png">
@@ -38,7 +38,7 @@
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6/6-16.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6/6-17.png">
 <meta property="article:published_time" content="2021-07-18T13:49:37.000Z">
-<meta property="article:modified_time" content="2021-07-22T15:53:54.435Z">
+<meta property="article:modified_time" content="2021-07-22T15:56:18.426Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="matlab应用">
 <meta name="twitter:card" content="summary">
@@ -367,6 +367,7 @@
 <li><a href="#5">M/M/1排队问题</a></li>
 <li><a href="#6">利用相关系数修复碎纸条</a></li>
 <li><a href="#7">多元统计分析</a></li>
+<li><a href="#8">主成分回归估计</a></li>
 </ul>
 <h2 id="一、-找出10万以内的所有亲和数"><a href="#一、-找出10万以内的所有亲和数" class="headerlink" title="一、  找出10万以内的所有亲和数"></a>一、  找出10万以内的所有亲和数</h2><h2 id="1"></h2>
 
@@ -731,7 +732,7 @@ $r=\frac{\sum_{i=1}^n(x_i-\bar x(y_i-\bar y))}{\sqrt{\sum_{i=1}^n(x_i-\bar x)^2}
 <p><br></p>
 <h2 id="8"></h2> 
 
-<h2 id="七、主成分回归估计"><a href="#七、主成分回归估计" class="headerlink" title="七、主成分回归估计"></a>七、主成分回归估计</h2><h3 id="7-1-题目分析-1"><a href="#7-1-题目分析-1" class="headerlink" title="7.1  题目分析"></a>7.1  题目分析</h3><p>&emsp;&emsp;主成分估计（principal component estimate）是Massy在1965年提出的，它是回归系数参数的一种线性有偏估计（biased estimate），同其它有偏估计，如岭估计（ridge estimate）等一样，是为了克服最小二乘（LS）估计在设计阵病态（即存在多重共线性）时表现出的不稳定性而提出的。主成分估计采用的方法是将原来的回归自变量变换到另一组变量，即主成分，选择其中一部分重要的主成分作为新的自变量（此时丢弃了一部分，影响不大的自变量，这实际达到了降维的目的），然后用最小二乘法对选取主成分后的模型参数进行估计，最后再变换回原来的模型求出参数的估计。  </p>
+<h2 id="八、主成分回归估计"><a href="#八、主成分回归估计" class="headerlink" title="八、主成分回归估计"></a>八、主成分回归估计</h2><h3 id="8-1-题目分析"><a href="#8-1-题目分析" class="headerlink" title="8.1  题目分析"></a>8.1  题目分析</h3><p>&emsp;&emsp;主成分估计（principal component estimate）是Massy在1965年提出的，它是回归系数参数的一种线性有偏估计（biased estimate），同其它有偏估计，如岭估计（ridge estimate）等一样，是为了克服最小二乘（LS）估计在设计阵病态（即存在多重共线性）时表现出的不稳定性而提出的。主成分估计采用的方法是将原来的回归自变量变换到另一组变量，即主成分，选择其中一部分重要的主成分作为新的自变量（此时丢弃了一部分，影响不大的自变量，这实际达到了降维的目的），然后用最小二乘法对选取主成分后的模型参数进行估计，最后再变换回原来的模型求出参数的估计。  </p>
 <p>&emsp;&emsp;求解水泥的影响因子与热量值之间的线性关系：</p>
 <table>
    <tr>
@@ -838,9 +839,9 @@ $r=\frac{\sum_{i=1}^n(x_i-\bar x(y_i-\bar y))}{\sqrt{\sum_{i=1}^n(x_i-\bar x)^2}
 </table>
 
 <p><br></p>
-<h3 id="7-2-程序解答"><a href="#7-2-程序解答" class="headerlink" title="7.2  程序解答"></a>7.2  程序解答</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line"></span><br><span class="line">A&#x3D;xlsread(&#39;D:\File\文档\MATLAB\暑期训练\多元统计分析\对水泥性质影响因素的线性回归\水泥.xlsx&#39;,&#39;Sheet1&#39;,&#39;A2:D14&#39;);</span><br><span class="line">B&#x3D;xlsread(&#39;D:\File\文档\MATLAB\暑期训练\多元统计分析\对水泥性质影响因素的线性回归\水泥.xlsx&#39;,&#39;Sheet2&#39;,&#39;A2:A14&#39;);</span><br><span class="line">[C,C_mean,C_std]&#x3D;zscore(A)%对A标准化处理：C为标准化处理后的值；C_mean为均值；C_std为标准方差</span><br><span class="line">[G,S,L]&#x3D;pca(C);</span><br><span class="line">L&#x3D;L(1:3)%取特征值的前三个</span><br><span class="line"></span><br><span class="line">%求特征向量</span><br><span class="line">d1&#x3D;size(C,1);</span><br><span class="line">d&#x3D;(C&#39;*C)&#x2F;(d1-1);</span><br><span class="line">D&#x3D;cov(d);</span><br><span class="line">e&#x3D;pcacov(D)&#39;;%特征向量</span><br><span class="line">E&#x3D;e(1:3,:)&#39;</span><br><span class="line">F&#x3D;C*E %F&#x3D;S</span><br><span class="line"></span><br><span class="line">Q&#x3D;E&#39;.&#x2F;C_std %</span><br><span class="line"></span><br><span class="line">syms X1 X2 X3 X4 F1 F2 F3</span><br><span class="line">F1&#x3D;Q(1,1)*(X1-C_mean(1))+Q(1,2)*(X2-C_mean(2))+Q(1,3)*(X3-C_mean(3))+Q(1,4)*(X4-C_mean(4));</span><br><span class="line">F2&#x3D;Q(2,1)*(X1-C_mean(1))+Q(2,2)*(X2-C_mean(2))+Q(2,3)*(X3-C_mean(3))+Q(2,4)*(X4-C_mean(4));</span><br><span class="line">F3&#x3D;Q(3,1)*(X1-C_mean(1))+Q(3,2)*(X2-C_mean(2))+Q(3,3)*(X3-C_mean(3))+Q(3,4)*(X4-C_mean(4));</span><br><span class="line"></span><br><span class="line">y&#x3D;95.423+9.883*F1+0.125*F2+4.555*F3;</span><br><span class="line"></span><br><span class="line">Y&#x3D;vpa(y,4)</span><br></pre></td></tr></table></figure>
+<h3 id="8-2-程序解答"><a href="#8-2-程序解答" class="headerlink" title="8.2  程序解答"></a>8.2  程序解答</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line"></span><br><span class="line">A&#x3D;xlsread(&#39;D:\File\文档\MATLAB\暑期训练\多元统计分析\对水泥性质影响因素的线性回归\水泥.xlsx&#39;,&#39;Sheet1&#39;,&#39;A2:D14&#39;);</span><br><span class="line">B&#x3D;xlsread(&#39;D:\File\文档\MATLAB\暑期训练\多元统计分析\对水泥性质影响因素的线性回归\水泥.xlsx&#39;,&#39;Sheet2&#39;,&#39;A2:A14&#39;);</span><br><span class="line">[C,C_mean,C_std]&#x3D;zscore(A)%对A标准化处理：C为标准化处理后的值；C_mean为均值；C_std为标准方差</span><br><span class="line">[G,S,L]&#x3D;pca(C);</span><br><span class="line">L&#x3D;L(1:3)%取特征值的前三个</span><br><span class="line"></span><br><span class="line">%求特征向量</span><br><span class="line">d1&#x3D;size(C,1);</span><br><span class="line">d&#x3D;(C&#39;*C)&#x2F;(d1-1);</span><br><span class="line">D&#x3D;cov(d);</span><br><span class="line">e&#x3D;pcacov(D)&#39;;%特征向量</span><br><span class="line">E&#x3D;e(1:3,:)&#39;</span><br><span class="line">F&#x3D;C*E %F&#x3D;S</span><br><span class="line"></span><br><span class="line">Q&#x3D;E&#39;.&#x2F;C_std %</span><br><span class="line"></span><br><span class="line">syms X1 X2 X3 X4 F1 F2 F3</span><br><span class="line">F1&#x3D;Q(1,1)*(X1-C_mean(1))+Q(1,2)*(X2-C_mean(2))+Q(1,3)*(X3-C_mean(3))+Q(1,4)*(X4-C_mean(4));</span><br><span class="line">F2&#x3D;Q(2,1)*(X1-C_mean(1))+Q(2,2)*(X2-C_mean(2))+Q(2,3)*(X3-C_mean(3))+Q(2,4)*(X4-C_mean(4));</span><br><span class="line">F3&#x3D;Q(3,1)*(X1-C_mean(1))+Q(3,2)*(X2-C_mean(2))+Q(3,3)*(X3-C_mean(3))+Q(3,4)*(X4-C_mean(4));</span><br><span class="line"></span><br><span class="line">y&#x3D;95.423+9.883*F1+0.125*F2+4.555*F3;</span><br><span class="line"></span><br><span class="line">Y&#x3D;vpa(y,4)</span><br></pre></td></tr></table></figure>
 <p><br></p>
-<h3 id="7-3-结果"><a href="#7-3-结果" class="headerlink" title="7.3  结果"></a>7.3  结果</h3><p><img src="/images/matlab/6/6-16.png" alt="6-16">  </p>
+<h3 id="8-3-结果"><a href="#8-3-结果" class="headerlink" title="8.3  结果"></a>8.3  结果</h3><p><img src="/images/matlab/6/6-16.png" alt="6-16">  </p>
 <p><img src="/images/matlab/6/6-17.png" alt="6-17"></p>
 
       
