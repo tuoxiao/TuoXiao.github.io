@@ -18,12 +18,12 @@
   
   
   <title>Matlab案例分析 | TuTo&#39;Blog</title>
-  <meta name="description" content="一、  找出10万以内的所有亲和数1.1  题目介绍&amp;emsp;&amp;emsp;亲和数是这样一对正整数a和b，使得a的所有真因子的和等于b，而b的所有真因子的和等于a。亲和数问题最早由毕达哥拉斯学派发现和研究的。他们在研究数字的规律的时候发现有以下的性点的两个数：    $1+2+4+71+142&#x3D;220$        $1+2+4+5+10+11+20+22+44+55+110&#x3D;284$">
+  <meta name="description" content="[目录] 找出10万以内的所有亲和数 编写猜数字游戏 钻井问题 BP网络预测 M&#x2F;M&#x2F;1排队问题 利用相关系数修复碎纸条 多元统计分析  一、  找出10万以内的所有亲和数  1.1  题目介绍&amp;emsp;&amp;emsp;亲和数是这样一对正整数a和b，使得a的所有真因子的和等于b，而b的所有真因子的和等于a。亲和数问题最早由毕达哥拉斯学派发现和研究的。他们在研究数字的规律的时候发现有以下的性点的两个数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matlab案例分析">
 <meta property="og:url" content="http://tuoxiao.github.io/2021/07/18/matlab/matlab6/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、  找出10万以内的所有亲和数1.1  题目介绍&amp;emsp;&amp;emsp;亲和数是这样一对正整数a和b，使得a的所有真因子的和等于b，而b的所有真因子的和等于a。亲和数问题最早由毕达哥拉斯学派发现和研究的。他们在研究数字的规律的时候发现有以下的性点的两个数：    $1+2+4+71+142&#x3D;220$        $1+2+4+5+10+11+20+22+44+55+110&#x3D;284$">
+<meta property="og:description" content="[目录] 找出10万以内的所有亲和数 编写猜数字游戏 钻井问题 BP网络预测 M&#x2F;M&#x2F;1排队问题 利用相关系数修复碎纸条 多元统计分析  一、  找出10万以内的所有亲和数  1.1  题目介绍&amp;emsp;&amp;emsp;亲和数是这样一对正整数a和b，使得a的所有真因子的和等于b，而b的所有真因子的和等于a。亲和数问题最早由毕达哥拉斯学派发现和研究的。他们在研究数字的规律的时候发现有以下的性点的两个数">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6/6-1.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6/6-3.png">
@@ -31,8 +31,12 @@
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6/6-7.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6/6-9.png">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6/6-11.png">
+<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6/6-14.png">
+<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6/6-15.png">
+<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6/6-12.png">
+<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/6/6-13.png">
 <meta property="article:published_time" content="2021-07-18T13:49:37.000Z">
-<meta property="article:modified_time" content="2021-07-21T13:24:29.062Z">
+<meta property="article:modified_time" content="2021-07-22T14:11:33.723Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="matlab应用">
 <meta name="twitter:card" content="summary">
@@ -353,7 +357,18 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="一、-找出10万以内的所有亲和数"><a href="#一、-找出10万以内的所有亲和数" class="headerlink" title="一、  找出10万以内的所有亲和数"></a>一、  找出10万以内的所有亲和数</h2><h3 id="1-1-题目介绍"><a href="#1-1-题目介绍" class="headerlink" title="1.1  题目介绍"></a>1.1  题目介绍</h3><p>&emsp;&emsp;亲和数是这样一对正整数a和b，使得a的所有真因子的和等于b，而b的所有真因子的和等于a。亲和数问题最早由毕达哥拉斯学派发现和研究的。他们在研究数字的规律的时候发现有以下的性点的两个数：</p>
+        <h2 id="目录"><a href="#目录" class="headerlink" title="[目录]"></a>[目录]</h2><ul>
+<li><a href="#1">找出10万以内的所有亲和数</a></li>
+<li><a href="#2">编写猜数字游戏</a></li>
+<li><a href="#3">钻井问题</a></li>
+<li><a href="#4">BP网络预测</a></li>
+<li><a href="#5">M/M/1排队问题</a></li>
+<li><a href="#6">利用相关系数修复碎纸条</a></li>
+<li><a href="#7">多元统计分析</a></li>
+</ul>
+<h2 id="一、-找出10万以内的所有亲和数"><a href="#一、-找出10万以内的所有亲和数" class="headerlink" title="一、  找出10万以内的所有亲和数"></a>一、  找出10万以内的所有亲和数</h2><h2 id="1"></h2>
+
+<h3 id="1-1-题目介绍"><a href="#1-1-题目介绍" class="headerlink" title="1.1  题目介绍"></a>1.1  题目介绍</h3><p>&emsp;&emsp;亲和数是这样一对正整数a和b，使得a的所有真因子的和等于b，而b的所有真因子的和等于a。亲和数问题最早由毕达哥拉斯学派发现和研究的。他们在研究数字的规律的时候发现有以下的性点的两个数：</p>
 <p><br></p>
 <center>
 
@@ -379,6 +394,8 @@ $1+2+4+5+10+11+20+22+44+55+110=284$
 
 <p><br></p>
 <p><br></p>
+<h2 id="2"></h2>
+
 <h2 id="二、编写猜数字游戏"><a href="#二、编写猜数字游戏" class="headerlink" title="二、编写猜数字游戏"></a>二、编写猜数字游戏</h2><h3 id="2-1-题目介绍"><a href="#2-1-题目介绍" class="headerlink" title="2.1  题目介绍"></a>2.1  题目介绍</h3><p>编写程序实现猜数字游戏 游戏说明：</p>
 <p>计算机随机生成一个4位数（4个数字互不相同）然后玩家输入一个4位数，计算机提示（？A？B）:</p>
 <p>&emsp;&emsp;&emsp;&emsp;A 的含义是数字位置正确的有多少个?</p>
@@ -392,6 +409,8 @@ $1+2+4+5+10+11+20+22+44+55+110=284$
 
 <p><br></p>
 <p><br></p>
+<h2 id="3"></h2>
+
 <h2 id="三、钻井问题"><a href="#三、钻井问题" class="headerlink" title="三、钻井问题"></a>三、钻井问题</h2><h3 id="3-1-题目介绍"><a href="#3-1-题目介绍" class="headerlink" title="3.1  题目介绍"></a>3.1  题目介绍</h3><p>&emsp;&emsp;试编写程序计算经过怎样的坐标平移旋转，可以使得这些点横纵坐标小数部分都小于0.05 的数目达到最大。</p>
 <p>十五口井的坐标如下：</p>
 <p>$(0.5,2)|(1.41,3.5)|(3,1.5)|(3.37,3.51)|(3.4,5.5)|(4.72,2)|(4.72,6.24)|(5.34,4.10)$  </p>
@@ -404,6 +423,8 @@ $1+2+4+5+10+11+20+22+44+55+110=284$
 
 <p><br></p>
 <p><br></p>
+<h2 id="4"></h2> 
+
 <h2 id="四、利用BP神经网络预测上海市2009年6月的入境旅游人数"><a href="#四、利用BP神经网络预测上海市2009年6月的入境旅游人数" class="headerlink" title="四、利用BP神经网络预测上海市2009年6月的入境旅游人数"></a>四、利用BP神经网络预测上海市2009年6月的入境旅游人数</h2><h3 id="4-1-题目介绍"><a href="#4-1-题目介绍" class="headerlink" title="4.1  题目介绍"></a>4.1  题目介绍</h3><p>&emsp;&emsp;说明：以2008年1月到2009年4 月的数据为输入，2008年2 月到2009年5月的数据为输出，训练模型，最终依靠训练出的模型预测2009年6月的旅游人数。 </p>
 <div class="table-container">
 <table>
@@ -479,6 +500,8 @@ $1+2+4+5+10+11+20+22+44+55+110=284$
 
 <p><br></p>
 <p><br></p>
+<h2 id="5"></h2> 
+
 <h2 id="五、-M-M-1-问题"><a href="#五、-M-M-1-问题" class="headerlink" title="五、 M/M/1 问题"></a>五、 M/M/1 问题</h2><h3 id="5-1-题目介绍"><a href="#5-1-题目介绍" class="headerlink" title="5.1  题目介绍"></a>5.1  题目介绍</h3><p>&emsp;&emsp;随机模拟问题：考虑一个简单的排队系统$M/M/1$，具体理论可参看《算法大全》中排队论模型一章，设顾客到达服务窗口的规律服从参数为 $\lambda$ 的泊松分布（等价于两个顾客之间的间隔时间服从均值为 $\frac{1}{\lambda}$ 的指数分布，又称参数为 $\lambda$ 的负指数分布，密度函数为：</p>
 <center>
 
@@ -505,6 +528,8 @@ $f(x)=\begin{cases} \lambda e^{-\lambda x} & \text{x>0} \\ 0 & \text{else}\end{c
 
 <p><br></p>
 <p><br></p>
+<h2 id="6"></h2> 
+
 <h2 id="六、利用相关系数修复碎纸条"><a href="#六、利用相关系数修复碎纸条" class="headerlink" title="六、利用相关系数修复碎纸条"></a>六、利用相关系数修复碎纸条</h2><h3 id="6-1-题目说明"><a href="#6-1-题目说明" class="headerlink" title="6.1  题目说明"></a>6.1  题目说明</h3><p>&emsp;&emsp;将一张写满内容A4纸平均分成19份，随机打乱顺序后尝试拼接完整。</p>
 <p>由于第I片的右侧和第I+1片的左侧存在相关性，故可以通过求取相关系数得出联系！  </p>
 <center>
@@ -521,6 +546,8 @@ $r=\frac{\sum_{i=1}^n(x_i-\bar x(y_i-\bar y))}{\sqrt{\sum_{i=1}^n(x_i-\bar x)^2}
 <p><br></p>
 <h2 id="6-2-程序"><a href="#6-2-程序" class="headerlink" title="6.2  程序"></a>6.2  程序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">%% 函数准备</span><br><span class="line">a1&#x3D;imread(&#39;000.bmp&#39;);</span><br><span class="line">[m,n]&#x3D;size(a1);</span><br><span class="line">dirname &#x3D; &#39;ImageChips&#39;;</span><br><span class="line">files &#x3D; dir(fullfile(dirname, &#39;*.bmp&#39;));</span><br><span class="line">a&#x3D;zeros(m,n,19);</span><br><span class="line">pic&#x3D;[];</span><br><span class="line"></span><br><span class="line">%% 算第一张纸条</span><br><span class="line">E&#x3D;[1];</span><br><span class="line">F&#x3D;[1:19];</span><br><span class="line">for j&#x3D;1:19</span><br><span class="line">    e&#x3D;tuo(j);</span><br><span class="line">    E&#x3D;[E,e];</span><br><span class="line">end</span><br><span class="line">f1 &#x3D; intersect(E,F);</span><br><span class="line">f&#x3D;setdiff(F,f1);</span><br><span class="line">disp([&#39;利用相关系数，得出&#39;,num2str(f),&#39;张纸片左侧与其他纸片右侧关系最小&#39;])</span><br><span class="line"></span><br><span class="line">%% 调用函数，测算结果</span><br><span class="line">c&#x3D;0;</span><br><span class="line">TT&#x3D;[9];</span><br><span class="line">j&#x3D;9;</span><br><span class="line">D&#x3D;[];</span><br><span class="line">for c&#x3D;1:18</span><br><span class="line">    T&#x3D;tuo(j);</span><br><span class="line">    TT&#x3D;[TT,T];</span><br><span class="line">    j&#x3D;T;</span><br><span class="line">    T&#x3D;tuo(j);</span><br><span class="line">    c&#x3D;c+1;</span><br><span class="line">end</span><br><span class="line">disp(&#39;纸片按照现行顺序，排列如下所示：&#39;)</span><br><span class="line">TT</span><br><span class="line">for ii &#x3D; 1:length(files)</span><br><span class="line">filename &#x3D; fullfile(dirname, files(TT(ii)).name);</span><br><span class="line">a(:,:,TT(ii))&#x3D;imread(filename);</span><br><span class="line">pic&#x3D;[pic,a(:,:,TT(ii))];</span><br><span class="line">end</span><br><span class="line">%double(pic);</span><br><span class="line">figure</span><br><span class="line">imshow(pic,[])</span><br><span class="line"></span><br><span class="line">%% 排序函数</span><br><span class="line">function T&#x3D;tuo(j)</span><br><span class="line">    a1&#x3D;imread(&#39;000.bmp&#39;);</span><br><span class="line">    [m,n]&#x3D;size(a1);</span><br><span class="line">    %imshow(a1);%显示图像</span><br><span class="line">    %image(a1);</span><br><span class="line"></span><br><span class="line">    dirname &#x3D; &#39;ImageChips&#39;;</span><br><span class="line">    files &#x3D; dir(fullfile(dirname, &#39;*.bmp&#39;));</span><br><span class="line">    a&#x3D;zeros(m,n,19);</span><br><span class="line">    pic&#x3D;[];</span><br><span class="line">    for ii &#x3D; 1:length(files)</span><br><span class="line">    filename &#x3D; fullfile(dirname, files(ii).name);</span><br><span class="line">    a(:,:,ii)&#x3D;imread(filename);</span><br><span class="line">    pic&#x3D;[pic,a(:,:,ii)];</span><br><span class="line">    end</span><br><span class="line">    %double(pic);</span><br><span class="line">    %figure</span><br><span class="line">    %imshow(pic,[])</span><br><span class="line">    a&#x3D;double(a);</span><br><span class="line">    b&#x3D;a.&#x2F;255;</span><br><span class="line">    r&#x3D;[];</span><br><span class="line">    m&#x3D;1;</span><br><span class="line">    RRr&#x3D;[];</span><br><span class="line">    for i&#x3D;1:19</span><br><span class="line">        x&#x3D;b(:,72,j);</span><br><span class="line">        y&#x3D;b(:,1,i);</span><br><span class="line">        r1&#x3D;sum((x-mean(x)).*(y-mean(y)));</span><br><span class="line">        r2&#x3D;sqrt(sum((x-mean(x)).^2))*sqrt(sum((y-mean(y)).^2));</span><br><span class="line">        r&#x3D;[r;m,(r1&#x2F;r2)];</span><br><span class="line">        %rr&#x3D;corrcoef(x,y);%或利用库函数来求样本相关系数</span><br><span class="line">        m&#x3D;m+1;</span><br><span class="line">        R&#x3D;max(r(:,2));</span><br><span class="line">        Rj&#x3D;r(r(:,2)&#x3D;&#x3D;R);%已知向量某一列特殊值求向量位置</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">        RRr&#x3D;[RRr;Rj];</span><br><span class="line">        T&#x3D;RRr;</span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><br></p>
+<h2 id="6"></h2> 
+
 <h3 id="6-3-结果"><a href="#6-3-结果" class="headerlink" title="6.3  结果"></a>6.3  结果</h3><center><img src="/images/matlab/6/6-11.png" width="100%" height="100%" align=center /></center>
 
 
@@ -535,6 +562,174 @@ $r=\frac{\sum_{i=1}^n(x_i-\bar x(y_i-\bar y))}{\sqrt{\sum_{i=1}^n(x_i-\bar x)^2}
 </ul>
 <p><br></p>
 <h4 id="6-4-2-对文件夹下的文件重命名"><a href="#6-4-2-对文件夹下的文件重命名" class="headerlink" title="6.4.2  对文件夹下的文件重命名"></a>6.4.2  对文件夹下的文件重命名</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">%% 对文件夹下的文件重命名</span><br><span class="line">files &#x3D; dir(&#39;F:\Matlab\*.mat&#39;);</span><br><span class="line">len&#x3D;length(files);</span><br><span class="line">for i&#x3D;1:len</span><br><span class="line">    oldname&#x3D;files(i).name;</span><br><span class="line">    newname&#x3D;strcat(num2str(i), &#39;new.mat&#39;);</span><br><span class="line">    command &#x3D; [&#39;rename&#39; 32 oldname 32 newname];</span><br><span class="line">    status &#x3D; dos(command);</span><br><span class="line">    if status &#x3D;&#x3D; 0</span><br><span class="line">        disp([oldname, &#39; 已被重命名为 &#39;, newname])</span><br><span class="line">    else</span><br><span class="line">        disp([oldname, &#39; 重命名失败!&#39;])</span><br><span class="line">    end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<p><br></p>
+<h2 id="7"></h2> 
+
+<h2 id="七、多元统计分析法"><a href="#七、多元统计分析法" class="headerlink" title="七、多元统计分析法"></a>七、多元统计分析法</h2><h3 id="7-1-题目分析"><a href="#7-1-题目分析" class="headerlink" title="7.1  题目分析"></a>7.1  题目分析</h3><p>&emsp;&emsp;下表是多个省市全年经济发展指标，试对其发展进行评价!</p>
+<p><br></p>
+<ul>
+<li>版幅限制我对列表进行了转置。<table>
+ <tr>
+    <td>省份</td>
+    <td>安徽</td>
+    <td>河南</td>
+    <td>湖北</td>
+    <td>湖南</td>
+    <td>江西</td>
+    <td>山西</td>
+ </tr>
+ <tr>
+    <td>生产总值</td>
+    <td>4812.70 </td>
+    <td>8815.09 </td>
+    <td>6320.40 </td>
+    <td>5612.26 </td>
+    <td>3495.94 </td>
+    <td>3000.00 </td>
+ </tr>
+ <tr>
+    <td>第一产业</td>
+    <td>932.40 </td>
+    <td>1647.48 </td>
+    <td>1020.09 </td>
+    <td>1155.85 </td>
+    <td>711.70 </td>
+    <td>253.40 </td>
+ </tr>
+ <tr>
+    <td>第二产业</td>
+    <td>2169.80 </td>
+    <td>4515.35 </td>
+    <td>2994.67 </td>
+    <td>2214.41 </td>
+    <td>1595.74 </td>
+    <td>1810.10 </td>
+ </tr>
+ <tr>
+    <td>第三产业</td>
+    <td>1710.50 </td>
+    <td>2652.26 </td>
+    <td>2305.72 </td>
+    <td>2242.00 </td>
+    <td>1188.50 </td>
+    <td>978.90 </td>
+ </tr>
+ <tr>
+    <td>人均总值</td>
+    <td>7448.60 </td>
+    <td>9071.80 </td>
+    <td>10505.80 </td>
+    <td>8379.40 </td>
+    <td>8161.30 </td>
+    <td>9024.10 </td>
+ </tr>
+ <tr>
+    <td>粮食产量</td>
+    <td>2743.00 </td>
+    <td>4260.00 </td>
+    <td>2100.12 </td>
+    <td>2810.26 </td>
+    <td>1803.40 </td>
+    <td>1062.00 </td>
+ </tr>
+ <tr>
+    <td>工业增加</td>
+    <td>1736.00 </td>
+    <td>3862.18 </td>
+    <td>1664.73 </td>
+    <td>1781.14 </td>
+    <td>1110.70 </td>
+    <td>1568.50 </td>
+ </tr>
+ <tr>
+    <td>固定投资</td>
+    <td>1914.20 </td>
+    <td>3099.00 </td>
+    <td>2356.38 </td>
+    <td>1981.29 </td>
+    <td>1820.00 </td>
+    <td>1458.50 </td>
+ </tr>
+ <tr>
+    <td>消费总额</td>
+    <td>1503.10 </td>
+    <td>2808.17 </td>
+    <td>2667.48 </td>
+    <td>2069.84 </td>
+    <td>1059.90 </td>
+    <td>884.80 </td>
+ </tr>
+ <tr>
+    <td>进出口</td>
+    <td>72.10 </td>
+    <td>66.10 </td>
+    <td>67.72 </td>
+    <td>54.38 </td>
+    <td>35.30 </td>
+    <td>53.80 </td>
+ </tr>
+ <tr>
+    <td>预算收入</td>
+    <td>274.40 </td>
+    <td>428.80 </td>
+    <td>303.69 </td>
+    <td>348.80 </td>
+    <td>205.80 </td>
+    <td>255.20 </td>
+ </tr>
+ <tr>
+    <td>居民收入</td>
+    <td>7511.40 </td>
+    <td>7704.90 </td>
+    <td>8023.00 </td>
+    <td>8617.48 </td>
+    <td>7560.00 </td>
+    <td>7902.90 </td>
+ </tr>
+ <tr>
+    <td>农民收入</td>
+    <td>2499.30 </td>
+    <td>2553.15 </td>
+    <td>2897.00 </td>
+    <td>2838.00 </td>
+    <td>2953.00 </td>
+    <td>2589.60 </td>
+ </tr>
+ <tr>
+    <td></td>
+ </tr>
+</table>
+
+
+</li>
+</ul>
+<p><br></p>
+<h3 id="7-2-解答过程"><a href="#7-2-解答过程" class="headerlink" title="7.2  解答过程"></a>7.2  解答过程</h3><ul>
+<li>Spss求解<ul>
+<li>1、对其中6(m)个变量13(z)个观测值,在<code>分析-描述统计-描述</code>中进行标准化处理，形成$[m\times z]$的矩阵A；  </li>
+<li>2、对标准化处理后的矩阵在<code>分析-降维-因子</code>中进行因子降维，用主成分分析法提取出特征值大于特定值的n个重要成分，形成$[z\times n]$的矩阵B；  </li>
+<li>3、将矩阵$A\times B$，即$[m,z]\times[z,n]=[m,n]$，的到成分系数与标准化参数的乘积矩阵SS;  </li>
+<li>4、对第二步中的选取的n个成分系数的权重重新分配，得到$[n,1]$的权重矩阵L；</li>
+<li>5、矩阵$L\times S$，即得到评价值。</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/matlab/6/6-14.png" alt="6-14"><br><img src="/images/matlab/6/6-15.png" alt="6-15"></p>
+<p><br></p>
+<ul>
+<li>Matlab求解  </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">A&#x3D;xlsread(&#39;D:\File\文档\MATLAB\暑期训练\多元统计分析\各省GDP占比权重排名\a.xlsx&#39;,&#39;Sheet1&#39;,&#39;B1:N7&#39;)%去取数据</span><br><span class="line">[B,B_mean,B_std]&#x3D;zscore(A)%对A进行标准化处理</span><br><span class="line"></span><br><span class="line">[coeff,score,latent] &#x3D; pca(B);</span><br><span class="line">latent%特征值</span><br><span class="line">l&#x3D;latent(latent&gt;1) %选取特征值大于一的</span><br><span class="line">L&#x3D;l&#x2F;sum(l)%权重矩阵</span><br><span class="line">score %成分系数与标准化参数的乘积矩阵 </span><br><span class="line">S&#x3D;score(:,1:3)</span><br><span class="line">E&#x3D;S(:,1)*L(1)+S(:,2)*L(2)+S(:,3)*L(3)</span><br><span class="line">G&#x3D;[&quot;安徽&quot;;&quot;河南&quot;;&quot;湖北&quot;;&quot;湖南&quot;;&quot;江西&quot;;&quot;山西&quot;]</span><br><span class="line"></span><br><span class="line">disp(&#39;各省评价得分如下所示&#39;)</span><br><span class="line">H&#x3D;[&quot;省份&quot;,&quot;得分&quot;;G,E]</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="6-3-结果-1"><a href="#6-3-结果-1" class="headerlink" title="6.3  结果"></a>6.3  结果</h3><p><img src="/images/matlab/6/6-12.png" alt="6-12"></p>
+<p><img src="/images/matlab/6/6-13.png" alt="6-13"></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<h2 id="8"></h2> 
+
+<h2 id="七、多元统计回归分析"><a href="#七、多元统计回归分析" class="headerlink" title="七、多元统计回归分析"></a>七、多元统计回归分析</h2>
       
     </div>
     <div class="article-footer">
