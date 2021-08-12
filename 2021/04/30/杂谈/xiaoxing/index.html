@@ -55,6 +55,8 @@
   
   
   
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
+  
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
@@ -421,9 +423,7 @@
     
   <section id="comments">
   	
-      <div id="lv-container" data-id="city" data-uid="MTAyMC81Mjc5MS8yOTI2OA==">
-        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-      </div>    
+           
     
   </section>
 
@@ -526,20 +526,24 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
    
     
-<script defer type="text/javascript">
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '3e0bdc40f32050ed629b',
+    clientSecret: '46c7c8ce86494c8148e916aba9ab77df38f524ec',
+    repo: 'Gittalk',
+    owner: 'tuoxiao',
+    admin: ['tuoxiao'],
+    id: md5(location.pathname),
+    distractionFreeMode: true
+    proxy: https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token
+  })
+  gitalk.render('comments')
+  </script>
 
-    if (typeof LivereTower === 'function') { return; }
-
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-</script>
-
+      
 
 
 
