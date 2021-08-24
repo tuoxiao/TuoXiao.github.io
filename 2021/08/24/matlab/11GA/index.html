@@ -26,7 +26,7 @@
 <meta property="og:description" content="遗传算法的介绍&amp;emsp;&amp;emsp;遗传算法是借鉴生物界的进化规律(适者生存,优胜劣汰)的遗传机制，演化而来的随机化搜索方法。它是由美国教授于1975年首先提出的，其主要特点是直接对结构对象进行操作，不存在求导和函数连续性的区间限定，具有内在的隐并行性和更好的全局寻优能力，采用概率化的寻优方法，能自动获取和指导优化的搜索空间，自适应的调整搜索方向，不需要确定的规则，遗传算法这些性质已被人们广泛的">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-24T01:04:29.000Z">
-<meta property="article:modified_time" content="2021-08-24T02:20:48.824Z">
+<meta property="article:modified_time" content="2021-08-24T07:12:31.520Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="数学建模">
 <meta name="twitter:card" content="summary">
@@ -358,6 +358,26 @@
 <li>3、按照个体适应值大小，从种群中选出适应值较大的个体构成交配池。</li>
 <li>用交叉和变异两个遗传算子对交配池中的个体进行操作，并形成新一代种群。</li>
 <li>5、反复执行步骤2~5，直至满足收敛判据为止。</li>
+</ul>
+<h3 id="遗传算法的运行决定"><a href="#遗传算法的运行决定" class="headerlink" title="遗传算法的运行决定"></a>遗传算法的运行决定</h3><p>&emsp;&emsp;<code>编码串长度、种群大小、交叉和变异概率</code></p>
+<ul>
+<li><p>编码串长度：由由优化问题所求的求解精度所决定。</p>
+</li>
+<li><p>种群大小：种群大小表示种群所含的个体数量；</p>
+<ul>
+<li>种群较小时，可提高遗传算法的运行速度，但降低群体多样性，可能找不到最优解。</li>
+<li>种群较大时，又会增加计算量，使遗传算法的运行效率降低。</li>
+<li>一般取种群数目为<code>20~100</code>。</li>
+</ul>
+</li>
+<li><p>交叉和变异概率：  </p>
+<ul>
+<li>交叉概率控制着交叉操作的频率，由于交叉操作是遗传算法中产生新个体的主要方法，所以交叉概率通常区较大值，但取值过大可能会破坏群体优良模式。一般取<code>0.4~0.99</code>.</li>
+<li>变异概率也是影响新个体产生的一种因素，变异概率小，产生新个体少；变异概率大，又会使遗传算法变成随机搜索。一般变异概率取<code>0.0001~0.1</code></li>
+</ul>
+</li>
+<li><p>遗传算法通常收敛判据；规定遗传代数，连续几次得到最优个体的适应值没有变化或变化很小。</p>
+</li>
 </ul>
 
       
