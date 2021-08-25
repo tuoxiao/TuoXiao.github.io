@@ -26,7 +26,7 @@
 <meta property="og:description" content="&amp;emsp;&amp;emsp;遗传算法是借鉴生物界的进化规律(适者生存,优胜劣汰)的遗传机制，演化而来的随机化搜索方法。它是由美国教授于1975年首先提出的，其主要特点是直接对结构对象进行操作，不存在求导和函数连续性的区间限定，具有内在的隐并行性和更好的全局寻优能力，采用概率化的寻优方法，能自动获取和指导优化的搜索空间，自适应的调整搜索方向，不需要确定的规则，遗传算法这些性质已被人们广泛的应用于组合优化">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-24T01:04:29.000Z">
-<meta property="article:modified_time" content="2021-08-24T13:04:55.378Z">
+<meta property="article:modified_time" content="2021-08-25T01:24:33.159Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="遗传算法">
 <meta property="article:tag" content="算法">
@@ -433,6 +433,12 @@ x_k-(x_k-U^k_{min})(1-r^{b(1-G/T)}) \quad Random(0,1)=0
 <p><br></p>
 <h2 id="4-遗传算法在Matlab中实现"><a href="#4-遗传算法在Matlab中实现" class="headerlink" title="4 遗传算法在Matlab中实现"></a>4 遗传算法在Matlab中实现</h2><h4 id="4-1-编码"><a href="#4-1-编码" class="headerlink" title="4.1 编码"></a>4.1 编码</h4><p>遗传算法不对优化问题的实际决策变量进行操作，所以应用遗传算法首要问题是通过编码来将决策变量表示成串结构数据。采用最常用的二进制编码方案，即通过二进制数构成的符号串来表示一个个体，用下面的<font face="Times New Roman " > <strong>encoding</strong> </font>函数来实现编码并产生初始种群： </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function[bin_gen,bits]&#x3D;encoding(min_var,max_var,scale_var,popsize)</span><br><span class="line">  bits&#x3D;ceil(log2((max_var-min_var).&#x2F;scale_var));</span><br><span class="line">  bin_gen&#x3D;randint(popsize,sum(bits));</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;在上面代码中，首先根据决策变量的下界<font face="Times New Roman">(min_var)</font>、上界<font face="Times New Roman">(max_var)</font>及其搜索精度(scale_var)来确定表示各决策变量的二进制串的长度<font face="Times New Roman">bits</font>，然后随机产生一个种群大小为 <font face="Times New Roman"> popsize </font>的初始种群<font face="Times New Roman"> bin_gen </font>。编码后的实际搜索精度为<font face="Times New Roman"> scale_dec (max_var-min_var)/(2^bits-1) </font>，该精度会在解码时用到。</p>
+<h4 id="4-2-解码"><a href="#4-2-解码" class="headerlink" title="4.2 解码"></a>4.2 解码</h4><p>&emsp;&emsp;编码后的个体构成的种群<font face="Times New Roman"> bin_gen </font>必须经过解码以转换成原问题空间的决策变量构成的种群<font face="Times New Roman"> var_gen </font>，才能计算相应的适应值。用下面代码实现。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function[var_gen,fitness] &#x3D; decoding (funname,bin_gen,bits,min_var,max_var)</span><br><span class="line">    num_var&#x3D;lenth(bits);</span><br><span class="line">    popsize&#x3D;size(bin_gen,1);</span><br><span class="line">    scale_dec&#x3D;(max_var-min_var).&#x2F;(2.^bits-1);</span><br><span class="line">    bits&#x3D;[o bits];</span><br><span class="line">    for i&#x3D;1:num_var</span><br><span class="line">      bin_var(i)&#x3D;bin-gen(:,bits(i):bits(i+1));</span><br><span class="line">      var(i)&#x3D;sum(ones(popsize,1)*2.^(size(bin_var(i),2)-1:-1:0).*bin_var(i),2).*scale_dec(i)+min_var(i)</span><br><span class="line">    end</span><br><span class="line">    var_gen&#x3D;[var(1,:)];</span><br><span class="line">    for i&#x3D;1:popsize</span><br><span class="line">      fitness(i)&#x3D;eval(funname,&#39;(var_gen(I,:))&#39;);</span><br><span class="line">    end</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;解码函数的关键在于先由二进制数求得对应的十进制数 $D$ ，并根据下式得出实际决策变量值 $X$ ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X&#x3D;D*scale_dec+min_var</span><br></pre></td></tr></table></figure>
+<h4 id="4-3-选择"><a href="#4-3-选择" class="headerlink" title="4.3 选择"></a>4.3 选择</h4>
       
     </div>
     <div class="article-footer">
