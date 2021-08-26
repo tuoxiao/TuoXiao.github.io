@@ -26,8 +26,10 @@
 <meta property="og:description" content="&amp;emsp;&amp;emsp;遗传算法是借鉴生物界的进化规律(适者生存,优胜劣汰)的遗传机制，演化而来的随机全局搜索和优化算法。它是由美国教授于1975年首先提出的，其主要特点是直接对结构对象进行操作，不存在求导和函数连续性的区间限定，具有内在的隐并行性和更好的全局寻优能力，采用概率化的寻优方法，能自动获取和指导优化的搜索空间，自适应的调整搜索方向，不需要确定的规则，遗传算法这些性质已被人们广泛的应用于">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://tuoxiao.github.io/images/matlab/11/11-1.png">
+<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/11/11-2.png">
+<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/11/11-3.png">
 <meta property="article:published_time" content="2021-08-24T01:04:29.000Z">
-<meta property="article:modified_time" content="2021-08-26T02:01:25.781Z">
+<meta property="article:modified_time" content="2021-08-26T08:40:35.955Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="遗传算法">
 <meta property="article:tag" content="算法">
@@ -421,7 +423,6 @@ X_B^{t+1}=aX_A^t+(1-a)X_B^t
 <h4 id="2-5-变异算子"><a href="#2-5-变异算子" class="headerlink" title="2.5 变异算子"></a>2.5 变异算子</h4><p>&emsp;&emsp;变异算子是实数编码编遗传算法中起到重大作用。在实数编码时，变异算子不在像二进制编码时仅仅是简单的恢复群体中多样性的损失，它她已经成为一个主要的搜索算子。定义参数 $P_m$ ，作为变异操作的概率，建议取值范围为<code>0.01-0.1</code>。采用非均匀变异：设个体 $X=x_1x_2···x_k···x_l$，其中变异点的新基因为：</p>
 <script type="math/tex; mode=display">
 X^{'}_k=
-
 \begin{cases}  
 x_k+(U^k_{max}-x_k)(1-r^{b(1-G/T)}) \quad Random(0,1)=1 \\
 x_k-(x_k-U^k_{min})(1-r^{b(1-G/T)}) \quad Random(0,1)=0
@@ -439,14 +440,15 @@ x_k-(x_k-U^k_{min})(1-r^{b(1-G/T)}) \quad Random(0,1)=0
 <ul>
 <li><font face="Times New Roman " >newPop</font>是被选中的新种群；</li>
 <li><font face="Times New Roman " >oldPop</font>是当前种群；</li>
-<li><font face="Times New Roman " >options</font>是其他可选参数向量；<ul>
-<li><font face="Times New Roman " >roulette.m</font>  </li>
-<li><font face="Times New Roman " >normGeomSelsct.m</font> </li>
-<li><font face="Times New Roman " >tourn.m</font><h4 id="3-4-初始化函数和终止函数"><a href="#3-4-初始化函数和终止函数" class="headerlink" title="3.4 初始化函数和终止函数"></a>3.4 初始化函数和终止函数</h4></li>
-</ul>
+<li><font face="Times New Roman " >options</font>是其他可选参数向量；
+* <font face="Times New Roman " >roulette.m</font>  
+* <font face="Times New Roman " >normGeomSelsct.m</font> 
+* <font face="Times New Roman " >tourn.m</font>
+
+
 </li>
 </ul>
-<p>&emsp;&emsp;遗传算法工具箱给出了 <font face="Times New Roman " >innitializega.m</font> 和 <font face="Times New Roman " >initializeoga.m</font> 两个种群初始优化函数和<font face="Times New Roman " > maxGenTerm.m </font>、<font face="Times New Roman " >optMaxGenTerm.m </font>两个终止函数。</p>
+<h4 id="3-4-初始化函数和终止函数"><a href="#3-4-初始化函数和终止函数" class="headerlink" title="3.4 初始化函数和终止函数"></a>3.4 初始化函数和终止函数</h4><p>&emsp;&emsp;遗传算法工具箱给出了 <font face="Times New Roman " >innitializega.m</font> 和 <font face="Times New Roman " >initializeoga.m</font> 两个种群初始优化函数和<font face="Times New Roman " > maxGenTerm.m </font>、<font face="Times New Roman " >optMaxGenTerm.m </font>两个终止函数。</p>
 <p>&emsp;&emsp;遗传算法工具箱已经在多维变量优化、非线性规划、参数优化和动态系统最优控等一系列领域有了很好的应用。</p>
 <p><br></p>
 <h2 id="4-遗传算法在Matlab中实现"><a href="#4-遗传算法在Matlab中实现" class="headerlink" title="4 遗传算法在Matlab中实现"></a>4 遗传算法在Matlab中实现</h2><h4 id="4-1-编码"><a href="#4-1-编码" class="headerlink" title="4.1 编码"></a>4.1 编码</h4><p>遗传算法不对优化问题的实际决策变量进行操作，所以应用遗传算法首要问题是通过编码来将决策变量表示成串结构数据。采用最常用的二进制编码方案，即通过二进制数构成的符号串来表示一个个体，用下面的<font face="Times New Roman " > <strong>encoding</strong> </font>函数来实现编码并产生初始种群： </p>
@@ -463,7 +465,19 @@ x_k-(x_k-U^k_{min})(1-r^{b(1-G/T)}) \quad Random(0,1)=0
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function new_gen &#x3D; crossover (old_gen,pc)</span><br><span class="line">  [nouse,mating] &#x3D; sort(rand(size(old_gen,1),1));</span><br><span class="line">  mat_gen &#x3D; old_gen(mating,:);</span><br><span class="line">  pairs &#x3D; size(mat_gen,1)&#x2F;2;</span><br><span class="line">  bits &#x3D; size(mat_gen,2);</span><br><span class="line">  cpairs &#x3D; rand(pairs,1)&lt;pc;</span><br><span class="line">  cpoints &#x3D; randint(pairs,1,[1,bits]);</span><br><span class="line">  cpoints &#x3D; cpairs.*cpoints;</span><br><span class="line">  for i&#x3D;1:pairs</span><br><span class="line">    new_gen([2*i-1 2*i],:) &#x3D; [mat_gen([2*i-1 2*i],1:cpoints(i))mat_gen([2*i 2*i-1],cpoints(i)+1:bits)];</span><br><span class="line">  end</span><br></pre></td></tr></table></figure>
 <h4 id="4-5-变异"><a href="#4-5-变异" class="headerlink" title="4.5 变异"></a>4.5 变异</h4><p>&emsp;&emsp;对于二进制的基因串而言，变异操作就是按照变异的概率<font face ="Times New Roman"> pm </font>随机选择变异点<font face ="Times New Roman"> mpoints </font>，在变异点将其取反即可。变异算子的实现过程如下；</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">funtion new_gen &#x3D; mutation(old_gen,pm)</span><br><span class="line">  mpoints &#x3D; find(rand(size(old_gen))&lt;pm);</span><br><span class="line">  new_gen &#x3D; old_gen;</span><br><span class="line">  new_gen(mpoints) &#x3D; 1-old_gen*(mppints);</span><br></pre></td></tr></table></figure>
-<h2 id="5-例：暴雨强度公式优化及Matlab实现"><a href="#5-例：暴雨强度公式优化及Matlab实现" class="headerlink" title="5 例：暴雨强度公式优化及Matlab实现"></a>5 例：暴雨强度公式优化及Matlab实现</h2>
+<h2 id="5-简单一元函数优化实例"><a href="#5-简单一元函数优化实例" class="headerlink" title="5 简单一元函数优化实例"></a>5 简单一元函数优化实例</h2><p>用遗传算法计算下面函数的最大值：</p>
+<script type="math/tex; mode=display">f(x)=x sin(10\pi x)+2.0 \qquad x\in [-1,2]</script><p>&emsp;&emsp;选择二进制编码，种群个体数量为 $40$ ，每个种群长度为 $20$ ，使用代沟为 $0.9$ ，最大遗传代数为 $25$ 。</p>
+<ul>
+<li>代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">figure(1)</span><br><span class="line">fplot(&#39;variable.*sin(10*pi*variable)+2.0&#39;,[-1,2])</span><br><span class="line">nind&#x3D;40;</span><br><span class="line">maxgen&#x3D;25;</span><br><span class="line">preci&#x3D;20;</span><br><span class="line">GGAP&#x3D;0.9;</span><br><span class="line">trace&#x3D;zeros(2,maxgen);</span><br><span class="line">fieldD&#x3D;[20;-1;2;1;0;1;1];</span><br><span class="line">chrom&#x3D;crtbp(nind,preci);</span><br><span class="line">gen&#x3D;0;</span><br><span class="line">variable&#x3D;bs2rv(chrom,fieldD);</span><br><span class="line">objv&#x3D;variable.*sin(10*pi*variable)+2.0;</span><br><span class="line">while gen&lt;maxgen</span><br><span class="line">    FitnV&#x3D;ranking(-objv);</span><br><span class="line">    selch&#x3D;select(&#39;sus&#39;,chrom,FitnV,GGAP);</span><br><span class="line">    selch&#x3D;recombin(&#39;xovsp&#39;,selch,0.7);</span><br><span class="line">    selch&#x3D;mut(selch);7</span><br><span class="line">    variable&#x3D;bs2rv(selch,fieldD);</span><br><span class="line">    objvsel&#x3D;variable.*sin(10*pi*variable)+2.0;</span><br><span class="line">    [chrom,objv]&#x3D;reins(chrom,selch,1,1,objv,objvsel);</span><br><span class="line">    gen&#x3D;gen+1;</span><br><span class="line">    [Y,I]&#x3D;max(objv),hold on;</span><br><span class="line">    plot(variable(I),Y,&#39;bo&#39;);</span><br><span class="line">    trace(1,gen)&#x3D;max(objv);</span><br><span class="line">    trace(2,gen)&#x3D;sum(objv)&#x2F;length(objv);</span><br><span class="line">end</span><br><span class="line">variable&#x3D;bs2rv(chrom,fieldD);</span><br><span class="line">hold on;grid;</span><br><span class="line">plot(variable&#39;,objv&#39;,&#39;b*&#39;);</span><br><span class="line">figure(2)</span><br><span class="line">plot(trace(1,:)&#39;);</span><br><span class="line">hold on;</span><br><span class="line">plot(trace(2,:)&#39;,&#39;-&#39;);grid;</span><br><span class="line">legend(&#39;解的变化&#39;,&#39;种群均值变化&#39;)</span><br><span class="line">disp([&#39;输出最大值为&#39;,num2str(Y)])</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>下图展示的是经过多次遗传，得出的最优良子代汇聚结果：</p>
+<center><img src="/images/matlab/11/11-2.png" width="70%" height="70%" align=center /></center>
+
+<p><br></p>
+<p>下图是每代得到的结果：</p>
+<center><img src="/images/matlab/11/11-3.png" width="70%" height="70%" align=center /></center>
+
       
     </div>
     <div class="article-footer">
