@@ -25,12 +25,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="&amp;emsp;&amp;emsp;遗传算法是借鉴生物界的进化规律(适者生存,优胜劣汰)的遗传机制，演化而来的随机全局搜索和优化算法。它是由美国教授于1975年首先提出的，其主要特点是直接对结构对象进行操作，不存在求导和函数连续性的区间限定，具有内在的隐并行性和更好的全局寻优能力，采用概率化的寻优方法，能自动获取和指导优化的搜索空间，自适应的调整搜索方向，不需要确定的规则，遗传算法这些性质已被人们广泛的应用于">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://tuoxiao.github.io/images/matlab/11/11-1.png">
 <meta property="article:published_time" content="2021-08-24T01:04:29.000Z">
-<meta property="article:modified_time" content="2021-08-25T13:56:22.678Z">
+<meta property="article:modified_time" content="2021-08-26T02:01:25.781Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="遗传算法">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://tuoxiao.github.io/images/matlab/11/11-1.png">
   <!-- Canonical links -->
   <link rel="canonical" href="http://tuoxiao.github.io/2021/08/24/matlab/11GA/index.html">
   
@@ -394,6 +396,8 @@
 <li><p>遗传算法通常收敛判据；规定遗传代数，连续几次得到最优个体的适应值没有变化或变化很小。</p>
 </li>
 </ul>
+<h4 id="1-4-遗传算法得主要应用领域"><a href="#1-4-遗传算法得主要应用领域" class="headerlink" title="1.4 遗传算法得主要应用领域"></a>1.4 遗传算法得主要应用领域</h4><center><img src="/images/matlab/11/11-1.png" width="70%" height="70%" align=center /></center>
+
 <p><br></p>
 <h2 id="2-遗传算法的基本原理"><a href="#2-遗传算法的基本原理" class="headerlink" title="2 遗传算法的基本原理"></a>2 遗传算法的基本原理</h2><p>&emsp;&emsp;遗传算法是一种基于自然选择和一种遗传变异等生物进化机制的全局性概率搜索算法，它在形式上也是一种迭代方法.它从选定的初始解出发，通过不断迭代，逐步改进当前解，直至最后搜索到最优解或满意解。在进化计算中，迭代计算过程采用了模拟生物体的进化机制，从一组解出发，采用类似于自然选择和有性繁殖的方式，在继承原有优良基因的基础上，生成有更好性能指标的，下一代解的群体。<br>&emsp;&emsp;<font face="Times New Roman ">Ga</font>有较强的全局优化能力，是一种自适应的智能的搜索技术，其主要应用领域是复杂的非线性优化问题，选择、交叉和变异是遗传算法的三个主要操作者。</p>
 <h4 id="2-1-编码"><a href="#2-1-编码" class="headerlink" title="2.1 编码"></a>2.1 编码</h4><p>&emsp;&emsp;解空间向<font face="Times New Roman ">Ga</font>空间映射称之为编码，它是连接问题与算法的桥梁。本问题中设计变量均为连续变量，为克服二进制编码在进行连续函数离散时产生的映射误差和方便处理各约束条件，采用浮点数编码方法，染色体长度与设计变量维数相同。</p>
