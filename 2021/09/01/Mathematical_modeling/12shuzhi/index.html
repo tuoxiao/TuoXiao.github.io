@@ -26,7 +26,7 @@
 <meta property="og:description" content="数值计算引论    &amp;emsp;&amp;emsp;随着计算机的发展与普及,继理论分析和科学实验之后,在计算机上用数值方法进行科学计算已成为科学研究的另一种重要手段。求解各种数学问题的数值计算方法不仅在自然科学得到广泛的应用,而且还渗透到包括生命科学、经济科学和社会科学的许多领域。数值计算方法是应用数学的一个分支,又称数值分析或计算方法,它是研究用数字计算机求解各种数学问题的数值方法及其理论的一门学科,是">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-01T11:05:53.000Z">
-<meta property="article:modified_time" content="2021-09-01T15:21:11.787Z">
+<meta property="article:modified_time" content="2021-09-08T07:48:59.307Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="误差分析">
 <meta name="twitter:card" content="summary">
@@ -349,6 +349,7 @@
         <font size=5><center>数值计算引论</center></font>  
 
 <p>&emsp;&emsp;随着计算机的发展与普及,继理论分析和科学实验之后,在计算机上用数值方法进行科学计算已成为科学研究的另一种重要手段。求解各种数学问题的数值计算方法不仅在自然科学得到广泛的应用,而且还渗透到包括生命科学、经济科学和社会科学的许多领域。数值计算方法是应用数学的一个分支,又称数值分析或计算方法,它是研究用数字计算机求解各种数学问题的数值方法及其理论的一门学科,是程序设计和对数值结果进行分析的依据和基础。本书介绍的是在微积分、线性代数和常微分方程等基础数学中最常用的、行之有效的数值方法,内容包括非线性方程的数值解法、数值代数、代数插值、曲线拟合的最小二乘法。  </p>
+<p><br></p>
 <h2 id="1、误差的来源"><a href="#1、误差的来源" class="headerlink" title="1、误差的来源"></a>1、误差的来源</h2><ul>
 <li><p>观测参数或实验参数与真实值之间存在的 <font color=red>观测误差/测量误差</font></p>
 </li>
@@ -357,6 +358,7 @@
 <li><p>机器计算受字长限制，参与有限位计算产生的误差 <font color=red>舍入误差/计算误差</font>    </p>
 </li>
 </ul>
+<p><br></p>
 <h2 id="2、近似数的误差表示"><a href="#2、近似数的误差表示" class="headerlink" title="2、近似数的误差表示"></a>2、近似数的误差表示</h2><p>&emsp;&emsp;近似数的误差常用绝对误差、相对误差和有效数字表示。下面介绍这三种表示方法及其相互之间的关系。  </p>
 <h4 id="2-1-绝对误差"><a href="#2-1-绝对误差" class="headerlink" title="2.1 绝对误差"></a>2.1 绝对误差</h4><p>&emsp;&emsp;<B>定义1-1</B>&emsp;$x^,$ 是准确值 $x$ 的一个近似值，则：</p>
 <script type="math/tex; mode=display">e(x^,)=x-x^,  \tag{1-1}</script><p>称为近似值$x^,$的绝对误差，简称<B>误差</B>,在不易混淆的情况下$e(x^,)$ 记为：$e^,$  </p>
@@ -367,9 +369,47 @@
 <p>一般的，在同一量的不同近似值中，$|e^,|$，越小 $e^,$ 精度越高。  </p>
 <p>&emsp;&emsp;<B>定义1-2</B>&emsp;如果  </p>
 <script type="math/tex; mode=display">|e^,| = |x-x^,|\le \epsilon^,</script><p>即</p>
-<script type="math/tex; mode=display">x^,-\epsilon^, \le x \le x^,+\epsilon^,</script><p><font color=purple> 例子: </font><br>$x=\pi$，$x^,=3.1415$，则，$x-x^,=0.0000926535…$，这时</p>
-<script type="math/tex; mode=display">|e^,|=0.0000926535...<0.0001=10^{-4}</script><p>下面讨论“四舍五入”的绝对误差限。  </p>
+<script type="math/tex; mode=display">x^,-\epsilon^, \le x \le x^,+\epsilon^,</script><font color=purple> 例子2.1-1: </font>  
+$x=\pi$，$x^,=3.1415$，则，$x-x^,=0.0000926535...$，这时
+$$|e^,|=0.0000926535...<0.0001=10^{-4}$$
 
+
+
+#### 2.2 相对误差  
+
+&emsp;&emsp;<B>定义1-3</B>&emsp;相对误差是近似数$x^,$的绝对误差$e^,$与准确值$x$的比值，即：
+$$\frac{e^,}{x}=\frac{x-x^,}{x}     \tag{1-2}$$
+
+
+#### 2.3 有效数字  
+
+&emsp;&emsp;有效数字是近似数的一种表示方法,它不但能表示近似数的大小,而且不用计算近似数的绝对误差和相对误差,直接由组成近似数数字个数就能表示其精度。
+
+&emsp;&emsp;<B>定义1-4</B>&emsp; 设数 $x^,$ 的近似值 $x^,=0.x_1x_2···x_n···\times10^m$ ，其中 $x_i$ 为 $0\sim9$ 之间的任意数，但 $x_i\neq 0,i=1,2,3,···,m$ 为整数，若：
+$$|x-x^,|\le\frac{1}{2}\times10^{m-n}       \tag{1-3}$$
+
+表示 $e(x^,)$保留了 $(|m-n|+1)$ 位小数
+
+<font color=purple> 例子2.3-1: </font>
+
+<p>&emsp;&emsp;取 $3.141$ 和 $3.142$ 作为圆周率 $\pi$ 的近似值，分别有几位有效数字？</p>
+<ul>
+<li>当取 $3.141$ 时，<script type="math/tex; mode=display">\pi-3.141=0.00059···<0.005=\frac{1}{2}\times10^{-2}</script></li>
+</ul>
+<p>&emsp;&emsp;故，保留了 $3$ 位小数。</p>
+<ul>
+<li>当取 $3.142$ 时，<script type="math/tex; mode=display">3.142-\pi=0.000407···<0.0005=\frac{1}{2}\times10^{-3}</script>&emsp;&emsp;故，保留了 $4$ 位小数。</li>
+</ul>
+<p><br></p>
+<h2 id="3、数值运算误差分析"><a href="#3、数值运算误差分析" class="headerlink" title="3、数值运算误差分析"></a>3、数值运算误差分析</h2><h4 id="3-1-函数运算误差"><a href="#3-1-函数运算误差" class="headerlink" title="3.1 函数运算误差"></a>3.1 函数运算误差</h4><p>&emsp;&emsp;设一元函数$f(x)$的自变量$x$的近似值为$x^,$，一元函数的近似值为$(x^,)$，其误差为$\epsilon[f(x^,)]$，对$f(x)$在近似值$x^,$附近的泰勒展开</p>
+<script type="math/tex; mode=display">f(x)=f(x^,)+f'(x^,)(x-x^,)+\frac{f''(\xi)}{2}(x-x^,)^2</script><p>$\xi$ 介于 $x$ 和 $x^,$ 之间，取绝对值得：</p>
+<script type="math/tex; mode=display">|f(x)-f(x^,)|\le |f'(x^,)|\epsilon^,+\frac{f''(\xi)}{2}(\epsilon^,)^2</script><font color=purple>例子：</font>
+
+<p>正方形的边长约为$100cm$，怎样测量才能使其误差面积不超过$1cm^2$?</p>
+<p>解：设正方形边长为 $xcm$ ，测量值为 $x^,cm$，面积</p>
+<script type="math/tex; mode=display">y=f(x)=x^2</script><p>由于$f’(x)=2x$，记自变量和函数的绝对值误差分别为 $e^,$ 和 $e(y^,)$，则</p>
+<script type="math/tex; mode=display">e^,=x-x^,</script><script type="math/tex; mode=display">e(y^,)=y-y^,\approx f'(x)(x-x^,)=2x^,e^,=200e^,</script><p>现在要求 $|e(y^,)|\approx 2000e^,&lt;1$，于是</p>
+<script type="math/tex; mode=display">|e^,|\le(\frac{1}{200}cm)=0.005cm</script>
       
     </div>
     <div class="article-footer">
