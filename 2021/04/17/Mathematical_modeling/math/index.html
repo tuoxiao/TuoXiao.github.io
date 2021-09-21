@@ -26,7 +26,7 @@
 <meta property="og:description" content="&amp;emsp;&amp;emsp;LaTex表达式是一种简单的、常见的一种数学公式表达形式，在很多地方都有出现。   目录 一、矩阵 二、函数 三、运算 3-1、一般函数 3-2、括号的使用 3-3、极限 3-4、积分   四、字母与符号 4-1、运算符号 4-2、希腊字母 4-3、其他符号 4-4、杂项     &amp;emsp;&amp;emsp;所有的LaTex的书写形式都是在 $…$ 之中，只不过对于嵌入在文章中">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-17T10:53:06.496Z">
-<meta property="article:modified_time" content="2021-09-21T13:35:42.398Z">
+<meta property="article:modified_time" content="2021-09-21T13:40:06.338Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Math">
@@ -329,7 +329,7 @@
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E6%95%B0%E5%BB%BA%E6%A8%A1/">学数建模</a>
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
   </span>
 
         
@@ -1438,5 +1438,20 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
   <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="/js/clipboard_use.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

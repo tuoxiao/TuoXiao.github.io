@@ -302,7 +302,7 @@
   <article class="article article-categories article-type-list" itemscope="">
     <header class="article-header">
       <h1 itemprop="name" class="hidden-xs">分类</h1>
-      <p class="text-muted hidden-xs">Total 5 categories</p>
+      <p class="text-muted hidden-xs">Total 4 categories</p>
       <nav role="navigation" id="nav-main" class="okayNav">
         <ul>
           <li><a href="/categories">All</a></li>
@@ -313,9 +313,7 @@
           
           <li><a href="/categories/数学建模/">数学建模</a></li>
           
-          <li><a href="/categories/Mechanical-Engineering/">Mechanical Engineering</a></li>
-          
-          <li><a href="/categories/学数建模/">学数建模</a></li>
+          <li><a href="/categories/机械工程/">机械工程</a></li>
           
         </ul>
       </nav>
@@ -440,7 +438,7 @@
               <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
               数学建模
             </a>
-            <small class="text-muted">(Total 13 articles)</small>
+            <small class="text-muted">(Total 14 articles)</small>
           </h3>
         </div>
         <div id="collapse数学建模" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading数学建模">
@@ -551,6 +549,14 @@
 
 
               
+                
+<a href="/2021/04/17/Mathematical_modeling/math/" class="collection-item" target="_blank" itemprop="url">
+  <time datetime="2021-04-17T10:53:06.496Z" itemprop="datePublished">2021-04-17</time>
+  <span>&nbsp;&nbsp;&nbsp;</span> Mathjax渲染公式
+</a>
+
+
+              
             </div>
           </div>
         </div>
@@ -559,14 +565,14 @@
       <div class="panel panel-default b-no">
         <div class="panel-heading" role="tab">
           <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapseMechanical Engineering" aria-expanded="true">
+            <a data-toggle="collapse" href="#collapse机械工程" aria-expanded="true">
               <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
-              Mechanical Engineering
+              机械工程
             </a>
             <small class="text-muted">(Total 3 articles)</small>
           </h3>
         </div>
-        <div id="collapseMechanical Engineering" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingMechanical Engineering">
+        <div id="collapse机械工程" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading机械工程">
           <div class="panel-body">
             <div class="collection">
               
@@ -590,33 +596,6 @@
 <a href="/2021/05/01/Mechanical%20engineering/yaodongbaogan/" class="collection-item" target="_blank" itemprop="url">
   <time datetime="2021-05-01T10:54:23.000Z" itemprop="datePublished">2021-05-01</time>
   <span>&nbsp;&nbsp;&nbsp;</span> 摇动摆杆运动分析
-</a>
-
-
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse学数建模" aria-expanded="true">
-              <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
-              学数建模
-            </a>
-            <small class="text-muted">(Total 1 articles)</small>
-          </h3>
-        </div>
-        <div id="collapse学数建模" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading学数建模">
-          <div class="panel-body">
-            <div class="collection">
-              
-                
-<a href="/2021/04/17/Mathematical_modeling/math/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2021-04-17T10:53:06.496Z" itemprop="datePublished">2021-04-17</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Mathjax渲染公式
 </a>
 
 
@@ -696,5 +675,20 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
   <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="/js/clipboard_use.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
