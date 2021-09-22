@@ -25,12 +25,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="&amp;emsp;&amp;emsp;感谢太极创客团队对arduino的无私奉献，个人的全部所学均来自太极创客官方网站！   目录 基本结构 setup函数 loop函数   控制结构 if if···else for switch_case while do···while break continue return      基本结构   1、Setup函数     说明:&amp;emsp;&amp;emsp;当Ardu">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/tuoxiao/tuoxiao.github.io/master/img/1.png">
 <meta property="article:published_time" content="2021-04-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-09-21T13:35:20.541Z">
+<meta property="article:modified_time" content="2021-09-21T15:00:38.018Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="单片机">
 <meta property="article:tag" content="Arduino">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/tuoxiao/tuoxiao.github.io/master/img/1.png">
   <!-- Canonical links -->
   <link rel="canonical" href="http://tuoxiao.github.io/2021/04/07/Miscellaneous/Arduino/index.html">
   
@@ -370,7 +372,22 @@
 <h3 id="说明"><a href="#说明" class="headerlink" title="说明:"></a>说明:</h3><p>&emsp;&emsp;当Arduino程序开始运行时会调用setup()函数。通常我们setup()函数其中初始化一些变量、引脚状态及一些调用的库等。当Arduino控制器通电或复位后，setup函数会运行一次。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Setup() 示例程序</span><br><span class="line"></span><br><span class="line">int buttonPin &#x3D; 3;  #指定引脚3</span><br><span class="line"></span><br><span class="line">void setup() &#123;</span><br><span class="line">    pinMode(buttonPin, INPUT);  &#x2F;&#x2F; 当Arduino通电或复位后，这里的内容将运行一次</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void loop() &#123;</span><br><span class="line">    &#x2F;&#x2F; 当Arduino通电或复位后，这里的内容将无限循环运行</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><h2 id="12"></h2><font color=black size=5>2、Loop函数</font>  </p>
 <h3 id="说明-1"><a href="#说明-1" class="headerlink" title="说明:"></a>说明:</h3><p>&emsp;&emsp;在setup()函数对程序完成了初始化后，loop()函数将会运行。loop函数是一个循环体，在Arduino启动后，loop()函数中的程序将会不断运行。通过loop()函数你可以利用你的程序来控制Arduino，并使Arduino根据你的程序进行相应的反应。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Loop() 说明程序</span><br><span class="line"></span><br><span class="line">const int buttonPin &#x3D; 3; </span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 当Arduino通电或复位后，Setup()函数中的内容将运行一次</span><br><span class="line">void setup() &#123;</span><br><span class="line">Serial.begin(9600);  &#x2F;&#x2F; 串口通讯初始化</span><br><span class="line">pinMode(buttonPin, INPUT); &#x2F;&#x2F;将“按钮”引脚设置为INPUT模式</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; loop函数不断循环检查是否按钮被按下</span><br><span class="line">&#x2F;&#x2F; 一旦按钮按下，Arduino控制器将通过</span><br><span class="line">&#x2F;&#x2F; 串口监视器显示字母“H”。否则显示字母“L”</span><br><span class="line">void loop() &#123;</span><br><span class="line">if (digitalRead(buttonPin) &#x3D;&#x3D; HIGH)  &#x2F;&#x2F;检查是否按钮被按下</span><br><span class="line">    Serial.write(&#39;H&#39;); &#x2F;&#x2F; 串口监视器显示字母“H”</span><br><span class="line">else</span><br><span class="line">    Serial.write(&#39;L&#39;); &#x2F;&#x2F;串口监视器显示字母“L”</span><br><span class="line">delay(1000);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><h2 id="102"></h2><font color=red size=6><center>控制结构</center></font></p>
+<p><h2 id="2"></h2><font color=red size=6><center>控制结构</center></font>  </p>
+<p><h2 id="21"></h2><font color=black size=5>1、If函数</font>  </p>
+<h3 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h3><p>&emsp;&emsp;通过if指令，用户可以让Arduino判断某一个条件是否达到，并且根据这一判断结果执行相应的程序。 </p>
+<h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[c gutter&#x3D;”false”]</span><br><span class="line">if(表达式) &#123;</span><br><span class="line">语句块</span><br><span class="line">&#125;</span><br><span class="line">[&#x2F;c]</span><br></pre></td></tr></table></figure>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[c gutter&#x3D;”false”]</span><br><span class="line">if( a &#x3D;&#x3D; 0 ) &#123;</span><br><span class="line">digitalWrite(LEDpin, HIGH);</span><br><span class="line">&#125;</span><br><span class="line">[&#x2F;c]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在以上示例中，Arduino控制器通过判断变量a是否等于0，从而决定是否执行指令<br><font face=Times New Roman><b>digitalWrite</b>(LEDpin, HIGH)</font>;  </li>
+<li>在以上示例的表达式 $a=0$中，”$==$”是关系运算符号，这条语句的作用是让 Arduino 判断变量 $a$ 是否等于零。切记不能使用单一等号 $=$。$=$是赋值符号。 $a=0$ 的含义是给变量 $a$ 赋值0。  </li>
+</ul>
+<p><br></p>
+<p><h2 id="22"></h2><font color=black size=5>2、If···else函数</font>  </p>
+<h3 id="说明-3"><a href="#说明-3" class="headerlink" title="说明"></a>说明</h3><p>&emsp;&emsp;通过 if…else 语句，用户可以让 Arduino 判断某一个条件是否达到，并且根据这一判断结果执行相应的程序。  </p>
+<h3 id="结构-1"><a href="#结构-1" class="headerlink" title="结构"></a>结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if( 表达式1 ) &#123;</span><br><span class="line">    语句块1</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    语句块2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<center><img src="https://raw.githubusercontent.com/tuoxiao/tuoxiao.github.io/master/img/1.png"/></center>
+
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
 
       
     </div>
