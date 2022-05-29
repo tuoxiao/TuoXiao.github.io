@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <meta name="google-site-verification" content="ltntyMz_MY9XlKa50cm0w-qga7431-IO4P8WU3se1Ak" />
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Matlab案例分析 | TuTo&#39;Blog</title>
+  <meta name="description" content="[目录] 找出10万以内的所有亲和数 编写猜数字游戏 钻井问题 BP网络预测 M&#x2F;M&#x2F;1排队问题 利用相关系数修复碎纸条 多元统计分析 主成分回归估计  一、  找出10万以内的所有亲和数  1.1  题目介绍&amp;emsp;&amp;emsp;亲和数是这样一对正整数a和b，使得a的所有真因子的和等于b，而b的所有真因子的和等于a。亲和数问题最早由毕达哥拉斯学派发现和研究的。他们在研究数字的规律的时候发现有以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matlab案例分析">
+<meta property="og:url" content="http://example.com/2021/07/18/Mathematical_modeling/matlab6/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[目录] 找出10万以内的所有亲和数 编写猜数字游戏 钻井问题 BP网络预测 M&#x2F;M&#x2F;1排队问题 利用相关系数修复碎纸条 多元统计分析 主成分回归估计  一、  找出10万以内的所有亲和数  1.1  题目介绍&amp;emsp;&amp;emsp;亲和数是这样一对正整数a和b，使得a的所有真因子的和等于b，而b的所有真因子的和等于a。亲和数问题最早由毕达哥拉斯学派发现和研究的。他们在研究数字的规律的时候发现有以">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/matlab/6/6-1.png">
+<meta property="og:image" content="http://example.com/images/matlab/6/6-3.png">
+<meta property="og:image" content="http://example.com/images/matlab/6/6-5.png">
+<meta property="og:image" content="http://example.com/images/matlab/6/6-7.png">
+<meta property="og:image" content="http://example.com/images/matlab/6/6-9.png">
+<meta property="og:image" content="http://example.com/images/matlab/6/6-11.png">
+<meta property="og:image" content="http://example.com/images/matlab/6/6-14.png">
+<meta property="og:image" content="http://example.com/images/matlab/6/6-15.png">
+<meta property="og:image" content="http://example.com/images/matlab/6/6-12.png">
+<meta property="og:image" content="http://example.com/images/matlab/6/6-13.png">
+<meta property="og:image" content="http://example.com/images/matlab/6/6-16.png">
+<meta property="og:image" content="http://example.com/images/matlab/6/6-17.png">
+<meta property="article:published_time" content="2021-07-18T13:49:37.000Z">
+<meta property="article:modified_time" content="2021-08-24T10:12:47.458Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="matlab应用">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/matlab/6/6-1.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://example.com/2021/07/18/Mathematical_modeling/matlab6/index.html">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
+  
+  
+  
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/tuoxiao" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">TuTo</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md"></h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> ShiYan, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">Links</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/tuoxiao" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/6573256711" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/yunshengchu2" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://space.bilibili.com/488452389" target="_blank" title="Bilibili" data-toggle=tooltip data-placement=top><i class="icon icon-bilibili"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>个人留存学习笔记，欢迎各位交流指正！</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Arduino/" style="font-size: 13px;">Arduino</a> <a href="/tags/Git/" style="font-size: 13px;">Git</a> <a href="/tags/Github/" style="font-size: 14px;">Github</a> <a href="/tags/Hexo/" style="font-size: 13.5px;">Hexo</a> <a href="/tags/Math/" style="font-size: 13px;">Math</a> <a href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 13px;">Matlab基础知识</a> <a href="/tags/Python/" style="font-size: 13px;">Python</a> <a href="/tags/markdown/" style="font-size: 13px;">markdown</a> <a href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 13px;">matlab基础知识</a> <a href="/tags/matlab%E5%BA%94%E7%94%A8/" style="font-size: 13.5px;">matlab应用</a> <a href="/tags/matlab%E7%A8%8B%E5%BA%8F/" style="font-size: 13px;">matlab程序</a> <a href="/tags/matlab%E7%BB%98%E5%9B%BE/" style="font-size: 13px;">matlab绘图</a> <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 13px;">单片机</a> <a href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" style="font-size: 13px;">微分方程</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" style="font-size: 14px;">机械原理</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" style="font-size: 13px;">机械设计</a> <a href="/tags/%E7%8E%A9%E6%9C%BA/" style="font-size: 13px;">玩机</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 13.5px;">算法</a> <a href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" style="font-size: 13px;">论文排版</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 13px;">语法</a> <a href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" style="font-size: 13px;">遗传算法</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Archive</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+              </p>
+              <p class="item-title">
+                <a href="/2022/05/29/Learn/math/" class="title">Mathjax渲染公式</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-05-29T02:42:59.527Z" itemprop="datePublished">2022-05-29</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/24/Mathematical_modeling/11GA/" class="title">Genetic Algorithm</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-24T01:04:29.000Z" itemprop="datePublished">2021-08-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/15/Mathematical_modeling/10matlab/" class="title">Matlab微分方程</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-15T02:51:42.000Z" itemprop="datePublished">2021-08-15</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/07/31/Mathematical_modeling/9latex/" class="title">Latex排版</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-07-31T12:53:38.000Z" itemprop="datePublished">2021-07-31</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/07/18/Mathematical_modeling/matlab6/" class="title">Matlab案例分析</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-07-18T13:49:37.000Z" itemprop="datePublished">2021-07-18</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-Mathematical_modeling/matlab6" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Matlab案例分析
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/07/18/Mathematical_modeling/matlab6/" class="article-date">
+	  <time datetime="2021-07-18T13:49:37.000Z" itemprop="datePublished">2021-07-18</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/matlab%E5%BA%94%E7%94%A8/" rel="tag">matlab应用</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/07/18/Mathematical_modeling/matlab6/#comments" class="article-comment-link">Comments</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="目录"><a href="#目录" class="headerlink" title="[目录]"></a>[目录]</h2><ul>
+<li><a href="#1">找出10万以内的所有亲和数</a></li>
+<li><a href="#2">编写猜数字游戏</a></li>
+<li><a href="#3">钻井问题</a></li>
+<li><a href="#4">BP网络预测</a></li>
+<li><a href="#5">M/M/1排队问题</a></li>
+<li><a href="#6">利用相关系数修复碎纸条</a></li>
+<li><a href="#7">多元统计分析</a></li>
+<li><a href="#8">主成分回归估计</a></li>
+</ul>
+<h2 id="一、-找出10万以内的所有亲和数"><a href="#一、-找出10万以内的所有亲和数" class="headerlink" title="一、  找出10万以内的所有亲和数"></a>一、  找出10万以内的所有亲和数</h2><h2 id="1"></h2>
+
+<h3 id="1-1-题目介绍"><a href="#1-1-题目介绍" class="headerlink" title="1.1  题目介绍"></a>1.1  题目介绍</h3><p>&emsp;&emsp;亲和数是这样一对正整数a和b，使得a的所有真因子的和等于b，而b的所有真因子的和等于a。亲和数问题最早由毕达哥拉斯学派发现和研究的。他们在研究数字的规律的时候发现有以下的性点的两个数：</p>
+<script type="math/tex; mode=display">1+2+4+71+142=220 \\ 
+
+1+2+4+5+10+11+20+22+44+55+110=284</script><p>&emsp;&emsp;就是220的真因子是$1、2、4、5、10、11、20、22、44、55、110$，它们的和是$284；284$的真因子是$1、2、4、71、142$,其和恰好是$220$。这是最早发现的一对亲和数，也是最小的一对亲和数。</p>
+<p>考虑到1是每个整数的因子，把除去整数本身之外的所有因子叫做这个数的“真因子”。如果两个整数，其中每一个数的真因子的和都恰好等于另一个数，那么这两个数，就构成一对“亲和数”。</p>
+<p><br></p>
+<h3 id="1-2-程序"><a href="#1-2-程序" class="headerlink" title="1.2  程序"></a>1.2  程序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">%寻找100000以内的亲和数对</span><br><span class="line">clc</span><br><span class="line">E=[];</span><br><span class="line">for j=1:100000;   </span><br><span class="line">    T=tuo1(j);</span><br><span class="line">    M=tuo1(tuo1(j));</span><br><span class="line">    if j==tuo1(tuo1(j)) &amp;&amp; M~=T</span><br><span class="line">        C=[M,T];</span><br><span class="line">        E=[E;C];</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line">F=E(1:2:end,:)</span><br><span class="line"></span><br><span class="line">function T= tuo1(a)%函数1，寻找数的所用因数</span><br><span class="line">    A=[];</span><br><span class="line">    for i=1:100000</span><br><span class="line">        if (mod(a,i)==0)</span><br><span class="line">            A=[A,i];</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">    T=sum(A)-a;</span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="1-3-结果"><a href="#1-3-结果" class="headerlink" title="1.3  结果"></a>1.3  结果</h3><center><img src="/images/matlab/6/6-1.png" width="60%" height="60%" align=center /></center>
+
+<p><br></p>
+<p><br></p>
+<h2 id="2"></h2>
+
+<h2 id="二、编写猜数字游戏"><a href="#二、编写猜数字游戏" class="headerlink" title="二、编写猜数字游戏"></a>二、编写猜数字游戏</h2><h3 id="2-1-题目介绍"><a href="#2-1-题目介绍" class="headerlink" title="2.1  题目介绍"></a>2.1  题目介绍</h3><p>编写程序实现猜数字游戏 游戏说明：</p>
+<p>计算机随机生成一个4位数（4个数字互不相同）然后玩家输入一个4位数，计算机提示（？A？B）:</p>
+<p>&emsp;&emsp;&emsp;&emsp;A 的含义是数字位置正确的有多少个?</p>
+<p>&emsp;&emsp;&emsp;&emsp;B 的意思是仅数字正确的 有多少个?</p>
+<p>如计算机随机产生的为1234，玩家输入1325，则返回1A2B （数字1位置正确， 而2和3仅数字正确，位置不对），程序在4A或玩家猜测<code>10</code>次时结束。 </p>
+<p><br></p>
+<h3 id="2-2-程序"><a href="#2-2-程序" class="headerlink" title="2.2  程序"></a>2.2  程序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line">format </span><br><span class="line">disp(&#x27;猜数字开始了，现在已经产生了一个四位随机数&#x27;)</span><br><span class="line">X=randperm(9);</span><br><span class="line">a1=X(1);</span><br><span class="line">b1=X(2);</span><br><span class="line">c1=X(3);</span><br><span class="line">d1=X(4);</span><br><span class="line">t=10;</span><br><span class="line"></span><br><span class="line">while i~=4 &amp;&amp; t&gt;0</span><br><span class="line">    M=input(&#x27;请输入一个四位数：&#x27;)</span><br><span class="line"></span><br><span class="line">    a2=fix(M/1000);</span><br><span class="line">    b2=fix((M-1000*a2)/100);</span><br><span class="line">    c2=fix(M/10)-100*a2-10*b2;</span><br><span class="line">    d2=M-1000*a2-100*b2-10*c2;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    i=0;%数字位置全对</span><br><span class="line">    j=0;%仅数字对</span><br><span class="line"></span><br><span class="line">    if a1==a2 </span><br><span class="line">        i=i+1;</span><br><span class="line">    end</span><br><span class="line">    if b1==b2 </span><br><span class="line">        i=i+1;</span><br><span class="line">    end</span><br><span class="line">    if c1==c2 </span><br><span class="line">        i=i+1;</span><br><span class="line">    end</span><br><span class="line">    if d1==d2 </span><br><span class="line">        i=i+1;</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    if a1==b2 ||a1==c2 ||a1==d2</span><br><span class="line">        j=j+1;</span><br><span class="line">    end</span><br><span class="line">    if b1==a2 ||b1==c2 ||b1==d2</span><br><span class="line">        j=j+1;</span><br><span class="line">    end</span><br><span class="line">    if c1==a2 ||c1==b2 ||c1==d2</span><br><span class="line">        j=j+1;</span><br><span class="line">    end</span><br><span class="line">    if d1==a2 ||d1==b2 ||d1==c2</span><br><span class="line">        j=j+1;</span><br><span class="line">    end</span><br><span class="line">    t=t-1;</span><br><span class="line">    disp([num2str(i),&#x27;A&#x27;,num2str(j),&#x27;B&#x27;])</span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="2-3-结果"><a href="#2-3-结果" class="headerlink" title="2.3  结果"></a>2.3  结果</h3><center><img src="/images/matlab/6/6-3.png" width="100%" height="100%" align=center /></center>
+
+
+<p><br></p>
+<p><br></p>
+<h2 id="3"></h2>
+
+<h2 id="三、钻井问题"><a href="#三、钻井问题" class="headerlink" title="三、钻井问题"></a>三、钻井问题</h2><h3 id="3-1-题目介绍"><a href="#3-1-题目介绍" class="headerlink" title="3.1  题目介绍"></a>3.1  题目介绍</h3><p>&emsp;&emsp;试编写程序计算经过怎样的坐标平移旋转，可以使得这些点横纵坐标小数部分都小于0.05 的数目达到最大。</p>
+<p>十五口井的坐标如下：</p>
+<p>$(0.5,2)|(1.41,3.5)|(3,1.5)|(3.37,3.51)|(3.4,5.5)|(4.72,2)|(4.72,6.24)|(5.34,4.10)$  </p>
+<p>$(7.57,2.01)|(8.38,4.50)|(8.98,3.41)|(9.5,0.8)|(9.57,1.2)|(9.58,1.58)|(9.58,8.05)$</p>
+<p><br></p>
+<h3 id="3-2-程序"><a href="#3-2-程序" class="headerlink" title="3.2  程序"></a>3.2  程序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line">format </span><br><span class="line">t=-1;</span><br><span class="line">G=[];</span><br><span class="line"></span><br><span class="line">for t=1:100000</span><br><span class="line">    t=t+1</span><br><span class="line">    T=tuo1(t);</span><br><span class="line">    G=([G;T]);</span><br><span class="line">end</span><br><span class="line">G;</span><br><span class="line">H=find(G(:,4)&gt;=6)</span><br><span class="line">J=G(H(1:end),:)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">function T=tuo1(t)</span><br><span class="line">b=-1;</span><br><span class="line">N=[];</span><br><span class="line">E=[];</span><br><span class="line">%montecarlo随机取点</span><br><span class="line">% i\j  :蒙特卡洛取得随机点，代替坐标原点</span><br><span class="line">i=10*rand(1);</span><br><span class="line">j=9*rand(1);</span><br><span class="line"></span><br><span class="line">% X1/Y1：相对于原坐标井的位置  </span><br><span class="line">X1=[0.5 1.41 3.00 3.37 3.4 4.72 4.72 5.43 7.57 8.38 8.98 9.50 9.57 9.58 9.58];</span><br><span class="line">Y1=[2 3.5 1.5 3.51 5.5 2 6.24 4.1 2.01 4.5 3.41 0.8 1.2 1.58 8.05];</span><br><span class="line"></span><br><span class="line">% X2/Y2:X1/Y1减去i/j后的相对位置</span><br><span class="line">X2=X1-i;</span><br><span class="line">Y2=Y1-j;</span><br><span class="line"></span><br><span class="line">% a  :各点到相对原点的距离</span><br><span class="line">% A  ：各点相对相对原点的角度</span><br><span class="line">a=sqrt(X2.^2+Y2.^2);</span><br><span class="line">A=atand(Y2./X2);</span><br><span class="line"></span><br><span class="line">% B  :产生0-90的角度偏移</span><br><span class="line">for B=0:90</span><br><span class="line">    b=b+1;</span><br><span class="line">    </span><br><span class="line">    n=0;</span><br><span class="line">    for m=1:15</span><br><span class="line">        </span><br><span class="line">        X3=a.*cosd(A-B);</span><br><span class="line">        Y3=a.*sind(A-B);</span><br><span class="line">        [X3;Y3];</span><br><span class="line">        X=abs(X3-fix(X3));</span><br><span class="line">        Y=abs(Y3-fix(Y3));</span><br><span class="line"></span><br><span class="line">        if X(m)&lt;0.05 &amp;&amp; Y(m)&lt;0.05</span><br><span class="line">            n=n+1;</span><br><span class="line">        end</span><br><span class="line">        N=[N,n];</span><br><span class="line">    end</span><br><span class="line">    N=max(N);</span><br><span class="line">    e=[i,j,B,N];</span><br><span class="line">    E=[E;e];   </span><br><span class="line">end</span><br><span class="line">T=E;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="3-3-结果"><a href="#3-3-结果" class="headerlink" title="3.3  结果"></a>3.3  结果</h3><center><img src="/images/matlab/6/6-5.png" width="70%" height="70%" align=center /></center>
+
+
+<p><br></p>
+<p><br></p>
+<h2 id="4"></h2> 
+
+<h2 id="四、利用BP神经网络预测上海市2009年6月的入境旅游人数"><a href="#四、利用BP神经网络预测上海市2009年6月的入境旅游人数" class="headerlink" title="四、利用BP神经网络预测上海市2009年6月的入境旅游人数"></a>四、利用BP神经网络预测上海市2009年6月的入境旅游人数</h2><h3 id="4-1-题目介绍"><a href="#4-1-题目介绍" class="headerlink" title="4.1  题目介绍"></a>4.1  题目介绍</h3><p>&emsp;&emsp;说明：以2008年1月到2009年4 月的数据为输入，2008年2 月到2009年5月的数据为输出，训练模型，最终依靠训练出的模型预测2009年6月的旅游人数。 </p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">时间</th>
+<th style="text-align:center">人数</th>
+<th style="text-align:center">时间</th>
+<th style="text-align:center">人数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">2008-1</td>
+<td style="text-align:center">517640</td>
+<td style="text-align:center">2008-10</td>
+<td style="text-align:center">627675</td>
+</tr>
+<tr>
+<td style="text-align:center">2008-2</td>
+<td style="text-align:center">528780</td>
+<td style="text-align:center">2008-11</td>
+<td style="text-align:center">599271</td>
+</tr>
+<tr>
+<td style="text-align:center">2008-3</td>
+<td style="text-align:center">576064</td>
+<td style="text-align:center">2008-12</td>
+<td style="text-align:center">419753</td>
+</tr>
+<tr>
+<td style="text-align:center">2008-4</td>
+<td style="text-align:center">575336</td>
+<td style="text-align:center">2009-1</td>
+<td style="text-align:center">414747</td>
+</tr>
+<tr>
+<td style="text-align:center">2008-5</td>
+<td style="text-align:center">556293</td>
+<td style="text-align:center">2009-2</td>
+<td style="text-align:center">468685</td>
+</tr>
+<tr>
+<td style="text-align:center">2008-6</td>
+<td style="text-align:center">503906</td>
+<td style="text-align:center">2009-3</td>
+<td style="text-align:center">510617</td>
+</tr>
+<tr>
+<td style="text-align:center">2008-7</td>
+<td style="text-align:center">510391</td>
+<td style="text-align:center">2009-4</td>
+<td style="text-align:center">549291</td>
+</tr>
+<tr>
+<td style="text-align:center">2008-8</td>
+<td style="text-align:center">483831</td>
+<td style="text-align:center">2009-5</td>
+<td style="text-align:center">490005</td>
+</tr>
+<tr>
+<td style="text-align:center">2008-9</td>
+<td style="text-align:center">504473</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<h3 id="4-2-程序"><a href="#4-2-程序" class="headerlink" title="4.2  程序"></a>4.2  程序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line">format bank</span><br><span class="line">% 读取、处理数据数据</span><br><span class="line">A=[517640 528780 576064 575336 556293 503906 510391 483831 504473 627675 599271 419753 414747 468685 510617 549291 490005];</span><br><span class="line">p1=[A(1:4);A(2:5);A(3:6);A(4:7);A(5:8);A(6:9);A(7:10);A(8:11);A(9:12);A(10:13);A(11:14);A(12:15);A(13:16)]&#x27;</span><br><span class="line">t1=[A(5:17)]</span><br><span class="line">[P,minp,maxp,T,mint,maxt]=premnmx(p1,t1);</span><br><span class="line"></span><br><span class="line">%迭代学习</span><br><span class="line">net=newff(minmax(P),[12,5,1],&#123;&#x27;tansig&#x27;,&#x27;tansig&#x27;,&#x27;purelin&#x27;&#125;,&#x27;traingdm&#x27;)</span><br><span class="line">net.trainParam.epochs=1000000;</span><br><span class="line">net.trainParam.goal=0.00001</span><br><span class="line">net.trainParam.lr=0.01;</span><br><span class="line">[net,tr]=train(net,P,T)</span><br><span class="line"></span><br><span class="line">%反向预测</span><br><span class="line">y=sim(net,P)</span><br><span class="line">Y=postmnmx(y,mint,maxt)</span><br><span class="line">t=1:13;</span><br><span class="line">plot(t,t1,&#x27;r*&#x27;,t,Y,&#x27;bo&#x27;);</span><br><span class="line">title(&#x27;入境人数实际值与预测值对比&#x27;)</span><br><span class="line">legend(&#x27;真实值&#x27;,&#x27;预测值&#x27;)</span><br><span class="line">B=[t;t1;Y]&#x27;</span><br><span class="line"></span><br><span class="line">%展开预测2009年6月的数据</span><br><span class="line">c=A(14:17);</span><br><span class="line">c1=premnmx(c);</span><br><span class="line">c2=c1&#x27;;</span><br><span class="line">C1=sim(net,c2);</span><br><span class="line">C=postmnmx(C1,mint,maxt);</span><br><span class="line">disp([&#x27;经过多次迭代，预测2009年6月份入境旅游人数为：&#x27;,num2str(C)])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="4-3-结果"><a href="#4-3-结果" class="headerlink" title="4.3  结果"></a>4.3  结果</h3><center><img src="/images/matlab/6/6-7.png" width="100%" height="100%" align=center /></center>
+
+
+<p><br></p>
+<p><br></p>
+<h2 id="5"></h2> 
+
+<h2 id="五、-M-M-1-问题"><a href="#五、-M-M-1-问题" class="headerlink" title="五、 M/M/1 问题"></a>五、 M/M/1 问题</h2><h3 id="5-1-题目介绍"><a href="#5-1-题目介绍" class="headerlink" title="5.1  题目介绍"></a>5.1  题目介绍</h3><p>&emsp;&emsp;随机模拟问题：考虑一个简单的排队系统$M/M/1$，具体理论可参看《算法大全》中排队论模型一章，设顾客到达服务窗口的规律服从参数为 $\lambda$ 的泊松分布（等价于两个顾客之间的间隔时间服从均值为 $\frac{1}{\lambda}$ 的指数分布，又称参数为 $\lambda$ 的负指数分布，密度函数为：</p>
+<script type="math/tex; mode=display">
+f(x)=
+\begin{cases} 
+\lambda e^{-\lambda x} & \text{x>0} \\
+ 0 & \text{else}\end{cases}</script><p>其中，其数学期望$E(X)=\frac{1}{\lambda}$</p>
+<p>（注：一般来说，到达服务窗口的顾客流是一个泊松流，即在$(0,t)$时间间隔内，到达服务窗口的顾客人数服从参数为 $\lambda t$ 的 泊松分布，我们知道，该泊松分布的数学期望为 $\lambda t$ ；该泊松流等价于任意相邻两个顾客到达的间隔时间服从参数为 $\lambda$ 的负指数分布。比如，若 $\lambda=5$ ，表示单位时间内平均（数学期望）有 $5$  个顾客到达窗口，等价于任意相邻两个顾客到达的间隔时间为$\frac{1}{5}$ ）。  </p>
+<p>&emsp;&emsp;每个顾客在窗口接受服务的时间服从参数为 $\mu$ 的负指数分布，试在以下两种情况下作随机模拟：  </p>
+<p>1）$\lambda=5$ 人/分钟，$\mu=6$ 人/分钟；  </p>
+<p>2） $\lambda=\mu=5$人/分钟。  </p>
+<p>&emsp;&emsp;（Matlab中指数分布随机数生成函数为$exprnd(mu)$，其中$mu$为数学期望值 ，可以模拟很长一段时间排队系统的工作状况，比如取 $T=5000$分钟，进而得到系统的以下参数的模拟值：</p>
+<p>1）队长：指排队系统中等待服务的顾客人数的平均值。</p>
+<p>2）逗留时间：指一个顾客在排队系统中的平均停留时间。</p>
+<p>3）忙期：指从顾客到达空闲服务机构起，到服务机构再次为空闲止这段时间的平均长度。</p>
+<p>请将模拟值与理论值比较一下。</p>
+<p><br></p>
+<h3 id="5-2-程序"><a href="#5-2-程序" class="headerlink" title="5.2  程序"></a>5.2  程序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">%% 计算模块</span><br><span class="line"> clear</span><br><span class="line"></span><br><span class="line"> tic</span><br><span class="line"> N=0;</span><br><span class="line"> Tim=0;</span><br><span class="line"> J=1;</span><br><span class="line"> t=5000;</span><br><span class="line"> lamda=5;</span><br><span class="line"> mu=6;</span><br><span class="line"></span><br><span class="line"> for j=1:J</span><br><span class="line">     [nn,tim]=tuo(j)</span><br><span class="line">     Tim=Tim+tim;</span><br><span class="line">     N=N+nn;</span><br><span class="line"> end</span><br><span class="line"> N=N/J;</span><br><span class="line"> Tim=Tim/J;</span><br><span class="line"> Jj=lamda/(mu*(mu-lamda))+1/mu;</span><br><span class="line"> disp(&#x27;当lamda=5,mu=6时：&#x27;)</span><br><span class="line"> disp([&#x27;每次模拟时间为5000min,经过&#x27;,num2str(J),&#x27;次模拟，得到如下平均结果：&#x27;])</span><br><span class="line"> disp([&#x27;平均服务的客户人数：Lq=&#x27;,num2str(N)])</span><br><span class="line"> disp([&#x27;客户平均逗留时间及平均逗留忙期：Ws &amp; B=&#x27;,num2str(Tim)])</span><br><span class="line"> disp(&#x27;******************分界线******************&#x27;)</span><br><span class="line"> disp(&#x27;理论结果如下：&#x27;)</span><br><span class="line"> disp([&#x27;平均服务的客户人数：Lq`=&#x27;,num2str((lamda)^2/(mu*(mu-lamda)))])</span><br><span class="line"> disp([&#x27;客户的平均逗留时间及平均服务忙期：Ws` &amp; B`=&#x27;,&#x27;num2str(Jj)&#x27;])</span><br><span class="line"> disp(&#x27;******************分界线******************&#x27;)</span><br><span class="line"> toc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> %% 函数模块</span><br><span class="line"> function [nn,tim]=tuo(t)</span><br><span class="line">     t=5000;</span><br><span class="line">     lamda=5;</span><br><span class="line">     mu=6;</span><br><span class="line">     i=1;</span><br><span class="line">     w=0;</span><br><span class="line">     e0=0;c0=0;</span><br><span class="line">     x(1)=exprnd(1/lamda);</span><br><span class="line">     c(1)=c0+x(1);</span><br><span class="line">     b(1)=c(1);</span><br><span class="line">     while b(i)&lt;=1</span><br><span class="line">         y(i)=exprnd(1/lamda);</span><br><span class="line">         e(i)=b(i)+y(i);</span><br><span class="line">         wait(i)=b(i)+y(i);</span><br><span class="line">         w=w+wait(i);</span><br><span class="line">         i=i+1;</span><br><span class="line">         x(i)=exprnd(1/lamda);</span><br><span class="line">         c(i)=c(i-1)+x(i);</span><br><span class="line">         b(i)=max(c(i),e(i-1));</span><br><span class="line">     end</span><br><span class="line">     n=i-1;</span><br><span class="line">     nn=n/t;</span><br><span class="line">     tim=w/n;</span><br><span class="line"> end</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="5-3-结果"><a href="#5-3-结果" class="headerlink" title="5.3  结果"></a>5.3  结果</h3><center><img src="/images/matlab/6/6-9.png" width="100%" height="100%" align=center /></center>
+
+
+<p><br></p>
+<p><br></p>
+<h2 id="6"></h2> 
+
+<h2 id="六、利用相关系数修复碎纸条"><a href="#六、利用相关系数修复碎纸条" class="headerlink" title="六、利用相关系数修复碎纸条"></a>六、利用相关系数修复碎纸条</h2><h3 id="6-1-题目说明"><a href="#6-1-题目说明" class="headerlink" title="6.1  题目说明"></a>6.1  题目说明</h3><p>&emsp;&emsp;将一张写满内容A4纸平均分成19份，随机打乱顺序后尝试拼接完整。</p>
+<p>由于第I片的右侧和第I+1片的左侧存在相关性，故可以通过求取相关系数得出联系！  </p>
+<script type="math/tex; mode=display">
+\rho_{xy}=\frac{cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}=\frac{E((X-EX)(Y-EY))}{\sqrt{D(X)\sqrt{D(Y)}}}=\frac{EXY-EX·EY}{\sqrt{D(X)}\sqrt{D(Y)}}</script><p><br></p>
+<script type="math/tex; mode=display">r=\frac{\sum_{i=1}^n(x_i-\bar x(y_i-\bar y))}{\sqrt{\sum_{i=1}^n(x_i-\bar x)^2}\sum_{i=1}^n(y_i-\bar y)^2}</script><p><br></p>
+<h2 id="6-2-程序"><a href="#6-2-程序" class="headerlink" title="6.2  程序"></a>6.2  程序</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">%% 函数准备</span><br><span class="line">a1=imread(&#x27;000.bmp&#x27;);</span><br><span class="line">[m,n]=size(a1);</span><br><span class="line">dirname = &#x27;ImageChips&#x27;;</span><br><span class="line">files = dir(fullfile(dirname, &#x27;*.bmp&#x27;));</span><br><span class="line">a=zeros(m,n,19);</span><br><span class="line">pic=[];</span><br><span class="line"></span><br><span class="line">%% 算第一张纸条</span><br><span class="line">E=[1];</span><br><span class="line">F=[1:19];</span><br><span class="line">for j=1:19</span><br><span class="line">    e=tuo(j);</span><br><span class="line">    E=[E,e];</span><br><span class="line">end</span><br><span class="line">f1 = intersect(E,F);</span><br><span class="line">f=setdiff(F,f1);</span><br><span class="line">disp([&#x27;利用相关系数，得出&#x27;,num2str(f),&#x27;张纸片左侧与其他纸片右侧关系最小&#x27;])</span><br><span class="line"></span><br><span class="line">%% 调用函数，测算结果</span><br><span class="line">c=0;</span><br><span class="line">TT=[9];</span><br><span class="line">j=9;</span><br><span class="line">D=[];</span><br><span class="line">for c=1:18</span><br><span class="line">    T=tuo(j);</span><br><span class="line">    TT=[TT,T];</span><br><span class="line">    j=T;</span><br><span class="line">    T=tuo(j);</span><br><span class="line">    c=c+1;</span><br><span class="line">end</span><br><span class="line">disp(&#x27;纸片按照现行顺序，排列如下所示：&#x27;)</span><br><span class="line">TT</span><br><span class="line">for ii = 1:length(files)</span><br><span class="line">filename = fullfile(dirname, files(TT(ii)).name);</span><br><span class="line">a(:,:,TT(ii))=imread(filename);</span><br><span class="line">pic=[pic,a(:,:,TT(ii))];</span><br><span class="line">end</span><br><span class="line">%double(pic);</span><br><span class="line">figure</span><br><span class="line">imshow(pic,[])</span><br><span class="line"></span><br><span class="line">%% 排序函数</span><br><span class="line">function T=tuo(j)</span><br><span class="line">    a1=imread(&#x27;000.bmp&#x27;);</span><br><span class="line">    [m,n]=size(a1);</span><br><span class="line">    %imshow(a1);%显示图像</span><br><span class="line">    %image(a1);</span><br><span class="line"></span><br><span class="line">    dirname = &#x27;ImageChips&#x27;;</span><br><span class="line">    files = dir(fullfile(dirname, &#x27;*.bmp&#x27;));</span><br><span class="line">    a=zeros(m,n,19);</span><br><span class="line">    pic=[];</span><br><span class="line">    for ii = 1:length(files)</span><br><span class="line">    filename = fullfile(dirname, files(ii).name);</span><br><span class="line">    a(:,:,ii)=imread(filename);</span><br><span class="line">    pic=[pic,a(:,:,ii)];</span><br><span class="line">    end</span><br><span class="line">    %double(pic);</span><br><span class="line">    %figure</span><br><span class="line">    %imshow(pic,[])</span><br><span class="line">    a=double(a);</span><br><span class="line">    b=a./255;</span><br><span class="line">    r=[];</span><br><span class="line">    m=1;</span><br><span class="line">    RRr=[];</span><br><span class="line">    for i=1:19</span><br><span class="line">        x=b(:,72,j);</span><br><span class="line">        y=b(:,1,i);</span><br><span class="line">        r1=sum((x-mean(x)).*(y-mean(y)));</span><br><span class="line">        r2=sqrt(sum((x-mean(x)).^2))*sqrt(sum((y-mean(y)).^2));</span><br><span class="line">        r=[r;m,(r1/r2)];</span><br><span class="line">        %rr=corrcoef(x,y);%或利用库函数来求样本相关系数</span><br><span class="line">        m=m+1;</span><br><span class="line">        R=max(r(:,2));</span><br><span class="line">        Rj=r(r(:,2)==R);%已知向量某一列特殊值求向量位置</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">        RRr=[RRr;Rj];</span><br><span class="line">        T=RRr;</span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="6"></h2> 
+
+<h3 id="6-3-结果"><a href="#6-3-结果" class="headerlink" title="6.3  结果"></a>6.3  结果</h3><center><img src="/images/matlab/6/6-11.png" width="100%" height="100%" align=center /></center>
+
+
+<p><br></p>
+<h3 id="6-4-程序分析"><a href="#6-4-程序分析" class="headerlink" title="6.4  程序分析"></a>6.4  程序分析</h3><h4 id="6-4-1-图片及其灰度"><a href="#6-4-1-图片及其灰度" class="headerlink" title="6.4.1   图片及其灰度"></a>6.4.1   图片及其灰度</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">%% 函数准备</span><br><span class="line">a1=imread(&#x27;000.bmp&#x27;);</span><br><span class="line">[m,n]=size(a1);</span><br><span class="line">%imshow(a1);%显示图像</span><br><span class="line">%image(a1);</span><br><span class="line">dirname = &#x27;ImageChips&#x27;;</span><br><span class="line">files = dir(fullfile(dirname, &#x27;*.bmp&#x27;));</span><br><span class="line">a=zeros(m,n,19);</span><br><span class="line">pic=[];</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>imread</code>函数，读取图片灰度，数组 。  </li>
+<li>$[m,n]$是一个取值范围在0~255之间的二维数组，记录图片灰度。  </li>
+<li><code>imshow</code>展示图片灰度数组。  </li>
+<li><code>image</code>将灰度向量转变为图片</li>
+<li><code>dir</code> - 列出文件夹内容:(列出“dirname”这个文件夹内所有后缀为.bmp的文件)</li>
+</ul>
+<p><br></p>
+<h4 id="6-4-2-对文件夹下的文件重命名"><a href="#6-4-2-对文件夹下的文件重命名" class="headerlink" title="6.4.2  对文件夹下的文件重命名"></a>6.4.2  对文件夹下的文件重命名</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">%% 对文件夹下的文件重命名</span><br><span class="line">files = dir(&#x27;F:\Matlab\*.mat&#x27;);</span><br><span class="line">len=length(files);</span><br><span class="line">for i=1:len</span><br><span class="line">    oldname=files(i).name;</span><br><span class="line">    newname=strcat(num2str(i), &#x27;new.mat&#x27;);</span><br><span class="line">    command = [&#x27;rename&#x27; 32 oldname 32 newname];</span><br><span class="line">    status = dos(command);</span><br><span class="line">    if status == 0</span><br><span class="line">        disp([oldname, &#x27; 已被重命名为 &#x27;, newname])</span><br><span class="line">    else</span><br><span class="line">        disp([oldname, &#x27; 重命名失败!&#x27;])</span><br><span class="line">    end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<p><br></p>
+<h2 id="7"></h2> 
+
+<h2 id="七、多元统计分析法"><a href="#七、多元统计分析法" class="headerlink" title="七、多元统计分析法"></a>七、多元统计分析法</h2><h3 id="7-1-题目分析"><a href="#7-1-题目分析" class="headerlink" title="7.1  题目分析"></a>7.1  题目分析</h3><p>&emsp;&emsp;下表是多个省市全年经济发展指标，试对其发展进行评价!</p>
+<p><br></p>
+<ul>
+<li>版幅限制我对列表进行了转置。<table>
+ <tr>
+    <td>省份</td>
+    <td>安徽</td>
+    <td>河南</td>
+    <td>湖北</td>
+    <td>湖南</td>
+    <td>江西</td>
+    <td>山西</td>
+ </tr>
+ <tr>
+    <td>生产总值</td>
+    <td>4812.70 </td>
+    <td>8815.09 </td>
+    <td>6320.40 </td>
+    <td>5612.26 </td>
+    <td>3495.94 </td>
+    <td>3000.00 </td>
+ </tr>
+ <tr>
+    <td>第一产业</td>
+    <td>932.40 </td>
+    <td>1647.48 </td>
+    <td>1020.09 </td>
+    <td>1155.85 </td>
+    <td>711.70 </td>
+    <td>253.40 </td>
+ </tr>
+ <tr>
+    <td>第二产业</td>
+    <td>2169.80 </td>
+    <td>4515.35 </td>
+    <td>2994.67 </td>
+    <td>2214.41 </td>
+    <td>1595.74 </td>
+    <td>1810.10 </td>
+ </tr>
+ <tr>
+    <td>第三产业</td>
+    <td>1710.50 </td>
+    <td>2652.26 </td>
+    <td>2305.72 </td>
+    <td>2242.00 </td>
+    <td>1188.50 </td>
+    <td>978.90 </td>
+ </tr>
+ <tr>
+    <td>人均总值</td>
+    <td>7448.60 </td>
+    <td>9071.80 </td>
+    <td>10505.80 </td>
+    <td>8379.40 </td>
+    <td>8161.30 </td>
+    <td>9024.10 </td>
+ </tr>
+ <tr>
+    <td>粮食产量</td>
+    <td>2743.00 </td>
+    <td>4260.00 </td>
+    <td>2100.12 </td>
+    <td>2810.26 </td>
+    <td>1803.40 </td>
+    <td>1062.00 </td>
+ </tr>
+ <tr>
+    <td>工业增加</td>
+    <td>1736.00 </td>
+    <td>3862.18 </td>
+    <td>1664.73 </td>
+    <td>1781.14 </td>
+    <td>1110.70 </td>
+    <td>1568.50 </td>
+ </tr>
+ <tr>
+    <td>固定投资</td>
+    <td>1914.20 </td>
+    <td>3099.00 </td>
+    <td>2356.38 </td>
+    <td>1981.29 </td>
+    <td>1820.00 </td>
+    <td>1458.50 </td>
+ </tr>
+ <tr>
+    <td>消费总额</td>
+    <td>1503.10 </td>
+    <td>2808.17 </td>
+    <td>2667.48 </td>
+    <td>2069.84 </td>
+    <td>1059.90 </td>
+    <td>884.80 </td>
+ </tr>
+ <tr>
+    <td>进出口</td>
+    <td>72.10 </td>
+    <td>66.10 </td>
+    <td>67.72 </td>
+    <td>54.38 </td>
+    <td>35.30 </td>
+    <td>53.80 </td>
+ </tr>
+ <tr>
+    <td>预算收入</td>
+    <td>274.40 </td>
+    <td>428.80 </td>
+    <td>303.69 </td>
+    <td>348.80 </td>
+    <td>205.80 </td>
+    <td>255.20 </td>
+ </tr>
+ <tr>
+    <td>居民收入</td>
+    <td>7511.40 </td>
+    <td>7704.90 </td>
+    <td>8023.00 </td>
+    <td>8617.48 </td>
+    <td>7560.00 </td>
+    <td>7902.90 </td>
+ </tr>
+ <tr>
+    <td>农民收入</td>
+    <td>2499.30 </td>
+    <td>2553.15 </td>
+    <td>2897.00 </td>
+    <td>2838.00 </td>
+    <td>2953.00 </td>
+    <td>2589.60 </td>
+ </tr>
+ <tr>
+    <td></td>
+ </tr>
+</table>
+
+
+</li>
+</ul>
+<p><br></p>
+<h3 id="7-2-解答过程"><a href="#7-2-解答过程" class="headerlink" title="7.2  解答过程"></a>7.2  解答过程</h3><ul>
+<li>Spss求解<ul>
+<li>1、对其中6(m)个变量13(z)个观测值,在<code>分析-描述统计-描述</code>中进行标准化处理，形成$[m\times z]$的矩阵A；  </li>
+<li>2、对标准化处理后的矩阵在<code>分析-降维-因子</code>中进行因子降维，用主成分分析法提取出特征值大于特定值的n个重要成分，形成$[z\times n]$的矩阵B；  </li>
+<li>3、将矩阵$A\times B$，即$[m,z]\times[z,n]=[m,n]$，的到成分系数与标准化参数的乘积矩阵SS;  </li>
+<li>4、对第二步中的选取的n个成分系数的权重重新分配，得到$[n,1]$的权重矩阵L；</li>
+<li>5、矩阵$L\times S$，即得到评价值。</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/matlab/6/6-14.png" alt="6-14"><br><img src="/images/matlab/6/6-15.png" alt="6-15"></p>
+<p><br></p>
+<ul>
+<li>Matlab求解  </li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">A=xlsread(&#x27;D:\File\文档\MATLAB\暑期训练\多元统计分析\各省GDP占比权重排名\a.xlsx&#x27;,&#x27;Sheet1&#x27;,&#x27;B1:N7&#x27;)%去取数据</span><br><span class="line">[B,B_mean,B_std]=zscore(A)%对A进行标准化处理</span><br><span class="line"></span><br><span class="line">[coeff,score,latent] = pca(B);</span><br><span class="line">latent%特征值</span><br><span class="line">l=latent(latent&gt;1) %选取特征值大于一的</span><br><span class="line">L=l/sum(l)%权重矩阵</span><br><span class="line">score %成分系数与标准化参数的乘积矩阵 </span><br><span class="line">S=score(:,1:3)</span><br><span class="line">E=S(:,1)*L(1)+S(:,2)*L(2)+S(:,3)*L(3)</span><br><span class="line">G=[&quot;安徽&quot;;&quot;河南&quot;;&quot;湖北&quot;;&quot;湖南&quot;;&quot;江西&quot;;&quot;山西&quot;]</span><br><span class="line"></span><br><span class="line">disp(&#x27;各省评价得分如下所示&#x27;)</span><br><span class="line">H=[&quot;省份&quot;,&quot;得分&quot;;G,E]</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="6-3-结果-1"><a href="#6-3-结果-1" class="headerlink" title="6.3  结果"></a>6.3  结果</h3><p><img src="/images/matlab/6/6-12.png" alt="6-12"></p>
+<p><img src="/images/matlab/6/6-13.png" alt="6-13"></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<h2 id="8"></h2> 
+
+<h2 id="八、主成分回归估计"><a href="#八、主成分回归估计" class="headerlink" title="八、主成分回归估计"></a>八、主成分回归估计</h2><h3 id="8-1-题目分析"><a href="#8-1-题目分析" class="headerlink" title="8.1  题目分析"></a>8.1  题目分析</h3><p>&emsp;&emsp;主成分估计（principal component estimate）是Massy在1965年提出的，它是回归系数参数的一种线性有偏估计（biased estimate），同其它有偏估计，如岭估计（ridge estimate）等一样，是为了克服最小二乘（LS）估计在设计阵病态（即存在多重共线性）时表现出的不稳定性而提出的。主成分估计采用的方法是将原来的回归自变量变换到另一组变量，即主成分，选择其中一部分重要的主成分作为新的自变量（此时丢弃了一部分，影响不大的自变量，这实际达到了降维的目的），然后用最小二乘法对选取主成分后的模型参数进行估计，最后再变换回原来的模型求出参数的估计。  </p>
+<p>&emsp;&emsp;求解水泥的影响因子与热量值之间的线性关系：</p>
+<table>
+   <tr>
+      <td>影响因子1</td>
+      <td>影响因子2</td>
+      <td>影响因子3</td>
+      <td>影响因子4</td>
+      <td>热量值</td>
+   </tr>
+   <tr>
+      <td>7</td>
+      <td>26</td>
+      <td>6</td>
+      <td>60</td>
+      <td>78.5</td>
+   </tr>
+   <tr>
+      <td>1</td>
+      <td>29</td>
+      <td>15</td>
+      <td>52</td>
+      <td>74.3</td>
+   </tr>
+   <tr>
+      <td>11</td>
+      <td>56</td>
+      <td>8</td>
+      <td>20</td>
+      <td>104.3</td>
+   </tr>
+   <tr>
+      <td>11</td>
+      <td>31</td>
+      <td>8</td>
+      <td>47</td>
+      <td>87.6</td>
+   </tr>
+   <tr>
+      <td>7</td>
+      <td>52</td>
+      <td>6</td>
+      <td>33</td>
+      <td>95.9</td>
+   </tr>
+   <tr>
+      <td>11</td>
+      <td>55</td>
+      <td>9</td>
+      <td>22</td>
+      <td>109.2</td>
+   </tr>
+   <tr>
+      <td>3</td>
+      <td>71</td>
+      <td>17</td>
+      <td>6</td>
+      <td>102.7</td>
+   </tr>
+   <tr>
+      <td>1</td>
+      <td>31</td>
+      <td>22</td>
+      <td>44</td>
+      <td>72.5</td>
+   </tr>
+   <tr>
+      <td>2</td>
+      <td>54</td>
+      <td>18</td>
+      <td>22</td>
+      <td>93.1</td>
+   </tr>
+   <tr>
+      <td>21</td>
+      <td>47</td>
+      <td>4</td>
+      <td>26</td>
+      <td>115.9</td>
+   </tr>
+   <tr>
+      <td>1</td>
+      <td>40</td>
+      <td>23</td>
+      <td>34</td>
+      <td>83.8</td>
+   </tr>
+   <tr>
+      <td>11</td>
+      <td>66</td>
+      <td>9</td>
+      <td>12</td>
+      <td>113.3</td>
+   </tr>
+   <tr>
+      <td>10</td>
+      <td>68</td>
+      <td>8</td>
+      <td>12</td>
+      <td>109.4</td>
+   </tr>
+   <tr>
+      <td></td>
+   </tr>
+</table>
+
+<p><br></p>
+<h3 id="8-2-程序解答"><a href="#8-2-程序解答" class="headerlink" title="8.2  程序解答"></a>8.2  程序解答</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line"></span><br><span class="line">A=xlsread(&#x27;D:\File\文档\MATLAB\暑期训练\多元统计分析\对水泥性质影响因素的线性回归\水泥.xlsx&#x27;,&#x27;Sheet1&#x27;,&#x27;A2:D14&#x27;);</span><br><span class="line">B=xlsread(&#x27;D:\File\文档\MATLAB\暑期训练\多元统计分析\对水泥性质影响因素的线性回归\水泥.xlsx&#x27;,&#x27;Sheet2&#x27;,&#x27;A2:A14&#x27;);</span><br><span class="line">[C,C_mean,C_std]=zscore(A)%对A标准化处理：C为标准化处理后的值；C_mean为均值；C_std为标准方差</span><br><span class="line">[G,S,L]=pca(C);</span><br><span class="line">L=L(1:3)%取特征值的前三个</span><br><span class="line"></span><br><span class="line">%求特征向量</span><br><span class="line">d1=size(C,1);</span><br><span class="line">d=(C&#x27;*C)/(d1-1);</span><br><span class="line">D=cov(d);</span><br><span class="line">e=pcacov(D)&#x27;;%特征向量</span><br><span class="line">E=e(1:3,:)&#x27;</span><br><span class="line">F=C*E %F=S</span><br><span class="line"></span><br><span class="line">Q=E&#x27;./C_std %</span><br><span class="line"></span><br><span class="line">syms X1 X2 X3 X4 F1 F2 F3</span><br><span class="line">F1=Q(1,1)*(X1-C_mean(1))+Q(1,2)*(X2-C_mean(2))+Q(1,3)*(X3-C_mean(3))+Q(1,4)*(X4-C_mean(4));</span><br><span class="line">F2=Q(2,1)*(X1-C_mean(1))+Q(2,2)*(X2-C_mean(2))+Q(2,3)*(X3-C_mean(3))+Q(2,4)*(X4-C_mean(4));</span><br><span class="line">F3=Q(3,1)*(X1-C_mean(1))+Q(3,2)*(X2-C_mean(2))+Q(3,3)*(X3-C_mean(3))+Q(3,4)*(X4-C_mean(4));</span><br><span class="line"></span><br><span class="line">y=95.423+9.883*F1+0.125*F2+4.555*F3;</span><br><span class="line"></span><br><span class="line">Y=vpa(y,4)</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="8-3-结果"><a href="#8-3-结果" class="headerlink" title="8.3  结果"></a>8.3  结果</h3><p><img src="/images/matlab/6/6-16.png" alt="6-16">  </p>
+<p><img src="/images/matlab/6/6-17.png" alt="6-17"></p>
+<p><br></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2021/07/18/Mathematical_modeling/matlab6/" title="Matlab案例分析" target="_blank" rel="external">http://example.com/2021/07/18/Mathematical_modeling/matlab6/</a>
+    </li>
+    
+    
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/tuoxiao" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/tuoxiao" target="_blank"><span class="text-dark">TuTo</span><small class="ml-1x"></small></a></h3>
+        <div>天地与我并生，万物与我为一。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="lv-container" data-id="city" data-uid="MTAyMC81Mjc5MS8yOTI2OA==">
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+      </div>    
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2021/07/31/Mathematical_modeling/9latex/" title="Latex排版"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2021/07/15/Learn/Python/" title="Python"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/tuoxiao" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/6573256711" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/yunshengchu2" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://space.bilibili.com/488452389" target="_blank" title="Bilibili" data-toggle=tooltip data-placement=top><i class="icon icon-bilibili"></i></a></li>
+        
+    </ul>
+
+ 
+    <span id="sitetime"></span>
+    <script>function siteTime(){
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth()+1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+           year - 作为date对象的年份，为4位年份值
+           month - 0-11之间的整数，做为date对象的月份
+           day - 1-31之间的整数，做为date对象的天数
+           hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+           minutes - 0-59之间的整数，做为date对象的分钟数
+           seconds - 0-59之间的整数，做为date对象的秒数
+           microseconds - 0-999之间的整数，做为date对象的毫秒数
+        */
+        var t1 = Date.UTC(2021,02,10,0,0,0); //t1为建站时间
+        var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+        var diff = t2-t1;
+        var diffYears = Math.floor(diff/years);
+        var diffDD = Math.floor((diff/days));
+        var diffDays = Math.floor((diff/days)-diffYears*365);
+        var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+        var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+        var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+        document.getElementById("sitetime").innerHTML="已运行："+diffDD+"天"+diffHours+"小时"+diffMinutes+"分钟";
+        // 因为建站时间还没有一年，就将之注释掉了。需要的可以取消
+        }
+        siteTime();
+    </script>
+    
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<div id="go-top"></div>
+<style type="text/css">
+#go-top {
+ width:40px;height:36px;
+ background-color:#141414;
+ position:relative;
+ border-radius:2px;
+ position:fixed;right:10px;bottom:60px;
+ cursor:pointer;display:none;
+}
+#go-top:after {
+ content:" ";
+ position:absolute;left:14px;top:14px;
+ border-top:2px solid #fff;border-right:2px solid #fff;
+ width:12px;height:12px;
+ transform:rotate(-45deg);
+}
+#go-top:hover {
+ background-color:#141414;
+}
+</style>
+<script>
+$(function () {
+  var top=$("#go-top");
+  $(window).scroll(function () {
+    ($(window).scrollTop() > 300) ? top.show(300) : top.hide(200);
+    $("#go-top").click(function () {
+      $('body,html').animate({scrollTop:0});
+      return false();
+    })
+  });
+});
+</script>
+
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+    
+<script defer type="text/javascript">
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+
+
+
+
+
+
+
+
+
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+  <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/clipboard_use.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
