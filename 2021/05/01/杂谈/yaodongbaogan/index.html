@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>摇动摆杆运动分析 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="提出问题：&lt;img src&#x3D;”&#x2F;images&#x2F;zatan&#x2F;2-1.png” width&#x3D;25%” height&#x3D;25%” align&#x3D;right &#x2F;&gt; &amp;emsp;&amp;emsp;在如左图所示的摆杆中，已知: &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;$\i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="摇动摆杆运动分析">
+<meta property="og:url" content="http://example.com/2021/05/01/%E6%9D%82%E8%B0%88/yaodongbaogan/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="提出问题：&lt;img src&#x3D;”&#x2F;images&#x2F;zatan&#x2F;2-1.png” width&#x3D;25%” height&#x3D;25%” align&#x3D;right &#x2F;&gt; &amp;emsp;&amp;emsp;在如左图所示的摆杆中，已知: &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;$\i">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/zatan/2/2-9.png">
+<meta property="og:image" content="http://example.com/images/zatan/2/2-10.png">
+<meta property="og:image" content="http://example.com/images/zatan/2/2-4.png">
+<meta property="og:image" content="http://example.com/images/zatan/2/2-5.png">
+<meta property="og:image" content="http://example.com/images/zatan/2/2-6.png">
+<meta property="og:image" content="http://example.com/images/zatan/2/2-7.png">
+<meta property="article:published_time" content="2021-05-01T10:54:23.000Z">
+<meta property="article:modified_time" content="2021-07-21T13:29:52.799Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="机械原理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/zatan/2/2-9.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-杂谈/yaodongbaogan" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/05/01/%E6%9D%82%E8%B0%88/yaodongbaogan/" class="article-date">
+  <time class="dt-published" datetime="2021-05-01T10:54:23.000Z" itemprop="datePublished">2021-05-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      摇动摆杆运动分析
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="提出问题："><a href="#提出问题：" class="headerlink" title="提出问题："></a>提出问题：</h2><p>&lt;img src&#x3D;”&#x2F;images&#x2F;zatan&#x2F;2-1.png” width&#x3D;25%” height&#x3D;25%” align&#x3D;right &#x2F;&gt;</p>
+<p>&amp;emsp;&amp;emsp;在如左图所示的摆杆中，已知:</p>
+<p>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;$\iota_1$&amp;ensp;&#x3D; &amp;ensp;0.6 m<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;$\iota_4$&amp;ensp;&#x3D; &amp;ensp;1.2 m<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;$\omega_1$&#x3D; &amp;ensp;3 rad&#x2F;s  </p>
+<p>&amp;emsp;&amp;emsp;假如原动杆以$\omega_1$的恒定角速度转动，尝试导出机构3的角位置 $\theta_3$、角速度 $\omega_3$、角加速度$\alpha_3$</p>
+<br>
+
+<br>
+
+<h2 id="建立模型"><a href="#建立模型" class="headerlink" title="建立模型"></a>建立模型</h2><p>&lt;img src&#x3D;”&#x2F;images&#x2F;zatan&#x2F;2-2.png” width&#x3D;60%” height&#x3D;60%” align&#x3D;right &#x2F;&gt;</p>
+<p>1、首先要将运动机构简化为数学模型，可以很轻易得出如右图所示模型；<br>2、求出 $\theta_3$ ： </p>
+<center>
+$\frac{cos\theta_3}{\iota_1}$=$\frac{sin(\theta_3-\theta_1)}{\iota_4}$  
+
+</center>
+<center>
+
+<p> $\Downarrow$  </p>
+</center>
+<center>
+
+<p>2cos$\theta_3$&#x3D;sin($\theta_3-\theta_1$)  </p>
+</center>
+<center>
+
+<p> $\Downarrow$  </p>
+</center>
+<center>
+
+<p>$2cos\theta_3 &#x3D;sin\theta_3cos\theta_1-sin\theta_1cos\theta_3$  </p>
+</center>
+<center>
+
+<p>$\Downarrow$  </p>
+</center>
+<center>
+
+<p>$tan\theta_3 &#x3D; \frac{2+sin\theta_1}{cos\theta_1}$  </p>
+</center>
+<center>
+
+<p>$\Downarrow$  </p>
+</center>
+<center>
+
+<p>$\theta_3 &#x3D; arctan\frac{2+sin\theta_1}{cos\theta_1}$</p>
+</center>
+
+<br>
+
+<p>&lt;img src&#x3D;”&#x2F;images&#x2F;zatan&#x2F;2-3.png” width&#x3D;60%” height&#x3D;60%” align&#x3D;right &#x2F;&gt;</p>
+<p>3、因为$\theta_3$要满足如此条件 ： ($\frac{\pi}{3} \leqslant \theta_3 \leqslant \frac{2\pi}{3}$)。且用反三角函数解出来的 $\theta_3$ 有一跃变的过程。  故，对 $\theta_3$ 对弧度值小于0的 $\theta_3$ 进行 $\theta_3$ &#x3D; $\theta_3$ +$\pi$ 处理，可以得到正确的 $\theta_3$ 值。</p>
+<p>4、求出 $\theta_3$ 后，则 $\omega_3$ 、$\alpha_3$ 求法就简单：</p>
+<center>
+
+<p>$\omega_3 &#x3D; \omega_1 * cos (\theta_3-\theta_1)$</p>
+</center>
+<center>
+
+<p>$\alpha_3 &#x3D; \omega_1 * sin (\theta_3-\theta_1)$</p>
+</center>
+
+<p>5、对以上数学模型进行处理，分别带入到Excel、Matlab中，可以输出运行结果‘</p>
+<br>
+
+<br>
+
+<h2 id="Excel计算数据"><a href="#Excel计算数据" class="headerlink" title="Excel计算数据"></a>Excel计算数据</h2><table>
+   <tr>
+      <td>\theta_1 (\cric)</td>
+      <td>\theta_3 (rad)</td>
+      <td>\omega_3 (rad/s)</td>
+      <td>\alpha_3 (rad/s^-2)</td>
+   </tr>
+   <tr>
+      <td>0</td>
+      <td>1.107148718</td>
+      <td>1.341640786</td>
+      <td>2.683281573</td>
+   </tr>
+   <tr>
+      <td>5</td>
+      <td>1.125474919</td>
+      <td>1.523293436</td>
+      <td>2.584487784</td>
+   </tr>
+   <tr>
+      <td>10</td>
+      <td>1.145395003</td>
+      <td>1.693764615</td>
+      <td>2.476118218</td>
+   </tr>
+   <tr>
+      <td>15</td>
+      <td>1.166705008</td>
+      <td>1.8532794</td>
+      <td>2.359100563</td>
+   </tr>
+   <tr>
+      <td>20</td>
+      <td>1.189228628</td>
+      <td>2.002024817</td>
+      <td>2.234255275</td>
+   </tr>
+   <tr>
+      <td>25</td>
+      <td>1.212812651</td>
+      <td>2.140153305</td>
+      <td>2.10231868</td>
+   </tr>
+   <tr>
+      <td>30</td>
+      <td>1.237323155</td>
+      <td>2.267786838</td>
+      <td>1.963961012</td>
+   </tr>
+   <tr>
+      <td>35</td>
+      <td>1.262642349</td>
+      <td>2.385021177</td>
+      <td>1.819800535</td>
+   </tr>
+   <tr>
+      <td>40</td>
+      <td>1.288665945</td>
+      <td>2.491929983</td>
+      <td>1.670414607</td>
+   </tr>
+   <tr>
+      <td>45</td>
+      <td>1.315300953</td>
+      <td>2.588568628</td>
+      <td>1.516348395</td>
+   </tr>
+   <tr>
+      <td>50</td>
+      <td>1.342463822</td>
+      <td>2.674977634</td>
+      <td>1.358121738</td>
+   </tr>
+   <tr>
+      <td>55</td>
+      <td>1.370078875</td>
+      <td>2.751185712</td>
+      <td>1.196234584</td>
+   </tr>
+   <tr>
+      <td>60</td>
+      <td>1.398076962</td>
+      <td>2.817212405</td>
+      <td>1.031171308</td>
+   </tr>
+   <tr>
+      <td>65</td>
+      <td>1.426394312</td>
+      <td>2.873070353</td>
+      <td>0.863404163</td>
+   </tr>
+   <tr>
+      <td>70</td>
+      <td>1.45497152</td>
+      <td>2.918767192</td>
+      <td>0.693396048</td>
+   </tr>
+   <tr>
+      <td>75</td>
+      <td>1.48375266</td>
+      <td>2.954307121</td>
+      <td>0.521602754</td>
+   </tr>
+   <tr>
+      <td>80</td>
+      <td>1.512684489</td>
+      <td>2.979692149</td>
+      <td>0.348474818</td>
+   </tr>
+   <tr>
+      <td>85</td>
+      <td>1.541715716</td>
+      <td>2.994923043</td>
+      <td>0.174459074</td>
+   </tr>
+   <tr>
+      <td>90</td>
+      <td>1.570796327</td>
+      <td>3</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>95</td>
+      <td>1.599876938</td>
+      <td>2.994923043</td>
+      <td>-0.174459074</td>
+   </tr>
+   <tr>
+      <td>100</td>
+      <td>1.628908165</td>
+      <td>2.979692149</td>
+      <td>-0.348474818</td>
+   </tr>
+   <tr>
+      <td>105</td>
+      <td>1.657839993</td>
+      <td>2.954307121</td>
+      <td>-0.521602754</td>
+   </tr>
+   <tr>
+      <td>110</td>
+      <td>1.686621134</td>
+      <td>2.918767192</td>
+      <td>-0.693396048</td>
+   </tr>
+   <tr>
+      <td>115</td>
+      <td>1.715198341</td>
+      <td>2.873070353</td>
+      <td>-0.863404163</td>
+   </tr>
+   <tr>
+      <td>120</td>
+      <td>1.743515692</td>
+      <td>2.817212405</td>
+      <td>-1.031171308</td>
+   </tr>
+   <tr>
+      <td>125</td>
+      <td>1.771513779</td>
+      <td>2.751185712</td>
+      <td>-1.196234584</td>
+   </tr>
+   <tr>
+      <td>130</td>
+      <td>1.799128831</td>
+      <td>2.674977634</td>
+      <td>-1.358121738</td>
+   </tr>
+   <tr>
+      <td>135</td>
+      <td>1.8262917</td>
+      <td>2.588568628</td>
+      <td>-1.516348395</td>
+   </tr>
+   <tr>
+      <td>140</td>
+      <td>1.852926708</td>
+      <td>2.491929983</td>
+      <td>-1.670414607</td>
+   </tr>
+   <tr>
+      <td>145</td>
+      <td>1.878950305</td>
+      <td>2.385021177</td>
+      <td>-1.819800535</td>
+   </tr>
+   <tr>
+      <td>150</td>
+      <td>1.904269499</td>
+      <td>2.267786838</td>
+      <td>-1.963961012</td>
+   </tr>
+   <tr>
+      <td>155</td>
+      <td>1.928780002</td>
+      <td>2.140153305</td>
+      <td>-2.10231868</td>
+   </tr>
+   <tr>
+      <td>160</td>
+      <td>1.952364025</td>
+      <td>2.002024817</td>
+      <td>-2.234255275</td>
+   </tr>
+   <tr>
+      <td>165</td>
+      <td>1.974887646</td>
+      <td>1.8532794</td>
+      <td>-2.359100563</td>
+   </tr>
+   <tr>
+      <td>170</td>
+      <td>1.99619765</td>
+      <td>1.693764615</td>
+      <td>-2.476118218</td>
+   </tr>
+   <tr>
+      <td>175</td>
+      <td>2.016117734</td>
+      <td>1.523293436</td>
+      <td>-2.584487784</td>
+   </tr>
+   <tr>
+      <td>180</td>
+      <td>2.034443936</td>
+      <td>1.341640786</td>
+      <td>-2.683281573</td>
+   </tr>
+   <tr>
+      <td>185</td>
+      <td>2.050939135</td>
+      <td>1.148541591</td>
+      <td>-2.771435046</td>
+   </tr>
+   <tr>
+      <td>190</td>
+      <td>2.065326477</td>
+      <td>0.943691779</td>
+      <td>-2.847708873</td>
+   </tr>
+   <tr>
+      <td>195</td>
+      <td>2.077281554</td>
+      <td>0.726754602</td>
+      <td>-2.910640436</td>
+   </tr>
+   <tr>
+      <td>200</td>
+      <td>2.086423264</td>
+      <td>0.497376043</td>
+      <td>-2.958482224</td>
+   </tr>
+   <tr>
+      <td>205</td>
+      <td>2.092303368</td>
+      <td>0.255215338</td>
+      <td>-2.989124476</td>
+   </tr>
+   <tr>
+      <td>210</td>
+      <td>2.094395102</td>
+      <td>-1.1485E-15</td>
+      <td>-3</td>
+   </tr>
+   <tr>
+      <td>215</td>
+      <td>2.092081706</td>
+      <td>-0.268380304</td>
+      <td>-2.98797122</td>
+   </tr>
+   <tr>
+      <td>220</td>
+      <td>2.084646809</td>
+      <td>-0.549719909</td>
+      <td>-2.949204642</td>
+   </tr>
+   <tr>
+      <td>225</td>
+      <td>2.071270364</td>
+      <td>-0.843253913</td>
+      <td>-2.879048947</td>
+   </tr>
+   <tr>
+      <td>230</td>
+      <td>2.051036647</td>
+      <td>-1.147288675</td>
+      <td>-2.771953949</td>
+   </tr>
+   <tr>
+      <td>235</td>
+      <td>2.022965068</td>
+      <td>-1.458669382</td>
+      <td>-2.621504079</td>
+   </tr>
+   <tr>
+      <td>240</td>
+      <td>1.986079566</td>
+      <td>-1.772071484</td>
+      <td>-2.420694664</td>
+   </tr>
+   <tr>
+      <td>245</td>
+      <td>1.939536273</td>
+      <td>-2.07917744</td>
+      <td>-2.162642174</td>
+   </tr>
+   <tr>
+      <td>250</td>
+      <td>1.882826066</td>
+      <td>-2.367960099</td>
+      <td>-1.841945974</td>
+   </tr>
+   <tr>
+      <td>255</td>
+      <td>1.816048477</td>
+      <td>-2.622540252</td>
+      <td>-1.456805623</td>
+   </tr>
+   <tr>
+      <td>260</td>
+      <td>1.740206377</td>
+      <td>-2.824297227</td>
+      <td>-1.011605247</td>
+   </tr>
+   <tr>
+      <td>265</td>
+      <td>1.657404473</td>
+      <td>-2.954765565</td>
+      <td>-0.518999474</td>
+   </tr>
+   <tr>
+      <td>270</td>
+      <td>1.570796327</td>
+      <td>-3</td>
+      <td>-3.67545E-16</td>
+   </tr>
+   <tr>
+      <td>275</td>
+      <td>1.484188181</td>
+      <td>-2.954765565</td>
+      <td>0.518999474</td>
+   </tr>
+   <tr>
+      <td>280</td>
+      <td>1.401386276</td>
+      <td>-2.824297227</td>
+      <td>1.011605247</td>
+   </tr>
+   <tr>
+      <td>285</td>
+      <td>1.325544177</td>
+      <td>-2.622540252</td>
+      <td>1.456805623</td>
+   </tr>
+   <tr>
+      <td>290</td>
+      <td>1.258766587</td>
+      <td>-2.367960099</td>
+      <td>1.841945974</td>
+   </tr>
+   <tr>
+      <td>295</td>
+      <td>1.202056381</td>
+      <td>-2.07917744</td>
+      <td>2.162642174</td>
+   </tr>
+   <tr>
+      <td>300</td>
+      <td>1.155513088</td>
+      <td>-1.772071484</td>
+      <td>2.420694664</td>
+   </tr>
+   <tr>
+      <td>305</td>
+      <td>1.118627586</td>
+      <td>-1.458669382</td>
+      <td>2.621504079</td>
+   </tr>
+   <tr>
+      <td>310</td>
+      <td>1.090556007</td>
+      <td>-1.147288675</td>
+      <td>2.771953949</td>
+   </tr>
+   <tr>
+      <td>315</td>
+      <td>1.07032229</td>
+      <td>-0.843253913</td>
+      <td>2.879048947</td>
+   </tr>
+   <tr>
+      <td>320</td>
+      <td>1.056945844</td>
+      <td>-0.549719909</td>
+      <td>2.949204642</td>
+   </tr>
+   <tr>
+      <td>325</td>
+      <td>1.049510948</td>
+      <td>-0.268380304</td>
+      <td>2.98797122</td>
+   </tr>
+   <tr>
+      <td>330</td>
+      <td>1.047197551</td>
+      <td>-5.51317E-16</td>
+      <td>3</td>
+   </tr>
+   <tr>
+      <td>335</td>
+      <td>1.049289285</td>
+      <td>0.255215338</td>
+      <td>2.989124476</td>
+   </tr>
+   <tr>
+      <td>340</td>
+      <td>1.05516939</td>
+      <td>0.497376043</td>
+      <td>2.958482224</td>
+   </tr>
+   <tr>
+      <td>345</td>
+      <td>1.064311099</td>
+      <td>0.726754602</td>
+      <td>2.910640436</td>
+   </tr>
+   <tr>
+      <td>350</td>
+      <td>1.076266177</td>
+      <td>0.943691779</td>
+      <td>2.847708873</td>
+   </tr>
+   <tr>
+      <td>355</td>
+      <td>1.090653519</td>
+      <td>1.148541591</td>
+      <td>2.771435046</td>
+   </tr>
+   <tr>
+      <td>360</td>
+      <td>1.107148718</td>
+      <td>1.341640786</td>
+      <td>2.683281573</td>
+   </tr>
+   <tr>
+      <td></td>
+   </tr>
+</table>
+
+
+
+<h2 id="Matlab程序运算、作图"><a href="#Matlab程序运算、作图" class="headerlink" title="Matlab程序运算、作图"></a>Matlab程序运算、作图</h2><ul>
+<li><p>示例程序：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line">%已知：</span><br><span class="line">l1=0.6;</span><br><span class="line">l4=1.2;</span><br><span class="line">w1=3;</span><br><span class="line">th=[0:5:360]</span><br><span class="line">th1=deg2rad(th)</span><br><span class="line">th3=atan(((l4/l1)+sin(th1))./cos(th1));</span><br><span class="line">th3(th3&lt;0)=th3(th3&lt;0)+pi;</span><br><span class="line">om3=(w1.*cos(th3-th1));</span><br><span class="line">al3=w1.*sin(th3-th1)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">figure(1)       %得到机构3的转动角度\theta_3的角度</span><br><span class="line">plot(th,th3,&#x27;r&#x27;)</span><br><span class="line">title(&#x27;角位移图线&#x27;);</span><br><span class="line">xlabel(&#x27;原动杆转角 \theta_1 /\circ&#x27;)</span><br><span class="line">ylabel(&#x27;从动杆转角 \theta_2 &#x27;)</span><br><span class="line">grid on;</span><br><span class="line"></span><br><span class="line">figure(2)       %得到机构3的角速度\omega_3</span><br><span class="line">plot(th,om3,&#x27;b&#x27;)</span><br><span class="line">title(&#x27;角速度图像&#x27;);</span><br><span class="line">xlabel(&#x27;原动杆转动角度 \theta_1 /\circ&#x27;)</span><br><span class="line">ylabel(&#x27;从动杆转角速读 \omega_2 /rad/s&#x27;)</span><br><span class="line">grid on;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">figure(3)       %得到机构3的角加速度\alpha_3</span><br><span class="line">plot(th,al3,&#x27;black&#x27;)</span><br><span class="line">title(&#x27;角加速度图线&#x27;);</span><br><span class="line">xlabel(&#x27;原动杆转角度 \theta_1 /\circ&#x27;)</span><br><span class="line">ylabel(&#x27;从动杆转角加速度 \alpha_3 rad/s^2&#x27;)</span><br><span class="line">grid on;</span><br><span class="line"></span><br><span class="line">figure(4)       %合并以上三个图像</span><br><span class="line">plot(th,th3,&#x27;r&#x27;,th,om3,&#x27;b&#x27;,th,al3,&#x27;black&#x27;)</span><br><span class="line">title(&#x27;摆动导杆运动分析&#x27;);</span><br><span class="line">text(100,1.3,&#x27;\theta_3&#x27;)</span><br><span class="line">text(100,2.7,&#x27;\omega_3&#x27;)</span><br><span class="line">text(200,-2.5,&#x27;\alpha_3&#x27;)</span><br><span class="line">grid on;</span><br><span class="line"></span><br><span class="line">disp(&#x27;原转动角度 - 从转动角度 - 角速度 - 角加速度&#x27;)</span><br><span class="line">y=[th&#x27;,th3&#x27;,om3&#x27;,al3&#x27;];</span><br><span class="line">disp(y)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>得到以下图像：<br><img src="/images/zatan/2/2-9.png" alt="1"><br><img src="/images/zatan/2/2-10.png" alt="2"><br><img src="/images/zatan/2/2-4.png" alt="3"><br><img src="/images/zatan/2/2-5.png" alt="4">  </p>
+</li>
+<li><p>得到同Excel数据：(节选)<br> <img src="/images/zatan/2/2-6.png" alt="5"></p>
+</li>
+</ul>
+<h2 id="Adams运动分析"><a href="#Adams运动分析" class="headerlink" title="Adams运动分析"></a>Adams运动分析</h2><br>
+
+<br>
+
+<h4 id="模拟运动曲线"><a href="#模拟运动曲线" class="headerlink" title="模拟运动曲线"></a>模拟运动曲线</h4><br>
+
+<p><img src="/images/zatan/2/2-7.png" alt="2-7"></p>
+<h4 id="运动模拟"><a href="#运动模拟" class="headerlink" title="运动模拟"></a>运动模拟</h4><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe 
+src="/images/zatan/2-8.gif" scrolling="no" border="0" 
+frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 100%; left: 0; top: 0;"> </iframe></div>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/05/01/%E6%9D%82%E8%B0%88/yaodongbaogan/" data-id="cl3qp23px001u10qf3q5972tf" data-title="摇动摆杆运动分析" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/05/23/%E6%9D%82%E8%B0%88/tulun/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          凸轮轮廓线推导
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/04/30/%E6%9D%82%E8%B0%88/xiaoxing/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">小新pro13Intel版Bios</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arduino/" rel="tag">Arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" rel="tag">Lingo案例分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">Matlab基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">matlab基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E5%BA%94%E7%94%A8/" rel="tag">matlab应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E7%A8%8B%E5%BA%8F/" rel="tag">matlab程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E7%BB%98%E5%9B%BE/" rel="tag">matlab绘图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" rel="tag">单片机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" rel="tag">机械设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" rel="tag">论文排版</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Arduino/" style="font-size: 10px;">Arduino</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" style="font-size: 10px;">Lingo案例分析</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 10px;">Matlab基础知识</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 10px;">matlab基础知识</a> <a href="/tags/matlab%E5%BA%94%E7%94%A8/" style="font-size: 15px;">matlab应用</a> <a href="/tags/matlab%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">matlab程序</a> <a href="/tags/matlab%E7%BB%98%E5%9B%BE/" style="font-size: 10px;">matlab绘图</a> <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 10px;">单片机</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" style="font-size: 20px;">机械原理</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">机械设计</a> <a href="/tags/%E7%8E%A9%E6%9C%BA/" style="font-size: 10px;">玩机</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" style="font-size: 10px;">论文排版</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 10px;">语法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/">Mathjax渲染公式</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/29/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/31/matlab/9latex/">Latex排版</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/30/matlab/8Lingo/">Lingo</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/18/matlab/matlab6/">Matlab案例分析</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

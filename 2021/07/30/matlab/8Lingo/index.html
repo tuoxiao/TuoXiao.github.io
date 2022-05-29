@@ -4,15 +4,22 @@
   <meta charset="utf-8">
   
   
-  <title>Archives: 2022 | Hexo</title>
+  <title>Lingo | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2022/index.html">
+  <meta name="description" content="钢管下料问题1.1 题目再现 题目：已知需采用三种切割模式，将19m长的原料钢管截成客户所需要的长度：  4m 长的 50根；5m长的10根；6m长的20根； 8m长的15根。  问题:如何下料最节省？   1.2 建模分析 设:    钢管的切割模式为 $x_1、x_2、x_3$ ; $r_{ij}$ 为在某种情况下，每根原料钢管生产4m、5m、6m、8m需要的钢管数量。   约束方程为：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lingo">
+<meta property="og:url" content="http://example.com/2021/07/30/matlab/8Lingo/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="钢管下料问题1.1 题目再现 题目：已知需采用三种切割模式，将19m长的原料钢管截成客户所需要的长度：  4m 长的 50根；5m长的10根；6m长的20根； 8m长的15根。  问题:如何下料最节省？   1.2 建模分析 设:    钢管的切割模式为 $x_1、x_2、x_3$ ; $r_{ij}$ 为在某种情况下，每根原料钢管生产4m、5m、6m、8m需要的钢管数量。   约束方程为：">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/matlab/8/1.png">
+<meta property="article:published_time" content="2021-07-30T11:17:35.000Z">
+<meta property="article:modified_time" content="2021-07-30T11:50:24.271Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Lingo案例分析">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/matlab/8/1.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -69,58 +76,101 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-29T02:39:39.834Z" itemprop="datePublished">May 29</time>
+        <section id="main"><article id="post-matlab/8Lingo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/07/30/matlab/8Lingo/" class="article-date">
+  <time class="dt-published" datetime="2021-07-30T11:17:35.000Z" itemprop="datePublished">2021-07-30</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/">Mathjax渲染公式</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      Lingo
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/29/hello-world/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-29T02:07:02.804Z" itemprop="datePublished">May 29</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/29/hello-world/">Hello World</a>
-    </h1>
-  
+        <h2 id="钢管下料问题"><a href="#钢管下料问题" class="headerlink" title="钢管下料问题"></a>钢管下料问题</h2><h3 id="1-1-题目再现"><a href="#1-1-题目再现" class="headerlink" title="1.1 题目再现"></a>1.1 题目再现</h3><ul>
+<li><p>题目：<br>已知需采用三种切割模式，将19m长的原料钢管截成客户所需要的长度：  4m 长的 50根；5m长的10根；6m长的20根； 8m长的15根。</p>
+</li>
+<li><p>问题:如何下料最节省？</p>
+</li>
+</ul>
+<h3 id="1-2-建模分析"><a href="#1-2-建模分析" class="headerlink" title="1.2 建模分析"></a>1.2 建模分析</h3><ul>
+<li><p>设:  </p>
+<ul>
+<li>钢管的切割模式为 $x_1、x_2、x_3$ ;</li>
+<li>$r_{ij}$ 为在某种情况下，每根原料钢管生产4m、5m、6m、8m需要的钢管数量。</li>
+</ul>
+</li>
+<li><p>约束方程为：</p>
+</li>
+</ul>
+<center>
 
-    </header>
+<p>$Min&#x3D;x_1+x_2+x_3$</p>
+<br>
+
+<p>$$<br>\begin{cases} r_{11}x_1+r_{12}x_2+r_{13}x_3 \ge50 \r_{21}x_1+r_{22}x_2+r_{23}x_3 \ge10 \ r_{31}x_1+r_{32}x_2+r_{33}x_3 \ge20 \r_{41}x_1+r_{42}x_2+r_{43}x_3 \ge15 \end{cases}<br>$$</p>
+<br>
+
+<p>$$<br>\begin{cases}<br>16\leqq4r_{11}+5r_{21}+6r_{31}+8r_{41} \leqq19 \<br>16\leqq4r_{12}+5r_{22}+6r_{32}+8r_{42} \leqq19 \<br>16\leqq4r_{13}+5r_{23}+6r_{33}+8r_{43} \leqq19<br>\end{cases}<br>$$</p>
+<br>
+
+</center>
+
+
+<h3 id="1-3-Lingo编程求解"><a href="#1-3-Lingo编程求解" class="headerlink" title="1.3 Lingo编程求解"></a>1.3 Lingo编程求解</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sets:</span><br><span class="line">hang/1..4/:d,l;</span><br><span class="line">lie/1..3/:x;</span><br><span class="line">link(hang,lie):r;</span><br><span class="line">endsets</span><br><span class="line"></span><br><span class="line">data:</span><br><span class="line">d=50,10,20,15;</span><br><span class="line">l=4,5,6,8;</span><br><span class="line">enddata</span><br><span class="line"></span><br><span class="line">min=@sum(lie(j):x(j));</span><br><span class="line">@for(hang(i):@sum(lie(j):r(i,j)*x(j))&gt;d(i));</span><br><span class="line">@for(lie(j):@sum(hang(i):l(i)*r(i,j))&gt;16);</span><br><span class="line">@for(lie(j):@sum(hang(i):l(i)*r(i,j))&lt;19);</span><br><span class="line">@for(link(i,j):@gin(r(i,j)));</span><br><span class="line">@for(link(i,j):@gin(r));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="1-4-得到结果"><a href="#1-4-得到结果" class="headerlink" title="1.4 得到结果"></a>1.4 得到结果</h3><p><img src="/images/matlab/8/1.png" alt="1"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/07/30/matlab/8Lingo/" data-id="cl3qp23p4000110qf73px57jr" data-title="Lingo" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" rel="tag">Lingo案例分析</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/07/31/matlab/9latex/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Latex排版
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/07/18/matlab/matlab6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Matlab案例分析</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>

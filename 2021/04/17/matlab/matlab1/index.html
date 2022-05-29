@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Matlab基础 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="目录 字符认知 创建函数 数组运算 矩阵的生成 矩阵函数 随机数 数组运算 数据读取  MATLAB计算基础       1、字符认知常用命令功能      命令 说明 命令 说明    cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matlab基础">
+<meta property="og:url" content="http://example.com/2021/04/17/matlab/matlab1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="目录 字符认知 创建函数 数组运算 矩阵的生成 矩阵函数 随机数 数组运算 数据读取  MATLAB计算基础       1、字符认知常用命令功能      命令 说明 命令 说明    cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/matlab/1/1-1.png">
+<meta property="og:image" content="http://example.com/images/matlab/1/1-2.png">
+<meta property="og:image" content="http://example.com/images/matlab/1/1-3.png">
+<meta property="og:image" content="http://example.com/images/matlab/1/1-4.png">
+<meta property="og:image" content="http://example.com/images/matlab/1/1-5.png">
+<meta property="og:image" content="http://example.com/images/matlab/1/1-6.png">
+<meta property="og:image" content="http://example.com/images/matlab/1/1-8.png">
+<meta property="og:image" content="http://example.com/images/matlab/1/1-7.png">
+<meta property="og:image" content="http://example.com/images/matlab/1/1-9.png">
+<meta property="og:image" content="http://example.com/images/matlab/1/1-10.png">
+<meta property="article:published_time" content="2021-04-16T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-07-30T11:15:38.601Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="matlab基础知识">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/matlab/1/1-1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-matlab/matlab1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/17/matlab/matlab1/" class="article-date">
+  <time class="dt-published" datetime="2021-04-16T16:00:00.000Z" itemprop="datePublished">2021-04-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Matlab基础
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#1">字符认知</a></li>
+<li><a href="#2">创建函数</a></li>
+<li><a href="#3">数组运算</a></li>
+<li><a href="#4">矩阵的生成</a></li>
+<li><a href="#5">矩阵函数</a></li>
+<li><a href="#6">随机数</a></li>
+<li><a href="#7">数组运算</a></li>
+<li><a href="#8">数据读取</a></li>
+</ul>
+<p><font size= 7 color = black ><center>MATLAB计算基础</center></font>  </p>
+<h2 id="1"></h2>  
+
+<h2 id="1、字符认知"><a href="#1、字符认知" class="headerlink" title="1、字符认知"></a>1、字符认知</h2><p><font size= 4 color = red ><center>常用命令功能</center></font>  </p>
+<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">说明</th>
+<th align="center">命令</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">cd</td>
+<td align="center">显示或改变当前工作文件夹</td>
+<td align="center">load</td>
+<td align="center">加载指定文件的变量</td>
+</tr>
+<tr>
+<td align="center">dir</td>
+<td align="center">显示当前文件夹或指定目录下的文件</td>
+<td align="center">diary</td>
+<td align="center">日志文件命令</td>
+</tr>
+<tr>
+<td align="center">clc</td>
+<td align="center">清除工作窗口中所有显示的内容</td>
+<td align="center">!</td>
+<td align="center">调用DOS命令</td>
+</tr>
+<tr>
+<td align="center">home</td>
+<td align="center">将光标移至命令行窗口的左上角</td>
+<td align="center">exit</td>
+<td align="center">退出matlab</td>
+</tr>
+<tr>
+<td align="center">clf</td>
+<td align="center">清楚图形窗口</td>
+<td align="center">quit</td>
+<td align="center">退出matlab</td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td align="center">显示文件内容</td>
+<td align="center">pack</td>
+<td align="center">收敛内存碎片</td>
+</tr>
+<tr>
+<td align="center">clear</td>
+<td align="center">清理内存信息</td>
+<td align="center">hold</td>
+<td align="center">图形保持开关</td>
+</tr>
+<tr>
+<td align="center">echo</td>
+<td align="center">工作窗信息显示开关</td>
+<td align="center">path</td>
+<td align="center">显示搜索目录</td>
+</tr>
+<tr>
+<td align="center">disp</td>
+<td align="center">显示变量或文字内容</td>
+<td align="center">save</td>
+<td align="center">保存内存变量到指定位置</td>
+</tr>
+</tbody></table>
+<br>
+
+<br>
+
+
+<p><font size= 4 color = red ><center>MATLAB默认常量</center></font> </p>
+<table>
+<thead>
+<tr>
+<th align="center">变量名</th>
+<th align="center">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">i &amp; j</td>
+<td align="center">虚数单位</td>
+</tr>
+<tr>
+<td align="center">pi</td>
+<td align="center">圆周率（Π）</td>
+</tr>
+<tr>
+<td align="center">ans</td>
+<td align="center">存放最近一次无赋值变量语句的预算结果</td>
+</tr>
+<tr>
+<td align="center">Inf</td>
+<td align="center">无穷大</td>
+</tr>
+<tr>
+<td align="center">eps</td>
+<td align="center">机器浮点运算误差限（如果某变量的绝对值小于eps，则视为0）</td>
+</tr>
+<tr>
+<td align="center">NaN</td>
+<td align="center">不定式（0&#x2F;0，或inf&#x2F;inf，或超出存储大小的值）</td>
+</tr>
+<tr>
+<td align="center">lasterr</td>
+<td align="center">存放最后一次的错误消息</td>
+</tr>
+<tr>
+<td align="center">lastwarn</td>
+<td align="center">存放最后一次警告消息</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>1、变量名区分大小写，因此A和a表示的是不同的变量；  </p>
+</li>
+<li><p>2、变量名以英文字母开头，每一个字母后可使用字母、数字、下划线，但不可以使用空格和标点符号； </p>
+</li>
+<li><p>3、变量民不得超过31位，超过的部分将会被忽略；</p>
+</li>
+<li><p>4、某些常量也可以作为变量使用；</p>
+</li>
+</ul>
+<br>
+
+<br>
+
+<p><font size=4 color=red><center>MATLAB数据显示格式</center></font></p>
+<table>
+<thead>
+<tr>
+<th align="center">格式</th>
+<th align="center">含义</th>
+<th align="center">*</th>
+<th align="center">格式</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">format(short)</td>
+<td align="center">短格式（5位定点数）</td>
+<td align="center">*</td>
+<td align="center">format lone e</td>
+<td align="center">长格式e方式</td>
+</tr>
+<tr>
+<td align="center">format long</td>
+<td align="center">长格式（15点定位数）</td>
+<td align="center">*</td>
+<td align="center">format bank</td>
+<td align="center">2位十进制格式</td>
+</tr>
+<tr>
+<td align="center">format short e</td>
+<td align="center">短格式e方程</td>
+<td align="center">*</td>
+<td align="center">format hex</td>
+<td align="center">十六进制格式</td>
+</tr>
+</tbody></table>
+<br>
+
+
+<table>
+<thead>
+<tr>
+<th align="center">format string</th>
+<th align="center">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">%d</td>
+<td align="center">把值作为整数值来处理</td>
+</tr>
+<tr>
+<td align="center">%e</td>
+<td align="center">用科学计数法来显示数据</td>
+</tr>
+<tr>
+<td align="center">%f</td>
+<td align="center">用于格式化浮点数并显示这个数值</td>
+</tr>
+<tr>
+<td align="center">%g</td>
+<td align="center">用科学计数格式，或浮点数这个格式，根据哪个短，并显示</td>
+</tr>
+<tr>
+<td align="center">\n</td>
+<td align="center">转到新的一行</td>
+</tr>
+</tbody></table>
+<br>
+
+<br>
+
+<h2 id="2"></h2> 
+
+<h2 id="2、创建函数"><a href="#2、创建函数" class="headerlink" title="2、创建函数"></a>2、创建函数</h2><p><font size=4 color=red><center>数组的创建与操作</center></font>  </p>
+<center><img src="/images/matlab/1/1-1.png" width=80%" height=80%" align=center /></center>
+
+
+
+<p><font size=4 color=red><center>对数组进行访问</center></font> </p>
+<center><img src="/images/matlab/1/1-2.png" width=80%" height=80%" align=center /></center>  
+
+
+<p><font size=4 color=red><center>通过logspace和linspace创建数组</center></font>  </p>
+<p><img src="/images/matlab/1/1-3.png" alt="1-3"></p>
+<br>
+ 
+<br>  
+
+<h2 id="3"></h2> 
+
+<h2 id="3、数组运算"><a href="#3、数组运算" class="headerlink" title="3、数组运算"></a>3、数组运算</h2><br>
+
+<p>&amp;emsp;&amp;emsp;在matlab中，常见的运算关系有算术运算、关系运算、逻辑运算: </p>
+<p>算术运算：<br>&amp;emsp;&amp;emsp;数组的运算是从单个的元素出发，针对每个元素进行运算。在MATLAB中，一维数组的算术运算包括加、减、乘、左除、右除和乘方。  </p>
+<p><img src="/images/matlab/1/1-4.png" alt="1-4"><br><img src="/images/matlab/1/1-5.png" alt="1-5"> </p>
+<br>
+
+<br>
+
+<p>&amp;emsp;&amp;emsp;通过dot函数可以实现点积运算，其等价于<code>.*</code>,但是运算规则要求数组A和数组B的维数相同。函数的调用格式为：  </p>
+<p>&amp;emsp;&amp;emsp;C&#x3D;dot(A,B)或C&#x3D;dot(A,B,dim),其中参数dim用于指定内积计算的维数。  </p>
+<center><img src="/images/matlab/1/1-6.png" width=80%" height=80%" align=center /></center>
+
+<br>
+ 
+
+<h2 id="4"></h2> 
+
+<h2 id="4、矩阵的生成"><a href="#4、矩阵的生成" class="headerlink" title="4、矩阵的生成"></a>4、矩阵的生成</h2><br>
+
+<p><font size=4 color=red><center>直接输入</center></font></p>
+<center><img src="/images/matlab/1/1-8.png" width=80%" height=80%" align=center /></center>    
+*输入表达式将自动计算出结果 
+
+<br>
+
+<p><font size=4 color=red><center>常用特殊矩阵生成函数</center></font>  </p>
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">one(n)</td>
+<td align="center">创建一个n x n的1矩阵</td>
+</tr>
+<tr>
+<td align="center">zeros(n)</td>
+<td align="center">创建一个n x n的0矩阵</td>
+</tr>
+<tr>
+<td align="center">eye(n)</td>
+<td align="center">创建一个n x n的单位矩阵</td>
+</tr>
+<tr>
+<td align="center">magic(n)</td>
+<td align="center">创建一个n x n的魔方矩阵，使其每一行、每一列元素之和相等</td>
+</tr>
+<tr>
+<td align="center">rand(n)</td>
+<td align="center">创建一个n x n的随机矩阵，其元素都在0-1之间随机分布</td>
+</tr>
+<tr>
+<td align="center">randn(n)</td>
+<td align="center">创建一个 n x n的矩阵，使元素为0-1零均值、单位方差的正态分布随机数</td>
+</tr>
+<tr>
+<td align="center">hilb(n)</td>
+<td align="center">创建一个n x n的hilbert矩阵</td>
+</tr>
+<tr>
+<td align="center">vander([1;2;3;x;y;z;])</td>
+<td align="center">矩阵最后一列全为1，倒数第二列是指定向量，其他各列是其后列与倒数第二列的点乘积</td>
+</tr>
+</tbody></table>
+<p>*希尔伯特矩阵会因原始数据的微小扰动而产生不可靠的计算结果。故在matlab中有一个专门用于求希尔伯特矩阵逆函数invhlib(n),其功能是求n阶希尔伯特函数的逆函数  </p>
+<p><font size=4 color=red><center>托普利兹矩阵：</center></font>  </p>
+<center><img src="/images/matlab/1/1-7.png" width=80%" height=80%" align=center /></center>
+
+
+
+
+<p><font size=4 color=red>矩阵的部分删除:</font><br>&amp;emsp;&amp;emsp;在MATLAB中，可以将矩阵的某行或某列赋值为空值而直接删除此行或此列。要是删除行或列的部分元素则矩阵将会出错。（孔赋值只能有一个非冒号引索）   </p>
+<center><img src="/images/matlab/1/1-9.png" width=80%" height=80%" align=center /></center></center>  
+  
+<br>  
+
+<h2 id="5"></h2> 
+
+<h2 id="5、矩阵函数："><a href="#5、矩阵函数：" class="headerlink" title="5、矩阵函数："></a>5、矩阵函数：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v=diag(A,k)</span><br></pre></td></tr></table></figure>
+<p>获取矩阵的对角线元素，默认k为0，当k&#x3D;1时，为主对角线右上的对角线。<br><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=tril(X,k)</span><br></pre></td></tr></table></figure>
+<p>只返回矩阵的下三角部分，其余部分用0补齐；当不为0时，则返回其对应的三角区域。<br><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=triu(X,k)</span><br></pre></td></tr></table></figure>
+<p>只返回矩阵的上三角部分，其余部分用0补齐；当不为0时，则返回其对应的三角区域。<br><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=rot90(A,k)</span><br></pre></td></tr></table></figure>
+<p>将矩阵A逆时针旋转90k°<br><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=fliplr(A)</span><br></pre></td></tr></table></figure>
+<p>将矩阵A实现左右翻转  </p>
+<br>  
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=flipud(A)</span><br></pre></td></tr></table></figure>
+将矩阵A实现上下翻转  
+<br>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=flipdim(A,dim)</span><br></pre></td></tr></table></figure>
+<p>· 当 dim&#x3D;1 时，数组上下翻转，相当于函数flipud(A)<br>· 当 dim&#x3D;2 时，数组左右翻转，相当于函数fliplr(A)<br><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B=inv(A)</span><br></pre></td></tr></table></figure>
+<p>求方阵A的逆矩阵，赋值给B<br><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=det(A)</span><br></pre></td></tr></table></figure>
+<p>求方阵A所对应行列式的函数值<br><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=rank(A)</span><br></pre></td></tr></table></figure>
+<p>求矩阵的秩<br><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=trace(A)</span><br></pre></td></tr></table></figure>
+<p>求矩阵的迹<br><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">norm(V)             计算向量V的2范数</span><br><span class="line">norm(V,1)           计算向量V的1范数</span><br><span class="line">norm(V,inf)         计算向量V的无穷范数</span><br></pre></td></tr></table></figure>
+<p>求矩阵的范数<br><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cond(A,1)           计算A的1范数下的条件数</span><br><span class="line">cond(A,2)           计算A的2范数下的条件数</span><br><span class="line">cond(A,inf)         计算A无穷范数下的条件数</span><br></pre></td></tr></table></figure>
+<p>计算范数的条件数<br><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E=eig(A)            求矩阵A的全部特征值，构成向量E</span><br><span class="line">[V,D]=eig(A)        求矩阵A的全部特征值，构成对叫矩阵D，并求A的所有特征向量</span><br><span class="line">[V,D]=eigs(A,k)     求矩阵A的前k个特征值构成对角矩阵D，并求A的前k个特征向量</span><br></pre></td></tr></table></figure>
+<br>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sqrtm(A)            计算矩阵A的平方根</span><br><span class="line">logm(A)             计算矩阵A的自然对数</span><br></pre></td></tr></table></figure>
+<p>矩阵的超越函数<br><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expm(A)             以矩阵A为对数的指数，e^A</span><br></pre></td></tr></table></figure>
+<p>矩阵指数<br><br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">B=spares(A)         将矩阵A转换为稀疏存储的矩阵B</span><br><span class="line">nnz(B)              返回矩阵B中非0元素的个数</span><br><span class="line">full(B)             返回稀疏矩阵B的原矩阵，即A</span><br><span class="line">spy(B)              显示矩阵A中非零元素分布图</span><br></pre></td></tr></table></figure>
+<ul>
+<li>matlab中存在两种存储方式，完全存储方式和稀疏存储方式。</li>
+</ul>
+<br> 
+
+
+<h2 id="6"></h2>
+
+<h2 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h2><h3 id="1、在-0-1-之间的随机数"><a href="#1、在-0-1-之间的随机数" class="headerlink" title="1、在[0,1]之间的随机数"></a>1、在[0,1]之间的随机数</h3><p>rand(m,n)–产生m*n阶[0,1]之间的随机矩阵;</p>
+<h3 id="2-按概率产生随机数"><a href="#2-按概率产生随机数" class="headerlink" title="2.按概率产生随机数"></a>2.按概率产生随机数</h3><p>h&#x3D;randsrc(m)    %mxm阶矩阵<br>h&#x3D;randsrc(m,n)  %mxn阶矩阵<br>h&#x3D;randsrc(m,n[alphabet,prob])   %将’alphabet’中的值以’prob’的概率出现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">alphabet=[52 53 54 55 56];</span><br><span class="line">prob=[0.05 0.25 0.4 0.25 0.05];</span><br><span class="line">l=randsrc(100000,1,[alphabet;prob]);</span><br><span class="line">a=sum(l(:)==52);</span><br><span class="line">b=sum(l(:)==53);</span><br><span class="line">c=sum(l(:)==54);</span><br><span class="line">d=sum(l(:)==55);</span><br><span class="line">e=sum(l(:)==56);</span><br><span class="line">A=[a,b,c,d,e]</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/1/1-10.png" alt="1-10"></p>
+<h3 id="3、均匀分布随机数"><a href="#3、均匀分布随机数" class="headerlink" title="3、均匀分布随机数"></a>3、均匀分布随机数</h3><p>nuifrnd(a,b,m,n)–产生m*n阶在[a,b]之间的随机数；</p>
+<h3 id="4、二项式矩阵"><a href="#4、二项式矩阵" class="headerlink" title="4、二项式矩阵"></a>4、二项式矩阵</h3><p>binornd(n,p[M,N,N,…])–生成的随机数服从参数为(N,p)的二项分布，这些随机数排列成M<em>N</em>P… 阶矩阵。如果只写M，则生成M*M矩阵；</p>
+<br>
+
+<br>
+
+<h2 id="7"></h2>
+
+<h2 id="数组的运算"><a href="#数组的运算" class="headerlink" title="数组的运算"></a>数组的运算</h2><h3 id="1、数组间交集"><a href="#1、数组间交集" class="headerlink" title="1、数组间交集"></a>1、数组间交集</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = intersect(A,B)</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="2、数组间并集"><a href="#2、数组间并集" class="headerlink" title="2、数组间并集"></a>2、数组间并集</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = union(A,B)</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="3、数组间补集"><a href="#3、数组间补集" class="headerlink" title="3、数组间补集"></a>3、数组间补集</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = setdiff(A,B)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>子集写后边</li>
+</ul>
+<br>
+
+<br>
+
+<h2 id="8"></h2>
+
+<h2 id="八、数据读取"><a href="#八、数据读取" class="headerlink" title="八、数据读取"></a>八、数据读取</h2><h3 id="8-1-从Excel中读取数据"><a href="#8-1-从Excel中读取数据" class="headerlink" title="8.1  从Excel中读取数据"></a>8.1  从Excel中读取数据</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = xlsread(&#x27;D:\CO2.xlsx&#x27;,Sheet1,&#x27;A1:B5&#x27;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>其中，‘D:\CO2.xlsx’表示读入的EXCEL数据所在的路径以及EXCEL的文件名称；2表示位于sheet2；’A1:B5’表示需要读入的数据范围</li>
+</ul>
+<h3 id="8-2-时间格式在matlab可识别与可视时间切换"><a href="#8-2-时间格式在matlab可识别与可视时间切换" class="headerlink" title="8.2  时间格式在matlab可识别与可视时间切换"></a>8.2  时间格式在matlab可识别与可视时间切换</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a=StockSampleA1&#123;:,2&#125;;%注意：由于这是表数据，不能用小括号</span><br><span class="line">B=[];</span><br><span class="line">for I=1:n</span><br><span class="line">    y=floor(a(I)/10000);  </span><br><span class="line">    S=a(I)-y*10000;</span><br><span class="line">    m=floor(S/100);</span><br><span class="line">    d=S-m*100;</span><br><span class="line">    b=datenum(y,m,d);</span><br><span class="line">    B=[B;b]</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>b=datenum(y,m,d)</code>–函数可以将可视时间格式转换为Matlab可识别格式；  </li>
+<li><code>D=datetime(b)</code>–该函数可以将Matlab可识别时间格式转化为可视时间格式；</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/17/matlab/matlab1/" data-id="cl3qp23pe000910qf234je04m" data-title="Matlab基础" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">matlab基础知识</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/04/30/%E6%9D%82%E8%B0%88/xiaoxing/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          小新pro13Intel版Bios
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/04/07/%E5%AD%A6%E4%B9%A0/Arduino/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Arduino语言学习-结构</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arduino/" rel="tag">Arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" rel="tag">Lingo案例分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">Matlab基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">matlab基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E5%BA%94%E7%94%A8/" rel="tag">matlab应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E7%A8%8B%E5%BA%8F/" rel="tag">matlab程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E7%BB%98%E5%9B%BE/" rel="tag">matlab绘图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" rel="tag">单片机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" rel="tag">机械设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" rel="tag">论文排版</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Arduino/" style="font-size: 10px;">Arduino</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" style="font-size: 10px;">Lingo案例分析</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 10px;">Matlab基础知识</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 10px;">matlab基础知识</a> <a href="/tags/matlab%E5%BA%94%E7%94%A8/" style="font-size: 15px;">matlab应用</a> <a href="/tags/matlab%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">matlab程序</a> <a href="/tags/matlab%E7%BB%98%E5%9B%BE/" style="font-size: 10px;">matlab绘图</a> <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 10px;">单片机</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" style="font-size: 20px;">机械原理</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">机械设计</a> <a href="/tags/%E7%8E%A9%E6%9C%BA/" style="font-size: 10px;">玩机</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" style="font-size: 10px;">论文排版</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 10px;">语法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/">Mathjax渲染公式</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/29/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/31/matlab/9latex/">Latex排版</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/30/matlab/8Lingo/">Lingo</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/18/matlab/matlab6/">Matlab案例分析</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
