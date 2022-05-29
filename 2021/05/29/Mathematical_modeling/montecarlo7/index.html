@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>MonteCarlo模拟 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="&amp;emsp;&amp;emsp;蒙特卡洛(MonteCarlo)是一种应用随机数来进行计算机模拟的方法。   Example1–利润计算&amp;emsp;&amp;emsp;已知一公司产品售价150元，初期研发成本250000元，单件原材料成本在[50，80]之间波动，市场需求符合正态分布[12000,3000]，单件人工成本成概率出现[(52,0.05)(53,0.25)(54,0.4">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MonteCarlo模拟">
+<meta property="og:url" content="http://example.com/2021/05/29/Mathematical_modeling/montecarlo7/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;蒙特卡洛(MonteCarlo)是一种应用随机数来进行计算机模拟的方法。   Example1–利润计算&amp;emsp;&amp;emsp;已知一公司产品售价150元，初期研发成本250000元，单件原材料成本在[50，80]之间波动，市场需求符合正态分布[12000,3000]，单件人工成本成概率出现[(52,0.05)(53,0.25)(54,0.4">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/matlab/7/7-1.png">
+<meta property="og:image" content="http://example.com/images/matlab/7/7-2.png">
+<meta property="og:image" content="http://example.com/images/matlab/7/7-4.png">
+<meta property="og:image" content="http://example.com/images/matlab/7/7-3.png">
+<meta property="og:image" content="http://example.com/images/matlab/7/7-7.png">
+<meta property="og:image" content="http://example.com/images/matlab/7/7-8.png">
+<meta property="og:image" content="http://example.com/images/matlab/7/7-5.png">
+<meta property="og:image" content="http://example.com/images/matlab/7/7-6.png">
+<meta property="article:published_time" content="2021-05-29T08:03:47.000Z">
+<meta property="article:modified_time" content="2021-08-27T09:20:05.001Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/matlab/7/7-1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Mathematical_modeling/montecarlo7" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/05/29/Mathematical_modeling/montecarlo7/" class="article-date">
+  <time class="dt-published" datetime="2021-05-29T08:03:47.000Z" itemprop="datePublished">2021-05-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      MonteCarlo模拟
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>&amp;emsp;&amp;emsp;蒙特卡洛(MonteCarlo)是一种应用随机数来进行计算机模拟的方法。  </p>
+<h2 id="Example1–利润计算"><a href="#Example1–利润计算" class="headerlink" title="Example1–利润计算"></a>Example1–利润计算</h2><p>&amp;emsp;&amp;emsp;已知一公司产品售价<code>150</code>元，初期研发成本<code>250000</code>元，单件原材料成本在<code>[50，80]</code>之间波动，市场需求符合正态分布<code>[12000,3000]</code>，单件人工成本成概率出现<code>[(52,0.05)(53,0.25)(54,0.4)(55,0.25)(56,0.05)]</code>。尝试计算公司亏损的概率。  </p>
+<h3 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line">profit=[];</span><br><span class="line">frequency=1000;</span><br><span class="line">for i=1:frequency</span><br><span class="line">    p=150;  %售价</span><br><span class="line">    a=250000;   %广告费</span><br><span class="line">    m=50+(80-50)*rand;  %原材料成本在50-80美元之间均匀分布</span><br><span class="line">    </span><br><span class="line">    r=normrnd(12000,3000);  %符合正态分布</span><br><span class="line">    </span><br><span class="line">    alphabet=[52 53 54 55 56];</span><br><span class="line">    prob=[0.05 0.25 0.4 0.25 0.05];</span><br><span class="line">    l=randsrc(1,1,[alphabet;prob]);     %此函数以‘prob’的概率输出‘alphabet’的值</span><br><span class="line">    </span><br><span class="line">    tp=(p-m-l)*r-a;</span><br><span class="line">    profit=[profit ;tp];    %每运算一次，将上一次的计算结果带入矩阵中</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">me=mean(profit);</span><br><span class="line">ma=max(profit);</span><br><span class="line">mi=min(profit);</span><br><span class="line">sg=std(profit);</span><br><span class="line">po=0;</span><br><span class="line">ne=0;</span><br><span class="line"></span><br><span class="line">for i=1:length(profit)</span><br><span class="line">    if profit(i,1)&lt;0        %遍历整个数列，数值小于1则记录1，得到亏损的概率</span><br><span class="line">        ne=ne+1;</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line">lo=ne/length(profit)；  %亏损的概率</span><br><span class="line">t=1:frequency;</span><br><span class="line">T=0;</span><br><span class="line">plot(t,profit,&#x27;r.&#x27;,t,T,&#x27;black.&#x27;)</span><br><span class="line"></span><br><span class="line">A=[me ma mi sg lo]</span><br><span class="line">disp([&#x27;···me··&#x27;,&#x27;··ma··&#x27;,&#x27;··mi··&#x27;,&#x27;··sg··&#x27;,&#x27;··lo···&#x27;])</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="/images/matlab/7/7-1.png" alt="7-1"><br><img src="/images/matlab/7/7-2.png" alt="7-2"></p>
+<h2 id="Exercise2–代替积分"><a href="#Exercise2–代替积分" class="headerlink" title="Exercise2–代替积分"></a>Exercise2–代替积分</h2><p>&amp;emsp;&amp;emsp;$y&#x3D;2x+1$,$x \in[0,10]$,求面积。  </p>
+<h3 id="程序-1"><a href="#程序-1" class="headerlink" title="程序"></a>程序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line">%用ment carlo算法计算积分</span><br><span class="line">%x[0,10]</span><br><span class="line">%y[0,2x+1]</span><br><span class="line">M=21;</span><br><span class="line">N=10;</span><br><span class="line">j=0;</span><br><span class="line">p=[];</span><br><span class="line">q=[];</span><br><span class="line">frequency=20000;</span><br><span class="line">for i=1:frequency</span><br><span class="line">    m=rand*M;</span><br><span class="line">    n=rand*N;</span><br><span class="line">    if m&lt;(2*n+1)</span><br><span class="line">        j=j+1;</span><br><span class="line">    end</span><br><span class="line">    p=[p;m];</span><br><span class="line">    q=[q;n];</span><br><span class="line">end</span><br><span class="line">s=j/frequency</span><br><span class="line">S=s*M*N</span><br><span class="line"></span><br><span class="line">x=[0:10];</span><br><span class="line">y=2*x+1;</span><br><span class="line"></span><br><span class="line">plot(q,p,&#x27;r.&#x27;,x,y,&#x27;black-&#x27;)</span><br><span class="line">set(gca,&#x27;Ylim&#x27;,[0,21])</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/7/7-4.png" alt="7-4"><br><img src="/images/matlab/7/7-3.png" alt="7-3">  </p>
+<h2 id="浦松投针问题"><a href="#浦松投针问题" class="headerlink" title="浦松投针问题"></a>浦松投针问题</h2><p>&amp;emsp;&amp;emsp;</p>
+<h3 id="Example–程序"><a href="#Example–程序" class="headerlink" title="Example–程序"></a>Example–程序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line">%蒲丰投针实验的计算机模拟</span><br><span class="line">format long;                 %设置15位显示精度</span><br><span class="line">a=1;</span><br><span class="line">l=0.6;                      %两平行线间的宽度和针长</span><br><span class="line">figure; axis([0,pi,0,a/2]); %初始化绘图板</span><br><span class="line">set(gca,&#x27;nextplot&#x27;,&#x27;add&#x27;);  %初始化绘图方式为叠加</span><br><span class="line">counter=0;                  %初始化计数器</span><br><span class="line">n=2000;                     %和设定投针次数</span><br><span class="line">x=unifrnd(0,1/2,n,1);       %在[0,1/2]之间产生1*n阶矩阵</span><br><span class="line">phi=unifrnd(0,pi,1,n);      %样本空间Ω</span><br><span class="line">frame=moviein(n);           %建立一个1120列的大矩阵</span><br><span class="line">for i=1:n</span><br><span class="line">if x(i)&lt;l*sin(phi(i))/2  %满足此条件表示针与线的相交</span><br><span class="line">    plot(phi(i),x(i),&#x27;b.&#x27;);</span><br><span class="line">    counter=counter+1;    %统计针与线相交的次数</span><br><span class="line">    frame(:,counter)=getframe; %描点并取帧</span><br><span class="line">end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">fren=counter/n;</span><br><span class="line">pihat=2*l/(a*fren);%用频率近似计算π</span><br><span class="line">disp(counter);</span><br><span class="line">disp(pihat);</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/matlab/7/7-7.png" alt="7-7"><br><img src="/images/matlab/7/7-8.png" alt="7-8"></p>
+<h4 id="程序-2"><a href="#程序-2" class="headerlink" title="程序"></a>程序</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line">%普松投针--求圆周率</span><br><span class="line">h=1;</span><br><span class="line">l=0.6;</span><br><span class="line">n=10000;</span><br><span class="line">x=unifrnd(0,1,n,1);</span><br><span class="line">y=unifrnd(0,2*pi,n,1);</span><br><span class="line">X=[];</span><br><span class="line">Y=[];</span><br><span class="line">A=[];</span><br><span class="line">B=[];</span><br><span class="line">j=0;</span><br><span class="line">%figure;</span><br><span class="line">%axis([-0.5,1.5,-h,2]); %初始化绘图板</span><br><span class="line">%set(gca,&#x27;nextplot&#x27;,&#x27;add&#x27;);  %初始化绘图方式为叠加</span><br><span class="line">for i=1:n</span><br><span class="line">    </span><br><span class="line">    if  x(i)+l*sin(y(i))&gt;=h || x(i)+l*sin(y(i))&lt;0 </span><br><span class="line">        j=j+1;      </span><br><span class="line">    end</span><br><span class="line">    X=[X;x(i)+l*cos(y(i))];</span><br><span class="line">    Y=[Y;x(i)+l*sin(y(i))];</span><br><span class="line">    A=[A;x(i),X(i),Y(i)];</span><br><span class="line">    %plot([A(i,1),A(i,2)],[A(i,1),A(i,3)])</span><br><span class="line">    grid on;</span><br><span class="line">end</span><br><span class="line">A;</span><br><span class="line">fre=j/n</span><br><span class="line">pai=2*l/(h*fre)</span><br></pre></td></tr></table></figure>
+
+<h4 id="输出效果"><a href="#输出效果" class="headerlink" title="输出效果"></a>输出效果</h4><p><img src="/images/matlab/7/7-5.png" alt="7-5"><br><img src="/images/matlab/7/7-6.png" alt="7-6"> </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/05/29/Mathematical_modeling/montecarlo7/" data-id="cl3qp64250012z4qfh464g16b" data-title="MonteCarlo模拟" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/05/29/matlab/montecarlo7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          MonteCarlo模拟
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/05/23/%E6%9D%82%E8%B0%88/tulun/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">凸轮轮廓线推导</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arduino/" rel="tag">Arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" rel="tag">Lingo案例分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">Matlab基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">matlab基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E5%BA%94%E7%94%A8/" rel="tag">matlab应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E7%A8%8B%E5%BA%8F/" rel="tag">matlab程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E7%BB%98%E5%9B%BE/" rel="tag">matlab绘图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" rel="tag">单片机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" rel="tag">微分方程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" rel="tag">机械设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" rel="tag">论文排版</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" rel="tag">遗传算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Arduino/" style="font-size: 12.5px;">Arduino</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" style="font-size: 12.5px;">Lingo案例分析</a> <a href="/tags/Math/" style="font-size: 12.5px;">Math</a> <a href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 12.5px;">Matlab基础知识</a> <a href="/tags/Python/" style="font-size: 12.5px;">Python</a> <a href="/tags/markdown/" style="font-size: 12.5px;">markdown</a> <a href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 12.5px;">matlab基础知识</a> <a href="/tags/matlab%E5%BA%94%E7%94%A8/" style="font-size: 17.5px;">matlab应用</a> <a href="/tags/matlab%E7%A8%8B%E5%BA%8F/" style="font-size: 12.5px;">matlab程序</a> <a href="/tags/matlab%E7%BB%98%E5%9B%BE/" style="font-size: 12.5px;">matlab绘图</a> <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 12.5px;">单片机</a> <a href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" style="font-size: 12.5px;">微分方程</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" style="font-size: 20px;">机械原理</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" style="font-size: 12.5px;">机械设计</a> <a href="/tags/%E7%8E%A9%E6%9C%BA/" style="font-size: 12.5px;">玩机</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 15px;">算法</a> <a href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" style="font-size: 12.5px;">论文排版</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 12.5px;">语法</a> <a href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" style="font-size: 10px;">遗传算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/29/Learn/math/">Mathjax渲染公式</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/">Mathjax渲染公式</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/29/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/24/Mathematical_modeling/11GA/">Genetic Algorithm</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/15/Mathematical_modeling/10matlab/">Matlab微分方程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Matlab数据分析 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  1&amp;emsp;多项式及其函数     1.1  多项式的创建与表达· 输入多项式 $2x^4-85x^3+15x^2+100$   1a&#x3D;ploy2sym([2 -85 15 100])  1.2  多项式的四则运算1.2.1  加、减法12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matlab数据分析">
+<meta property="og:url" content="http://example.com/2021/04/01/Mathematical_modeling/matlab4/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="目录 多项式及其函数 数值插值 函数的极限 数值积分 多元统计分析 假设检验 回归分析  1&amp;emsp;多项式及其函数     1.1  多项式的创建与表达· 输入多项式 $2x^4-85x^3+15x^2+100$   1a&#x3D;ploy2sym([2 -85 15 100])  1.2  多项式的四则运算1.2.1  加、减法12345a&#x3D;[1 2 3 4 5];b&#x3D;[2 3 4 0 5];c&#x3D;a">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-1.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-2.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-3.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-4.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-5.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-6.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-7.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-8.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-9.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-10.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-12.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-13.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-14.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-15.png">
+<meta property="og:image" content="http://example.com/images/matlab/4/4-16.png">
+<meta property="article:published_time" content="2021-03-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-07-30T11:16:08.776Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="matlab应用">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/matlab/4/4-1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Mathematical_modeling/matlab4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/01/Mathematical_modeling/matlab4/" class="article-date">
+  <time class="dt-published" datetime="2021-03-31T16:00:00.000Z" itemprop="datePublished">2021-04-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Matlab数据分析
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#1">多项式及其函数</a></li>
+<li><a href="#2">数值插值</a></li>
+<li><a href="#3">函数的极限</a></li>
+<li><a href="#4">数值积分</a></li>
+<li><a href="#5">多元统计分析</a></li>
+<li><a href="#6">假设检验</a></li>
+<li><a href="#7">回归分析</a></li>
+</ul>
+<h2 id="1"></h2><font size=5 color=red>1&emsp;多项式及其函数 </font>  
+
+<h2 id="1-1-多项式的创建与表达"><a href="#1-1-多项式的创建与表达" class="headerlink" title="1.1  多项式的创建与表达"></a>1.1  多项式的创建与表达</h2><p>· 输入多项式 $2x^4-85x^3+15x^2+100$  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=ploy2sym([2 -85 15 100])</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2-多项式的四则运算"><a href="#1-2-多项式的四则运算" class="headerlink" title="1.2  多项式的四则运算"></a>1.2  多项式的四则运算</h2><h4 id="1-2-1-加、减法"><a href="#1-2-1-加、减法" class="headerlink" title="1.2.1  加、减法"></a>1.2.1  加、减法</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=[1 2 3 4 5];</span><br><span class="line">b=[2 3 4 0 5];</span><br><span class="line">c=a+b;</span><br><span class="line">c</span><br><span class="line">poly2sym(c)        %显示多项式</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/4/4-1.png" alt="4-1"></p>
+<br>
+
+<h4 id="1-2-2-乘法"><a href="#1-2-2-乘法" class="headerlink" title="1.2.2  乘法"></a>1.2.2  乘法</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=[1 2];</span><br><span class="line">b=[3 4];</span><br><span class="line">c=poly2sym(conv(a,b))</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/4/4-2.png" alt="4-2">  </p>
+<br>
+
+<h4 id="1-2-3-除法"><a href="#1-2-3-除法" class="headerlink" title="1.2.3  除法"></a>1.2.3  除法</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=[1 4 9 15];</span><br><span class="line">b=[1 2 -3 20 -16 21];</span><br><span class="line">[q,r]=deconv(b,a)</span><br><span class="line">poly2sym(q)</span><br><span class="line">poly2sym(r)</span><br></pre></td></tr></table></figure>
+<p>$[q,r]&#x3D;deconv(b,a)$:<br>&amp;emsp;&amp;emsp;q为多项式b除以a的商户式；r为多项式b除以a的余式。返回的<code>q,r</code>仍为多项式系数向量。  </p>
+<p><img src="/images/matlab/4/4-3.png" alt="4-3">  </p>
+<br>  
+
+<h2 id="1-3-多项式求导"><a href="#1-3-多项式求导" class="headerlink" title="1.3  多项式求导"></a>1.3  多项式求导</h2><pre><code>k = polyder(p) : 求多项式p的导函数多项式。
+k = polyder(a,b) : 求多项式a和b 乘积的导函数多项式。
+[p,q] =polyder(a,b):求多项式b与多项式a相除的导函数多项式，导函数的分子存在p中，分母存在q中。其中，参数a,b是多项式的系数向量，返回结果p,q也是多项式的系数向量。
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a=[2 4 6 -8 10]</span><br><span class="line">poly2sym(a)</span><br><span class="line">b=polyder(a)</span><br><span class="line">poly2sym(b)</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/4/4-4.png" alt="4-4"></p>
+<br>
+
+<br>
+
+<p> · 已知多项式$p(x)&#x3D;2x^3-x^2+3$和$q(x)&#x3D;2x&#x3D;1$，求如下导数：$p’、(p·q)’、(p&#x2F;q)’$。  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">k1=polyder([2,-1,0,3]);</span><br><span class="line">poly2sym(k1)</span><br><span class="line">k2=polyder([2,-1,0,3],[2,1]);</span><br><span class="line">poly2sym(k2)</span><br><span class="line">[k3,d]=polyder([2,-1,0,3],[2,1])</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/4/4-5.png" alt="4-5"></p>
+<br>
+
+<br>
+
+<h2 id="1-4-多项式求值"><a href="#1-4-多项式求值" class="headerlink" title="1.4  多项式求值"></a>1.4  多项式求值</h2><h4 id="1-4-1-polyval函数"><a href="#1-4-1-polyval函数" class="headerlink" title="1.4.1  polyval函数"></a>1.4.1  polyval函数</h4><p> · 已知多项式 $x^4+6x^3-9$ ，分别取$x&#x3D;1.3$和一个给定的矩阵2x3个元素为自变量，计算该多项式的值。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">A=[1 6 0 0 -9];     %定义的多项式</span><br><span class="line">x=1.3;              %定义的自变量</span><br><span class="line">y1=polyval(A,x);    </span><br><span class="line">y1</span><br><span class="line">B=[-1 1.3 1.5;2 -1.8 1.6];      %定义的矩阵为自变量</span><br><span class="line">y2=polyval(A,B);</span><br><span class="line">y2</span><br></pre></td></tr></table></figure>
+<p> · 调用此函数时，有两种形式：<br> &amp;emsp;&amp;emsp;$y&#x3D;poluval(A，x)$ –其中x为单独的自变量<br>&amp;emsp;&amp;emsp;$y&#x3D;poluval(A，B)$ –其中B为一个自变量矩阵<br><img src="/images/matlab/4/4-6.png" alt="4-6"></p>
+<br>
+
+<h4 id="1-4-2-polyvalm函数"><a href="#1-4-2-polyvalm函数" class="headerlink" title="1.4.2  polyvalm函数"></a>1.4.2  polyvalm函数</h4><p>· 已知多项式 $p(x)&#x3D;3^3-x^2+5$ ，求矩阵 A&#x3D;$\begin{pmatrix} -1 &amp; 2 \ -2 &amp; 1 \end{pmatrix}$ 的多项式的值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">p=[3 -1 0 5];</span><br><span class="line">x=[-1 2; -2 1];</span><br><span class="line">polyval(p,x)</span><br><span class="line">polyvalm(p,x)</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/4/4-7.png" alt="4-7"></p>
+<br>
+
+<h2 id="1-5-多项式求根"><a href="#1-5-多项式求根" class="headerlink" title="1.5  多项式求根"></a>1.5  多项式求根</h2><p>· 已知多项式 $x^3-6x^2-72x-27$ 的根。  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">p=[1 -6 -72 -27];</span><br><span class="line">k=poly2sym(p)</span><br><span class="line">r=roots(p)</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/4/4-8.png" alt="4-8"></p>
+<p>· 若已知多项式的根，可以反求多项式 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">r=[2 5 8 7];    %已知根</span><br><span class="line">p=poly(r)       %反求多项式系数</span><br><span class="line">k=poly2sym(p)   %导出多项式</span><br><span class="line">r=roots(p)      %再次求出多项式的根验证正确性</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>· 注意有根才能求根！<br><img src="/images/matlab/4/4-9.png" alt="4-9"></p>
+<br>
+
+<h2 id="1-6-部分分式展开"><a href="#1-6-部分分式展开" class="headerlink" title="1.6  部分分式展开"></a>1.6  部分分式展开</h2><p>对有理多项式 $\frac{10(s+2)}{(s+1)(s+3)(s+4)}$ 进行展开  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">num=10*[1 2];</span><br><span class="line">den=poly([-1;-3;-4]);</span><br><span class="line">[res,poles,k]=residue(num,den)</span><br></pre></td></tr></table></figure>
+<p>结果是余数、极点和部分分式展开的常数项，如下：</p>
+<p>$\frac{10(s+2)}{(s+1)(s+3)(s+3)}&#x3D;\frac{-6.66667}{s+4}+\frac{5}{s+3}+\frac{1.6667}{s+1}$  </p>
+<p><img src="/images/matlab/4/4-10.png" alt="4-10"></p>
+<br>
+
+<h2 id="1-7-求解线性方程组"><a href="#1-7-求解线性方程组" class="headerlink" title="1.7  求解线性方程组"></a>1.7  求解线性方程组</h2><center>
+
+<p>$\begin{cases} 2x+3y-z&#x3D;2 \8x-2y-3z&#x3D;4 \ 45x+3y+9z&#x3D;23 \end{cases}$  </p>
+</center>
+
+
+<p>方法一、</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=[2 3 -1;8 2 3;45 3 9];</span><br><span class="line">b=[2;4;23];</span><br><span class="line">z=rats(inv(a)*b)</span><br></pre></td></tr></table></figure>
+<p>方法二：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">syms x y z</span><br><span class="line">[x y z]=solve(2*x+3*y-z-2,8*x+2*y+3*z-4,45*x+3*y+9*z-23)</span><br></pre></td></tr></table></figure>
+<br>
+
+<h2 id="1-8-解定积分"><a href="#1-8-解定积分" class="headerlink" title="1.8  解定积分"></a>1.8  解定积分</h2><center>
+
+<p>$I&#x3D; \int_0^1 xlin(1+x)d_x$</p>
+</center>
+
+<p>· 方法一：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quad(&#x27;x.*log(1+x)&#x27;,0,1)</span><br></pre></td></tr></table></figure>
+<p>· 方法二：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">syms x</span><br><span class="line">int(x*log(1+x),0,1)</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-9-曲面拟合"><a href="#1-9-曲面拟合" class="headerlink" title="1.9  曲面拟合"></a>1.9  曲面拟合</h2><h4 id="最小二乘拟合"><a href="#最小二乘拟合" class="headerlink" title="最小二乘拟合"></a>最小二乘拟合</h4><p>· 某地一煤矿，为估计其储量便于开采，先在该地进行开采，先在该地进行勘探。假设该地是一长方形区域，长为4km，宽为5km.勘探得到如下表所示数据：</p>
+<p>|编号|坐标&#x2F;km|煤层厚度&#x2F;km|<em>|编号|坐标&#x2F;km|煤层厚度&#x2F;km|<br>|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|<br>|1|(1,1)|13.2|</em>|11|(3,1)|23.28|<br>|2|(1,2)|25.80|<em>|12|(3,2)|26.48|<br>|3|(1,3)|8.47|</em>|13|(3,3)|29.14|<br>|4|(1,4)|25.27|<em>|14|(3,4)|12.04|<br>|5|(1,5)|22.32|</em>|15|(3,5)|14.58|<br>|6|(2,1)|15.47|<em>|16|(4,1)|19.95|<br>|7|(2,2)|21.33|</em>|17|(4,2)|23.73|<br>|8|(2,3)|14.49|<em>|18|(4,3)|15.35|<br>|9|(2,4)|24.83|</em>|19|(4,4)|18.01|<br>|10|(2,5)|26.19|*|20|(4,5)|16.29|</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">x=[1 2 3 4 5 6 7 8 9 10]</span><br><span class="line">y=[1 2 3 4 4 4.7 5 5.2 6 7.2 ]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">%尝试一次多项式拟合  </span><br><span class="line">p1=polyfit(x,y,1)</span><br><span class="line"></span><br><span class="line">%尝试第二次拟合  </span><br><span class="line">p3=polyfit(x,y,3)</span><br><span class="line"></span><br><span class="line">%对拟合曲线进行比较</span><br><span class="line">x2=1:0.1:10</span><br><span class="line">y1=polyval(p1,x2)</span><br><span class="line">y3=polyval(p3,x2)</span><br><span class="line">plot(x,y,&#x27;*&#x27;,x2,y1,&#x27;b&#x27;,x2,y3,&#x27;r&#x27;)</span><br></pre></td></tr></table></figure>
+<h4 id="拟合效果"><a href="#拟合效果" class="headerlink" title="拟合效果"></a>拟合效果</h4><p><img src="/images/matlab/4/4-12.png" alt="4-12"></p>
+<br>
+
+<h4 id="采用拟合的方法"><a href="#采用拟合的方法" class="headerlink" title="采用拟合的方法"></a>采用拟合的方法</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  clc;</span><br><span class="line"> x=1:4;</span><br><span class="line"> y=1:5;</span><br><span class="line"> [X,Y]=meshgrid(x,y);</span><br><span class="line"> Z=-[13.72 25.80 8.47 25.27 22.32;15.47 21.33 14.49 24.83 26.19;23.28 26.48 29.14 12.04 14.58;19.95 23.73 15.35 18.01 16.29]&#x27;;</span><br><span class="line"> surf(X,Y,Z);</span><br><span class="line"> x=reshape(X,20,1);</span><br><span class="line"> y=reshape(Y,20,1);</span><br><span class="line"> z=reshape(Z,20,1);</span><br><span class="line"> p=4;</span><br><span class="line"> q=5;</span><br><span class="line"> U=leftmatrix(x,p,y,q);</span><br><span class="line"> V=rightmatrix(x,p,y,q,z);</span><br><span class="line"> a_n=U\V;</span><br><span class="line"> aa=zeros();</span><br><span class="line"> for i=1:length(a_n)</span><br><span class="line">     ii=quotient(i-1,q)+1;</span><br><span class="line">     jj=mod(i-1,q)+1;</span><br><span class="line">     aa(ii,jj)=a_n(i,1);</span><br><span class="line"> end</span><br><span class="line"> </span><br><span class="line"> aa;</span><br><span class="line"> </span><br><span class="line"> m=31;n=41;</span><br><span class="line"> [X1,Y1]=meshgrid(linspace(1,4,m),linspace(1,5,n));</span><br><span class="line"> xx=reshape(X1,m*n,1);</span><br><span class="line"> yy=reshape(Y1,m*n,1);</span><br><span class="line"> zz=zeros(m*n,1);</span><br><span class="line"> xy=zeros(m*n,1);</span><br><span class="line"> xt=zeros(m*n,1);</span><br><span class="line"> yt=zeros(m*n,1);</span><br><span class="line"> for i=1:p</span><br><span class="line">     for j=1:q</span><br><span class="line">         xt=xx.^(i-1);</span><br><span class="line">         yt=yy.^(j-1);</span><br><span class="line">         xy=xt.*yt;</span><br><span class="line">         zz=zz+aa(i,j).*xy;</span><br><span class="line">     end</span><br><span class="line"> end</span><br><span class="line"> Z1=reshape(zz,n,m);</span><br><span class="line"> surf(X1,Y1,Z1);</span><br><span class="line"> p=sum(Z);</span><br><span class="line"> q=p(:,[2,3,4]);</span><br><span class="line"> h=sum(q&#x27;)/15;</span><br><span class="line"> v=2000*4000*h;</span><br><span class="line"> </span><br><span class="line"> function U =leftmatrix(x,p,y,q)</span><br><span class="line">     %U*a=V,a为系数列矩阵，长度为p*q;</span><br><span class="line">     %U为q*p矩阵；</span><br><span class="line">     %x,y为长度一致的列矩阵,给定点的坐标；</span><br><span class="line">     %p,q为拟合的函数的x,y的幂的最高次数；</span><br><span class="line">     m=length(x);</span><br><span class="line">     if(nargin~=4)&amp;(m~=length(y))</span><br><span class="line">         error(&#x27;错误，检查错误！！&#x27;);</span><br><span class="line">     end</span><br><span class="line">     U_L=p*q;%U为p*q阶方程</span><br><span class="line">     U=zeros(U_L,U_L);</span><br><span class="line">     for i=1:p*q</span><br><span class="line">         for j=1:p*q</span><br><span class="line">             x_z=quotient(j-1,q)+quotient(i-1,q); %x的幂的次数，quotient为求商</span><br><span class="line">             y_z=mod(j-1,q)+mod(i-1,q);</span><br><span class="line">             U(i,j)=qiuhe(x,x_z,y,y_z);</span><br><span class="line">         end</span><br><span class="line">     end</span><br><span class="line"> end</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"> function V=rightmatrix(x,p,y,q,z)</span><br><span class="line">     %U*a=V</span><br><span class="line">     %V为一个列向量，长为p*q</span><br><span class="line">     %x,y,z为点的坐标</span><br><span class="line">     %p,q分别为x,y的幂的最高次数</span><br><span class="line"></span><br><span class="line">     if nargin~=5</span><br><span class="line">         error(&#x27;错误，检查检查rightmatrix&#x27;);</span><br><span class="line">     end</span><br><span class="line">     V=zeros(p*q,1);</span><br><span class="line">     for i=1:p*q</span><br><span class="line">         x_z=quotient(i-1,q);</span><br><span class="line">         y_z=mod(i-1,q);</span><br><span class="line">         V(i,1)=qiuhe(x,x_z,y,y_z,z);</span><br><span class="line">     end</span><br><span class="line"> end</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">function sh =quotient(x,y)</span><br><span class="line">    %sh为x/y的商</span><br><span class="line">    sh=(x-mod(x,y)/y);</span><br><span class="line">end</span><br><span class="line">    </span><br><span class="line">function he =qiuhe(x,p,y,q,z)</span><br><span class="line">    %x,y向量长度相同</span><br><span class="line">    %p,q分别为x,y的幂的次数</span><br><span class="line">    m=length(x);</span><br><span class="line">    if (nargin&lt;4)&amp;&amp;(m~=length(y))</span><br><span class="line">        error(&#x27;错误，检查!!&#x27;)</span><br><span class="line">    end</span><br><span class="line">    if nargin ==4</span><br><span class="line">        z=ones(m,1);</span><br><span class="line">    end</span><br><span class="line">    he=0;</span><br><span class="line">    for i=1:m</span><br><span class="line">        he=he+x(i)^p*y(i)^q*z(i);</span><br><span class="line">    end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p><code>出了问题，暂时搁置，以后解决！！</code></p>
+<br>
+
+<br>
+
+
+<h2 id="2"></h2><font size=5 color=red><center>数值插值 </center></font>
+
+
+
+<h2 id="3"></h2><font size=5 color=red><center>函数的极限 </center></font>
+
+<h2 id="4"></h2><font size=5 color=red><center>数值积分</center></font>
+
+<h2 id="5"></h2><font size=5 color=red><center>多元统计分析 </center></font>
+
+<h2 id="6"></h2><font size=5 color=red><center>假设检验</center></font>
+
+<h2 id="7"></h2><font size=5 color=red>7 &emsp;回归分析 </font>  
+
+<p>&amp;emsp;&amp;emsp;在客观世界中普遍存在着变量之间的关系，像某个现象的发生或某种结果的得出，往往与其他某个或某些因素有关，但这种关系又不是很确定的，只是从数据上可以看出“有关”的趋势。回归分析就是用来研究区域，有这种特征的变量之间的线性关系，用一定的线性回归模拟来你和因变量和自变量的数据，并通过确定模型参数得到回归方程.</p>
+<br>
+  
+
+<h3 id="7-1一元线性回归"><a href="#7-1一元线性回归" class="headerlink" title="7.1一元线性回归"></a>7.1一元线性回归</h3><p>&amp;emsp;&amp;emsp;当线性回归中的自变量只有一个时，称为一元线性回归假设，对于x(在某个区间内)的每一个值有:</p>
+<center>
+
+<p>$y - N(a+bx,\sigma^2)$</p>
+<br>  
+
+</center>
+
+<p>其中, $a、b、\sigma^2$ 都是不依赖于 $x$ 的未知参数。记对于做这样的正态假设相当于假设</p>
+<center>
+
+<p>$\begin{cases} Y&#x3D;a+bx+\epsilon\\epsilon-N(0,\sigma^2)\end{cases}$</p>
+<br>
+
+</center>
+
+<p>其中，未知参数都不依赖 $x$。<br>&amp;emsp;&amp;emsp;通常采用最小二乘法来确定。上面两个待定参数 $a$ 和 $b$ 及要求观测值与利用上面回归模型得到的拟合值之间的差值的平方和最小。差值平方和达到最小时的模型参数便作为待定参数的最终值，代入模型，即可得到回归方程。<br>&amp;emsp;&amp;emsp;在Matlab中，提供了<code>polyfit</code>函数来实现从一次到高次多项式的回归法。<code>polyfit</code>函数在前面章节已经介绍过，在此不再介绍。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">%% 输入数据</span><br><span class="line">clc</span><br><span class="line">clear all</span><br><span class="line">x=[23.80,27.60,31.60,32.40,33.70,34.90,43.20,52.80,63.80,73.40];</span><br><span class="line">y=[41.4,51.8,61.70,67.90,68.70,77.50,95.90,137.40,155.0,175.0];	</span><br><span class="line">% 绘制散点图，判断是否具有线性关系</span><br><span class="line">figure</span><br><span class="line">plot(x,y,&#x27;r*&#x27;)%作散点图</span><br><span class="line">xlabel(&#x27;x（职工工资总额）&#x27;,&#x27;fontsize&#x27;, 12)           %横坐标名</span><br><span class="line">ylabel(&#x27;y（商品零售总额）&#x27;, &#x27;fontsize&#x27;,12)           %纵坐标名</span><br><span class="line">set(gca,&#x27;linewidth&#x27;,2);</span><br><span class="line">%% 采用LinearModel.fit函数进行回归</span><br><span class="line"></span><br><span class="line">m2 = LinearModel.fit(x,y)</span><br><span class="line">%% 采用regress函数进行回归</span><br><span class="line">Y=y&#x27;;</span><br><span class="line">X=[ones(length(y),1),x&#x27;];</span><br><span class="line">[b, bint, r, rint, s] = regress(Y, X)</span><br><span class="line">%绘图</span><br><span class="line">b1=b(1);b2=b(2);</span><br><span class="line">xx=min(x):0.01:max(x);</span><br><span class="line">yy=b1+b2*xx;</span><br><span class="line">plot(x,y,&#x27;r*&#x27;,xx,yy,&#x27;b&#x27;)</span><br><span class="line">xlabel(&#x27;x（职工工资总额）&#x27;,&#x27;fontsize&#x27;, 12)           %横坐标名</span><br><span class="line">ylabel(&#x27;y（商品零售总额）&#x27;, &#x27;fontsize&#x27;,12)           %纵坐标名</span><br><span class="line">set(gca,&#x27;linewidth&#x27;,2);</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/matlab/4/4-13.png" alt="4-13"></p>
+<ul>
+<li>采用LinearModel.fit函数进行回归   </li>
+<li>$[b, bint, r, rint, s] &#x3D; regress(Y, X)$函数用于另外一种回归!</li>
+</ul>
+<p><img src="/images/matlab/4/4-14.png" alt="4-14"></p>
+<br>
+
+<h3 id="非线性回归"><a href="#非线性回归" class="headerlink" title="非线性回归"></a>非线性回归</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">%用nlinfit或fitnlm</span><br><span class="line">%% 输入数据</span><br><span class="line">clc, clear all, close all</span><br><span class="line">x=[1.5, 4.5, 7.5,10.5,13.5,16.5,19.5,22.5,25.5];</span><br><span class="line">y=[7.0,4.8,3.6,3.1,2.7,2.5,2.4,2.3,2.2];  </span><br><span class="line">plot(x,y,&#x27;*&#x27;,&#x27;linewidth&#x27;,2);</span><br><span class="line">set(gca,&#x27;linewidth&#x27;,2);</span><br><span class="line">xlabel(&#x27;销售额x/万元&#x27;,&#x27;fontsize&#x27;, 12)         </span><br><span class="line">ylabel(&#x27;流通费率y/%&#x27;, &#x27;fontsize&#x27;,12)           </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">%% 对数形式</span><br><span class="line">m1 = @(b,x) b(1) + b(2)*log(x);</span><br><span class="line">nonlinfit1 = fitnlm(x,y,m1,[0.01;0.01])</span><br><span class="line">b=nonlinfit1.Coefficients.Estimate;</span><br><span class="line">Y1=b(1,1)+b(2,1)*log(x);</span><br><span class="line">hold on</span><br><span class="line">plot(x,Y1,&#x27;--k&#x27;,&#x27;linewidth&#x27;,2)</span><br><span class="line">%% 指数形式拟合</span><br><span class="line">m2 = &#x27;y ~ b1*x^b2&#x27;;</span><br><span class="line">nonlinfit2 = fitnlm(x,y,m2,[1;1])</span><br><span class="line">b1=nonlinfit2.Coefficients.Estimate(1,1);</span><br><span class="line">b2=nonlinfit2.Coefficients.Estimate(2,1);</span><br><span class="line">Y2=b1*x.^b2;</span><br><span class="line">hold on</span><br><span class="line">plot(x,Y2,&#x27;r&#x27;,&#x27;linewidth&#x27;,2)</span><br><span class="line">legend(&#x27;原始数据&#x27;,&#x27;a+b*lnx&#x27;,&#x27;a*x^b&#x27;)</span><br></pre></td></tr></table></figure>
+<p><img src="/images/matlab/4/4-15.png" alt="4-15"></p>
+<br>
+
+
+<h3 id="逐步回归"><a href="#逐步回归" class="headerlink" title="逐步回归"></a>逐步回归</h3><p><img src="/images/matlab/4/4-16.png" alt="4-16"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/01/Mathematical_modeling/matlab4/" data-id="cl3qp6425000zz4qf6dir2hre" data-title="Matlab数据分析" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab%E5%BA%94%E7%94%A8/" rel="tag">matlab应用</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/04/01/matlab/matlab4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Matlab数据分析
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/03/21/matlab/Matlab3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MATLAB绘图</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arduino/" rel="tag">Arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" rel="tag">Lingo案例分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">Matlab基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">matlab基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E5%BA%94%E7%94%A8/" rel="tag">matlab应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E7%A8%8B%E5%BA%8F/" rel="tag">matlab程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E7%BB%98%E5%9B%BE/" rel="tag">matlab绘图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" rel="tag">单片机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" rel="tag">微分方程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" rel="tag">机械设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" rel="tag">论文排版</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" rel="tag">遗传算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Arduino/" style="font-size: 12.5px;">Arduino</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" style="font-size: 12.5px;">Lingo案例分析</a> <a href="/tags/Math/" style="font-size: 12.5px;">Math</a> <a href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 12.5px;">Matlab基础知识</a> <a href="/tags/Python/" style="font-size: 12.5px;">Python</a> <a href="/tags/markdown/" style="font-size: 12.5px;">markdown</a> <a href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 12.5px;">matlab基础知识</a> <a href="/tags/matlab%E5%BA%94%E7%94%A8/" style="font-size: 17.5px;">matlab应用</a> <a href="/tags/matlab%E7%A8%8B%E5%BA%8F/" style="font-size: 12.5px;">matlab程序</a> <a href="/tags/matlab%E7%BB%98%E5%9B%BE/" style="font-size: 12.5px;">matlab绘图</a> <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 12.5px;">单片机</a> <a href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" style="font-size: 12.5px;">微分方程</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" style="font-size: 20px;">机械原理</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" style="font-size: 12.5px;">机械设计</a> <a href="/tags/%E7%8E%A9%E6%9C%BA/" style="font-size: 12.5px;">玩机</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 15px;">算法</a> <a href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" style="font-size: 12.5px;">论文排版</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 12.5px;">语法</a> <a href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" style="font-size: 10px;">遗传算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/29/Learn/math/">Mathjax渲染公式</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/">Mathjax渲染公式</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/29/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/24/Mathematical_modeling/11GA/">Genetic Algorithm</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/15/Mathematical_modeling/10matlab/">Matlab微分方程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
