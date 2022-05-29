@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
   <meta charset="utf-8">
   
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>TuTo&#39;Blog</title>
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
@@ -13,3038 +25,742 @@
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://example.com/index.html">
   
   
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
   
   
 <link rel="stylesheet" href="/css/style.css">
 
   
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
+  
+  
   
 <meta name="generator" content="Hexo 6.2.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/tuoxiao" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">TuTo</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md"></h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> ShiYan, China</small>
       </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
     </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">Links</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/tuoxiao" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/6573256711" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/yunshengchu2" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://space.bilibili.com/488452389" target="_blank" title="Bilibili" data-toggle=tooltip data-placement=top><i class="icon icon-bilibili"></i></a></li>
+        
+    </ul>
+
+    </nav>
   </div>
 </header>
 
-      <div class="outer">
-        <section id="main">
   
-    <article id="post-Learn/math" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/29/Learn/math/" class="article-date">
-  <time class="dt-published" datetime="2022-05-29T02:42:59.527Z" itemprop="datePublished">2022-05-29</time>
-</a>
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/29/Learn/math/">Mathjax渲染公式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>&amp;emsp;&amp;emsp;LaTex表达式是一种简单的、常见的一种数学公式表达形式，在很多地方都有出现。</p>
-<h2 id='0'></h2>
-
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="#1">一、矩阵</a></li>
-<li><a href="#2">二、函数</a></li>
-<li><a href="#3">三、运算</a><ul>
-<li><a href="#301">3-1、一般函数</a></li>
-<li><a href="#302">3-2、括号的使用</a></li>
-<li><a href="#303">3-3、极限</a></li>
-<li><a href="#304">3-4、积分</a></li>
-</ul>
-</li>
-<li><a href="#4">四、字母与符号</a><ul>
-<li><a href="#401">4-1、运算符号</a></li>
-<li><a href="#402">4-2、希腊字母</a></li>
-<li><a href="#403">4-3、其他符号</a></li>
-<li><a href="#404">4-4、杂项</a></li>
-</ul>
-</li>
-</ul>
-<br>
-
-<p>&amp;emsp;&amp;emsp;所有的LaTex的书写形式都是在 $…$ 之中，只不过对于嵌入在文章中间而言 是单对的$…$，而单独成行的LaTex表达式是双对的$$…$$。</p>
-<br>
-
-<br>
-
-<h2 id="1"></h2><font size=5 color=red><center>一、矩阵</center></font> 
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;matrix&#125; 0 &amp; 1 \\ 1 &amp; 0 \end&#123;matrix&#125; </span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\begin{matrix} 0 &amp; 1 \ 1 &amp; 0 \end{matrix}$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;pmatrix&#125; 0 &amp; -i \\ i &amp; 0 \end&#123;pmatrix&#125;</span><br></pre></td></tr></table></figure>
-
-<center>
-
-<p>$\begin{pmatrix} 0 &amp; -i \ i &amp; 0 \end{pmatrix}\$</p>
-</center>
-
-<br>
-
-<br>
-
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;bmatrix&#125; 0 &amp; -1 \\ 1 &amp; 0 \end&#123;bmatrix&#125;</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\begin{bmatrix} 0 &amp; -1 \ 1 &amp; 0 \end{bmatrix}$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;Bmatrix&#125; 1 &amp; 0 \\ 0 &amp; -1 \end&#123;Bmatrix&#125;</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\begin{Bmatrix} 1 &amp; 0 \ 0 &amp; -1 \end{Bmatrix}$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;vmatrix&#125; a &amp; b \\ c &amp; d \end&#123;vmatrix&#125;</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\begin{vmatrix} a &amp; b \ c &amp; d \end{vmatrix}$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;Vmatrix&#125; i &amp; 0 \\ 0 &amp; -i \end&#123;Vmatrix&#125;</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\begin{Vmatrix} i &amp; 0 \ 0 &amp; -i \end{Vmatrix}$</p>
-</center>
-
-<br>
-
-<br>
-
-<h2 id="2"></h2><font size=5 color=red><center>二、函数</center></font> 
-
-<br>
-
-<table>
-<thead>
-<tr>
-<th align="center">LaTex表达形式</th>
-<th align="center">实际效果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">\lim</td>
-<td align="center">$\lim$</td>
-</tr>
-<tr>
-<td align="center">\lim_{x\to 0}</td>
-<td align="center">$\lim_{x\to 0}$</td>
-</tr>
-<tr>
-<td align="center">\sin</td>
-<td align="center">$\sin x$</td>
-</tr>
-<tr>
-<td align="center">\cos</td>
-<td align="center">$\cos x$</td>
-</tr>
-<tr>
-<td align="center">\arctan x</td>
-<td align="center">$\arctan x$</td>
-</tr>
-<tr>
-<td align="center">\sec x</td>
-<td align="center">$\sec x$</td>
-</tr>
-<tr>
-<td align="center">\hat x</td>
-<td align="center">$\hat x$</td>
-</tr>
-<tr>
-<td align="center">\bar x</td>
-<td align="center">$\bar x$</td>
-</tr>
-<tr>
-<td align="center">\overline{xyz}</td>
-<td align="center">$\overline{xyz}$</td>
-</tr>
-<tr>
-<td align="center">\vec x</td>
-<td align="center">$\vec x$</td>
-</tr>
-<tr>
-<td align="center">\dot x</td>
-<td align="center">$\dot x$</td>
-</tr>
-<tr>
-<td align="center">\ddot x</td>
-<td align="center">$\ddot x$</td>
-</tr>
-<tr>
-<td align="center">\overrightarrow{xyz}</td>
-<td align="center">$\overrightarrow{xyz}$</td>
-</tr>
-<tr>
-<td align="center">\overleftrightarrow{xyz}</td>
-<td align="center">$\overleftrightarrow{xyz}$</td>
-</tr>
-<tr>
-<td align="center">\sqrt{x^3}</td>
-<td align="center">$\sqrt{x^3}$</td>
-</tr>
-<tr>
-<td align="center">\sqrt[3]{\frac xy}</td>
-<td align="center">$\sqrt[3]{\frac xy}$</td>
-</tr>
-<tr>
-<td align="center">\frac ab</td>
-<td align="center">$\frac ab$</td>
-</tr>
-<tr>
-<td align="center">\frac{a+1}{b+1}</td>
-<td align="center">$\frac{a+1}{b+1}$</td>
-</tr>
-<tr>
-<td align="center">{a+1\over b+1}</td>
-<td align="center">${a+1\over b+1}$</td>
-</tr>
-<tr>
-<td align="center">\cfrac{a}{b}</td>
-<td align="center">$\cfrac{a}{b}$</td>
-</tr>
-<tr>
-<td align="center">\stackrel{F.T}{\longrightarrow}</td>
-<td align="center">$\stackrel{F.T}{\longrightarrow}$</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-
-<h2 id="3"></h2><font size=5 color=red><center>三、运算</center></font> 
-
-<br>
-
-<h2 id="301"></h2><font size=4 color=skybule>3-1、一般函数</font>
-
-<br>
-
-<p>&amp;emsp;&amp;emsp;对于上标使用 下划线表示“ _ ” ；对于上标使用 “ ^ ”表示。LaTex表达式中的上下标可以叠加的，就比如:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;x^y&#125;^z$或者 $x^&#123;y^z&#125;$</span><br></pre></td></tr></table></figure>
-<p> LaTex表达式为</p>
-<center>
-
-<p>  ${x^y}^z$</p>
-</center>
-
-<br>
-
-<p>在此需要注意的是：LaTex表达式默认的是 “ _ ” “ ^ ” 之后的一位才是上下标的内容，对于超过一个字母的上下标需要使用 { } 将它括起来，比如</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$x_&#123;2i&#125;^&#123;2+b&#125;$</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为  </p>
-<center> 
-
-<p>$x_{2i}^{2+b}$</p>
-</center>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;f&#125;’(x) = x^2 + x</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>${f}’(x) &#x3D; x^2 + x$</p>
-</center>
-
-<br>
-
-<p>&amp;emsp;&amp;emsp;$\log$的表达式会稍微简单点，<code>$\log$ </code>就是它的LaTex表达式，同样的对于需要下标的同样使用下划线表示 “ _ ”， 对于多个字符组成的需要添加 { } 将其包括。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\log_&#123;21&#125; &#123;xy&#125;$</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\log_{21} {xy}$</p>
-</center>
-
-<br>
-
-<br>
-
-<h2 id="302"></h2><font size=4 color=skybule>3-2、括号使用</font>
-
-<br>
-
-<p>&amp;emsp;&amp;emsp;LaTex表达式中的 ( ) 、 [ ] 均可以正常使用，但是对于 { } 需要使用转义字符使用，即使用 <code>“\&#123;” 和 “\&#125;” </code>表示 { }</p>
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)$</p>
-</center>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f(x)=\begin&#123;cases&#125; x = \cos(t) \\y = \sin(t) \\ z = \frac xy \end&#123;cases&#125;</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$f(x)&#x3D;\begin{cases} x &#x3D; \cos(t)<br>\ y &#x3D; \sin(t)<br>\ z &#x3D; \frac xy \end{cases}$</p>
-</center>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f(x)=\begin&#123;cases&#125; 0&amp; \text&#123;x=0&#125;\\1&amp; \text&#123;x!=0&#125; \end&#123;cases&#125;</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$f(x)&#x3D;\begin{cases} 0&amp; \text{x&#x3D;0} \<br>1&amp; \text{x!&#x3D;0} \end{cases}$</p>
-</center>
-
-<br>
-
-<br>
-
-<h2 id="303"></h2><font size=4 color=skybule>3-3、极限</font>
-
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\lim_&#123;x \to 0&#125; \frac &#123;3x ^2 +7x^3&#125; &#123;x^2 +5x^4&#125; = 3</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$\lim_{x \to 0} \frac {3x ^2 +7x^3} {x^2 +5x^4} &#x3D; 3$</p>
-</center>
-
-<br>
-
-<h2 id="304"></h2><font size=4 color=skybule>3-4、积分</font>
-
-
-<p>&amp;emsp;&amp;emsp;积分中，需要注意的是，在多重积分内 dx 和 dy 之间 使用一个斜杠加一个逗号 , 来增大稍许间距。同样，在两个积分号之间使用一个斜杠加一个感叹号 ! 来减小稍许间距。使之更美观。</p>
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\int_a^b f(x) dx </span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$\int_a^b f(x) dx$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\int_0^&#123;+\infty&#125; x^n e^&#123;-x&#125; dx = n!  </span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$\int_0^{+\infty} x^n e^{-x} dx &#x3D; n!$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\int_&#123;x^2 + y^2 \leq R^2&#125;   f(x,y) dx dy = </span><br><span class="line">\int_&#123;\theta=0&#125;^&#123;2\pi&#125;    \int_&#123;r=0&#125;^R    f(r\cos\theta,r\sin\theta) r dr d\theta  </span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$\int_{x^2 + y^2 \leq R^2}   f(x,y) dx dy &#x3D;\int_{\theta&#x3D;0}^{2\pi}    \int_{r&#x3D;0}^R    f(r\cos\theta,r\sin\theta) r dr d\theta$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\int \!\!\! \int_D f(x,y)dxdy  \int \,\,\, \int_D f(x,y)dxdy</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$\int !!! \int_D f(x,y)dxdy  \int ,,, \int_D f(x,y)dxdy$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i\hbar\frac&#123;\partial \varphi &#125; &#123;\partial &#123;t&#125;&#125; = \frac&#123;-\hbar^2&#125;&#123;2m&#125; \left( \frac&#123;\partial^2&#125;&#123;\partial x^2&#125; + \frac&#123;\partial^2&#125;&#123;\partial y^2&#125;+\frac&#123;\partial^2&#125;&#123;\partial z^2&#125; \right) \varphi  + V \varphi</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$i\hbar\frac{\partial \varphi } {\partial {t}} &#x3D; \frac{-\hbar^2}{2m}<br>\left( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} +<br>\frac{\partial^2}{\partial z^2} \right) \varphi  + V \varphi$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\frac&#123;d&#125;&#123;dt&#125; \int \!\!\! \int \!\!\! \int_&#123;\textbf&#123;R&#125;^3&#125; \left | \varphi (r,t) \right|^2 dx dy dz = 0</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$\frac{d}{dt} \int !!! \int !!! \int_{\textbf{R}^3}<br>\left | \varphi (r,t) \right|^2 dx dy dz &#x3D; 0$</p>
-</center>
-
-<br>
-
-<br>
-
-<h2 id="4"></h2><font size=5 color=red><center>四、字母与符号</center></font> 
-
-<br>
-
-<h2 id="401"></h2><font size=4 color=skybule>4-1、运算符号</font> 
-
-<br>
-
-<p>&amp;emsp;&amp;emsp;普通字符在数学公式中含义一样，除了 # $ % &amp; ~ _ ^ \ { } 若要在数学环境中表示这些符号# $ % &amp; _ { }，需要分别表示为# $ % &amp; _ { }，即在个字符前加上<code>\</code> 。  </p>
-<table>
-<thead>
-<tr>
-<th align="center">LaTex 表达式</th>
-<th align="center">字体效果</th>
-<th align="center">LaTex 表达式</th>
-<th align="center">字体效果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">单空格 ： a \quad b</td>
-<td align="center">a&amp;ensp;b</td>
-<td align="center">双空格： a \qquad b</td>
-<td align="center">a&amp;emsp;b</td>
-</tr>
-<tr>
-<td align="center">$</td>
-<td align="center">$</td>
-<td align="center">\%</td>
-<td align="center">%</td>
-</tr>
-<tr>
-<td align="center">\times</td>
-<td align="center">×</td>
-<td align="center">\#</td>
-<td align="center">#</td>
-</tr>
-<tr>
-<td align="center">\&amp;</td>
-<td align="center">&amp;</td>
-<td align="center">\_</td>
-<td align="center">_</td>
-</tr>
-<tr>
-<td align="center">\sum</td>
-<td align="center">$\sum$</td>
-<td align="center">\int</td>
-<td align="center">$\int$</td>
-</tr>
-<tr>
-<td align="center">\Vert</td>
-<td align="center">$\Vert$</td>
-<td align="center">\vert x \vert</td>
-<td align="center">$\vert x \vert$</td>
-</tr>
-<tr>
-<td align="center">\langle</td>
-<td align="center">$\langle$</td>
-<td align="center">\rangle</td>
-<td align="center">$\rangle$</td>
-</tr>
-<tr>
-<td align="center">\lceil</td>
-<td align="center">$\lceil$</td>
-<td align="center">\rceil</td>
-<td align="center">$\rceil$</td>
-</tr>
-<tr>
-<td align="center">\lfloor</td>
-<td align="center">$\lfloor$</td>
-<td align="center">\rfloor</td>
-<td align="center">$\rfloor$</td>
-</tr>
-<tr>
-<td align="center">\lt</td>
-<td align="center">$\lt$</td>
-<td align="center">\gt</td>
-<td align="center">$\gt$</td>
-</tr>
-<tr>
-<td align="center">\le</td>
-<td align="center">$\le$</td>
-<td align="center">\ge</td>
-<td align="center">$\ge$</td>
-</tr>
-<tr>
-<td align="center">\pm</td>
-<td align="center">$\pm$</td>
-<td align="center">\mp</td>
-<td align="center">$\mp$</td>
-</tr>
-<tr>
-<td align="center">\subseteq</td>
-<td align="center">$\subseteq$</td>
-<td align="center">\subsetneq</td>
-<td align="center">$\subsetneq$</td>
-</tr>
-<tr>
-<td align="center">\supset</td>
-<td align="center">$\supset$</td>
-<td align="center">\in</td>
-<td align="center">$\in$</td>
-</tr>
-<tr>
-<td align="center">\sum_1^n</td>
-<td align="center">$\sum_1^n$</td>
-<td align="center">\infty</td>
-<td align="center">$\infty$</td>
-</tr>
-<tr>
-<td align="center">\prod_{k&#x3D;1}^n k &#x3D; n!</td>
-<td align="center">$\prod_{k&#x3D;1}^n k &#x3D; n!$</td>
-<td align="center">\sum_{i&#x3D;0}^\infty i^2</td>
-<td align="center">$\sum_{i&#x3D;0}^\infty i^2$</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<h2 id="402"></h2><font size=4 color=skybule>4-2、希腊字母</font>
-
-<br>
-
-<table>
-<thead>
-<tr>
-<th align="center">LaTex表达形式</th>
-<th align="center">对应的希腊字母</th>
-<th align="center">LaTex表达形式</th>
-<th align="center">对应的希腊字母</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">\alpha</td>
-<td align="center">α</td>
-<td align="center">\Alpha</td>
-<td align="center">A</td>
-</tr>
-<tr>
-<td align="center">\beta</td>
-<td align="center">β</td>
-<td align="center">\Beta</td>
-<td align="center">B</td>
-</tr>
-<tr>
-<td align="center">\gamma</td>
-<td align="center">γ</td>
-<td align="center">\Gamma</td>
-<td align="center">Γ</td>
-</tr>
-<tr>
-<td align="center">\delta</td>
-<td align="center">δ</td>
-<td align="center">\Delta</td>
-<td align="center">Δ</td>
-</tr>
-<tr>
-<td align="center">\epsilon</td>
-<td align="center">ϵ</td>
-<td align="center">\Epsilon</td>
-<td align="center">E</td>
-</tr>
-<tr>
-<td align="center">\zeta</td>
-<td align="center">ζ</td>
-<td align="center">\Zeta</td>
-<td align="center">Z</td>
-</tr>
-<tr>
-<td align="center">\eta</td>
-<td align="center">η</td>
-<td align="center">\Eta</td>
-<td align="center">H</td>
-</tr>
-<tr>
-<td align="center">\theta</td>
-<td align="center">θ</td>
-<td align="center">\Theta</td>
-<td align="center">Θ</td>
-</tr>
-<tr>
-<td align="center">\iota</td>
-<td align="center">ι</td>
-<td align="center">\Iota</td>
-<td align="center">I</td>
-</tr>
-<tr>
-<td align="center">\kappa</td>
-<td align="center">κ</td>
-<td align="center">Kappa</td>
-<td align="center">K</td>
-</tr>
-<tr>
-<td align="center">\Lambda</td>
-<td align="center">λ</td>
-<td align="center">\Lambda</td>
-<td align="center">Λ</td>
-</tr>
-<tr>
-<td align="center">\mu</td>
-<td align="center">μ</td>
-<td align="center">\Mu</td>
-<td align="center">M</td>
-</tr>
-<tr>
-<td align="center">\nu</td>
-<td align="center">ν</td>
-<td align="center">\Nu</td>
-<td align="center">N</td>
-</tr>
-<tr>
-<td align="center">\xi</td>
-<td align="center">ξ</td>
-<td align="center">\Xi</td>
-<td align="center">Ξ</td>
-</tr>
-<tr>
-<td align="center">\omicron</td>
-<td align="center">ο</td>
-<td align="center">\Omicron</td>
-<td align="center">O</td>
-</tr>
-<tr>
-<td align="center">\pi</td>
-<td align="center">π</td>
-<td align="center">\Pi</td>
-<td align="center">Π</td>
-</tr>
-<tr>
-<td align="center">\rho</td>
-<td align="center">ρ</td>
-<td align="center">\Rho</td>
-<td align="center">P</td>
-</tr>
-<tr>
-<td align="center">\sigma</td>
-<td align="center">σ</td>
-<td align="center">\Sigma</td>
-<td align="center">Σ</td>
-</tr>
-<tr>
-<td align="center">\tau</td>
-<td align="center">τ</td>
-<td align="center">\Tau</td>
-<td align="center">T</td>
-</tr>
-<tr>
-<td align="center">\upsilon</td>
-<td align="center">υ</td>
-<td align="center">\Upsilon</td>
-<td align="center">Υ</td>
-</tr>
-<tr>
-<td align="center">\varphi</td>
-<td align="center">φ</td>
-<td align="center">\Phi</td>
-<td align="center">Φ</td>
-</tr>
-<tr>
-<td align="center">\chi</td>
-<td align="center">χ</td>
-<td align="center">\Chi</td>
-<td align="center">X</td>
-</tr>
-<tr>
-<td align="center">\psi</td>
-<td align="center">ψ</td>
-<td align="center">\Psi</td>
-<td align="center">Ψ</td>
-</tr>
-<tr>
-<td align="center">\omega</td>
-<td align="center">ω</td>
-<td align="center">\Omega</td>
-<td align="center">Ω</td>
-</tr>
-<tr>
-<td align="center">\hat{a}</td>
-<td align="center">$\hat{a}$</td>
-<td align="center">\acute{a}</td>
-<td align="center">$\acute{a}$</td>
-</tr>
-<tr>
-<td align="center">\grave{a}</td>
-<td align="center">$\grave{a}$</td>
-<td align="center">\breve{a}</td>
-<td align="center">$\breve{a}$</td>
-</tr>
-<tr>
-<td align="center">\bar{a}</td>
-<td align="center">$\bar{a}$</td>
-<td align="center">\widetilde{a}</td>
-<td align="center">$\widetilde{a}$</td>
-</tr>
-<tr>
-<td align="center">\check{a}</td>
-<td align="center">$\check{a}$</td>
-<td align="center">\tilde{a}</td>
-<td align="center">$\tilde{a}$</td>
-</tr>
-<tr>
-<td align="center">\dot{a}</td>
-<td align="center">$\dot{a}$</td>
-<td align="center">\ddot{a}</td>
-<td align="center">$\ddot{a}$</td>
-</tr>
-<tr>
-<td align="center">\vec{a}</td>
-<td align="center">$\vec{a}$</td>
-<td align="center">\widehat{a}</td>
-<td align="center">$\widehat{a}$</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<h2 id="403"></h2><font size=4 color=skybule>4-3、其他符号</font>
-
-<br>
-
-<table>
-<thead>
-<tr>
-<th align="center">LaTex表达形式</th>
-<th align="center">实际效果</th>
-<th align="center">LaTex表达形式</th>
-<th align="center">实际效果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">\leqq</td>
-<td align="center">$\leqq$</td>
-<td align="center">\leqslant</td>
-<td align="center">$\leqslant$</td>
-</tr>
-<tr>
-<td align="center">\ge</td>
-<td align="center">$\ge$</td>
-<td align="center">\geq</td>
-<td align="center">$\geq$</td>
-</tr>
-<tr>
-<td align="center">\geqq</td>
-<td align="center">$\geqq$</td>
-<td align="center">\geqslant</td>
-<td align="center">$\geqslant$</td>
-</tr>
-<tr>
-<td align="center">\neq</td>
-<td align="center">$\neq$</td>
-<td align="center">\not\lt</td>
-<td align="center">$\not\lt$</td>
-</tr>
-<tr>
-<td align="center">\not</td>
-<td align="center">$\not$</td>
-<td align="center">\times</td>
-<td align="center">$\times$</td>
-</tr>
-<tr>
-<td align="center">\cdot</td>
-<td align="center">$\cdot$</td>
-<td align="center">\bullett</td>
-<td align="center">$\bullet$</td>
-</tr>
-<tr>
-<td align="center">\cup</td>
-<td align="center">$\cup$</td>
-<td align="center">\cap</td>
-<td align="center">$\cap$</td>
-</tr>
-<tr>
-<td align="center">\setminus</td>
-<td align="center">$\setminus$</td>
-<td align="center">\subset</td>
-<td align="center">$\subset$</td>
-</tr>
-<tr>
-<td align="center">\notin</td>
-<td align="center">$\notin$</td>
-<td align="center">\emptyset</td>
-<td align="center">$\emptyset$</td>
-</tr>
-<tr>
-<td align="center">\varnothing</td>
-<td align="center">$\varnothing$</td>
-<td align="center">\vDash</td>
-<td align="center">$\vDash$</td>
-</tr>
-<tr>
-<td align="center">{n+1 \choose 2k}</td>
-<td align="center">${n+1 \choose 2k}$</td>
-<td align="center">\binom{n+1}{2k}</td>
-<td align="center">$\binom{n+1}{2k}$</td>
-</tr>
-<tr>
-<td align="center">\to</td>
-<td align="center">$\to$</td>
-<td align="center">\rightarrow</td>
-<td align="center">$\rightarrow$</td>
-</tr>
-<tr>
-<td align="center">\leftarrow</td>
-<td align="center">$\leftarrow$</td>
-<td align="center">\Rightarrow</td>
-<td align="center">$\Rightarrow$</td>
-</tr>
-<tr>
-<td align="center">\Leftarrow</td>
-<td align="center">$\Leftarrow$</td>
-<td align="center">\mapsto</td>
-<td align="center">$\mapsto$</td>
-</tr>
-<tr>
-<td align="center">\land</td>
-<td align="center">$\land$</td>
-<td align="center">\lor</td>
-<td align="center">$\lor$</td>
-</tr>
-<tr>
-<td align="center">\lnot</td>
-<td align="center">$\lnot$</td>
-<td align="center">\forall</td>
-<td align="center">$\forall$</td>
-</tr>
-<tr>
-<td align="center">\exists</td>
-<td align="center">$\exists$</td>
-<td align="center">\top</td>
-<td align="center">$\top$</td>
-</tr>
-<tr>
-<td align="center">\bot</td>
-<td align="center">$\bot$</td>
-<td align="center">\vdash</td>
-<td align="center">$\vdash$</td>
-</tr>
-<tr>
-<td align="center">\star</td>
-<td align="center">$\star$</td>
-<td align="center">\ast</td>
-<td align="center">$\ast$</td>
-</tr>
-<tr>
-<td align="center">\oplus</td>
-<td align="center">$\oplus$</td>
-<td align="center">\circ</td>
-<td align="center">$\circ$</td>
-</tr>
-<tr>
-<td align="center">\approx</td>
-<td align="center">$\approx$</td>
-<td align="center">\sim</td>
-<td align="center">$\sim$</td>
-</tr>
-<tr>
-<td align="center">\simeq</td>
-<td align="center">$\simeq$</td>
-<td align="center">\cong</td>
-<td align="center">$\cong$</td>
-</tr>
-<tr>
-<td align="center">\equiv</td>
-<td align="center">$\equiv$</td>
-<td align="center">\prec</td>
-<td align="center">$\prec$</td>
-</tr>
-<tr>
-<td align="center">\lhd</td>
-<td align="center">$\lhd$</td>
-<td align="center">\therefore</td>
-<td align="center">$\therefore$</td>
-</tr>
-<tr>
-<td align="center">\infty</td>
-<td align="center">$\infty$</td>
-<td align="center">\aleph_0</td>
-<td align="center">$\aleph_0$</td>
-</tr>
-<tr>
-<td align="center">\nabla</td>
-<td align="center">$\nabla$</td>
-<td align="center">\partial</td>
-<td align="center">$\partial$</td>
-</tr>
-<tr>
-<td align="center">\Im</td>
-<td align="center">$\Im$</td>
-<td align="center">\Re</td>
-<td align="center">$\Re$</td>
-</tr>
-<tr>
-<td align="center">\ldots</td>
-<td align="center">$\ldots$</td>
-<td align="center">\cdots</td>
-<td align="center">$\cdots$</td>
-</tr>
-<tr>
-<td align="center">\epsilon</td>
-<td align="center">$ϵ$</td>
-<td align="center">\varepsilon</td>
-<td align="center">$\varepsilon$</td>
-</tr>
-<tr>
-<td align="center">\phi</td>
-<td align="center">$\phi$</td>
-<td align="center">\varphi</td>
-<td align="center">$\varphi$</td>
-</tr>
-<tr>
-<td align="center">\ell</td>
-<td align="center">$\ell$</td>
-<td align="center">a\equiv b\pmod n</td>
-<td align="center">$a\equiv b\pmod n$</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<h2 id="404"></h2><font size=4 color=skybule>4-4、公式加粗、更改颜色、添加序号、字体</font> 
-
-<br>
-
-<ul>
-<li>对公式加粗需要用 \bm{ …… }加之包含其中即可:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\bm&#123; .... &#125;$</span><br></pre></td></tr></table></figure></li>
-</ul>
-<br>
-
-<ul>
-<li>更改公式字母颜色：<br>如果只更改个别字母，那个后面的需要用黑色再改下<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\color&#123;red&#125;  </span><br><span class="line">\color&#123;green&#125;   </span><br><span class="line">\color&#123;back&#125;</span><br><span class="line">\color&#123;green&#125;。。。。。\color&#123;back&#125;。。。。</span><br></pre></td></tr></table></figure></li>
-</ul>
-<br>
-
-<ul>
-<li>给公式添加序号：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$$ ... \tag1$$</span><br><span class="line">$$ ... \tag&#123;1.1&#125;$$	# 多位序号记得用&#123;&#125;扩起来</span><br></pre></td></tr></table></figure></li>
-</ul>
-<br>
-
-<ul>
-<li>改变字体</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">LaTex表达形式</th>
-<th align="center">字体效果</th>
-<th align="center">LaTex表达形式</th>
-<th align="center">实际效果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">\mathbb{ABCDE}</td>
-<td align="center">$\mathbb{ABCDE}$</td>
-<td align="center">\Bbb{ABCDEF}</td>
-<td align="center">$\Bbb{ABCDEF}$</td>
-</tr>
-<tr>
-<td align="center">\mathbf{abcde}</td>
-<td align="center">$\mathbf{abcde}$</td>
-<td align="center">\mathtt{ABCDE}</td>
-<td align="center">$\mathtt{ABCDE}$</td>
-</tr>
-<tr>
-<td align="center">\mathrm{ABCDE}</td>
-<td align="center">$\mathrm{ABCDE}$</td>
-<td align="center">\mathsf{ABCDE}</td>
-<td align="center">$\mathsf{ABCDE}$</td>
-</tr>
-<tr>
-<td align="center">\mathcal{ABCDE}</td>
-<td align="center">$\mathcal{ABCDE}$</td>
-<td align="center">\mathscr{ABCDE}</td>
-<td align="center">$\mathscr{ABCDE}$</td>
-</tr>
-<tr>
-<td align="center">\mathfrak{ABCDE}</td>
-<td align="center">$\mathfrak{ABCDE}$</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<br>
-
-<h1 id="回到顶端"><a href="#回到顶端" class="headerlink" title="回到顶端"></a><a href="#0">回到顶端</a></h1>
-      
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>个人留存学习笔记，欢迎各位交流指正！</p>
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/29/Learn/math/" data-id="cl3qp642c001tz4qfb1w94uf0" data-title="Mathjax渲染公式" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li></ul>
+</div>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-学习/math" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/" class="article-date">
-  <time class="dt-published" datetime="2022-05-29T02:39:39.834Z" itemprop="datePublished">2022-05-29</time>
-</a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/">Mathjax渲染公式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>&amp;emsp;&amp;emsp;LaTex表达式是一种简单的、常见的一种数学公式表达形式，在很多地方都有出现。</p>
-<h2 id='0'></h2>
-
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="#1">一、矩阵</a></li>
-<li><a href="#2">二、函数</a></li>
-<li><a href="#3">三、运算</a><ul>
-<li><a href="#301">3-1、一般函数</a></li>
-<li><a href="#302">3-2、括号的使用</a></li>
-<li><a href="#303">3-3、极限</a></li>
-<li><a href="#304">3-4、积分</a></li>
-</ul>
-</li>
-<li><a href="#4">四、字母与符号</a><ul>
-<li><a href="#401">4-1、运算符号</a></li>
-<li><a href="#402">4-2、希腊字母</a></li>
-<li><a href="#403">4-3、其他符号</a></li>
-<li><a href="#404">4-4、杂项</a></li>
-</ul>
-</li>
-</ul>
-<br>
-
-<p>&amp;emsp;&amp;emsp;所有的LaTex的书写形式都是在 $…$ 之中，只不过对于嵌入在文章中间而言 是单对的$…$，而单独成行的LaTex表达式是双对的$$…$$。</p>
-<br>
-
-<br>
-
-<h2 id="1"></h2><font size=5 color=red><center>一、矩阵</center></font> 
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;matrix&#125; 0 &amp; 1 \\ 1 &amp; 0 \end&#123;matrix&#125; </span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\begin{matrix} 0 &amp; 1 \ 1 &amp; 0 \end{matrix}$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;pmatrix&#125; 0 &amp; -i \\ i &amp; 0 \end&#123;pmatrix&#125;</span><br></pre></td></tr></table></figure>
-
-<center>
-
-<p>$\begin{pmatrix} 0 &amp; -i \ i &amp; 0 \end{pmatrix}\$</p>
-</center>
-
-<br>
-
-<br>
-
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;bmatrix&#125; 0 &amp; -1 \\ 1 &amp; 0 \end&#123;bmatrix&#125;</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\begin{bmatrix} 0 &amp; -1 \ 1 &amp; 0 \end{bmatrix}$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;Bmatrix&#125; 1 &amp; 0 \\ 0 &amp; -1 \end&#123;Bmatrix&#125;</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\begin{Bmatrix} 1 &amp; 0 \ 0 &amp; -1 \end{Bmatrix}$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;vmatrix&#125; a &amp; b \\ c &amp; d \end&#123;vmatrix&#125;</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\begin{vmatrix} a &amp; b \ c &amp; d \end{vmatrix}$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;Vmatrix&#125; i &amp; 0 \\ 0 &amp; -i \end&#123;Vmatrix&#125;</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\begin{Vmatrix} i &amp; 0 \ 0 &amp; -i \end{Vmatrix}$</p>
-</center>
-
-<br>
-
-<br>
-
-<h2 id="2"></h2><font size=5 color=red><center>二、函数</center></font> 
-
-<br>
-
-<table>
-<thead>
-<tr>
-<th align="center">LaTex表达形式</th>
-<th align="center">实际效果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">\lim</td>
-<td align="center">$\lim$</td>
-</tr>
-<tr>
-<td align="center">\lim_{x\to 0}</td>
-<td align="center">$\lim_{x\to 0}$</td>
-</tr>
-<tr>
-<td align="center">\sin</td>
-<td align="center">$\sin x$</td>
-</tr>
-<tr>
-<td align="center">\cos</td>
-<td align="center">$\cos x$</td>
-</tr>
-<tr>
-<td align="center">\arctan x</td>
-<td align="center">$\arctan x$</td>
-</tr>
-<tr>
-<td align="center">\sec x</td>
-<td align="center">$\sec x$</td>
-</tr>
-<tr>
-<td align="center">\hat x</td>
-<td align="center">$\hat x$</td>
-</tr>
-<tr>
-<td align="center">\bar x</td>
-<td align="center">$\bar x$</td>
-</tr>
-<tr>
-<td align="center">\overline{xyz}</td>
-<td align="center">$\overline{xyz}$</td>
-</tr>
-<tr>
-<td align="center">\vec x</td>
-<td align="center">$\vec x$</td>
-</tr>
-<tr>
-<td align="center">\dot x</td>
-<td align="center">$\dot x$</td>
-</tr>
-<tr>
-<td align="center">\ddot x</td>
-<td align="center">$\ddot x$</td>
-</tr>
-<tr>
-<td align="center">\overrightarrow{xyz}</td>
-<td align="center">$\overrightarrow{xyz}$</td>
-</tr>
-<tr>
-<td align="center">\overleftrightarrow{xyz}</td>
-<td align="center">$\overleftrightarrow{xyz}$</td>
-</tr>
-<tr>
-<td align="center">\sqrt{x^3}</td>
-<td align="center">$\sqrt{x^3}$</td>
-</tr>
-<tr>
-<td align="center">\sqrt[3]{\frac xy}</td>
-<td align="center">$\sqrt[3]{\frac xy}$</td>
-</tr>
-<tr>
-<td align="center">\frac ab</td>
-<td align="center">$\frac ab$</td>
-</tr>
-<tr>
-<td align="center">\frac{a+1}{b+1}</td>
-<td align="center">$\frac{a+1}{b+1}$</td>
-</tr>
-<tr>
-<td align="center">{a+1\over b+1}</td>
-<td align="center">${a+1\over b+1}$</td>
-</tr>
-<tr>
-<td align="center">\cfrac{a}{b}</td>
-<td align="center">$\cfrac{a}{b}$</td>
-</tr>
-<tr>
-<td align="center">\stackrel{F.T}{\longrightarrow}</td>
-<td align="center">$\stackrel{F.T}{\longrightarrow}$</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-
-<h2 id="3"></h2><font size=5 color=red><center>三、运算</center></font> 
-
-<br>
-
-<h2 id="301"></h2><font size=4 color=skybule>3-1、一般函数</font>
-
-<br>
-
-<p>&amp;emsp;&amp;emsp;对于上标使用 下划线表示“ _ ” ；对于上标使用 “ ^ ”表示。LaTex表达式中的上下标可以叠加的，就比如:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;x^y&#125;^z$或者 $x^&#123;y^z&#125;$</span><br></pre></td></tr></table></figure>
-<p> LaTex表达式为</p>
-<center>
-
-<p>  ${x^y}^z$</p>
-</center>
-
-<br>
-
-<p>在此需要注意的是：LaTex表达式默认的是 “ _ ” “ ^ ” 之后的一位才是上下标的内容，对于超过一个字母的上下标需要使用 { } 将它括起来，比如</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$x_&#123;2i&#125;^&#123;2+b&#125;$</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为  </p>
-<center> 
-
-<p>$x_{2i}^{2+b}$</p>
-</center>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;f&#125;’(x) = x^2 + x</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>${f}’(x) &#x3D; x^2 + x$</p>
-</center>
-
-<br>
-
-<p>&amp;emsp;&amp;emsp;$\log$的表达式会稍微简单点，<code>$\log$ </code>就是它的LaTex表达式，同样的对于需要下标的同样使用下划线表示 “ _ ”， 对于多个字符组成的需要添加 { } 将其包括。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\log_&#123;21&#125; &#123;xy&#125;$</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\log_{21} {xy}$</p>
-</center>
-
-<br>
-
-<br>
-
-<h2 id="302"></h2><font size=4 color=skybule>3-2、括号使用</font>
-
-<br>
-
-<p>&amp;emsp;&amp;emsp;LaTex表达式中的 ( ) 、 [ ] 均可以正常使用，但是对于 { } 需要使用转义字符使用，即使用 <code>“\&#123;” 和 “\&#125;” </code>表示 { }</p>
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$\Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr)$</p>
-</center>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f(x)=\begin&#123;cases&#125; x = \cos(t) \\y = \sin(t) \\ z = \frac xy \end&#123;cases&#125;</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$f(x)&#x3D;\begin{cases} x &#x3D; \cos(t)<br>\ y &#x3D; \sin(t)<br>\ z &#x3D; \frac xy \end{cases}$</p>
-</center>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f(x)=\begin&#123;cases&#125; 0&amp; \text&#123;x=0&#125;\\1&amp; \text&#123;x!=0&#125; \end&#123;cases&#125;</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为:</p>
-<center>
-
-<p>$f(x)&#x3D;\begin{cases} 0&amp; \text{x&#x3D;0} \<br>1&amp; \text{x!&#x3D;0} \end{cases}$</p>
-</center>
-
-<br>
-
-<br>
-
-<h2 id="303"></h2><font size=4 color=skybule>3-3、极限</font>
-
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\lim_&#123;x \to 0&#125; \frac &#123;3x ^2 +7x^3&#125; &#123;x^2 +5x^4&#125; = 3</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$\lim_{x \to 0} \frac {3x ^2 +7x^3} {x^2 +5x^4} &#x3D; 3$</p>
-</center>
-
-<br>
-
-<h2 id="304"></h2><font size=4 color=skybule>3-4、积分</font>
-
-
-<p>&amp;emsp;&amp;emsp;积分中，需要注意的是，在多重积分内 dx 和 dy 之间 使用一个斜杠加一个逗号 , 来增大稍许间距。同样，在两个积分号之间使用一个斜杠加一个感叹号 ! 来减小稍许间距。使之更美观。</p>
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\int_a^b f(x) dx </span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$\int_a^b f(x) dx$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\int_0^&#123;+\infty&#125; x^n e^&#123;-x&#125; dx = n!  </span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$\int_0^{+\infty} x^n e^{-x} dx &#x3D; n!$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\int_&#123;x^2 + y^2 \leq R^2&#125;   f(x,y) dx dy = </span><br><span class="line">\int_&#123;\theta=0&#125;^&#123;2\pi&#125;    \int_&#123;r=0&#125;^R    f(r\cos\theta,r\sin\theta) r dr d\theta  </span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$\int_{x^2 + y^2 \leq R^2}   f(x,y) dx dy &#x3D;\int_{\theta&#x3D;0}^{2\pi}    \int_{r&#x3D;0}^R    f(r\cos\theta,r\sin\theta) r dr d\theta$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\int \!\!\! \int_D f(x,y)dxdy  \int \,\,\, \int_D f(x,y)dxdy</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$\int !!! \int_D f(x,y)dxdy  \int ,,, \int_D f(x,y)dxdy$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i\hbar\frac&#123;\partial \varphi &#125; &#123;\partial &#123;t&#125;&#125; = \frac&#123;-\hbar^2&#125;&#123;2m&#125; \left( \frac&#123;\partial^2&#125;&#123;\partial x^2&#125; + \frac&#123;\partial^2&#125;&#123;\partial y^2&#125;+\frac&#123;\partial^2&#125;&#123;\partial z^2&#125; \right) \varphi  + V \varphi</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$i\hbar\frac{\partial \varphi } {\partial {t}} &#x3D; \frac{-\hbar^2}{2m}<br>\left( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} +<br>\frac{\partial^2}{\partial z^2} \right) \varphi  + V \varphi$</p>
-</center>
-
-<br>
-
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\frac&#123;d&#125;&#123;dt&#125; \int \!\!\! \int \!\!\! \int_&#123;\textbf&#123;R&#125;^3&#125; \left | \varphi (r,t) \right|^2 dx dy dz = 0</span><br></pre></td></tr></table></figure>
-<p>LaTex表达式为：</p>
-<center>
-
-<p>$\frac{d}{dt} \int !!! \int !!! \int_{\textbf{R}^3}<br>\left | \varphi (r,t) \right|^2 dx dy dz &#x3D; 0$</p>
-</center>
-
-<br>
-
-<br>
-
-<h2 id="4"></h2><font size=5 color=red><center>四、字母与符号</center></font> 
-
-<br>
-
-<h2 id="401"></h2><font size=4 color=skybule>4-1、运算符号</font> 
-
-<br>
-
-<p>&amp;emsp;&amp;emsp;普通字符在数学公式中含义一样，除了 # $ % &amp; ~ _ ^ \ { } 若要在数学环境中表示这些符号# $ % &amp; _ { }，需要分别表示为# $ % &amp; _ { }，即在个字符前加上<code>\</code> 。  </p>
-<table>
-<thead>
-<tr>
-<th align="center">LaTex 表达式</th>
-<th align="center">字体效果</th>
-<th align="center">LaTex 表达式</th>
-<th align="center">字体效果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">单空格 ： a \quad b</td>
-<td align="center">a&amp;ensp;b</td>
-<td align="center">双空格： a \qquad b</td>
-<td align="center">a&amp;emsp;b</td>
-</tr>
-<tr>
-<td align="center">$</td>
-<td align="center">$</td>
-<td align="center">\%</td>
-<td align="center">%</td>
-</tr>
-<tr>
-<td align="center">\times</td>
-<td align="center">×</td>
-<td align="center">\#</td>
-<td align="center">#</td>
-</tr>
-<tr>
-<td align="center">\&amp;</td>
-<td align="center">&amp;</td>
-<td align="center">\_</td>
-<td align="center">_</td>
-</tr>
-<tr>
-<td align="center">\sum</td>
-<td align="center">$\sum$</td>
-<td align="center">\int</td>
-<td align="center">$\int$</td>
-</tr>
-<tr>
-<td align="center">\Vert</td>
-<td align="center">$\Vert$</td>
-<td align="center">\vert x \vert</td>
-<td align="center">$\vert x \vert$</td>
-</tr>
-<tr>
-<td align="center">\langle</td>
-<td align="center">$\langle$</td>
-<td align="center">\rangle</td>
-<td align="center">$\rangle$</td>
-</tr>
-<tr>
-<td align="center">\lceil</td>
-<td align="center">$\lceil$</td>
-<td align="center">\rceil</td>
-<td align="center">$\rceil$</td>
-</tr>
-<tr>
-<td align="center">\lfloor</td>
-<td align="center">$\lfloor$</td>
-<td align="center">\rfloor</td>
-<td align="center">$\rfloor$</td>
-</tr>
-<tr>
-<td align="center">\lt</td>
-<td align="center">$\lt$</td>
-<td align="center">\gt</td>
-<td align="center">$\gt$</td>
-</tr>
-<tr>
-<td align="center">\le</td>
-<td align="center">$\le$</td>
-<td align="center">\ge</td>
-<td align="center">$\ge$</td>
-</tr>
-<tr>
-<td align="center">\pm</td>
-<td align="center">$\pm$</td>
-<td align="center">\mp</td>
-<td align="center">$\mp$</td>
-</tr>
-<tr>
-<td align="center">\subseteq</td>
-<td align="center">$\subseteq$</td>
-<td align="center">\subsetneq</td>
-<td align="center">$\subsetneq$</td>
-</tr>
-<tr>
-<td align="center">\supset</td>
-<td align="center">$\supset$</td>
-<td align="center">\in</td>
-<td align="center">$\in$</td>
-</tr>
-<tr>
-<td align="center">\sum_1^n</td>
-<td align="center">$\sum_1^n$</td>
-<td align="center">\infty</td>
-<td align="center">$\infty$</td>
-</tr>
-<tr>
-<td align="center">\prod_{k&#x3D;1}^n k &#x3D; n!</td>
-<td align="center">$\prod_{k&#x3D;1}^n k &#x3D; n!$</td>
-<td align="center">\sum_{i&#x3D;0}^\infty i^2</td>
-<td align="center">$\sum_{i&#x3D;0}^\infty i^2$</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<h2 id="402"></h2><font size=4 color=skybule>4-2、希腊字母</font>
-
-<br>
-
-<table>
-<thead>
-<tr>
-<th align="center">LaTex表达形式</th>
-<th align="center">对应的希腊字母</th>
-<th align="center">LaTex表达形式</th>
-<th align="center">对应的希腊字母</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">\alpha</td>
-<td align="center">α</td>
-<td align="center">\Alpha</td>
-<td align="center">A</td>
-</tr>
-<tr>
-<td align="center">\beta</td>
-<td align="center">β</td>
-<td align="center">\Beta</td>
-<td align="center">B</td>
-</tr>
-<tr>
-<td align="center">\gamma</td>
-<td align="center">γ</td>
-<td align="center">\Gamma</td>
-<td align="center">Γ</td>
-</tr>
-<tr>
-<td align="center">\delta</td>
-<td align="center">δ</td>
-<td align="center">\Delta</td>
-<td align="center">Δ</td>
-</tr>
-<tr>
-<td align="center">\epsilon</td>
-<td align="center">ϵ</td>
-<td align="center">\Epsilon</td>
-<td align="center">E</td>
-</tr>
-<tr>
-<td align="center">\zeta</td>
-<td align="center">ζ</td>
-<td align="center">\Zeta</td>
-<td align="center">Z</td>
-</tr>
-<tr>
-<td align="center">\eta</td>
-<td align="center">η</td>
-<td align="center">\Eta</td>
-<td align="center">H</td>
-</tr>
-<tr>
-<td align="center">\theta</td>
-<td align="center">θ</td>
-<td align="center">\Theta</td>
-<td align="center">Θ</td>
-</tr>
-<tr>
-<td align="center">\iota</td>
-<td align="center">ι</td>
-<td align="center">\Iota</td>
-<td align="center">I</td>
-</tr>
-<tr>
-<td align="center">\kappa</td>
-<td align="center">κ</td>
-<td align="center">Kappa</td>
-<td align="center">K</td>
-</tr>
-<tr>
-<td align="center">\Lambda</td>
-<td align="center">λ</td>
-<td align="center">\Lambda</td>
-<td align="center">Λ</td>
-</tr>
-<tr>
-<td align="center">\mu</td>
-<td align="center">μ</td>
-<td align="center">\Mu</td>
-<td align="center">M</td>
-</tr>
-<tr>
-<td align="center">\nu</td>
-<td align="center">ν</td>
-<td align="center">\Nu</td>
-<td align="center">N</td>
-</tr>
-<tr>
-<td align="center">\xi</td>
-<td align="center">ξ</td>
-<td align="center">\Xi</td>
-<td align="center">Ξ</td>
-</tr>
-<tr>
-<td align="center">\omicron</td>
-<td align="center">ο</td>
-<td align="center">\Omicron</td>
-<td align="center">O</td>
-</tr>
-<tr>
-<td align="center">\pi</td>
-<td align="center">π</td>
-<td align="center">\Pi</td>
-<td align="center">Π</td>
-</tr>
-<tr>
-<td align="center">\rho</td>
-<td align="center">ρ</td>
-<td align="center">\Rho</td>
-<td align="center">P</td>
-</tr>
-<tr>
-<td align="center">\sigma</td>
-<td align="center">σ</td>
-<td align="center">\Sigma</td>
-<td align="center">Σ</td>
-</tr>
-<tr>
-<td align="center">\tau</td>
-<td align="center">τ</td>
-<td align="center">\Tau</td>
-<td align="center">T</td>
-</tr>
-<tr>
-<td align="center">\upsilon</td>
-<td align="center">υ</td>
-<td align="center">\Upsilon</td>
-<td align="center">Υ</td>
-</tr>
-<tr>
-<td align="center">\varphi</td>
-<td align="center">φ</td>
-<td align="center">\Phi</td>
-<td align="center">Φ</td>
-</tr>
-<tr>
-<td align="center">\chi</td>
-<td align="center">χ</td>
-<td align="center">\Chi</td>
-<td align="center">X</td>
-</tr>
-<tr>
-<td align="center">\psi</td>
-<td align="center">ψ</td>
-<td align="center">\Psi</td>
-<td align="center">Ψ</td>
-</tr>
-<tr>
-<td align="center">\omega</td>
-<td align="center">ω</td>
-<td align="center">\Omega</td>
-<td align="center">Ω</td>
-</tr>
-<tr>
-<td align="center">\hat{a}</td>
-<td align="center">$\hat{a}$</td>
-<td align="center">\acute{a}</td>
-<td align="center">$\acute{a}$</td>
-</tr>
-<tr>
-<td align="center">\grave{a}</td>
-<td align="center">$\grave{a}$</td>
-<td align="center">\breve{a}</td>
-<td align="center">$\breve{a}$</td>
-</tr>
-<tr>
-<td align="center">\bar{a}</td>
-<td align="center">$\bar{a}$</td>
-<td align="center">\widetilde{a}</td>
-<td align="center">$\widetilde{a}$</td>
-</tr>
-<tr>
-<td align="center">\check{a}</td>
-<td align="center">$\check{a}$</td>
-<td align="center">\tilde{a}</td>
-<td align="center">$\tilde{a}$</td>
-</tr>
-<tr>
-<td align="center">\dot{a}</td>
-<td align="center">$\dot{a}$</td>
-<td align="center">\ddot{a}</td>
-<td align="center">$\ddot{a}$</td>
-</tr>
-<tr>
-<td align="center">\vec{a}</td>
-<td align="center">$\vec{a}$</td>
-<td align="center">\widehat{a}</td>
-<td align="center">$\widehat{a}$</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<h2 id="403"></h2><font size=4 color=skybule>4-3、其他符号</font>
-
-<br>
-
-<table>
-<thead>
-<tr>
-<th align="center">LaTex表达形式</th>
-<th align="center">实际效果</th>
-<th align="center">LaTex表达形式</th>
-<th align="center">实际效果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">\leqq</td>
-<td align="center">$\leqq$</td>
-<td align="center">\leqslant</td>
-<td align="center">$\leqslant$</td>
-</tr>
-<tr>
-<td align="center">\ge</td>
-<td align="center">$\ge$</td>
-<td align="center">\geq</td>
-<td align="center">$\geq$</td>
-</tr>
-<tr>
-<td align="center">\geqq</td>
-<td align="center">$\geqq$</td>
-<td align="center">\geqslant</td>
-<td align="center">$\geqslant$</td>
-</tr>
-<tr>
-<td align="center">\neq</td>
-<td align="center">$\neq$</td>
-<td align="center">\not\lt</td>
-<td align="center">$\not\lt$</td>
-</tr>
-<tr>
-<td align="center">\not</td>
-<td align="center">$\not$</td>
-<td align="center">\times</td>
-<td align="center">$\times$</td>
-</tr>
-<tr>
-<td align="center">\cdot</td>
-<td align="center">$\cdot$</td>
-<td align="center">\bullett</td>
-<td align="center">$\bullet$</td>
-</tr>
-<tr>
-<td align="center">\cup</td>
-<td align="center">$\cup$</td>
-<td align="center">\cap</td>
-<td align="center">$\cap$</td>
-</tr>
-<tr>
-<td align="center">\setminus</td>
-<td align="center">$\setminus$</td>
-<td align="center">\subset</td>
-<td align="center">$\subset$</td>
-</tr>
-<tr>
-<td align="center">\notin</td>
-<td align="center">$\notin$</td>
-<td align="center">\emptyset</td>
-<td align="center">$\emptyset$</td>
-</tr>
-<tr>
-<td align="center">\varnothing</td>
-<td align="center">$\varnothing$</td>
-<td align="center">\vDash</td>
-<td align="center">$\vDash$</td>
-</tr>
-<tr>
-<td align="center">{n+1 \choose 2k}</td>
-<td align="center">${n+1 \choose 2k}$</td>
-<td align="center">\binom{n+1}{2k}</td>
-<td align="center">$\binom{n+1}{2k}$</td>
-</tr>
-<tr>
-<td align="center">\to</td>
-<td align="center">$\to$</td>
-<td align="center">\rightarrow</td>
-<td align="center">$\rightarrow$</td>
-</tr>
-<tr>
-<td align="center">\leftarrow</td>
-<td align="center">$\leftarrow$</td>
-<td align="center">\Rightarrow</td>
-<td align="center">$\Rightarrow$</td>
-</tr>
-<tr>
-<td align="center">\Leftarrow</td>
-<td align="center">$\Leftarrow$</td>
-<td align="center">\mapsto</td>
-<td align="center">$\mapsto$</td>
-</tr>
-<tr>
-<td align="center">\land</td>
-<td align="center">$\land$</td>
-<td align="center">\lor</td>
-<td align="center">$\lor$</td>
-</tr>
-<tr>
-<td align="center">\lnot</td>
-<td align="center">$\lnot$</td>
-<td align="center">\forall</td>
-<td align="center">$\forall$</td>
-</tr>
-<tr>
-<td align="center">\exists</td>
-<td align="center">$\exists$</td>
-<td align="center">\top</td>
-<td align="center">$\top$</td>
-</tr>
-<tr>
-<td align="center">\bot</td>
-<td align="center">$\bot$</td>
-<td align="center">\vdash</td>
-<td align="center">$\vdash$</td>
-</tr>
-<tr>
-<td align="center">\star</td>
-<td align="center">$\star$</td>
-<td align="center">\ast</td>
-<td align="center">$\ast$</td>
-</tr>
-<tr>
-<td align="center">\oplus</td>
-<td align="center">$\oplus$</td>
-<td align="center">\circ</td>
-<td align="center">$\circ$</td>
-</tr>
-<tr>
-<td align="center">\approx</td>
-<td align="center">$\approx$</td>
-<td align="center">\sim</td>
-<td align="center">$\sim$</td>
-</tr>
-<tr>
-<td align="center">\simeq</td>
-<td align="center">$\simeq$</td>
-<td align="center">\cong</td>
-<td align="center">$\cong$</td>
-</tr>
-<tr>
-<td align="center">\equiv</td>
-<td align="center">$\equiv$</td>
-<td align="center">\prec</td>
-<td align="center">$\prec$</td>
-</tr>
-<tr>
-<td align="center">\lhd</td>
-<td align="center">$\lhd$</td>
-<td align="center">\therefore</td>
-<td align="center">$\therefore$</td>
-</tr>
-<tr>
-<td align="center">\infty</td>
-<td align="center">$\infty$</td>
-<td align="center">\aleph_0</td>
-<td align="center">$\aleph_0$</td>
-</tr>
-<tr>
-<td align="center">\nabla</td>
-<td align="center">$\nabla$</td>
-<td align="center">\partial</td>
-<td align="center">$\partial$</td>
-</tr>
-<tr>
-<td align="center">\Im</td>
-<td align="center">$\Im$</td>
-<td align="center">\Re</td>
-<td align="center">$\Re$</td>
-</tr>
-<tr>
-<td align="center">\ldots</td>
-<td align="center">$\ldots$</td>
-<td align="center">\cdots</td>
-<td align="center">$\cdots$</td>
-</tr>
-<tr>
-<td align="center">\epsilon</td>
-<td align="center">$ϵ$</td>
-<td align="center">\varepsilon</td>
-<td align="center">$\varepsilon$</td>
-</tr>
-<tr>
-<td align="center">\phi</td>
-<td align="center">$\phi$</td>
-<td align="center">\varphi</td>
-<td align="center">$\varphi$</td>
-</tr>
-<tr>
-<td align="center">\ell</td>
-<td align="center">$\ell$</td>
-<td align="center">a\equiv b\pmod n</td>
-<td align="center">$a\equiv b\pmod n$</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<h2 id="404"></h2><font size=4 color=skybule>4-4、公式加粗、更改颜色、添加序号、字体</font> 
-
-<br>
-
-<ul>
-<li>对公式加粗需要用 \bm{ …… }加之包含其中即可:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\bm&#123; .... &#125;$</span><br></pre></td></tr></table></figure></li>
-</ul>
-<br>
-
-<ul>
-<li>更改公式字母颜色：<br>如果只更改个别字母，那个后面的需要用黑色再改下<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\color&#123;red&#125;  </span><br><span class="line">\color&#123;green&#125;   </span><br><span class="line">\color&#123;back&#125;</span><br><span class="line">\color&#123;green&#125;。。。。。\color&#123;back&#125;。。。。</span><br></pre></td></tr></table></figure></li>
-</ul>
-<br>
-
-<ul>
-<li>给公式添加序号：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$$ ... \tag1$$</span><br><span class="line">$$ ... \tag&#123;1.1&#125;$$	# 多位序号记得用&#123;&#125;扩起来</span><br></pre></td></tr></table></figure></li>
-</ul>
-<br>
-
-<ul>
-<li>改变字体</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">LaTex表达形式</th>
-<th align="center">字体效果</th>
-<th align="center">LaTex表达形式</th>
-<th align="center">实际效果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">\mathbb{ABCDE}</td>
-<td align="center">$\mathbb{ABCDE}$</td>
-<td align="center">\Bbb{ABCDEF}</td>
-<td align="center">$\Bbb{ABCDEF}$</td>
-</tr>
-<tr>
-<td align="center">\mathbf{abcde}</td>
-<td align="center">$\mathbf{abcde}$</td>
-<td align="center">\mathtt{ABCDE}</td>
-<td align="center">$\mathtt{ABCDE}$</td>
-</tr>
-<tr>
-<td align="center">\mathrm{ABCDE}</td>
-<td align="center">$\mathrm{ABCDE}$</td>
-<td align="center">\mathsf{ABCDE}</td>
-<td align="center">$\mathsf{ABCDE}$</td>
-</tr>
-<tr>
-<td align="center">\mathcal{ABCDE}</td>
-<td align="center">$\mathcal{ABCDE}$</td>
-<td align="center">\mathscr{ABCDE}</td>
-<td align="center">$\mathscr{ABCDE}$</td>
-</tr>
-<tr>
-<td align="center">\mathfrak{ABCDE}</td>
-<td align="center">$\mathfrak{ABCDE}$</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<br>
-
-<h1 id="回到顶端"><a href="#回到顶端" class="headerlink" title="回到顶端"></a><a href="#0">回到顶端</a></h1>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/29/%E5%AD%A6%E4%B9%A0/math/" data-id="cl3qp23pq001510qf3mm7gape" data-title="Mathjax渲染公式" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/29/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-05-29T02:07:02.804Z" itemprop="datePublished">2022-05-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/29/hello-world/" data-id="cl3qnwjd90000scqf9xco30ia" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Mathematical_modeling/11GA" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/08/24/Mathematical_modeling/11GA/" class="article-date">
-  <time class="dt-published" datetime="2021-08-24T01:04:29.000Z" itemprop="datePublished">2021-08-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/08/24/Mathematical_modeling/11GA/">Genetic Algorithm</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>&amp;emsp;&amp;emsp;遗传算法是借鉴生物界的进化规律(适者生存,优胜劣汰)的遗传机制，演化而来的<strong>随机全局搜索和优化算法</strong>。它是由美国教授于1975年首先提出的，其主要特点是直接对结构对象进行操作，不存在求导和函数连续性的区间限定，具有内在的隐并行性和更好的全局寻优能力，采用概率化的寻优方法，能自动获取和指导优化的搜索空间，自适应的调整搜索方向，不需要确定的规则，遗传算法这些性质已被人们广泛的应用于组合优化机器学习信号处理，自适应控制和人工生命的领域，他是现代有关智能计算中的关键技术。</p>
-<br>
-
-<h2 id="1-遗传算法的介绍"><a href="#1-遗传算法的介绍" class="headerlink" title="1 遗传算法的介绍"></a>1 遗传算法的介绍</h2><h4 id="1-1-遗传算法的优点与不足："><a href="#1-1-遗传算法的优点与不足：" class="headerlink" title="1.1 遗传算法的优点与不足："></a>1.1 遗传算法的优点与不足：</h4><ul>
-<li><p>优点</p>
-<ul>
-<li>不是从单个点，而是从多个点构成的，而是从多个点构成的群体开始搜索。</li>
-<li>在搜索最优解过程中，只需要由目标函数转化过来的适应值信息，而不需要导数等其他值辅助信息。</li>
-<li>搜索过程不宜陷入局部最优点。</li>
-</ul>
-</li>
-<li><p>不足：  </p>
-<ul>
-<li>编码不规范及编码存在表示的不准确性。</li>
-<li>单一的遗传算法不能全面的将优化问题得约束表示出来。考虑约束的一个方法就是对不可行解采用阈值，这样，计算的时间必然增加。</li>
-<li>遗传算法的效率通常比其他传统的算法效率低。</li>
-<li>遗传算法容易出现过早收敛得情况。</li>
-<li>遗传算法对算法得精度、可信度、计算复杂性等方面、还没有有效的定量分析方法。</li>
-</ul>
-</li>
-</ul>
-<h4 id="1-2-遗传算法基本步骤如下："><a href="#1-2-遗传算法基本步骤如下：" class="headerlink" title="1.2 遗传算法基本步骤如下："></a>1.2 遗传算法基本步骤如下：</h4><ul>
-<li>1、在一定编码条件下，随机产生初始种群。</li>
-<li>2、用相应解码方法，将编码后的个体转化为问题空间的决策变量，并求得个体的适应值。</li>
-<li>3、按照个体适应值大小，从种群中选出适应值较大的个体构成交配池。</li>
-<li>4、用交叉和变异两个遗传算子对交配池中的个体进行操作，并形成新一代种群。</li>
-<li>5、反复执行步骤2-5，直至满足收敛判据为止。</li>
-</ul>
-<h4 id="1-3-遗传算法的运行决定"><a href="#1-3-遗传算法的运行决定" class="headerlink" title="1.3 遗传算法的运行决定"></a>1.3 遗传算法的运行决定</h4><p>&amp;emsp;&amp;emsp;<code>编码串长度、种群大小、交叉和变异概率</code></p>
-<ul>
-<li><p>编码串长度：由由优化问题所求的求解精度所决定。</p>
-</li>
-<li><p>种群大小：种群大小表示种群所含的个体数量；</p>
-<ul>
-<li>种群较小时，可提高遗传算法的运行速度，但降低群体多样性，可能找不到最优解。</li>
-<li>种群较大时，又会增加计算量，使遗传算法的运行效率降低。</li>
-<li>一般取种群数目为<code>20-100</code>。</li>
-</ul>
-</li>
-<li><p>交叉和变异概率：  </p>
-<ul>
-<li>交叉概率控制着交叉操作的频率，由于交叉操作是遗传算法中产生新个体的主要方法，所以交叉概率通常区较大值，但取值过大可能会破坏群体优良模式。一般取<code>0.4-0.99</code>.</li>
-<li>变异概率也是影响新个体产生的一种因素，变异概率小，产生新个体少；变异概率大，又会使遗传算法变成随机搜索。一般变异概率取<code>0.0001-0.1</code></li>
-</ul>
-</li>
-<li><p>遗传算法通常收敛判据；规定遗传代数，连续几次得到最优个体的适应值没有变化或变化很小。</p>
-</li>
-</ul>
-<h4 id="1-4-遗传算法得主要应用领域"><a href="#1-4-遗传算法得主要应用领域" class="headerlink" title="1.4 遗传算法得主要应用领域"></a>1.4 遗传算法得主要应用领域</h4><center><img src="/images/matlab/11/11-1.png" width="70%" height="70%" align=center /></center>
-
-<br>
-
-<h2 id="2-遗传算法的基本原理"><a href="#2-遗传算法的基本原理" class="headerlink" title="2 遗传算法的基本原理"></a>2 遗传算法的基本原理</h2><p>&amp;emsp;&amp;emsp;遗传算法是一种基于自然选择和一种遗传变异等生物进化机制的全局性概率搜索算法，它在形式上也是一种迭代方法.它从选定的初始解出发，通过不断迭代，逐步改进当前解，直至最后搜索到最优解或满意解。在进化计算中，迭代计算过程采用了模拟生物体的进化机制，从一组解出发，采用类似于自然选择和有性繁殖的方式，在继承原有优良基因的基础上，生成有更好性能指标的，下一代解的群体。<br>&amp;emsp;&amp;emsp;<font face="Times New Roman ">Ga</font>有较强的全局优化能力，是一种自适应的智能的搜索技术，其主要应用领域是复杂的非线性优化问题，选择、交叉和变异是遗传算法的三个主要操作者。</p>
-<h4 id="2-1-编码"><a href="#2-1-编码" class="headerlink" title="2.1 编码"></a>2.1 编码</h4><p>&amp;emsp;&amp;emsp;解空间向<font face="Times New Roman ">Ga</font>空间映射称之为编码，它是连接问题与算法的桥梁。本问题中设计变量均为连续变量，为克服二进制编码在进行连续函数离散时产生的映射误差和方便处理各约束条件，采用浮点数编码方法，染色体长度与设计变量维数相同。</p>
-<p>设计变量为：<br>$$X&#x3D;[x_1,x_2,…,x_n]$$</p>
-<p>染色体为：<br>$$V&#x3D;[v_{k1},v_{k2},…,v_{kn}] \quad k&#x3D;(1,2,…,m)$$</p>
-<h4 id="2-2-适应度评价函数"><a href="#2-2-适应度评价函数" class="headerlink" title="2.2 适应度评价函数"></a>2.2 适应度评价函数</h4><p>&amp;emsp;&amp;emsp;度量个体适应度的函数称之为适应度函数。实际工程3优化问题一般都有一定的约束条件，惩罚技术时求解约束优化问题。在遗传算法中，惩罚技术用来在每代的种群中保持部分不可行解，使用遗传算法搜索可以从可行域和不可行域两边来达到最优解。</p>
-<p>对于非线性数学规划问题：<br>$$<br>min \quad f(x)\<br>s.t.\quad g_i(X)\ge0 \quad (i&#x3D;1,2,…,m)<br>$$</p>
-<p>本题中按照外点发构造惩罚函数：<br>$$<br>\phi(X,r^{k})&#x3D;f(x)+r^{k}{\sum_{\mu&#x3D;1}^m min[g_\mu (X),0]^2}<br>$$</p>
-<p>式子中。$r^k$为<code>惩罚因子</code>，是一个单调递增正值序列，$r^{k+1}&#x3D;er^k$，许多计算经验表明，若区$r^0&#x3D;1$，和$e&#x3D;5\sim 10$，可以取到满意的结果。</p>
-<h4 id="2-3-选择算子"><a href="#2-3-选择算子" class="headerlink" title="2.3 选择算子"></a>2.3 选择算子</h4><p>&amp;emsp;&amp;emsp;选择操作建立对个体的适应度进行评价的基础上，选择操作的目的是把优化的个体直接遗传到下一代，或通过配对交叉产生新的个体再遗传到下一代。比例选择是最常用的选择算子，它是一种回放式随机采样方式。设群体规模为$m$，个体$i$，的适应度为$F$，则个体$i$，被选中的概率$p_i$为：<br>$$P_{is}&#x3D;F_i&#x2F;\sum_{i&#x3D;1}^m F_i$$</p>
-<p>适应度函数数值越高的染色体被选中的概率越大。</p>
-<h4 id="2-4-交叉算子"><a href="#2-4-交叉算子" class="headerlink" title="2.4 交叉算子"></a>2.4 交叉算子</h4><p>&amp;emsp;&amp;emsp;首先定义交叉操作的概率 $P_c$ ，一般建议取值范围为<code>0.4-0.99</code>。然后按照概率 $P_c$ ，把两个父代个体的部分结构加以交换重组而生成新的个体。浮点数编码方法表达的个体在进行交叉时一般是进行算数交叉。假设在两个个体 $X_A^t$，$X_B^t$，之间进行算数交叉，则交叉运算后所产生的两个新个体是：<br>$$<br>\begin{cases}<br>X_A^{t+1}&#x3D;aX_B^t+(1-a)X_A^t  \<br>X_B^{t+1}&#x3D;aX_A^t+(1-a)X_B^t<br>\end{cases}<br>$$</p>
-<p>式子中，$a$为交叉参数，$a\in(0,1)$ 。它可以是一个常数，此时称之为均匀算数交叉；也可以是一个由此进化代数所决定的变量，此时称非均匀算数交叉。</p>
-<h4 id="2-5-变异算子"><a href="#2-5-变异算子" class="headerlink" title="2.5 变异算子"></a>2.5 变异算子</h4><p>&amp;emsp;&amp;emsp;变异算子是实数编码编遗传算法中起到重大作用。在实数编码时，变异算子不在像二进制编码时仅仅是简单的恢复群体中多样性的损失，它她已经成为一个主要的搜索算子。定义参数 $P_m$ ，作为变异操作的概率，建议取值范围为<code>0.01-0.1</code>。采用非均匀变异：设个体 $X&#x3D;x_1x_2···x_k···x_l$，其中变异点的新基因为：<br>$$<br>X^{‘}<em>k&#x3D;<br>\begin{cases}<br>x_k+(U^k</em>{max}-x_k)(1-r^{b(1-G&#x2F;T)}) \quad Random(0,1)&#x3D;1 \<br>x_k-(x_k-U^k_{min})(1-r^{b(1-G&#x2F;T)}) \quad Random(0,1)&#x3D;0<br>\end{cases}<br>$$<br>式中，$Random(0,1)$ 表示以均等的概率从 $0,1$ 中任取其一；$r$为$[0,1]$范围内符合均匀分布的一个随机数；$G$ 为当前代数；$T$为终止代数；$b$为调整变异步长的参数，随进化代数 $G$ 而动态变化。</p>
-<h4 id="2-6-终止代数"><a href="#2-6-终止代数" class="headerlink" title="2.6 终止代数"></a>2.6 终止代数</h4><p>&amp;emsp;&amp;emsp;经过选择、交叉和变异操作就能得到一个新的种群，上述步骤经过给定的循环次数后，遗传算法终止，并将当前种群中最佳的个体作为所求问题的最优解输出。对于终止代数，建议取值范围为<code>100-500</code>。</p>
-<br>
-
-<h2 id="遗传算法工具箱"><a href="#遗传算法工具箱" class="headerlink" title="遗传算法工具箱"></a>遗传算法工具箱</h2><h4 id="3-1-ga-m函数"><a href="#3-1-ga-m函数" class="headerlink" title="3.1 ga.m函数"></a>3.1 <font face="Times New Roman " ><strong>ga.m</strong></font>函数</h4><p>&amp;emsp;&amp;emsp;<font face="Times New Roman " ><strong>ga.m</strong></font>函数是Matlab遗传算法工具箱和外部接口，在实际优化过程中，编写好目标函数，设定参数，调用<font face="Times New Roman " ><strong>ga.m</strong></font>便可实现优化。</p>
-<h4 id="3-2-算子函数"><a href="#3-2-算子函数" class="headerlink" title="3.2 算子函数"></a>3.2 算子函数</h4><p>&amp;emsp;&amp;emsp;算子函数包含<code>交叉算子</code>和<code>变异算子</code>，算子函数提供了遗传算法搜索机制，通过算子函数，在原来基础上产生新的种群。</p>
-<ul>
-<li>交叉算子：<font face="Times New Roman " ><strong>function</strong>[child1,child2]&#x3D;<strong>crossover</strong>(parent1,parent2,bounds,params)</font>.</li>
-<li>变异算子：<font face="Times New Roman " ><strong>function</strong>[child]&#x3D;<strong>mutation</strong>(parent,bounds,params)</font>。</li>
-</ul>
-<p>二者不同的是，交叉算子由两个父代产生两个新的子代，而变异算子则是由一个父代产生一个新的子代。</p>
-<h4 id="3-3-选择函数"><a href="#3-3-选择函数" class="headerlink" title="3.3 选择函数"></a>3.3 选择函数</h4><p>选择函数：<font face="Times New Roman " ><strong>function</strong>[newPop]&#x3D;<strong>slectFuntion</strong>(oldPop,options)</font>,决定哪些个体进入下一代。 </p>
-<ul>
-<li><font face="Times New Roman " >newPop</font>是被选中的新种群；</li>
-<li><font face="Times New Roman " >oldPop</font>是当前种群；</li>
-<li><font face="Times New Roman " >options</font>是其他可选参数向量；<ul>
-<li><font face="Times New Roman " >roulette.m</font>  </li>
-<li><font face="Times New Roman " >normGeomSelsct.m</font> </li>
-<li><font face="Times New Roman " >tourn.m</font></li>
-</ul>
-</li>
-</ul>
-<h4 id="3-4-初始化函数和终止函数"><a href="#3-4-初始化函数和终止函数" class="headerlink" title="3.4 初始化函数和终止函数"></a>3.4 初始化函数和终止函数</h4><p>&amp;emsp;&amp;emsp;遗传算法工具箱给出了 <font face="Times New Roman " >innitializega.m</font> 和 <font face="Times New Roman " >initializeoga.m</font> 两个种群初始优化函数和<font face="Times New Roman " > maxGenTerm.m </font>、<font face="Times New Roman " >optMaxGenTerm.m </font>两个终止函数。</p>
-<p>&amp;emsp;&amp;emsp;遗传算法工具箱已经在多维变量优化、非线性规划、参数优化和动态系统最优控等一系列领域有了很好的应用。</p>
-<br>
-
-<h2 id="4-遗传算法在Matlab中实现"><a href="#4-遗传算法在Matlab中实现" class="headerlink" title="4 遗传算法在Matlab中实现"></a>4 遗传算法在Matlab中实现</h2><h4 id="4-1-编码"><a href="#4-1-编码" class="headerlink" title="4.1 编码"></a>4.1 编码</h4><p>遗传算法不对优化问题的实际决策变量进行操作，所以应用遗传算法首要问题是通过编码来将决策变量表示成串结构数据。采用最常用的二进制编码方案，即通过二进制数构成的符号串来表示一个个体，用下面的<font face="Times New Roman " > <strong>encoding</strong> </font>函数来实现编码并产生初始种群： </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function[bin_gen,bits]=encoding(min_var,max_var,scale_var,popsize)</span><br><span class="line">  bits=ceil(log2((max_var-min_var)./scale_var));</span><br><span class="line">  bin_gen=randint(popsize,sum(bits));</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-
-<p>&amp;emsp;&amp;emsp;在上面代码中，首先根据决策变量的下界<font face="Times New Roman">(min_var)</font>、上界<font face="Times New Roman">(max_var)</font>及其搜索精度<font face="Times New Roman">(scale_var)</font>来确定表示各决策变量的二进制串的长度<font face="Times New Roman">bits</font>，然后随机产生一个种群大小为 <font face="Times New Roman"> popsize </font>的初始种群<font face="Times New Roman"> bin_gen </font>。编码后的实际搜索精度为<font face="Times New Roman"> scale_dec (max_var-min_var)&#x2F;(2^bits-1) </font>，该精度会在解码时用到。</p>
-<h4 id="4-2-解码"><a href="#4-2-解码" class="headerlink" title="4.2 解码"></a>4.2 解码</h4><p>&amp;emsp;&amp;emsp;编码后的个体构成的种群<font face="Times New Roman"> bin_gen </font>必须经过解码以转换成原问题空间的决策变量构成的种群<font face="Times New Roman"> var_gen </font>，才能计算相应的适应值。用下面代码实现。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function[var_gen,fitness] = decoding (funname,bin_gen,bits,min_var,max_var)</span><br><span class="line">    num_var=lenth(bits);</span><br><span class="line">    popsize=size(bin_gen,1);</span><br><span class="line">    scale_dec=(max_var-min_var)./(2.^bits-1);</span><br><span class="line">    bits=[o bits];</span><br><span class="line">    for i=1:num_var</span><br><span class="line">      bin_var(i)=bin-gen(:,bits(i):bits(i+1));</span><br><span class="line">      var(i)=sum(ones(popsize,1)*2.^(size(bin_var(i),2)-1:-1:0).*bin_var(i),2).*scale_dec(i)+min_var(i)</span><br><span class="line">    end</span><br><span class="line">    var_gen=[var(1,:)];</span><br><span class="line">    for i=1:popsize</span><br><span class="line">      fitness(i)=eval(funname,&#x27;(var_gen(I,:))&#x27;);</span><br><span class="line">    end</span><br></pre></td></tr></table></figure>
-
-<p>&amp;emsp;&amp;emsp;解码函数的关键在于先由二进制数求得对应的十进制数 $D$ ，并根据下式得出实际决策变量值 $X$ ：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X=D*scale_dec+min_var</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-3-选择"><a href="#4-3-选择" class="headerlink" title="4.3 选择"></a>4.3 选择</h4><p>&amp;emsp;&amp;emsp;选择过程是利用解码后求得的各个适应值的大小，淘汰一些较差的个体而选出一些比较优良的个体，以进行下一步交叉变异操作。选择算子的程序如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">funcion[evo_gen,best_indiv,max_fitness] = selection(old_gen,fitness)</span><br><span class="line">popsize = length(fitness);</span><br><span class="line">[max_fitness,index1] = max(fitness);</span><br><span class="line">[min_fitness,index2] = min(fitness);</span><br><span class="line">best_indiv = old_gen(index1,:);</span><br><span class="line">index = [1;popsize];</span><br><span class="line">index(index1)= 0 ;</span><br><span class="line">index(index2)= 0 ;</span><br><span class="line">index=nonzeros(index);</span><br><span class="line">evo.gen = old-gen(index,:);</span><br><span class="line">evo_fitness = fitness(index,:);</span><br><span class="line">evo_popsize = popsize - 2;</span><br><span class="line">ps=evo_fitness/sum(evo_fitness);</span><br><span class="line">pscum = cumsum(ps);</span><br><span class="line">r = rand(1,evo_popsize);</span><br><span class="line">selscted = sum(pscum*ones(1,evo_popsize)&lt;ones(evo_popsize,1)*r)+1;</span><br><span class="line">evo_gen = evo_gen(selscted,:);</span><br></pre></td></tr></table></figure>
-
-<p>&amp;emsp;&amp;emsp;在该算子中，采用最优保存策略和比例保存法相结合的思路，即首先找出当前群体中适应值最高和最低的个体，将最佳个体<font face="Times New Roman"> best_indiv </font> 保留并用其替换最差个体，为保证当前最佳个体不被交叉、变异操作所破坏，允许其不参与交叉和变异直接进入下一代，然后将剩下的个体<font face="Times New Roman"> evo_gen </font > 按照比例法进行操作。所谓比例选择法，也叫轮盘赌算法，是指个体被选中的概率和该个体的适应值大小成正比。将两种方法结合的目的是：在遗传操作中，不仅能不断提高群体的平均适应值，而且能保证最佳适应值不减小。</p>
-<h4 id="4-4-交叉"><a href="#4-4-交叉" class="headerlink" title="4.4 交叉"></a>4.4 交叉</h4><p>&amp;emsp;&amp;emsp;下面采用单点交叉的方法来实现交叉算子，即按选择概率<font face ="Times New Roman"> pc </font>在两两配对的个体编码串 <font face ="Times New Roman"> cpairs </font>中随机设置一个交叉点<font face ="Times New Roman"> cpoints </font>，然后在该点互相交换两个配对个体的部分基因，从而形成两个新的个体，交叉算子程序如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function new_gen = crossover (old_gen,pc)</span><br><span class="line">  [nouse,mating] = sort(rand(size(old_gen,1),1));</span><br><span class="line">  mat_gen = old_gen(mating,:);</span><br><span class="line">  pairs = size(mat_gen,1)/2;</span><br><span class="line">  bits = size(mat_gen,2);</span><br><span class="line">  cpairs = rand(pairs,1)&lt;pc;</span><br><span class="line">  cpoints = randint(pairs,1,[1,bits]);</span><br><span class="line">  cpoints = cpairs.*cpoints;</span><br><span class="line">  for i=1:pairs</span><br><span class="line">    new_gen([2*i-1 2*i],:) = [mat_gen([2*i-1 2*i],1:cpoints(i))mat_gen([2*i 2*i-1],cpoints(i)+1:bits)];</span><br><span class="line">  end</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-5-变异"><a href="#4-5-变异" class="headerlink" title="4.5 变异"></a>4.5 变异</h4><p>&amp;emsp;&amp;emsp;对于二进制的基因串而言，变异操作就是按照变异的概率<font face ="Times New Roman"> pm </font>随机选择变异点<font face ="Times New Roman"> mpoints </font>，在变异点将其取反即可。变异算子的实现过程如下；</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">funtion new_gen = mutation(old_gen,pm)</span><br><span class="line">  mpoints = find(rand(size(old_gen))&lt;pm);</span><br><span class="line">  new_gen = old_gen;</span><br><span class="line">  new_gen(mpoints) = 1-old_gen*(mppints);</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-简单一元函数优化实例"><a href="#5-简单一元函数优化实例" class="headerlink" title="5 简单一元函数优化实例"></a>5 简单一元函数优化实例</h2><p>用遗传算法计算下面函数的最大值：<br>$$f(x)&#x3D;x sin(10\pi x)+2.0 \qquad x\in [-1,2]$$  </p>
-<p>&amp;emsp;&amp;emsp;选择二进制编码，种群个体数量为 $40$ ，每个种群长度为 $20$ ，使用代沟为 $0.9$ ，最大遗传代数为 $25$ 。</p>
-<ul>
-<li>代码：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">figure(1)</span><br><span class="line">fplot(&#x27;variable.*sin(10*pi*variable)+2.0&#x27;,[-1,2])</span><br><span class="line">nind=40;</span><br><span class="line">maxgen=25;</span><br><span class="line">preci=20;</span><br><span class="line">GGAP=0.9;</span><br><span class="line">trace=zeros(2,maxgen);</span><br><span class="line">fieldD=[20;-1;2;1;0;1;1];</span><br><span class="line">chrom=crtbp(nind,preci);</span><br><span class="line">gen=0;</span><br><span class="line">variable=bs2rv(chrom,fieldD);</span><br><span class="line">objv=variable.*sin(10*pi*variable)+2.0;</span><br><span class="line">while gen&lt;maxgen</span><br><span class="line">    FitnV=ranking(-objv);</span><br><span class="line">    selch=select(&#x27;sus&#x27;,chrom,FitnV,GGAP);</span><br><span class="line">    selch=recombin(&#x27;xovsp&#x27;,selch,0.7);</span><br><span class="line">    selch=mut(selch);7</span><br><span class="line">    variable=bs2rv(selch,fieldD);</span><br><span class="line">    objvsel=variable.*sin(10*pi*variable)+2.0;</span><br><span class="line">    [chrom,objv]=reins(chrom,selch,1,1,objv,objvsel);</span><br><span class="line">    gen=gen+1;</span><br><span class="line">    [Y,I]=max(objv),hold on;</span><br><span class="line">    plot(variable(I),Y,&#x27;bo&#x27;);</span><br><span class="line">    trace(1,gen)=max(objv);</span><br><span class="line">    trace(2,gen)=sum(objv)/length(objv);</span><br><span class="line">end</span><br><span class="line">variable=bs2rv(chrom,fieldD);</span><br><span class="line">hold on;grid;</span><br><span class="line">plot(variable&#x27;,objv&#x27;,&#x27;b*&#x27;);</span><br><span class="line">figure(2)</span><br><span class="line">plot(trace(1,:)&#x27;);</span><br><span class="line">hold on;</span><br><span class="line">plot(trace(2,:)&#x27;,&#x27;-&#x27;);grid;</span><br><span class="line">legend(&#x27;解的变化&#x27;,&#x27;种群均值变化&#x27;)</span><br><span class="line">disp([&#x27;输出最大值为&#x27;,num2str(Y)])</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>下图展示的是经过多次遗传，得出的最优良子代汇聚结果：</p>
-<center><img src="/images/matlab/11/11-2.png" width="70%" height="70%" align=center /></center>
-
-<br>
-
-<p>下图是每代得到的结果：</p>
-<center><img src="/images/matlab/11/11-3.png" width="70%" height="70%" align=center /></center>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/08/24/Mathematical_modeling/11GA/" data-id="cl3qp641v000ez4qfd4tl9s2s" data-title="Genetic Algorithm" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" rel="tag">遗传算法</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Mathematical_modeling/10matlab" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/08/15/Mathematical_modeling/10matlab/" class="article-date">
-  <time class="dt-published" datetime="2021-08-15T02:51:42.000Z" itemprop="datePublished">2021-08-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/08/15/Mathematical_modeling/10matlab/">Matlab微分方程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="微分方程求解"><a href="#微分方程求解" class="headerlink" title="微分方程求解"></a>微分方程求解</h1><h2 id="一阶线性微分方程"><a href="#一阶线性微分方程" class="headerlink" title="一阶线性微分方程"></a>一阶线性微分方程</h2><ul>
-<li>形如 $y’+P(x)y&#x3D;Q(x)$的函数称之为一阶线性常微分方程。其中：<ul>
-<li>$y’+P(x)y&#x3D;0$，被称为 齐次微分方程。</li>
-<li>$y’+P(x)y&#x3D;Q(x)$，被称为 非齐次微分方程。</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">syms y(x)</span><br><span class="line">ode=diff(y,x)-y==0;     %写出函数</span><br><span class="line">cond=y(0)==1;           %定义初始条件</span><br><span class="line">A=dsolve(ode,cond)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">syms y(x)</span><br><span class="line">ode=diff(y,x)-y==x;</span><br><span class="line">cond=[];</span><br><span class="line">A=dsolve(ode,cond)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>结果<br><img src="/images/matlab/10/10-1.png" alt="10-1"></li>
-</ul>
-<h2 id="二阶微分方程"><a href="#二阶微分方程" class="headerlink" title="二阶微分方程"></a>二阶微分方程</h2><ul>
-<li>形如$y’’+py’+qy&#x3D;f(x)$的方程被称为：二阶常系数微分方程</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">clear,clc,close all</span><br><span class="line"></span><br><span class="line">syms y(x)</span><br><span class="line">ode1=diff(y,x,2)-y==0;</span><br><span class="line">dy=diff(y,x)</span><br><span class="line">cond1=[y(0)==2,dy(0)==0];</span><br><span class="line">A=dsolve(ode1,cond1)</span><br><span class="line"></span><br><span class="line">syms y(x)</span><br><span class="line">ode2=x^2*diff(y,x,2)+x*diff(y,x)-y==0;</span><br><span class="line">cond2=[];</span><br><span class="line">B=dsolve(ode2,cond2)</span><br><span class="line">B1=diff(B,x)</span><br><span class="line">B2=diff(B,x,2)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>结果<br><img src="/images/matlab/10/10-2.png" alt="10-2"></li>
-</ul>
-<br>
-
-<h1 id="微分方程的数值解"><a href="#微分方程的数值解" class="headerlink" title="微分方程的数值解"></a>微分方程的数值解</h1><p>&amp;emsp;&amp;emsp;在工程和计算中常常需要求解微分方程，但微分方程的解析解通常很难得到，所以一种退而求其次的方法就是求其数值解。这里是使用Matlab中的ode45求解常微分方程数值解的简单说明。具体可使用”help ode45”命令查看它的帮助文档。</p>
-<p>查看 Matlab Help 可以发现,<code>ode45</code>的用法如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[X,Y]=ode45(odefun,tspan,y0)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>其中 </li>
-<li><code>odefun</code>通常指方程所在函数函数名；</li>
-<li><code>tspan</code>通常指</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/08/15/Mathematical_modeling/10matlab/" data-id="cl3qp641n0007z4qf9x2c5opf" data-title="Matlab微分方程" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" rel="tag">微分方程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-matlab/10matlab" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/08/15/matlab/10matlab/" class="article-date">
-  <time class="dt-published" datetime="2021-08-15T02:51:42.000Z" itemprop="datePublished">2021-08-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/08/15/matlab/10matlab/">Matlab微分方程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="微分方程求解"><a href="#微分方程求解" class="headerlink" title="微分方程求解"></a>微分方程求解</h1><h2 id="一阶线性微分方程"><a href="#一阶线性微分方程" class="headerlink" title="一阶线性微分方程"></a>一阶线性微分方程</h2><ul>
-<li>形如 $y’+P(x)y&#x3D;Q(x)$的函数称之为一阶线性常微分方程。其中：<ul>
-<li>$y’+P(x)y&#x3D;0$，被称为 齐次微分方程。</li>
-<li>$y’+P(x)y&#x3D;Q(x)$，被称为 非齐次微分方程。</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">syms y(x)</span><br><span class="line">ode=diff(y,x)-y==0;     %写出函数</span><br><span class="line">cond=y(0)==1;           %定义初始条件</span><br><span class="line">A=dsolve(ode,cond)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">syms y(x)</span><br><span class="line">ode=diff(y,x)-y==x;</span><br><span class="line">cond=[];</span><br><span class="line">A=dsolve(ode,cond)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>结果<br><img src="/images/matlab/10/10-1.png" alt="10-1"></li>
-</ul>
-<h2 id="二阶微分方程"><a href="#二阶微分方程" class="headerlink" title="二阶微分方程"></a>二阶微分方程</h2><ul>
-<li>形如$y’’+py’+qy&#x3D;f(x)$的方程被称为：二阶常系数微分方程</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">clear,clc,close all</span><br><span class="line"></span><br><span class="line">syms y(x)</span><br><span class="line">ode1=diff(y,x,2)-y==0;</span><br><span class="line">dy=diff(y,x)</span><br><span class="line">cond1=[y(0)==2,dy(0)==0];</span><br><span class="line">A=dsolve(ode1,cond1)</span><br><span class="line"></span><br><span class="line">syms y(x)</span><br><span class="line">ode2=x^2*diff(y,x,2)+x*diff(y,x)-y==0;</span><br><span class="line">cond2=[];</span><br><span class="line">B=dsolve(ode2,cond2)</span><br><span class="line">B1=diff(B,x)</span><br><span class="line">B2=diff(B,x,2)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>结果<br><img src="/images/matlab/10/10-2.png" alt="10-2"></li>
-</ul>
-<br>
-
-<h1 id="微分方程的数值解"><a href="#微分方程的数值解" class="headerlink" title="微分方程的数值解"></a>微分方程的数值解</h1><p>&amp;emsp;&amp;emsp;在工程和计算中常常需要求解微分方程，但微分方程的解析解通常很难得到，所以一种退而求其次的方法就是求其数值解。这里是使用Matlab中的ode45求解常微分方程数值解的简单说明。具体可使用”help ode45”命令查看它的帮助文档。</p>
-<p>查看 Matlab Help 可以发现,<code>ode45</code>的用法如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[X,Y]=ode45(odefun,tspan,y0)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>其中 </li>
-<li><code>odefun</code>通常指方程所在函数函数名；</li>
-<li><code>tspan</code>通常指</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/08/15/matlab/10matlab/" data-id="cl3qp642b001qz4qf9xk8fj36" data-title="Matlab微分方程" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" rel="tag">微分方程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-matlab/9latex" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/07/31/matlab/9latex/" class="article-date">
-  <time class="dt-published" datetime="2021-07-31T12:53:38.000Z" itemprop="datePublished">2021-07-31</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/07/31/matlab/9latex/">Latex排版</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="目录"><a href="#目录" class="headerlink" title="[目录]"></a>[目录]</h2><ul>
-<li><a href="#1">Latex介绍及安装</a></li>
-<li><a href="#2">Latex 结构</a></li>
-<li><a href="#4">模块插入</a><ul>
-<li><a href="#401">插入图片</a></li>
-<li><a href="#402">插入表格</a></li>
-<li><a href="#403">插入数学公式</a></li>
-</ul>
-</li>
-<li><a href="#5">版面设置</a><ul>
-<li><a href="#501">纸张大小</a></li>
-<li><a href="#502">边距设置</a></li>
-<li><a href="#503">Section设置</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="1"></h2>
-
-<h2 id="Latex介绍及安装"><a href="#Latex介绍及安装" class="headerlink" title="Latex介绍及安装"></a>Latex介绍及安装</h2><p>&amp;emsp;&amp;emsp; TeX 已经很老了，它在 1982 年以后基本就没有变化过。但是你相信世界上有如此完美的程序吗？它几乎没有bug, 而且你可以在几乎任何计算机上使用它，从PC机到Cray巨型机。经过几十年的风霜，它仍然是文档排版界的 “No.1”, “state-of-the-art”.它的王牌地位明显还将在21世纪继续保持！  </p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="http://mirror.ctan.org/systems/texlive/Images/texlive2021.iso">发行版Tex下载</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/38178015">安装教程</a>，只看第一部分。若你想使用VScode对程序进行编译则继续看完。  </p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/6096796328">出现这样的问题</a>，解决方案如下：  </p>
-<ul>
-<li>在系统变量中<code>path</code>中添加变量<code>C:\Windows\System32</code>；  </li>
-<li>重启电脑；</li>
-<li>管理员cmd运行<code>fmtutil-sys --all</code>；</li>
-</ul>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://texstudio.sourceforge.net/">Texstudo编译器</a>，可以辅助编写程序。当然你用Texlive自带的Texwoks也行，愿意瞎搞用Vscode也行。</p>
-<ul>
-<li>Texstudo编译器优点：<ul>
-<li>具有自动补齐的功能，可提高编写效率，也是许多大佬使用的TeX编辑器；</li>
-<li>在编译的功能上，明显强于Texworks和WinEdt10；</li>
-<li>可一边编写代码，一边预览输出的文档效果。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>版本更新–在cmd中运行 <code>tlmgr update --all</code></p>
-</li>
-<li><p>命令编译自行探索，这里只提供可视化操作过程</p>
-</li>
-</ul>
-<br>
-
-
-<h2 id="2"></h2>
-
-<h1 id="Latex-结构"><a href="#Latex-结构" class="headerlink" title="Latex 结构"></a>Latex 结构</h1><h3 id="Latex常用宏包"><a href="#Latex常用宏包" class="headerlink" title="Latex常用宏包"></a>Latex常用宏包</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;amsmath&#125;  %数学公式  </span><br><span class="line">\usepackage&#123;graphicx&#125;  %插图 </span><br><span class="line">\usepackage&#123;xcolor&#125;  %颜色 </span><br><span class="line">\usepackage&#123;array&#125;  %表格</span><br><span class="line">\usepackage&#123;fancyhdr&#125;</span><br><span class="line">\pagestyle&#123;fancy&#125;  %导入页眉页脚需要的宏包</span><br></pre></td></tr></table></figure>
-<br>
-
-<ul>
-<li>宏包问题详见此处：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/43981639">[LaTeX 指南] 功能性宏包推荐</a></li>
-</ul>
-<br>
-
-
-<h3 id="数学建模模板"><a href="#数学建模模板" class="headerlink" title="数学建模模板"></a>数学建模模板</h3><p>&amp;emsp;&amp;emsp;精心编写适合数学建模论文编撰！</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">%定调文章格式</span><br><span class="line">%\documentclass&#123;cumcmthesis&#125;</span><br><span class="line">\documentclass[withoutpreface,bwprint]&#123;cumcmthesis&#125; %去掉封面与编号页</span><br><span class="line">\usepackage&#123;geometry&#125;  %版面设置宏包</span><br><span class="line">\usepackage&#123;fancyhdr&#125;  %导入页眉页脚需要的宏包</span><br><span class="line"></span><br><span class="line">%纸张布局</span><br><span class="line">\geometry&#123;a4paper,left=2.5cm,right=2.5cm,top=3.5cm,bottom=2.5cm&#125;</span><br><span class="line">%标题</span><br><span class="line">\title&#123;标题&#125;  </span><br><span class="line">%设置页首</span><br><span class="line">\pagestyle&#123;fancy&#125;</span><br><span class="line">\fancyhead[c]&#123;标题&#125;</span><br><span class="line">% 将标题编号改为阿拉伯数字</span><br><span class="line">\renewcommand\thesection&#123;\arabic&#123;section&#125;&#125;</span><br><span class="line"></span><br><span class="line">% 正文区</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">	%\tableofcontents  %此语句为目录设置，有则添加目录</span><br><span class="line">	\thispagestyle&#123;empty&#125;</span><br><span class="line">	\maketitle</span><br><span class="line">	\graphicspath&#123;&#123;figures/&#125;&#125;</span><br><span class="line">	</span><br><span class="line">	\begin&#123;abstract&#125;</span><br><span class="line">		\thispagestyle&#123;empty&#125;</span><br><span class="line">			这里写摘要</span><br><span class="line">	\end&#123;abstract&#125;	</span><br><span class="line">	</span><br><span class="line">	\section&#123;演示&#125;</span><br><span class="line">		\subsection&#123;三线表&#125;				</span><br><span class="line">				</span><br><span class="line">	\begin&#123;table&#125;[!htbp]</span><br><span class="line">           \centering</span><br><span class="line">           \caption&#123;\kaishu 标题&#125;</span><br><span class="line">           \begin&#123;tabular&#125;&#123;c c c&#125;</span><br><span class="line">           \toprule[1.5pt] </span><br><span class="line">           符号	&amp;含义 		&amp; 单位 		\\</span><br><span class="line">           \midrule[1pt]</span><br><span class="line"></span><br><span class="line">           $ R $	&amp;鼓面半径	&amp;$ 0.2m $	\\</span><br><span class="line"></span><br><span class="line">           \toprule[1.5pt] </span><br><span class="line">           \end&#123;tabular&#125;	</span><br><span class="line">	\end&#123;table&#125;</span><br><span class="line">		</span><br><span class="line">\subsubsection&#123;绘图&#125;	</span><br><span class="line">       \begin&#123;figure&#125;[H]</span><br><span class="line">           \centering</span><br><span class="line">           \includegraphics[scale=0.9 ]&#123;7.png&#125;  </span><br><span class="line">           \caption&#123;\kaishu &quot;同心协力&quot;游戏示意图&#125;</span><br><span class="line">       \end&#123;figure&#125;  </span><br><span class="line"></span><br><span class="line">\textbf&#123;附录&#125;</span><br><span class="line">	\begin&#123;appendices&#125;</span><br><span class="line">		\section&#123;规划解决程序--lingo源代码&#125;			</span><br><span class="line">		\begin&#123;lstlisting&#125;[language=c]</span><br><span class="line">				F=tuo(h)</span><br><span class="line">		\end&#123;lstlisting&#125;</span><br><span class="line">	\end&#123;appendices&#125;					</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/matlab/9/1.png" alt="1"></p>
-<br>
-
-<h2 id="4"></h2>
-
-<h1 id="模块插入"><a href="#模块插入" class="headerlink" title="模块插入"></a>模块插入</h1><h2 id="401"></h2>
-
-<h3 id="1-插入图片"><a href="#1-插入图片" class="headerlink" title="1 插入图片"></a>1 插入图片</h3><p>&amp;emsp;&amp;emsp;在可选项进行设置：</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">\begin</span>&#123;figure&#125;[H]</span><br><span class="line">	<span class="keyword">\centering</span></span><br><span class="line">	<span class="keyword">\includegraphics</span>[scale=0.9 ]&#123;7.png&#125;  </span><br><span class="line">	<span class="keyword">\caption</span>&#123;<span class="keyword">\kaishu</span> &quot;同心协力&quot;游戏示意图&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;  </span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>语法：<code>\includegraphics</code>[可选项]{文件};</li>
-<li>格式：ESP,PDF,PNG,JPG,BMP可导入。</li>
-</ul>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">\includegraphics</span>[scale=0.3]&#123;tex.jpg&#125;                    <span class="comment">%设置缩放比例</span></span><br><span class="line"><span class="keyword">\includegraphics</span>[height=3cm]&#123;tex.jpg&#125;                   <span class="comment">%设置图片的高度</span></span><br><span class="line"><span class="keyword">\includegraphics</span>[width=100pt]&#123;tex.jpg&#125;                  <span class="comment">%设置图片的宽度</span></span><br><span class="line"><span class="keyword">\includegraphics</span>[height=1<span class="keyword">\textheight</span>]&#123;tex.jpg&#125;          <span class="comment">%设置图片的相对高度</span></span><br><span class="line"><span class="keyword">\includegraphics</span>[width=1<span class="keyword">\textwidth</span>]&#123;tex.jpg&#125;            <span class="comment">%设置图片的相对宽度</span></span><br><span class="line"><span class="keyword">\includegraphics</span>[angle=-45]&#123;b.png&#125;                      <span class="comment">%设置角度</span></span><br><span class="line"><span class="keyword">\includegraphics</span>[width=1<span class="keyword">\textwidth</span>,angle=-45]&#123;b.png&#125;    <span class="comment">%同时设置多个参数时，用逗进行分割</span></span><br></pre></td></tr></table></figure>
-<h2 id="402"></h2>
-
-<h3 id="2-插入表格"><a href="#2-插入表格" class="headerlink" title="2  插入表格"></a>2  插入表格</h3><ul>
-<li>代码实现三线表  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;[!htbp]</span><br><span class="line"></span><br><span class="line">			\centering</span><br><span class="line">			\caption&#123;\kaishu 标题&#125;</span><br><span class="line">			\begin&#123;tabular&#125;&#123;c c c&#125;</span><br><span class="line">				\toprule[1.5pt] </span><br><span class="line">				符号	&amp;含义 		&amp; 单位 		\\</span><br><span class="line">				\midrule[1pt]</span><br><span class="line">				$ R $	&amp;鼓面半径	&amp;$ 0.2m $	\\</span><br><span class="line">				\toprule[1.5pt] </span><br><span class="line">			\end&#123;tabular&#125;	</span><br><span class="line">		\end&#123;table&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="403"></h2>
-
-<h3 id="3-插入数学公式"><a href="#3-插入数学公式" class="headerlink" title="3 插入数学公式"></a>3 插入数学公式</h3><ul>
-<li><p>此处仅仅只放环境代码,具体 <a target="_blank" rel="noopener" href="https://tuoxiao.github.io/2021/04/17/%E5%AD%A6%E4%B9%A0/math/">数学语法</a> 见这里。</p>
-<br></li>
-</ul>
-<h2 id="5"></h2>
-
-<h1 id="版面设计"><a href="#版面设计" class="headerlink" title="版面设计"></a>版面设计</h1><h2 id="501"></h2>
-
-<h3 id="1-纸张大小"><a href="#1-纸张大小" class="headerlink" title="1 纸张大小"></a>1 纸张大小</h3><ul>
-<li><p>%导入版面设置的宏包–<code>\usepackage&#123;geometry&#125;</code></p>
-</li>
-<li><p>使用命令：<code>\geometry&#123;papersize=&#123;宽, 高&#125;&#125;</code></p>
-</li>
-<li><p>如：<code>\geometry&#123;papersize=&#123;20cm, 15cm&#125;&#125;</code></p>
-</li>
-</ul>
-<br>
-<h2 id="502"></h2>
-
-<h3 id="2-边距设置"><a href="#2-边距设置" class="headerlink" title="2  边距设置"></a>2  边距设置</h3><ul>
-<li>导入版面设置的宏包–<code>\usepackage&#123;geometry&#125;</code></li>
-<li>使用命令：<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\geometry</span>&#123;left          左边距</span><br><span class="line"><span class="keyword">\righ</span>                   右边距</span><br><span class="line"><span class="keyword">\top</span>                    上边距</span><br><span class="line"><span class="keyword">\bottom</span>                 下边距</span><br><span class="line"><span class="keyword">\geometry</span>&#123;left=5cm,right=5cm,top=5cm,bottom=5cm&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<br>
-<h2 id="503"></h2>
-
-<h3 id="3、改变Section编号"><a href="#3、改变Section编号" class="headerlink" title="3、改变Section编号"></a>3、改变Section编号</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\renewcommand\thesection&#123;\arabic&#123;section&#125;&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>arabic	    阿拉伯数字  </li>
-<li>roman			小写的罗马数字</li>
-<li>Roman			大写的罗马数字</li>
-<li>alph			小写字母</li>
-<li>Alph			大写字母</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/07/31/matlab/9latex/" data-id="cl3qp23p7000310qfb9h3c0o8" data-title="Latex排版" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" rel="tag">论文排版</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Mathematical_modeling/9latex" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/07/31/Mathematical_modeling/9latex/" class="article-date">
-  <time class="dt-published" datetime="2021-07-31T12:53:38.000Z" itemprop="datePublished">2021-07-31</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/07/31/Mathematical_modeling/9latex/">Latex排版</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="目录"><a href="#目录" class="headerlink" title="[目录]"></a>[目录]</h2><ul>
-<li><a href="#1">Latex介绍及安装</a></li>
-<li><a href="#2">Latex 结构</a></li>
-<li><a href="#4">模块插入</a><ul>
-<li><a href="#401">插入图片</a></li>
-<li><a href="#402">插入表格</a></li>
-<li><a href="#403">插入数学公式</a></li>
-</ul>
-</li>
-<li><a href="#5">版面设置</a><ul>
-<li><a href="#501">纸张大小</a></li>
-<li><a href="#502">边距设置</a></li>
-<li><a href="#503">Section设置</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="1"></h2>
-
-<h2 id="Latex介绍及安装"><a href="#Latex介绍及安装" class="headerlink" title="Latex介绍及安装"></a>Latex介绍及安装</h2><p>&amp;emsp;&amp;emsp; TeX 已经很老了，它在 1982 年以后基本就没有变化过。但是你相信世界上有如此完美的程序吗？它几乎没有bug, 而且你可以在几乎任何计算机上使用它，从PC机到Cray巨型机。经过几十年的风霜，它仍然是文档排版界的 “No.1”, “state-of-the-art”.它的王牌地位明显还将在21世纪继续保持！  </p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="http://mirror.ctan.org/systems/texlive/Images/texlive2021.iso">发行版Tex下载</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/38178015">安装教程</a>，只看第一部分。若你想使用Vscode对程序进行编译则继续看完。  </p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/6096796328">出现这样的问题</a>，解决方案如下：  </p>
-<ul>
-<li>在系统变量中<font face="Times New Roman" color="red"> path </font>中添加变量<font face="Times New Roman" color="red"> C:\Windows\System32 </font>；  </li>
-<li>重启电脑；</li>
-<li>管理员cmd运行<font face="Times New Roman" color="red"> fmtutil-sys –all </font>；</li>
-</ul>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://texstudio.sourceforge.net/">Texstudo编译器</a>，可以辅助编写程序。当然你用Texlive自带的Texwoks也行，愿意瞎搞用Vscode也行。</p>
-<ul>
-<li>Texstudo编译器优点：<ul>
-<li>具有自动补齐的功能，可提高编写效率，也是许多大佬使用的TeX编辑器；</li>
-<li>在编译的功能上，明显强于Texworks和WinEdt10；</li>
-<li>可一边编写代码，一边预览输出的文档效果。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>版本更新–在cmd中运行 <font face="Times New Roman" color="red"> tlmgr update –all </font></p>
-</li>
-<li><p>命令编译自行探索，这里只提供可视化操作过程</p>
-</li>
-</ul>
-<br>
-
-
-<h2 id="2"></h2>
-
-<h1 id="Latex-结构"><a href="#Latex-结构" class="headerlink" title="Latex 结构"></a>Latex 结构</h1><h3 id="Latex常用宏包"><a href="#Latex常用宏包" class="headerlink" title="Latex常用宏包"></a>Latex常用宏包</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;amsmath&#125;  %数学公式  </span><br><span class="line">\usepackage&#123;graphicx&#125;  %插图 </span><br><span class="line">\usepackage&#123;xcolor&#125;  %颜色 </span><br><span class="line">\usepackage&#123;array&#125;  %表格</span><br><span class="line">\usepackage&#123;fancyhdr&#125;</span><br><span class="line">\pagestyle&#123;fancy&#125;  %导入页眉页脚需要的宏包</span><br></pre></td></tr></table></figure>
-<br>
-
-<ul>
-<li>宏包问题详见此处：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/43981639">[LaTeX 指南] 功能性宏包推荐</a></li>
-</ul>
-<br>
-
-
-<h3 id="数学建模模板"><a href="#数学建模模板" class="headerlink" title="数学建模模板"></a>数学建模模板</h3><p>&amp;emsp;&amp;emsp;精心编写适合数学建模论文编撰！</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">%定调文章格式</span><br><span class="line">%\documentclass&#123;cumcmthesis&#125;</span><br><span class="line">\documentclass[withoutpreface,bwprint]&#123;cumcmthesis&#125; %去掉封面与编号页</span><br><span class="line">\usepackage&#123;geometry&#125;  %版面设置宏包</span><br><span class="line">\usepackage&#123;fancyhdr&#125;  %导入页眉页脚需要的宏包</span><br><span class="line"></span><br><span class="line">%纸张布局</span><br><span class="line">\geometry&#123;a4paper,left=2.5cm,right=2.5cm,top=3.5cm,bottom=2.5cm&#125;</span><br><span class="line">%标题</span><br><span class="line">\title&#123;标题&#125;  </span><br><span class="line">%设置页首</span><br><span class="line">\pagestyle&#123;fancy&#125;</span><br><span class="line">\fancyhead[c]&#123;标题&#125;</span><br><span class="line">% 将标题编号改为阿拉伯数字</span><br><span class="line">\renewcommand\thesection&#123;\arabic&#123;section&#125;&#125;</span><br><span class="line"></span><br><span class="line">% 正文区</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">	%\tableofcontents  %此语句为目录设置，有则添加目录</span><br><span class="line">	\thispagestyle&#123;empty&#125;</span><br><span class="line">	\maketitle</span><br><span class="line">	\graphicspath&#123;&#123;figures/&#125;&#125;</span><br><span class="line">	</span><br><span class="line">	\begin&#123;abstract&#125;</span><br><span class="line">		\thispagestyle&#123;empty&#125;</span><br><span class="line">			这里写摘要</span><br><span class="line">	\end&#123;abstract&#125;	</span><br><span class="line">	</span><br><span class="line">	\section&#123;演示&#125;</span><br><span class="line">		\subsection&#123;三线表&#125;				</span><br><span class="line">				</span><br><span class="line">	\begin&#123;table&#125;[!htbp]</span><br><span class="line">           \centering</span><br><span class="line">           \caption&#123;\kaishu 标题&#125;</span><br><span class="line">           \begin&#123;tabular&#125;&#123;c c c&#125;</span><br><span class="line">           \toprule[1.5pt] </span><br><span class="line">           符号	&amp;含义 		&amp; 单位 		\\</span><br><span class="line">           \midrule[1pt]</span><br><span class="line"></span><br><span class="line">           $ R $	&amp;鼓面半径	&amp;$ 0.2m $	\\</span><br><span class="line"></span><br><span class="line">           \toprule[1.5pt] </span><br><span class="line">           \end&#123;tabular&#125;	</span><br><span class="line">	\end&#123;table&#125;</span><br><span class="line">		</span><br><span class="line">\subsubsection&#123;绘图&#125;	</span><br><span class="line">       \begin&#123;figure&#125;[H]</span><br><span class="line">           \centering</span><br><span class="line">           \includegraphics[scale=0.9 ]&#123;7.png&#125;  </span><br><span class="line">           \caption&#123;\kaishu &quot;同心协力&quot;游戏示意图&#125;</span><br><span class="line">       \end&#123;figure&#125;  </span><br><span class="line"></span><br><span class="line">\textbf&#123;附录&#125;</span><br><span class="line">	\begin&#123;appendices&#125;</span><br><span class="line">		\section&#123;规划解决程序--lingo源代码&#125;			</span><br><span class="line">		\begin&#123;lstlisting&#125;[language=c]</span><br><span class="line">				F=tuo(h)</span><br><span class="line">		\end&#123;lstlisting&#125;</span><br><span class="line">	\end&#123;appendices&#125;					</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/matlab/9/1.png" alt="1"></p>
-<br>
-
-<h2 id="4"></h2>
-
-<h1 id="模块插入"><a href="#模块插入" class="headerlink" title="模块插入"></a>模块插入</h1><h2 id="401"></h2>
-
-<h3 id="1-插入图片"><a href="#1-插入图片" class="headerlink" title="1 插入图片"></a>1 插入图片</h3><p>&amp;emsp;&amp;emsp;在可选项进行设置：</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">\begin</span>&#123;figure&#125;[H]</span><br><span class="line">	<span class="keyword">\centering</span></span><br><span class="line">	<span class="keyword">\includegraphics</span>[scale=0.9 ]&#123;7.png&#125;  </span><br><span class="line">	<span class="keyword">\caption</span>&#123;<span class="keyword">\kaishu</span> &quot;同心协力&quot;游戏示意图&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;  </span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>语法：<font face="Times New Roman" color="red"> \includegraphics </font>[可选项]{文件};</li>
-<li>格式：<font face="Times New Roman" >ESP、PDF、PNG、JPG、BMP </font>可导入。</li>
-</ul>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">\includegraphics</span>[scale=0.3]&#123;tex.jpg&#125;                    <span class="comment">%设置缩放比例</span></span><br><span class="line"><span class="keyword">\includegraphics</span>[height=3cm]&#123;tex.jpg&#125;                   <span class="comment">%设置图片的高度</span></span><br><span class="line"><span class="keyword">\includegraphics</span>[width=100pt]&#123;tex.jpg&#125;                  <span class="comment">%设置图片的宽度</span></span><br><span class="line"><span class="keyword">\includegraphics</span>[height=1<span class="keyword">\textheight</span>]&#123;tex.jpg&#125;          <span class="comment">%设置图片的相对高度</span></span><br><span class="line"><span class="keyword">\includegraphics</span>[width=1<span class="keyword">\textwidth</span>]&#123;tex.jpg&#125;            <span class="comment">%设置图片的相对宽度</span></span><br><span class="line"><span class="keyword">\includegraphics</span>[angle=-45]&#123;b.png&#125;                      <span class="comment">%设置角度</span></span><br><span class="line"><span class="keyword">\includegraphics</span>[width=1<span class="keyword">\textwidth</span>,angle=-45]&#123;b.png&#125;    <span class="comment">%同时设置多个参数时，用逗进行分割</span></span><br></pre></td></tr></table></figure>
-<h2 id="402"></h2>
-
-<h3 id="2-插入表格"><a href="#2-插入表格" class="headerlink" title="2  插入表格"></a>2  插入表格</h3><ul>
-<li>代码实现三线表  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;[!htbp]</span><br><span class="line"></span><br><span class="line">			\centering</span><br><span class="line">			\caption&#123;\kaishu 标题&#125;</span><br><span class="line">			\begin&#123;tabular&#125;&#123;c c c&#125;</span><br><span class="line">				\toprule[1.5pt] </span><br><span class="line">				符号	&amp;含义 		&amp; 单位 		\\</span><br><span class="line">				\midrule[1pt]</span><br><span class="line">				$ R $	&amp;鼓面半径	&amp;$ 0.2m $	\\</span><br><span class="line">				\toprule[1.5pt] </span><br><span class="line">			\end&#123;tabular&#125;	</span><br><span class="line">		\end&#123;table&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="403"></h2>
-
-<h3 id="3-插入数学公式"><a href="#3-插入数学公式" class="headerlink" title="3 插入数学公式"></a>3 插入数学公式</h3><ul>
-<li><p>此处仅仅只放环境代码,具体 <a target="_blank" rel="noopener" href="https://tuoxiao.github.io/2021/04/17/%E5%AD%A6%E4%B9%A0/math/">数学语法</a> 见这里。</p>
-<br></li>
-</ul>
-<h2 id="5"></h2>
-
-<h1 id="版面设计"><a href="#版面设计" class="headerlink" title="版面设计"></a>版面设计</h1><h2 id="501"></h2>
-
-<h3 id="1-纸张大小"><a href="#1-纸张大小" class="headerlink" title="1 纸张大小"></a>1 纸张大小</h3><ul>
-<li><p>%导入版面设置的宏包–<font face="Times New Roman" color="red"> \usepackage{geometry} </font></p>
-</li>
-<li><p>使用命令：<font face="Times New Roman" color="red"> \geometry{papersize&#x3D;{宽, 高}} </font></p>
-</li>
-<li><p>如：<font face="Times New Roman" color="red"> \geometry{papersize&#x3D;{20cm, 15cm}} </font></p>
-</li>
-</ul>
-<br>
-<h2 id="502"></h2>
-
-<h3 id="2-边距设置"><a href="#2-边距设置" class="headerlink" title="2  边距设置"></a>2  边距设置</h3><ul>
-<li>导入版面设置的宏包–<font face="Times New Roman" color="red"> \usepackage{geometry} </font></li>
-<li>使用命令：<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\geometry</span>&#123;left          左边距</span><br><span class="line"><span class="keyword">\righ</span>                   右边距</span><br><span class="line"><span class="keyword">\top</span>                    上边距</span><br><span class="line"><span class="keyword">\bottom</span>                 下边距</span><br><span class="line"><span class="keyword">\geometry</span>&#123;left=5cm,right=5cm,top=5cm,bottom=5cm&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<br>
-<h2 id="503"></h2>
-
-<h3 id="3、改变Section编号"><a href="#3、改变Section编号" class="headerlink" title="3、改变Section编号"></a>3、改变Section编号</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\renewcommand\thesection&#123;\arabic&#123;section&#125;&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>arabic	    阿拉伯数字  </li>
-<li>roman			小写的罗马数字</li>
-<li>Roman			大写的罗马数字</li>
-<li>alph			小写字母</li>
-<li>Alph			大写字母</li>
-</ul>
-<h3 id="4、取消段落首行缩进"><a href="#4、取消段落首行缩进" class="headerlink" title="4、取消段落首行缩进"></a>4、取消段落首行缩进</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\noindent</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/07/31/Mathematical_modeling/9latex/" data-id="cl3qp641y000jz4qfek1u23i1" data-title="Latex排版" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" rel="tag">论文排版</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-matlab/8Lingo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/07/30/matlab/8Lingo/" class="article-date">
-  <time class="dt-published" datetime="2021-07-30T11:17:35.000Z" itemprop="datePublished">2021-07-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/07/30/matlab/8Lingo/">Lingo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="钢管下料问题"><a href="#钢管下料问题" class="headerlink" title="钢管下料问题"></a>钢管下料问题</h2><h3 id="1-1-题目再现"><a href="#1-1-题目再现" class="headerlink" title="1.1 题目再现"></a>1.1 题目再现</h3><ul>
-<li><p>题目：<br>已知需采用三种切割模式，将19m长的原料钢管截成客户所需要的长度：  4m 长的 50根；5m长的10根；6m长的20根； 8m长的15根。</p>
-</li>
-<li><p>问题:如何下料最节省？</p>
-</li>
-</ul>
-<h3 id="1-2-建模分析"><a href="#1-2-建模分析" class="headerlink" title="1.2 建模分析"></a>1.2 建模分析</h3><ul>
-<li><p>设:  </p>
-<ul>
-<li>钢管的切割模式为 $x_1、x_2、x_3$ ;</li>
-<li>$r_{ij}$ 为在某种情况下，每根原料钢管生产4m、5m、6m、8m需要的钢管数量。</li>
-</ul>
-</li>
-<li><p>约束方程为：</p>
-</li>
-</ul>
-<center>
-
-<p>$Min&#x3D;x_1+x_2+x_3$</p>
-<br>
-
-<p>$$<br>\begin{cases} r_{11}x_1+r_{12}x_2+r_{13}x_3 \ge50 \r_{21}x_1+r_{22}x_2+r_{23}x_3 \ge10 \ r_{31}x_1+r_{32}x_2+r_{33}x_3 \ge20 \r_{41}x_1+r_{42}x_2+r_{43}x_3 \ge15 \end{cases}<br>$$</p>
-<br>
-
-<p>$$<br>\begin{cases}<br>16\leqq4r_{11}+5r_{21}+6r_{31}+8r_{41} \leqq19 \<br>16\leqq4r_{12}+5r_{22}+6r_{32}+8r_{42} \leqq19 \<br>16\leqq4r_{13}+5r_{23}+6r_{33}+8r_{43} \leqq19<br>\end{cases}<br>$$</p>
-<br>
-
-</center>
-
-
-<h3 id="1-3-Lingo编程求解"><a href="#1-3-Lingo编程求解" class="headerlink" title="1.3 Lingo编程求解"></a>1.3 Lingo编程求解</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sets:</span><br><span class="line">hang/<span class="number">1.</span><span class="number">.4</span>/:d,l;</span><br><span class="line">lie/<span class="number">1.</span><span class="number">.3</span>/:x;</span><br><span class="line">link(hang,lie):r;</span><br><span class="line">endsets</span><br><span class="line"></span><br><span class="line">data:</span><br><span class="line">d=<span class="number">50</span>,<span class="number">10</span>,<span class="number">20</span>,<span class="number">15</span>;</span><br><span class="line">l=<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>;</span><br><span class="line">enddata</span><br><span class="line"></span><br><span class="line">min=@sum(lie(j):x(j));</span><br><span class="line">@<span class="keyword">for</span>(hang(i):@sum(lie(j):r(i,j)*x(j))&gt;d(i));</span><br><span class="line">@<span class="keyword">for</span>(lie(j):@sum(hang(i):l(i)*r(i,j))&gt;<span class="number">16</span>);</span><br><span class="line">@<span class="keyword">for</span>(lie(j):@sum(hang(i):l(i)*r(i,j))&lt;<span class="number">19</span>);</span><br><span class="line">@<span class="keyword">for</span>(link(i,j):@gin(r(i,j)));</span><br><span class="line">@<span class="keyword">for</span>(link(i,j):@gin(r));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="1-4-得到结果"><a href="#1-4-得到结果" class="headerlink" title="1.4 得到结果"></a>1.4 得到结果</h3><p><img src="/images/matlab/8/1.png" alt="1"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/07/30/matlab/8Lingo/" data-id="cl3qp23p4000110qf73px57jr" data-title="Lingo" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" rel="tag">Lingo案例分析</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Mathematical_modeling/8Lingo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/07/30/Mathematical_modeling/8Lingo/" class="article-date">
-  <time class="dt-published" datetime="2021-07-30T11:17:35.000Z" itemprop="datePublished">2021-07-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/07/30/Mathematical_modeling/8Lingo/">Lingo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="钢管下料问题"><a href="#钢管下料问题" class="headerlink" title="钢管下料问题"></a>钢管下料问题</h2><h3 id="1-1-题目再现"><a href="#1-1-题目再现" class="headerlink" title="1.1 题目再现"></a>1.1 题目再现</h3><ul>
-<li><p>题目：<br>已知需采用三种切割模式，将19m长的原料钢管截成客户所需要的长度：  4m 长的 50根；5m长的10根；6m长的20根； 8m长的15根。</p>
-</li>
-<li><p>问题:如何下料最节省？</p>
-</li>
-</ul>
-<h3 id="1-2-建模分析"><a href="#1-2-建模分析" class="headerlink" title="1.2 建模分析"></a>1.2 建模分析</h3><ul>
-<li><p>设:  </p>
-<ul>
-<li>钢管的切割模式为 $x_1、x_2、x_3$ ;</li>
-<li>$r_{ij}$ 为在某种情况下，每根原料钢管生产4m、5m、6m、8m需要的钢管数量。</li>
-</ul>
-</li>
-<li><p>约束方程为：</p>
-</li>
-</ul>
-<center>
-
-<p>$Min&#x3D;x_1+x_2+x_3$</p>
-<br>
-
-<p>$$<br>\begin{cases} r_{11}x_1+r_{12}x_2+r_{13}x_3 \ge50 \r_{21}x_1+r_{22}x_2+r_{23}x_3 \ge10 \ r_{31}x_1+r_{32}x_2+r_{33}x_3 \ge20 \r_{41}x_1+r_{42}x_2+r_{43}x_3 \ge15 \end{cases}<br>$$</p>
-<br>
-
-<p>$$<br>\begin{cases}<br>16\leqq4r_{11}+5r_{21}+6r_{31}+8r_{41} \leqq19 \<br>16\leqq4r_{12}+5r_{22}+6r_{32}+8r_{42} \leqq19 \<br>16\leqq4r_{13}+5r_{23}+6r_{33}+8r_{43} \leqq19<br>\end{cases}<br>$$</p>
-<br>
-
-</center>
-
-
-<h3 id="1-3-Lingo编程求解"><a href="#1-3-Lingo编程求解" class="headerlink" title="1.3 Lingo编程求解"></a>1.3 Lingo编程求解</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sets:</span><br><span class="line">hang/1.4/:d,l;</span><br><span class="line">lie/1..3/:x;</span><br><span class="line">link(hang,lie):r;</span><br><span class="line">endsets</span><br><span class="line"></span><br><span class="line">data:</span><br><span class="line">d=50,10,20,15;</span><br><span class="line">l=4,5,6,8;</span><br><span class="line">enddata</span><br><span class="line"></span><br><span class="line">min=@sum(lie(j):x(j));</span><br><span class="line">@for(hang(i):@sum(lie(j):r(i,j)*x(j))&gt;d(i));</span><br><span class="line">@for(lie(j):@sum(hang(i):l(i)*r(i,j))&gt;16);</span><br><span class="line">@for(lie(j):@sum(hang(i):l(i)*r(i,j))&lt;19);</span><br><span class="line">@for(link(i,j):@gin(r(i,j)));</span><br><span class="line">@for(link(i,j):@gin(r));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="1-4-得到结果"><a href="#1-4-得到结果" class="headerlink" title="1.4 得到结果"></a>1.4 得到结果</h3><p><img src="/images/matlab/8/1.png" alt="1">  </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/07/30/Mathematical_modeling/8Lingo/" data-id="cl3qp641x000hz4qf8o1a3des" data-title="Lingo" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" rel="tag">Lingo案例分析</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arduino/" rel="tag">Arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" rel="tag">Lingo案例分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">Matlab基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">matlab基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E5%BA%94%E7%94%A8/" rel="tag">matlab应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E7%A8%8B%E5%BA%8F/" rel="tag">matlab程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E7%BB%98%E5%9B%BE/" rel="tag">matlab绘图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" rel="tag">单片机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" rel="tag">微分方程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" rel="tag">机械设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" rel="tag">论文排版</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" rel="tag">遗传算法</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
+  <div class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Arduino/" style="font-size: 12.5px;">Arduino</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" style="font-size: 12.5px;">Lingo案例分析</a> <a href="/tags/Math/" style="font-size: 12.5px;">Math</a> <a href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 12.5px;">Matlab基础知识</a> <a href="/tags/Python/" style="font-size: 12.5px;">Python</a> <a href="/tags/markdown/" style="font-size: 12.5px;">markdown</a> <a href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 12.5px;">matlab基础知识</a> <a href="/tags/matlab%E5%BA%94%E7%94%A8/" style="font-size: 17.5px;">matlab应用</a> <a href="/tags/matlab%E7%A8%8B%E5%BA%8F/" style="font-size: 12.5px;">matlab程序</a> <a href="/tags/matlab%E7%BB%98%E5%9B%BE/" style="font-size: 12.5px;">matlab绘图</a> <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 12.5px;">单片机</a> <a href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" style="font-size: 12.5px;">微分方程</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" style="font-size: 20px;">机械原理</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" style="font-size: 12.5px;">机械设计</a> <a href="/tags/%E7%8E%A9%E6%9C%BA/" style="font-size: 12.5px;">玩机</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 15px;">算法</a> <a href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" style="font-size: 12.5px;">论文排版</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 12.5px;">语法</a> <a href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" style="font-size: 10px;">遗传算法</a>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Arduino/" style="font-size: 13.25px;">Arduino</a> <a href="/tags/Git/" style="font-size: 13.25px;">Git</a> <a href="/tags/Github/" style="font-size: 14px;">Github</a> <a href="/tags/Hexo/" style="font-size: 14px;">Hexo</a> <a href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" style="font-size: 13.25px;">Lingo案例分析</a> <a href="/tags/Math/" style="font-size: 13.25px;">Math</a> <a href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 13.25px;">Matlab基础知识</a> <a href="/tags/Python/" style="font-size: 13.25px;">Python</a> <a href="/tags/markdown/" style="font-size: 13.25px;">markdown</a> <a href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 13.25px;">matlab基础知识</a> <a href="/tags/matlab%E5%BA%94%E7%94%A8/" style="font-size: 13.75px;">matlab应用</a> <a href="/tags/matlab%E7%A8%8B%E5%BA%8F/" style="font-size: 13.25px;">matlab程序</a> <a href="/tags/matlab%E7%BB%98%E5%9B%BE/" style="font-size: 13.25px;">matlab绘图</a> <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 13.25px;">单片机</a> <a href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" style="font-size: 13.25px;">微分方程</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" style="font-size: 14px;">机械原理</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" style="font-size: 13.25px;">机械设计</a> <a href="/tags/%E7%8E%A9%E6%9C%BA/" style="font-size: 13.25px;">玩机</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 13.5px;">算法</a> <a href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" style="font-size: 13.25px;">论文排版</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 13.25px;">语法</a> <a href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" style="font-size: 13px;">遗传算法</a>
     </div>
   </div>
 
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
+      
+  <div class="widget">
+    <h3 class="widget-title">Archive</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a><span class="archive-list-count">12</span></li></ul>
     </div>
   </div>
 
 
-  
     
-  <div class="widget-wrap">
+      
+  <div class="widget">
     <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
         
           <li>
-            <a href="/2022/05/29/Learn/math/">Mathjax渲染公式</a>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+              </p>
+              <p class="item-title">
+                <a href="/2022/05/29/Learn/math/" class="title">Mathjax渲染公式</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-05-29T02:42:59.527Z" itemprop="datePublished">2022-05-29</time>
+              </p>
+            </div>
           </li>
-        
+          
           <li>
-            <a href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/">Mathjax渲染公式</a>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+              </p>
+              <p class="item-title">
+                <a href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/" class="title">Mathjax渲染公式</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-05-29T02:39:39.834Z" itemprop="datePublished">2022-05-29</time>
+              </p>
+            </div>
           </li>
-        
+          
           <li>
-            <a href="/2022/05/29/hello-world/">Hello World</a>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2022/05/29/hello-world/" class="title">Hello World</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-05-29T02:07:02.804Z" itemprop="datePublished">2022-05-29</time>
+              </p>
+            </div>
           </li>
-        
+          
           <li>
-            <a href="/2021/08/24/Mathematical_modeling/11GA/">Genetic Algorithm</a>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/24/Mathematical_modeling/11GA/" class="title">Genetic Algorithm</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-24T01:04:29.000Z" itemprop="datePublished">2021-08-24</time>
+              </p>
+            </div>
           </li>
-        
+          
           <li>
-            <a href="/2021/08/15/Mathematical_modeling/10matlab/">Matlab微分方程</a>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/15/Mathematical_modeling/10matlab/" class="title">Matlab微分方程</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-15T02:51:42.000Z" itemprop="datePublished">2021-08-15</time>
+              </p>
+            </div>
           </li>
-        
+          
       </ul>
     </div>
   </div>
+  
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
+    
   </div>
-</footer>
+</aside>
 
-    </div>
-    <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+  <main class="main" role="main">
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+  <div class="content article-list">
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
   
-</nav>
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/29/Learn/math/">Mathjax渲染公式</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2022/05/29/Learn/math/" class="article-date">
+	  <time datetime="2022-05-29T02:42:59.527Z" itemprop="datePublished">May 29</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Hexo/" rel="tag">Hexo</a>, <a class="article-tag-link-link" href="/tags/Math/" rel="tag">Math</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/05/29/Learn/math/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/">Mathjax渲染公式</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/" class="article-date">
+	  <time datetime="2022-05-29T02:39:39.834Z" itemprop="datePublished">May 29</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Hexo/" rel="tag">Hexo</a>, <a class="article-tag-link-link" href="/tags/Math/" rel="tag">Math</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/29/hello-world/">Hello World</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2022/05/29/hello-world/" class="article-date">
+	  <time datetime="2022-05-29T02:07:02.804Z" itemprop="datePublished">May 29</time>
+	</a>
+</span>
+    
     
 
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/05/29/hello-world/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
 
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/24/Mathematical_modeling/11GA/">Genetic Algorithm</a>
+    </h1>
+  
 
   </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/08/24/Mathematical_modeling/11GA/" class="article-date">
+	  <time datetime="2021-08-24T01:04:29.000Z" itemprop="datePublished">Aug 24</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a>, <a class="article-tag-link-link" href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" rel="tag">遗传算法</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/08/24/Mathematical_modeling/11GA/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/15/Mathematical_modeling/10matlab/">Matlab微分方程</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/08/15/Mathematical_modeling/10matlab/" class="article-date">
+	  <time datetime="2021-08-15T02:51:42.000Z" itemprop="datePublished">Aug 15</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" rel="tag">微分方程</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/08/15/Mathematical_modeling/10matlab/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/15/matlab/10matlab/">Matlab微分方程</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/08/15/matlab/10matlab/" class="article-date">
+	  <time datetime="2021-08-15T02:51:42.000Z" itemprop="datePublished">Aug 15</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" rel="tag">微分方程</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/08/15/matlab/10matlab/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/31/matlab/9latex/">Latex排版</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/07/31/matlab/9latex/" class="article-date">
+	  <time datetime="2021-07-31T12:53:38.000Z" itemprop="datePublished">Jul 31</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" rel="tag">论文排版</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/07/31/matlab/9latex/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/31/Mathematical_modeling/9latex/">Latex排版</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/07/31/Mathematical_modeling/9latex/" class="article-date">
+	  <time datetime="2021-07-31T12:53:38.000Z" itemprop="datePublished">Jul 31</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" rel="tag">论文排版</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/07/31/Mathematical_modeling/9latex/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/30/matlab/8Lingo/">Lingo</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/07/30/matlab/8Lingo/" class="article-date">
+	  <time datetime="2021-07-30T11:17:35.000Z" itemprop="datePublished">Jul 30</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" rel="tag">Lingo案例分析</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/07/30/matlab/8Lingo/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/30/Mathematical_modeling/8Lingo/">Lingo</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/07/30/Mathematical_modeling/8Lingo/" class="article-date">
+	  <time datetime="2021-07-30T11:17:35.000Z" itemprop="datePublished">Jul 30</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" rel="tag">Lingo案例分析</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/07/30/Mathematical_modeling/8Lingo/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+  </div>
+
+  
+    
+    <nav class="bar bar-footer clearfix" data-stick-bottom>
+        <div class="bar-inner">
+        <ul class="pager pull-left">
+            
+            <li class="prev disabled">
+                <a href="javascript:;">
+                    <i class="icon icon-angle-left"></i>
+                    Prev
+                </a>
+            </li>
+            
+            
+            <li class="next">
+                <a href="/page/2/">
+                    Next
+                    <i class="icon icon-angle-right"></i>
+                </a>
+            </li>
+            
+        </ul>
+        <div class="total-article bar-right">Page 1 of 5</div>
+        </div>
+    </nav>
+    
+ 
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/tuoxiao" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/6573256711" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/yunshengchu2" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://space.bilibili.com/488452389" target="_blank" title="Bilibili" data-toggle=tooltip data-placement=top><i class="icon icon-bilibili"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+  <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/clipboard_use.js"></script>
 </body>
 </html>

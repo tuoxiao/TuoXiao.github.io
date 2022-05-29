@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
   <meta charset="utf-8">
   
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>TuTo&#39;Blog</title>
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/page/3/index.html">
@@ -13,2896 +25,752 @@
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://example.com/page/3/index.html">
   
   
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
   
   
 <link rel="stylesheet" href="/css/style.css">
 
   
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
+  
+  
   
 <meta name="generator" content="Hexo 6.2.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/tuoxiao" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">TuTo</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md"></h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> ShiYan, China</small>
       </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
     </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">Links</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/tuoxiao" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/6573256711" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/yunshengchu2" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://space.bilibili.com/488452389" target="_blank" title="Bilibili" data-toggle=tooltip data-placement=top><i class="icon icon-bilibili"></i></a></li>
+        
+    </ul>
+
+    </nav>
   </div>
 </header>
 
-      <div class="outer">
-        <section id="main">
   
-    <article id="post-杂谈/tulun" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/05/23/%E6%9D%82%E8%B0%88/tulun/" class="article-date">
-  <time class="dt-published" datetime="2021-05-23T15:28:52.000Z" itemprop="datePublished">2021-05-23</time>
-</a>
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/05/23/%E6%9D%82%E8%B0%88/tulun/">凸轮轮廓线推导</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>某直动尖顶推杆盘型凸轮机构，已知:  </p>
-<p>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;基圆半径：&amp;emsp;&amp;ensp;&amp;ensp;$r_0 &#x3D;50mm$<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;偏心距：&amp;emsp;&amp;ensp;&amp;ensp;&amp;emsp;$e&#x3D; 15mm$<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;推程运动角：&amp;emsp;$\delta_0 &#x3D;150^\circ$<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;远休止角：&amp;emsp;&amp;ensp;&amp;ensp;$\delta_1 &#x3D;30^ \circ$<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;回程运动角：&amp;emsp;$\delta_2 &#x3D;90 ^\circ$<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;近休止角：&amp;emsp;&amp;ensp;&amp;ensp;$\delta_3 &#x3D; 90 ^\circ$  </p>
-<p>推程阶段运动规律为<code>等加速等减速</code>。回程阶段为<code>简谐运动</code>，凸轮转向为顺时针，偏置方式为正偏置。<br>用解析法设置此凸轮机构，推导凸轮轮廓线数学方程，并绘制运动线图和凸轮轮廓图。  </p>
-<h2 id="建立数学模型"><a href="#建立数学模型" class="headerlink" title="建立数学模型"></a>建立数学模型</h2><center><font size=5 color=red>运动规律</font></center>  
-
-<h4 id="等加速等减速运动过程"><a href="#等加速等减速运动过程" class="headerlink" title="等加速等减速运动过程"></a>等加速等减速运动过程</h4><br>
-
-<table>
-<thead>
-<tr>
-<th align="center">&amp;emsp;&amp;emsp;待求量&amp;emsp;&amp;emsp;</th>
-<th align="center">&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;推程&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;</th>
-<th align="center">&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;回程&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">加速阶段</td>
-<td align="center">$0\le\delta\le \frac{\delta_0}{2}$</td>
-<td align="center">$0\le\delta\le \frac{\delta_0’}{2}$</td>
-</tr>
-<tr>
-<td align="center">$s&#x3D;$</td>
-<td align="center">$2h\frac{\delta^2}{\delta_0^2}$</td>
-<td align="center">$h-2h\frac{\delta^2}{\delta_0’^2}$</td>
-</tr>
-<tr>
-<td align="center">$v&#x3D;$</td>
-<td align="center">$4h\omega\frac{\delta}{\delta_0^2}$</td>
-<td align="center">$-4h\omega\frac{\delta}{\delta_0’^2}$</td>
-</tr>
-<tr>
-<td align="center">$\alpha&#x3D;$</td>
-<td align="center">$4h\frac{\omega^2}{\delta_0^2}$</td>
-<td align="center">$-4h\frac{\omega^2}{\delta_0’^2}$</td>
-</tr>
-<tr>
-<td align="center">减速阶段</td>
-<td align="center">$\frac{\delta_0}{2}\le\delta\le\delta_0$</td>
-<td align="center">$\frac{\delta_0’}{2}\le\delta\le\delta’_0$</td>
-</tr>
-<tr>
-<td align="center">$s&#x3D;$</td>
-<td align="center">$h-2h\frac{(\delta_0-\delta)^2}{\delta_0’^2}$</td>
-<td align="center">$2h\frac{(\delta_0’-\delta)^2}{\delta_0^2}$</td>
-</tr>
-<tr>
-<td align="center">$v&#x3D;$</td>
-<td align="center">$4h\omega\frac{(\delta_0-\delta)}{\delta_0^2}$</td>
-<td align="center">$-4h\omega\frac{(\delta_0’-\delta)}{\delta_0’^2}$</td>
-</tr>
-<tr>
-<td align="center">$\alpha&#x3D;$</td>
-<td align="center">$-4h\frac{\omega^2}{\delta_0’^2}$</td>
-<td align="center">$4h\frac{\omega^2}{\delta_0^2}$</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<h4 id="简谐运动-余弦加速度"><a href="#简谐运动-余弦加速度" class="headerlink" title="简谐运动(余弦加速度)"></a>简谐运动(余弦加速度)</h4><br>
-
-<table>
-<thead>
-<tr>
-<th align="center">&amp;emsp;&amp;emsp;待求量&amp;emsp;&amp;emsp;</th>
-<th align="center">&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;推程&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;</th>
-<th align="center">&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;回程&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">简谐运动</td>
-<td align="center">$0\le\delta\le \frac{\delta_0}{2}$</td>
-<td align="center">$0\le\delta\le \frac{\delta_0’}{2}$</td>
-</tr>
-<tr>
-<td align="center">$s&#x3D;$</td>
-<td align="center">$\frac{h}{2}[1-cos(\frac{\pi\delta}{\delta_0})]$</td>
-<td align="center">$\frac{h}{2}[1+cos(\frac{\pi\delta}{\delta_0})]$</td>
-</tr>
-<tr>
-<td align="center">$v&#x3D;$</td>
-<td align="center">$\frac{\pi h\omega }{2\delta_0}sin(\frac{\pi \delta }{\delta_0})$</td>
-<td align="center">$-\frac{\pi h\omega }{2\delta_0’}sin(\frac{\pi \delta }{\delta_0’})$</td>
-</tr>
-<tr>
-<td align="center">$\alpha&#x3D;$</td>
-<td align="center">$\frac{\pi^2 h\omega^2 }{2\delta_0^2}sin(\frac{\pi \delta }{\delta_0})$</td>
-<td align="center">$-\frac{\pi^2 h\omega^2 }{2\delta_0’^2}sin(\frac{\pi \delta }{\delta_0’})$</td>
-</tr>
-<tr>
-<td align="center">摆线运动</td>
-<td align="center">$0\le\delta\le \frac{\delta_0}{2}$</td>
-<td align="center">$0\le\delta\le \frac{\delta_0’}{2}$</td>
-</tr>
-<tr>
-<td align="center">$s&#x3D;$</td>
-<td align="center">$h[\frac{\delta}{\delta_0}-\frac{1}{2\pi}sin(\frac{2\pi \delta}{\delta_0})]$</td>
-<td align="center">$h-h[\frac{\delta}{\delta_0’}-\frac{1}{2\pi}sin(\frac{2\pi \delta}{\delta_0’})]$</td>
-</tr>
-<tr>
-<td align="center">$v&#x3D;$</td>
-<td align="center">$\frac{h\omega}{\delta_0}[1-cos(\frac{2\pi \delta}{\delta_0})]$</td>
-<td align="center">$-\frac{h\omega}{\delta_0’}[1-cos(\frac{2\pi \delta}{\delta_0’})]$</td>
-</tr>
-<tr>
-<td align="center">$\alpha&#x3D;$</td>
-<td align="center">$\frac{2 \pi h \omega }{\delta_0^2}sin(\frac{2 \pi \delta}{\delta})$</td>
-<td align="center">$-\frac{2 \pi h \omega }{\delta_0^2}sin(\frac{2 \pi \delta}{\delta})$</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<p>&amp;emsp;&amp;emsp;由以上知识可知，其运动过程如下所示：  </p>
-<center>
-
-<p>$s&#x3D;\begin{cases} s1_1&#x3D;2h\frac{\delta^2}{\delta_0^2} &amp;      \delta\in(0,75^\circ) \s1_2 &#x3D; h-2h\frac{(\delta_0-\delta)^2}{\delta_0’^2} &amp; \delta \in(75^\circ,150^\circ) \ s2&#x3D;0 &amp; \delta \in (150^\circ,180^\circ) \s3&#x3D; \frac{h}{2}[1+cos(\frac{\pi\delta}{\delta_0})]   &amp; \delta\in(180^\circ,270^\circ)   \s4&#x3D;0 &amp; \delta \in(270^\circ,360^\circ)   \end{cases}$</p>
-<br>
-
-<br>
-
-<p>$v&#x3D;\begin{cases} v1_1 &#x3D; 4h\omega\frac{\delta}{\delta_0^2}&amp;      \delta\in(0,75^\circ) \v1_2 &#x3D; 4h\omega\frac{(\delta_0-\delta)}{\delta_0^2}  &amp; \delta \in(75^\circ,150^\circ)\ v2 &#x3D; 0 &amp; \delta \in (150^\circ,180^\circ)   \v3&#x3D;-\frac{\pi h\omega }{2\delta_0’}sin(\frac{\pi \delta }{\delta_0’})  &amp; \delta\in(180^\circ,270^\circ) \v4&#x3D; 0  &amp; \delta \in(270^\circ,360^\circ) \end{cases}$</p>
-<br>
-
-<br>
-
-<p>$\alpha&#x3D;\begin{cases} a1_1 &#x3D; 4h\frac{\omega^2}{\delta_0’^2}&amp;      \delta\in(0,75^\circ) \a1_2 &#x3D; -4h\frac{\omega^2} {\delta_0’^2} &amp; \delta \in(75^\circ,150^\circ)\ a2 &#x3D; 0 &amp; \delta \in (150^\circ,180^\circ)       \a3&#x3D; -\frac{\pi^2 h\omega^2 }{2\delta_0’^2}sin(\frac{\pi \delta }{\delta_0’})&amp; \delta\in(180^\circ,270^\circ)       \ a4&#x3D; 0 &amp; \delta \in(270^\circ,360^\circ)          \end{cases}$  </p>
-</center>
-
-
-
-<p><img src="/images/zatan/3/3-1.png" alt="3-1"><br><img src="/images/zatan/3/3-2.png" alt="3-2"><br><img src="/images/zatan/3/3-3.png" alt="3-3">  </p>
-<p>&amp;emsp;&amp;emsp;再得偏置直动尖顶推杆盘型凸轮机构理论轮廓线：  </p>
-<center>
-<br>
-
-<p>$\begin{cases} x&#x3D;(s_0+s)\sin\delta + e\cos\delta \y&#x3D;(s_0+s)\cos\delta - e\sin\delta\end{cases}$</p>
-<br>
-
-</center>
-
-<p>&amp;emsp;&amp;emsp;其中$s_0&#x3D;\sqrt{r_0^2-e^2}$  </p>
-<p>&amp;emsp;&amp;emsp;采用解析法，得到如下图所示盘型凸轮机构轮廓图：  </p>
-<p><img src="/images/zatan/3/3-4.png" alt="3-4"></p>
-<h2 id="部分程序示例"><a href="#部分程序示例" class="headerlink" title="部分程序示例"></a>部分程序示例</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line"></span><br><span class="line">%导入信息</span><br><span class="line">r0=50; %基圆半径</span><br><span class="line">e=15; %偏心距</span><br><span class="line">delta_0=150;</span><br><span class="line">delta_1=30;</span><br><span class="line">delta_2=90;</span><br><span class="line">delta_3=90;</span><br><span class="line">h=25;</span><br><span class="line"></span><br><span class="line">%计算 </span><br><span class="line">delta=[0:1:360];</span><br><span class="line">s0=sqrt(r0^2-e^2);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">%各个推程位移、速读、加速度计算</span><br><span class="line">s11=2*h.*((delta.^2)/(delta_0^2));</span><br><span class="line">s12=h-2*h.*((delta_0-delta).^2/(delta_0^2));</span><br><span class="line">v1_1=4*h.*(delta/delta_0^2).*(delta&gt;=0 &amp; delta&lt;=75);</span><br><span class="line">v1_2=4*h.*((delta_0-delta)/delta_0^2).*(delta&gt;75 &amp; delta&lt;=150);</span><br><span class="line">a11=(4*h)/delta_0^2;</span><br><span class="line">a12=-(4*h)/delta_0^2;</span><br><span class="line"></span><br><span class="line">s2=h.*(delta&gt;150 &amp; delta&lt;180);</span><br><span class="line">v2=0.*(delta&gt;=150 &amp; delta&lt;180);</span><br><span class="line">a2=0;</span><br><span class="line"></span><br><span class="line">s3=0.5*h.*(1+cos((delta./delta_2)*pi));</span><br><span class="line">v3=-(pi*h.*sin((delta./delta_2)*pi))/(2*delta_2).*(delta&gt;=180 &amp; delta&lt;=270);</span><br><span class="line">a3=-(pi^2*h.*cos((delta./delta_2)*pi))/(2*delta_2^2);</span><br><span class="line"></span><br><span class="line">s4=0.5*h*(1+cos((270/270)*pi)).*(delta&gt;270 &amp; delta&lt;=360);</span><br><span class="line">v4=0.*(delta&gt;270 &amp; delta&lt;=360);</span><br><span class="line">a4=0;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">s=s11.*(delta&gt;=0 &amp; delta&lt;=75)+s12.*(delta&gt;75 &amp; delta&lt;=150)+s2+s3.*(delta&gt;=180 &amp; delta&lt;=270)+s4;</span><br><span class="line">v=v1_1+v1_2+v2+v3+v4;</span><br><span class="line">a=a11.*(delta&gt;=0 &amp; delta&lt;=75)+a12.*(delta&gt;75&amp; delta&lt;=150)+a2.*(delta&gt;150 &amp; delta&lt;180)+a3.*(delta&gt;=180 &amp; delta&lt;=270)+a4.*(delta&gt;270 &amp; delta&lt;=360);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">%计算出推杆位置坐标</span><br><span class="line">x=(s0+s).*sin(delta)+e.*cos(delta);       </span><br><span class="line">y=(s0+s).*cos(delta)-e.*sin(delta);</span><br><span class="line">rho=sqrt(x.^2+y.^2);</span><br><span class="line">r=50;</span><br></pre></td></tr></table></figure>
-      
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>个人留存学习笔记，欢迎各位交流指正！</p>
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/23/%E6%9D%82%E8%B0%88/tulun/" data-id="cl3qp23pv001n10qf3lma5rty" data-title="凸轮轮廓线推导" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a></li></ul>
+</div>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Miscellaneous/tulun" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/05/23/Miscellaneous/tulun/" class="article-date">
-  <time class="dt-published" datetime="2021-05-23T15:28:52.000Z" itemprop="datePublished">2021-05-23</time>
-</a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/05/23/Miscellaneous/tulun/">凸轮轮廓线推导</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>某直动尖顶推杆盘型凸轮机构，已知:  </p>
-<p>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;基圆半径：&amp;emsp;&amp;ensp;&amp;ensp;$r_0 &#x3D;50mm$<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;偏心距：&amp;emsp;&amp;ensp;&amp;ensp;&amp;emsp;$e&#x3D; 15mm$<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;推程运动角：&amp;emsp;$\delta_0 &#x3D;150^\circ$<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;远休止角：&amp;emsp;&amp;ensp;&amp;ensp;$\delta_1 &#x3D;30^ \circ$<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;回程运动角：&amp;emsp;$\delta_2 &#x3D;90 ^\circ$<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;近休止角：&amp;emsp;&amp;ensp;&amp;ensp;$\delta_3 &#x3D; 90 ^\circ$  </p>
-<p>推程阶段运动规律为<code>等加速等减速</code>。回程阶段为<code>简谐运动</code>，凸轮转向为顺时针，偏置方式为正偏置。<br>用解析法设置此凸轮机构，推导凸轮轮廓线数学方程，并绘制运动线图和凸轮轮廓图。  </p>
-<h2 id="建立数学模型"><a href="#建立数学模型" class="headerlink" title="建立数学模型"></a>建立数学模型</h2><center><font size=5 color=red>运动规律</font></center>  
-
-<h4 id="等加速等减速运动过程"><a href="#等加速等减速运动过程" class="headerlink" title="等加速等减速运动过程"></a>等加速等减速运动过程</h4><br>
-
-<table>
-<thead>
-<tr>
-<th align="center">&amp;emsp;&amp;emsp;待求量&amp;emsp;&amp;emsp;</th>
-<th align="center">&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;推程&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;</th>
-<th align="center">&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;回程&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">加速阶段</td>
-<td align="center">$0\le\delta\le \frac{\delta_0}{2}$</td>
-<td align="center">$0\le\delta\le \frac{\delta_0’}{2}$</td>
-</tr>
-<tr>
-<td align="center">$s&#x3D;$</td>
-<td align="center">$2h\frac{\delta^2}{\delta_0^2}$</td>
-<td align="center">$h-2h\frac{\delta^2}{\delta_0’^2}$</td>
-</tr>
-<tr>
-<td align="center">$v&#x3D;$</td>
-<td align="center">$4h\omega\frac{\delta}{\delta_0^2}$</td>
-<td align="center">$-4h\omega\frac{\delta}{\delta_0’^2}$</td>
-</tr>
-<tr>
-<td align="center">$\alpha&#x3D;$</td>
-<td align="center">$4h\frac{\omega^2}{\delta_0^2}$</td>
-<td align="center">$-4h\frac{\omega^2}{\delta_0’^2}$</td>
-</tr>
-<tr>
-<td align="center">减速阶段</td>
-<td align="center">$\frac{\delta_0}{2}\le\delta\le\delta_0$</td>
-<td align="center">$\frac{\delta_0’}{2}\le\delta\le\delta’_0$</td>
-</tr>
-<tr>
-<td align="center">$s&#x3D;$</td>
-<td align="center">$h-2h\frac{(\delta_0-\delta)^2}{\delta_0’^2}$</td>
-<td align="center">$2h\frac{(\delta_0’-\delta)^2}{\delta_0^2}$</td>
-</tr>
-<tr>
-<td align="center">$v&#x3D;$</td>
-<td align="center">$4h\omega\frac{(\delta_0-\delta)}{\delta_0^2}$</td>
-<td align="center">$-4h\omega\frac{(\delta_0’-\delta)}{\delta_0’^2}$</td>
-</tr>
-<tr>
-<td align="center">$\alpha&#x3D;$</td>
-<td align="center">$-4h\frac{\omega^2}{\delta_0’^2}$</td>
-<td align="center">$4h\frac{\omega^2}{\delta_0^2}$</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<h4 id="简谐运动-余弦加速度"><a href="#简谐运动-余弦加速度" class="headerlink" title="简谐运动(余弦加速度)"></a>简谐运动(余弦加速度)</h4><br>
-
-<table>
-<thead>
-<tr>
-<th align="center">&amp;emsp;&amp;emsp;待求量&amp;emsp;&amp;emsp;</th>
-<th align="center">&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;推程&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;</th>
-<th align="center">&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;回程&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">简谐运动</td>
-<td align="center">$0\le\delta\le \frac{\delta_0}{2}$</td>
-<td align="center">$0\le\delta\le \frac{\delta_0’}{2}$</td>
-</tr>
-<tr>
-<td align="center">$s&#x3D;$</td>
-<td align="center">$\frac{h}{2}[1-cos(\frac{\pi\delta}{\delta_0})]$</td>
-<td align="center">$\frac{h}{2}[1+cos(\frac{\pi\delta}{\delta_0})]$</td>
-</tr>
-<tr>
-<td align="center">$v&#x3D;$</td>
-<td align="center">$\frac{\pi h\omega }{2\delta_0}sin(\frac{\pi \delta }{\delta_0})$</td>
-<td align="center">$-\frac{\pi h\omega }{2\delta_0’}sin(\frac{\pi \delta }{\delta_0’})$</td>
-</tr>
-<tr>
-<td align="center">$\alpha&#x3D;$</td>
-<td align="center">$\frac{\pi^2 h\omega^2 }{2\delta_0^2}sin(\frac{\pi \delta }{\delta_0})$</td>
-<td align="center">$-\frac{\pi^2 h\omega^2 }{2\delta_0’^2}sin(\frac{\pi \delta }{\delta_0’})$</td>
-</tr>
-<tr>
-<td align="center">摆线运动</td>
-<td align="center">$0\le\delta\le \frac{\delta_0}{2}$</td>
-<td align="center">$0\le\delta\le \frac{\delta_0’}{2}$</td>
-</tr>
-<tr>
-<td align="center">$s&#x3D;$</td>
-<td align="center">$h[\frac{\delta}{\delta_0}-\frac{1}{2\pi}sin(\frac{2\pi \delta}{\delta_0})]$</td>
-<td align="center">$h-h[\frac{\delta}{\delta_0’}-\frac{1}{2\pi}sin(\frac{2\pi \delta}{\delta_0’})]$</td>
-</tr>
-<tr>
-<td align="center">$v&#x3D;$</td>
-<td align="center">$\frac{h\omega}{\delta_0}[1-cos(\frac{2\pi \delta}{\delta_0})]$</td>
-<td align="center">$-\frac{h\omega}{\delta_0’}[1-cos(\frac{2\pi \delta}{\delta_0’})]$</td>
-</tr>
-<tr>
-<td align="center">$\alpha&#x3D;$</td>
-<td align="center">$\frac{2 \pi h \omega }{\delta_0^2}sin(\frac{2 \pi \delta}{\delta})$</td>
-<td align="center">$-\frac{2 \pi h \omega }{\delta_0^2}sin(\frac{2 \pi \delta}{\delta})$</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<p>&amp;emsp;&amp;emsp;由以上知识可知，其运动过程如下所示：  </p>
-<center>
-
-<p>$s&#x3D;\begin{cases} s1_1&#x3D;2h\frac{\delta^2}{\delta_0^2} &amp;      \delta\in(0,75^\circ) \s1_2 &#x3D; h-2h\frac{(\delta_0-\delta)^2}{\delta_0’^2} &amp; \delta \in(75^\circ,150^\circ) \ s2&#x3D;0 &amp; \delta \in (150^\circ,180^\circ) \s3&#x3D; \frac{h}{2}[1+cos(\frac{\pi\delta}{\delta_0})]   &amp; \delta\in(180^\circ,270^\circ)   \s4&#x3D;0 &amp; \delta \in(270^\circ,360^\circ)   \end{cases}$</p>
-<br>
-
-<br>
-
-<p>$v&#x3D;\begin{cases} v1_1 &#x3D; 4h\omega\frac{\delta}{\delta_0^2}&amp;      \delta\in(0,75^\circ) \v1_2 &#x3D; 4h\omega\frac{(\delta_0-\delta)}{\delta_0^2}  &amp; \delta \in(75^\circ,150^\circ)\ v2 &#x3D; 0 &amp; \delta \in (150^\circ,180^\circ)   \v3&#x3D;-\frac{\pi h\omega }{2\delta_0’}sin(\frac{\pi \delta }{\delta_0’})  &amp; \delta\in(180^\circ,270^\circ) \v4&#x3D; 0  &amp; \delta \in(270^\circ,360^\circ) \end{cases}$</p>
-<br>
-
-<br>
-
-<p>$\alpha&#x3D;\begin{cases} a1_1 &#x3D; 4h\frac{\omega^2}{\delta_0’^2}&amp;      \delta\in(0,75^\circ) \a1_2 &#x3D; -4h\frac{\omega^2} {\delta_0’^2} &amp; \delta \in(75^\circ,150^\circ)\ a2 &#x3D; 0 &amp; \delta \in (150^\circ,180^\circ)       \a3&#x3D; -\frac{\pi^2 h\omega^2 }{2\delta_0’^2}sin(\frac{\pi \delta }{\delta_0’})&amp; \delta\in(180^\circ,270^\circ)       \ a4&#x3D; 0 &amp; \delta \in(270^\circ,360^\circ)          \end{cases}$  </p>
-</center>
-
-
-
-<p><img src="/images/zatan/3/3-1.png" alt="3-1"><br><img src="/images/zatan/3/3-2.png" alt="3-2"><br><img src="/images/zatan/3/3-3.png" alt="3-3">  </p>
-<p>&amp;emsp;&amp;emsp;再得偏置直动尖顶推杆盘型凸轮机构理论轮廓线：  </p>
-<center>
-<br>
-
-<p>$\begin{cases} x&#x3D;(s_0+s)\sin\delta + e\cos\delta \y&#x3D;(s_0+s)\cos\delta - e\sin\delta\end{cases}$</p>
-<br>
-
-</center>
-
-<p>&amp;emsp;&amp;emsp;其中$s_0&#x3D;\sqrt{r_0^2-e^2}$  </p>
-<p>&amp;emsp;&amp;emsp;采用解析法，得到如下图所示盘型凸轮机构轮廓图：  </p>
-<p><img src="/images/zatan/3/3-4.png" alt="3-4"></p>
-<h2 id="部分程序示例"><a href="#部分程序示例" class="headerlink" title="部分程序示例"></a>部分程序示例</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line"></span><br><span class="line">%导入信息</span><br><span class="line">r0=50; %基圆半径</span><br><span class="line">e=15; %偏心距</span><br><span class="line">delta_0=150;</span><br><span class="line">delta_1=30;</span><br><span class="line">delta_2=90;</span><br><span class="line">delta_3=90;</span><br><span class="line">h=25;</span><br><span class="line"></span><br><span class="line">%计算 </span><br><span class="line">delta=[0:1:360];</span><br><span class="line">s0=sqrt(r0^2-e^2);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">%各个推程位移、速读、加速度计算</span><br><span class="line">s11=2*h.*((delta.^2)/(delta_0^2));</span><br><span class="line">s12=h-2*h.*((delta_0-delta).^2/(delta_0^2));</span><br><span class="line">v1_1=4*h.*(delta/delta_0^2).*(delta&gt;=0 &amp; delta&lt;=75);</span><br><span class="line">v1_2=4*h.*((delta_0-delta)/delta_0^2).*(delta&gt;75 &amp; delta&lt;=150);</span><br><span class="line">a11=(4*h)/delta_0^2;</span><br><span class="line">a12=-(4*h)/delta_0^2;</span><br><span class="line"></span><br><span class="line">s2=h.*(delta&gt;150 &amp; delta&lt;180);</span><br><span class="line">v2=0.*(delta&gt;=150 &amp; delta&lt;180);</span><br><span class="line">a2=0;</span><br><span class="line"></span><br><span class="line">s3=0.5*h.*(1+cos((delta./delta_2)*pi));</span><br><span class="line">v3=-(pi*h.*sin((delta./delta_2)*pi))/(2*delta_2).*(delta&gt;=180 &amp; delta&lt;=270);</span><br><span class="line">a3=-(pi^2*h.*cos((delta./delta_2)*pi))/(2*delta_2^2);</span><br><span class="line"></span><br><span class="line">s4=0.5*h*(1+cos((270/270)*pi)).*(delta&gt;270 &amp; delta&lt;=360);</span><br><span class="line">v4=0.*(delta&gt;270 &amp; delta&lt;=360);</span><br><span class="line">a4=0;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">s=s11.*(delta&gt;=0 &amp; delta&lt;=75)+s12.*(delta&gt;75 &amp; delta&lt;=150)+s2+s3.*(delta&gt;=180 &amp; delta&lt;=270)+s4;</span><br><span class="line">v=v1_1+v1_2+v2+v3+v4;</span><br><span class="line">a=a11.*(delta&gt;=0 &amp; delta&lt;=75)+a12.*(delta&gt;75&amp; delta&lt;=150)+a2.*(delta&gt;150 &amp; delta&lt;180)+a3.*(delta&gt;=180 &amp; delta&lt;=270)+a4.*(delta&gt;270 &amp; delta&lt;=360);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">%计算出推杆位置坐标</span><br><span class="line">x=(s0+s).*sin(delta)+e.*cos(delta);       </span><br><span class="line">y=(s0+s).*cos(delta)-e.*sin(delta);</span><br><span class="line">rho=sqrt(x.^2+y.^2);</span><br><span class="line">r=50;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/23/Miscellaneous/tulun/" data-id="cl3qp641m0004z4qfd2cndke8" data-title="凸轮轮廓线推导" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-杂谈/yaodongbaogan" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/05/01/%E6%9D%82%E8%B0%88/yaodongbaogan/" class="article-date">
-  <time class="dt-published" datetime="2021-05-01T10:54:23.000Z" itemprop="datePublished">2021-05-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/05/01/%E6%9D%82%E8%B0%88/yaodongbaogan/">摇动摆杆运动分析</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="提出问题："><a href="#提出问题：" class="headerlink" title="提出问题："></a>提出问题：</h2><p>&lt;img src&#x3D;”&#x2F;images&#x2F;zatan&#x2F;2-1.png” width&#x3D;25%” height&#x3D;25%” align&#x3D;right &#x2F;&gt;</p>
-<p>&amp;emsp;&amp;emsp;在如左图所示的摆杆中，已知:</p>
-<p>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;$\iota_1$&amp;ensp;&#x3D; &amp;ensp;0.6 m<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;$\iota_4$&amp;ensp;&#x3D; &amp;ensp;1.2 m<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;$\omega_1$&#x3D; &amp;ensp;3 rad&#x2F;s  </p>
-<p>&amp;emsp;&amp;emsp;假如原动杆以$\omega_1$的恒定角速度转动，尝试导出机构3的角位置 $\theta_3$、角速度 $\omega_3$、角加速度$\alpha_3$</p>
-<br>
-
-<br>
-
-<h2 id="建立模型"><a href="#建立模型" class="headerlink" title="建立模型"></a>建立模型</h2><p>&lt;img src&#x3D;”&#x2F;images&#x2F;zatan&#x2F;2-2.png” width&#x3D;60%” height&#x3D;60%” align&#x3D;right &#x2F;&gt;</p>
-<p>1、首先要将运动机构简化为数学模型，可以很轻易得出如右图所示模型；<br>2、求出 $\theta_3$ ： </p>
-<center>
-$\frac{cos\theta_3}{\iota_1}$=$\frac{sin(\theta_3-\theta_1)}{\iota_4}$  
-
-</center>
-<center>
-
-<p> $\Downarrow$  </p>
-</center>
-<center>
-
-<p>2cos$\theta_3$&#x3D;sin($\theta_3-\theta_1$)  </p>
-</center>
-<center>
-
-<p> $\Downarrow$  </p>
-</center>
-<center>
-
-<p>$2cos\theta_3 &#x3D;sin\theta_3cos\theta_1-sin\theta_1cos\theta_3$  </p>
-</center>
-<center>
-
-<p>$\Downarrow$  </p>
-</center>
-<center>
-
-<p>$tan\theta_3 &#x3D; \frac{2+sin\theta_1}{cos\theta_1}$  </p>
-</center>
-<center>
-
-<p>$\Downarrow$  </p>
-</center>
-<center>
-
-<p>$\theta_3 &#x3D; arctan\frac{2+sin\theta_1}{cos\theta_1}$</p>
-</center>
-
-<br>
-
-<p>&lt;img src&#x3D;”&#x2F;images&#x2F;zatan&#x2F;2-3.png” width&#x3D;60%” height&#x3D;60%” align&#x3D;right &#x2F;&gt;</p>
-<p>3、因为$\theta_3$要满足如此条件 ： ($\frac{\pi}{3} \leqslant \theta_3 \leqslant \frac{2\pi}{3}$)。且用反三角函数解出来的 $\theta_3$ 有一跃变的过程。  故，对 $\theta_3$ 对弧度值小于0的 $\theta_3$ 进行 $\theta_3$ &#x3D; $\theta_3$ +$\pi$ 处理，可以得到正确的 $\theta_3$ 值。</p>
-<p>4、求出 $\theta_3$ 后，则 $\omega_3$ 、$\alpha_3$ 求法就简单：</p>
-<center>
-
-<p>$\omega_3 &#x3D; \omega_1 * cos (\theta_3-\theta_1)$</p>
-</center>
-<center>
-
-<p>$\alpha_3 &#x3D; \omega_1 * sin (\theta_3-\theta_1)$</p>
-</center>
-
-<p>5、对以上数学模型进行处理，分别带入到Excel、Matlab中，可以输出运行结果‘</p>
-<br>
-
-<br>
-
-<h2 id="Excel计算数据"><a href="#Excel计算数据" class="headerlink" title="Excel计算数据"></a>Excel计算数据</h2><table>
-   <tr>
-      <td>\theta_1 (\cric)</td>
-      <td>\theta_3 (rad)</td>
-      <td>\omega_3 (rad/s)</td>
-      <td>\alpha_3 (rad/s^-2)</td>
-   </tr>
-   <tr>
-      <td>0</td>
-      <td>1.107148718</td>
-      <td>1.341640786</td>
-      <td>2.683281573</td>
-   </tr>
-   <tr>
-      <td>5</td>
-      <td>1.125474919</td>
-      <td>1.523293436</td>
-      <td>2.584487784</td>
-   </tr>
-   <tr>
-      <td>10</td>
-      <td>1.145395003</td>
-      <td>1.693764615</td>
-      <td>2.476118218</td>
-   </tr>
-   <tr>
-      <td>15</td>
-      <td>1.166705008</td>
-      <td>1.8532794</td>
-      <td>2.359100563</td>
-   </tr>
-   <tr>
-      <td>20</td>
-      <td>1.189228628</td>
-      <td>2.002024817</td>
-      <td>2.234255275</td>
-   </tr>
-   <tr>
-      <td>25</td>
-      <td>1.212812651</td>
-      <td>2.140153305</td>
-      <td>2.10231868</td>
-   </tr>
-   <tr>
-      <td>30</td>
-      <td>1.237323155</td>
-      <td>2.267786838</td>
-      <td>1.963961012</td>
-   </tr>
-   <tr>
-      <td>35</td>
-      <td>1.262642349</td>
-      <td>2.385021177</td>
-      <td>1.819800535</td>
-   </tr>
-   <tr>
-      <td>40</td>
-      <td>1.288665945</td>
-      <td>2.491929983</td>
-      <td>1.670414607</td>
-   </tr>
-   <tr>
-      <td>45</td>
-      <td>1.315300953</td>
-      <td>2.588568628</td>
-      <td>1.516348395</td>
-   </tr>
-   <tr>
-      <td>50</td>
-      <td>1.342463822</td>
-      <td>2.674977634</td>
-      <td>1.358121738</td>
-   </tr>
-   <tr>
-      <td>55</td>
-      <td>1.370078875</td>
-      <td>2.751185712</td>
-      <td>1.196234584</td>
-   </tr>
-   <tr>
-      <td>60</td>
-      <td>1.398076962</td>
-      <td>2.817212405</td>
-      <td>1.031171308</td>
-   </tr>
-   <tr>
-      <td>65</td>
-      <td>1.426394312</td>
-      <td>2.873070353</td>
-      <td>0.863404163</td>
-   </tr>
-   <tr>
-      <td>70</td>
-      <td>1.45497152</td>
-      <td>2.918767192</td>
-      <td>0.693396048</td>
-   </tr>
-   <tr>
-      <td>75</td>
-      <td>1.48375266</td>
-      <td>2.954307121</td>
-      <td>0.521602754</td>
-   </tr>
-   <tr>
-      <td>80</td>
-      <td>1.512684489</td>
-      <td>2.979692149</td>
-      <td>0.348474818</td>
-   </tr>
-   <tr>
-      <td>85</td>
-      <td>1.541715716</td>
-      <td>2.994923043</td>
-      <td>0.174459074</td>
-   </tr>
-   <tr>
-      <td>90</td>
-      <td>1.570796327</td>
-      <td>3</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>95</td>
-      <td>1.599876938</td>
-      <td>2.994923043</td>
-      <td>-0.174459074</td>
-   </tr>
-   <tr>
-      <td>100</td>
-      <td>1.628908165</td>
-      <td>2.979692149</td>
-      <td>-0.348474818</td>
-   </tr>
-   <tr>
-      <td>105</td>
-      <td>1.657839993</td>
-      <td>2.954307121</td>
-      <td>-0.521602754</td>
-   </tr>
-   <tr>
-      <td>110</td>
-      <td>1.686621134</td>
-      <td>2.918767192</td>
-      <td>-0.693396048</td>
-   </tr>
-   <tr>
-      <td>115</td>
-      <td>1.715198341</td>
-      <td>2.873070353</td>
-      <td>-0.863404163</td>
-   </tr>
-   <tr>
-      <td>120</td>
-      <td>1.743515692</td>
-      <td>2.817212405</td>
-      <td>-1.031171308</td>
-   </tr>
-   <tr>
-      <td>125</td>
-      <td>1.771513779</td>
-      <td>2.751185712</td>
-      <td>-1.196234584</td>
-   </tr>
-   <tr>
-      <td>130</td>
-      <td>1.799128831</td>
-      <td>2.674977634</td>
-      <td>-1.358121738</td>
-   </tr>
-   <tr>
-      <td>135</td>
-      <td>1.8262917</td>
-      <td>2.588568628</td>
-      <td>-1.516348395</td>
-   </tr>
-   <tr>
-      <td>140</td>
-      <td>1.852926708</td>
-      <td>2.491929983</td>
-      <td>-1.670414607</td>
-   </tr>
-   <tr>
-      <td>145</td>
-      <td>1.878950305</td>
-      <td>2.385021177</td>
-      <td>-1.819800535</td>
-   </tr>
-   <tr>
-      <td>150</td>
-      <td>1.904269499</td>
-      <td>2.267786838</td>
-      <td>-1.963961012</td>
-   </tr>
-   <tr>
-      <td>155</td>
-      <td>1.928780002</td>
-      <td>2.140153305</td>
-      <td>-2.10231868</td>
-   </tr>
-   <tr>
-      <td>160</td>
-      <td>1.952364025</td>
-      <td>2.002024817</td>
-      <td>-2.234255275</td>
-   </tr>
-   <tr>
-      <td>165</td>
-      <td>1.974887646</td>
-      <td>1.8532794</td>
-      <td>-2.359100563</td>
-   </tr>
-   <tr>
-      <td>170</td>
-      <td>1.99619765</td>
-      <td>1.693764615</td>
-      <td>-2.476118218</td>
-   </tr>
-   <tr>
-      <td>175</td>
-      <td>2.016117734</td>
-      <td>1.523293436</td>
-      <td>-2.584487784</td>
-   </tr>
-   <tr>
-      <td>180</td>
-      <td>2.034443936</td>
-      <td>1.341640786</td>
-      <td>-2.683281573</td>
-   </tr>
-   <tr>
-      <td>185</td>
-      <td>2.050939135</td>
-      <td>1.148541591</td>
-      <td>-2.771435046</td>
-   </tr>
-   <tr>
-      <td>190</td>
-      <td>2.065326477</td>
-      <td>0.943691779</td>
-      <td>-2.847708873</td>
-   </tr>
-   <tr>
-      <td>195</td>
-      <td>2.077281554</td>
-      <td>0.726754602</td>
-      <td>-2.910640436</td>
-   </tr>
-   <tr>
-      <td>200</td>
-      <td>2.086423264</td>
-      <td>0.497376043</td>
-      <td>-2.958482224</td>
-   </tr>
-   <tr>
-      <td>205</td>
-      <td>2.092303368</td>
-      <td>0.255215338</td>
-      <td>-2.989124476</td>
-   </tr>
-   <tr>
-      <td>210</td>
-      <td>2.094395102</td>
-      <td>-1.1485E-15</td>
-      <td>-3</td>
-   </tr>
-   <tr>
-      <td>215</td>
-      <td>2.092081706</td>
-      <td>-0.268380304</td>
-      <td>-2.98797122</td>
-   </tr>
-   <tr>
-      <td>220</td>
-      <td>2.084646809</td>
-      <td>-0.549719909</td>
-      <td>-2.949204642</td>
-   </tr>
-   <tr>
-      <td>225</td>
-      <td>2.071270364</td>
-      <td>-0.843253913</td>
-      <td>-2.879048947</td>
-   </tr>
-   <tr>
-      <td>230</td>
-      <td>2.051036647</td>
-      <td>-1.147288675</td>
-      <td>-2.771953949</td>
-   </tr>
-   <tr>
-      <td>235</td>
-      <td>2.022965068</td>
-      <td>-1.458669382</td>
-      <td>-2.621504079</td>
-   </tr>
-   <tr>
-      <td>240</td>
-      <td>1.986079566</td>
-      <td>-1.772071484</td>
-      <td>-2.420694664</td>
-   </tr>
-   <tr>
-      <td>245</td>
-      <td>1.939536273</td>
-      <td>-2.07917744</td>
-      <td>-2.162642174</td>
-   </tr>
-   <tr>
-      <td>250</td>
-      <td>1.882826066</td>
-      <td>-2.367960099</td>
-      <td>-1.841945974</td>
-   </tr>
-   <tr>
-      <td>255</td>
-      <td>1.816048477</td>
-      <td>-2.622540252</td>
-      <td>-1.456805623</td>
-   </tr>
-   <tr>
-      <td>260</td>
-      <td>1.740206377</td>
-      <td>-2.824297227</td>
-      <td>-1.011605247</td>
-   </tr>
-   <tr>
-      <td>265</td>
-      <td>1.657404473</td>
-      <td>-2.954765565</td>
-      <td>-0.518999474</td>
-   </tr>
-   <tr>
-      <td>270</td>
-      <td>1.570796327</td>
-      <td>-3</td>
-      <td>-3.67545E-16</td>
-   </tr>
-   <tr>
-      <td>275</td>
-      <td>1.484188181</td>
-      <td>-2.954765565</td>
-      <td>0.518999474</td>
-   </tr>
-   <tr>
-      <td>280</td>
-      <td>1.401386276</td>
-      <td>-2.824297227</td>
-      <td>1.011605247</td>
-   </tr>
-   <tr>
-      <td>285</td>
-      <td>1.325544177</td>
-      <td>-2.622540252</td>
-      <td>1.456805623</td>
-   </tr>
-   <tr>
-      <td>290</td>
-      <td>1.258766587</td>
-      <td>-2.367960099</td>
-      <td>1.841945974</td>
-   </tr>
-   <tr>
-      <td>295</td>
-      <td>1.202056381</td>
-      <td>-2.07917744</td>
-      <td>2.162642174</td>
-   </tr>
-   <tr>
-      <td>300</td>
-      <td>1.155513088</td>
-      <td>-1.772071484</td>
-      <td>2.420694664</td>
-   </tr>
-   <tr>
-      <td>305</td>
-      <td>1.118627586</td>
-      <td>-1.458669382</td>
-      <td>2.621504079</td>
-   </tr>
-   <tr>
-      <td>310</td>
-      <td>1.090556007</td>
-      <td>-1.147288675</td>
-      <td>2.771953949</td>
-   </tr>
-   <tr>
-      <td>315</td>
-      <td>1.07032229</td>
-      <td>-0.843253913</td>
-      <td>2.879048947</td>
-   </tr>
-   <tr>
-      <td>320</td>
-      <td>1.056945844</td>
-      <td>-0.549719909</td>
-      <td>2.949204642</td>
-   </tr>
-   <tr>
-      <td>325</td>
-      <td>1.049510948</td>
-      <td>-0.268380304</td>
-      <td>2.98797122</td>
-   </tr>
-   <tr>
-      <td>330</td>
-      <td>1.047197551</td>
-      <td>-5.51317E-16</td>
-      <td>3</td>
-   </tr>
-   <tr>
-      <td>335</td>
-      <td>1.049289285</td>
-      <td>0.255215338</td>
-      <td>2.989124476</td>
-   </tr>
-   <tr>
-      <td>340</td>
-      <td>1.05516939</td>
-      <td>0.497376043</td>
-      <td>2.958482224</td>
-   </tr>
-   <tr>
-      <td>345</td>
-      <td>1.064311099</td>
-      <td>0.726754602</td>
-      <td>2.910640436</td>
-   </tr>
-   <tr>
-      <td>350</td>
-      <td>1.076266177</td>
-      <td>0.943691779</td>
-      <td>2.847708873</td>
-   </tr>
-   <tr>
-      <td>355</td>
-      <td>1.090653519</td>
-      <td>1.148541591</td>
-      <td>2.771435046</td>
-   </tr>
-   <tr>
-      <td>360</td>
-      <td>1.107148718</td>
-      <td>1.341640786</td>
-      <td>2.683281573</td>
-   </tr>
-   <tr>
-      <td></td>
-   </tr>
-</table>
-
-
-
-<h2 id="Matlab程序运算、作图"><a href="#Matlab程序运算、作图" class="headerlink" title="Matlab程序运算、作图"></a>Matlab程序运算、作图</h2><ul>
-<li><p>示例程序：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line">%已知：</span><br><span class="line">l1=0.6;</span><br><span class="line">l4=1.2;</span><br><span class="line">w1=3;</span><br><span class="line">th=[0:5:360]</span><br><span class="line">th1=deg2rad(th)</span><br><span class="line">th3=atan(((l4/l1)+sin(th1))./cos(th1));</span><br><span class="line">th3(th3&lt;0)=th3(th3&lt;0)+pi;</span><br><span class="line">om3=(w1.*cos(th3-th1));</span><br><span class="line">al3=w1.*sin(th3-th1)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">figure(1)       %得到机构3的转动角度\theta_3的角度</span><br><span class="line">plot(th,th3,&#x27;r&#x27;)</span><br><span class="line">title(&#x27;角位移图线&#x27;);</span><br><span class="line">xlabel(&#x27;原动杆转角 \theta_1 /\circ&#x27;)</span><br><span class="line">ylabel(&#x27;从动杆转角 \theta_2 &#x27;)</span><br><span class="line">grid on;</span><br><span class="line"></span><br><span class="line">figure(2)       %得到机构3的角速度\omega_3</span><br><span class="line">plot(th,om3,&#x27;b&#x27;)</span><br><span class="line">title(&#x27;角速度图像&#x27;);</span><br><span class="line">xlabel(&#x27;原动杆转动角度 \theta_1 /\circ&#x27;)</span><br><span class="line">ylabel(&#x27;从动杆转角速读 \omega_2 /rad/s&#x27;)</span><br><span class="line">grid on;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">figure(3)       %得到机构3的角加速度\alpha_3</span><br><span class="line">plot(th,al3,&#x27;black&#x27;)</span><br><span class="line">title(&#x27;角加速度图线&#x27;);</span><br><span class="line">xlabel(&#x27;原动杆转角度 \theta_1 /\circ&#x27;)</span><br><span class="line">ylabel(&#x27;从动杆转角加速度 \alpha_3 rad/s^2&#x27;)</span><br><span class="line">grid on;</span><br><span class="line"></span><br><span class="line">figure(4)       %合并以上三个图像</span><br><span class="line">plot(th,th3,&#x27;r&#x27;,th,om3,&#x27;b&#x27;,th,al3,&#x27;black&#x27;)</span><br><span class="line">title(&#x27;摆动导杆运动分析&#x27;);</span><br><span class="line">text(100,1.3,&#x27;\theta_3&#x27;)</span><br><span class="line">text(100,2.7,&#x27;\omega_3&#x27;)</span><br><span class="line">text(200,-2.5,&#x27;\alpha_3&#x27;)</span><br><span class="line">grid on;</span><br><span class="line"></span><br><span class="line">disp(&#x27;原转动角度 - 从转动角度 - 角速度 - 角加速度&#x27;)</span><br><span class="line">y=[th&#x27;,th3&#x27;,om3&#x27;,al3&#x27;];</span><br><span class="line">disp(y)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>得到以下图像：<br><img src="/images/zatan/2/2-9.png" alt="1"><br><img src="/images/zatan/2/2-10.png" alt="2"><br><img src="/images/zatan/2/2-4.png" alt="3"><br><img src="/images/zatan/2/2-5.png" alt="4">  </p>
-</li>
-<li><p>得到同Excel数据：(节选)<br> <img src="/images/zatan/2/2-6.png" alt="5"></p>
-</li>
-</ul>
-<h2 id="Adams运动分析"><a href="#Adams运动分析" class="headerlink" title="Adams运动分析"></a>Adams运动分析</h2><br>
-
-<br>
-
-<h4 id="模拟运动曲线"><a href="#模拟运动曲线" class="headerlink" title="模拟运动曲线"></a>模拟运动曲线</h4><br>
-
-<p><img src="/images/zatan/2/2-7.png" alt="2-7"></p>
-<h4 id="运动模拟"><a href="#运动模拟" class="headerlink" title="运动模拟"></a>运动模拟</h4><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe 
-src="/images/zatan/2-8.gif" scrolling="no" border="0" 
-frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
-height: 100%; left: 0; top: 0;"> </iframe></div>
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/01/%E6%9D%82%E8%B0%88/yaodongbaogan/" data-id="cl3qp23px001u10qf3q5972tf" data-title="摇动摆杆运动分析" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Miscellaneous/yaodongbaogan" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/05/01/Miscellaneous/yaodongbaogan/" class="article-date">
-  <time class="dt-published" datetime="2021-05-01T10:54:23.000Z" itemprop="datePublished">2021-05-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/05/01/Miscellaneous/yaodongbaogan/">摇动摆杆运动分析</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="提出问题："><a href="#提出问题：" class="headerlink" title="提出问题："></a>提出问题：</h2><p>&lt;img src&#x3D;”&#x2F;images&#x2F;zatan&#x2F;2&#x2F;2-1.png” width&#x3D;25%” height&#x3D;25%” align&#x3D;right &#x2F;&gt;</p>
-<p>&amp;emsp;&amp;emsp;在如左图所示的摆杆中，已知:</p>
-<p>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;$\iota_1$&amp;ensp;&#x3D; &amp;ensp;0.6 m<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;$\iota_4$&amp;ensp;&#x3D; &amp;ensp;1.2 m<br>&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;$\omega_1$&#x3D; &amp;ensp;3 rad&#x2F;s  </p>
-<p>&amp;emsp;&amp;emsp;假如原动杆以$\omega_1$的恒定角速度转动，尝试导出机构3的角位置 $\theta_3$、角速度 $\omega_3$、角加速度$\alpha_3$</p>
-<br>
-
-<br>
-
-<h2 id="建立模型"><a href="#建立模型" class="headerlink" title="建立模型"></a>建立模型</h2><p>&lt;img src&#x3D;”&#x2F;images&#x2F;zatan&#x2F;2&#x2F;2-2.png” width&#x3D;60%” height&#x3D;60%” align&#x3D;right &#x2F;&gt;</p>
-<p>1、首先要将运动机构简化为数学模型，可以很轻易得出如右图所示模型；<br>2、求出 $\theta_3$ ： </p>
-<center>
-$\frac{cos\theta_3}{\iota_1}$=$\frac{sin(\theta_3-\theta_1)}{\iota_4}$  
-
-</center>
-<center>
-
-<p> $\Downarrow$  </p>
-</center>
-<center>
-
-<p>2cos$\theta_3$&#x3D;sin($\theta_3-\theta_1$)  </p>
-</center>
-<center>
-
-<p> $\Downarrow$  </p>
-</center>
-<center>
-
-<p>$2cos\theta_3 &#x3D;sin\theta_3cos\theta_1-sin\theta_1cos\theta_3$  </p>
-</center>
-<center>
-
-<p>$\Downarrow$  </p>
-</center>
-<center>
-
-<p>$tan\theta_3 &#x3D; \frac{2+sin\theta_1}{cos\theta_1}$  </p>
-</center>
-<center>
-
-<p>$\Downarrow$  </p>
-</center>
-<center>
-
-<p>$\theta_3 &#x3D; arctan\frac{2+sin\theta_1}{cos\theta_1}$</p>
-</center>
-
-<br>
-
-<p>&lt;img src&#x3D;”&#x2F;images&#x2F;zatan&#x2F;2&#x2F;2-3.png” width&#x3D;60%” height&#x3D;60%” align&#x3D;right &#x2F;&gt;</p>
-<p>3、因为$\theta_3$要满足如此条件 ： ($\frac{\pi}{3} \leqslant \theta_3 \leqslant \frac{2\pi}{3}$)。且用反三角函数解出来的 $\theta_3$ 有一跃变的过程。  故，对 $\theta_3$ 对弧度值小于0的 $\theta_3$ 进行 $\theta_3$ &#x3D; $\theta_3$ +$\pi$ 处理，可以得到正确的 $\theta_3$ 值。</p>
-<p>4、求出 $\theta_3$ 后，则 $\omega_3$ 、$\alpha_3$ 求法就简单：</p>
-<center>
-
-<p>$\omega_3 &#x3D; \omega_1 * cos (\theta_3-\theta_1)$</p>
-</center>
-<center>
-
-<p>$\alpha_3 &#x3D; \omega_1 * sin (\theta_3-\theta_1)$</p>
-</center>
-
-<p>5、对以上数学模型进行处理，分别带入到Excel、Matlab中，可以输出运行结果‘</p>
-<br>
-
-<br>
-
-<h2 id="Excel计算数据"><a href="#Excel计算数据" class="headerlink" title="Excel计算数据"></a>Excel计算数据</h2><table>
-   <tr>
-      <td>\theta_1 (\cric)</td>
-      <td>\theta_3 (rad)</td>
-      <td>\omega_3 (rad/s)</td>
-      <td>\alpha_3 (rad/s^-2)</td>
-   </tr>
-   <tr>
-      <td>0</td>
-      <td>1.107148718</td>
-      <td>1.341640786</td>
-      <td>2.683281573</td>
-   </tr>
-   <tr>
-      <td>5</td>
-      <td>1.125474919</td>
-      <td>1.523293436</td>
-      <td>2.584487784</td>
-   </tr>
-   <tr>
-      <td>10</td>
-      <td>1.145395003</td>
-      <td>1.693764615</td>
-      <td>2.476118218</td>
-   </tr>
-   <tr>
-      <td>15</td>
-      <td>1.166705008</td>
-      <td>1.8532794</td>
-      <td>2.359100563</td>
-   </tr>
-   <tr>
-      <td>20</td>
-      <td>1.189228628</td>
-      <td>2.002024817</td>
-      <td>2.234255275</td>
-   </tr>
-   <tr>
-      <td>25</td>
-      <td>1.212812651</td>
-      <td>2.140153305</td>
-      <td>2.10231868</td>
-   </tr>
-   <tr>
-      <td>30</td>
-      <td>1.237323155</td>
-      <td>2.267786838</td>
-      <td>1.963961012</td>
-   </tr>
-   <tr>
-      <td>35</td>
-      <td>1.262642349</td>
-      <td>2.385021177</td>
-      <td>1.819800535</td>
-   </tr>
-   <tr>
-      <td>40</td>
-      <td>1.288665945</td>
-      <td>2.491929983</td>
-      <td>1.670414607</td>
-   </tr>
-   <tr>
-      <td>45</td>
-      <td>1.315300953</td>
-      <td>2.588568628</td>
-      <td>1.516348395</td>
-   </tr>
-   <tr>
-      <td>50</td>
-      <td>1.342463822</td>
-      <td>2.674977634</td>
-      <td>1.358121738</td>
-   </tr>
-   <tr>
-      <td>55</td>
-      <td>1.370078875</td>
-      <td>2.751185712</td>
-      <td>1.196234584</td>
-   </tr>
-   <tr>
-      <td>60</td>
-      <td>1.398076962</td>
-      <td>2.817212405</td>
-      <td>1.031171308</td>
-   </tr>
-   <tr>
-      <td>65</td>
-      <td>1.426394312</td>
-      <td>2.873070353</td>
-      <td>0.863404163</td>
-   </tr>
-   <tr>
-      <td>70</td>
-      <td>1.45497152</td>
-      <td>2.918767192</td>
-      <td>0.693396048</td>
-   </tr>
-   <tr>
-      <td>75</td>
-      <td>1.48375266</td>
-      <td>2.954307121</td>
-      <td>0.521602754</td>
-   </tr>
-   <tr>
-      <td>80</td>
-      <td>1.512684489</td>
-      <td>2.979692149</td>
-      <td>0.348474818</td>
-   </tr>
-   <tr>
-      <td>85</td>
-      <td>1.541715716</td>
-      <td>2.994923043</td>
-      <td>0.174459074</td>
-   </tr>
-   <tr>
-      <td>90</td>
-      <td>1.570796327</td>
-      <td>3</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>95</td>
-      <td>1.599876938</td>
-      <td>2.994923043</td>
-      <td>-0.174459074</td>
-   </tr>
-   <tr>
-      <td>100</td>
-      <td>1.628908165</td>
-      <td>2.979692149</td>
-      <td>-0.348474818</td>
-   </tr>
-   <tr>
-      <td>105</td>
-      <td>1.657839993</td>
-      <td>2.954307121</td>
-      <td>-0.521602754</td>
-   </tr>
-   <tr>
-      <td>110</td>
-      <td>1.686621134</td>
-      <td>2.918767192</td>
-      <td>-0.693396048</td>
-   </tr>
-   <tr>
-      <td>115</td>
-      <td>1.715198341</td>
-      <td>2.873070353</td>
-      <td>-0.863404163</td>
-   </tr>
-   <tr>
-      <td>120</td>
-      <td>1.743515692</td>
-      <td>2.817212405</td>
-      <td>-1.031171308</td>
-   </tr>
-   <tr>
-      <td>125</td>
-      <td>1.771513779</td>
-      <td>2.751185712</td>
-      <td>-1.196234584</td>
-   </tr>
-   <tr>
-      <td>130</td>
-      <td>1.799128831</td>
-      <td>2.674977634</td>
-      <td>-1.358121738</td>
-   </tr>
-   <tr>
-      <td>135</td>
-      <td>1.8262917</td>
-      <td>2.588568628</td>
-      <td>-1.516348395</td>
-   </tr>
-   <tr>
-      <td>140</td>
-      <td>1.852926708</td>
-      <td>2.491929983</td>
-      <td>-1.670414607</td>
-   </tr>
-   <tr>
-      <td>145</td>
-      <td>1.878950305</td>
-      <td>2.385021177</td>
-      <td>-1.819800535</td>
-   </tr>
-   <tr>
-      <td>150</td>
-      <td>1.904269499</td>
-      <td>2.267786838</td>
-      <td>-1.963961012</td>
-   </tr>
-   <tr>
-      <td>155</td>
-      <td>1.928780002</td>
-      <td>2.140153305</td>
-      <td>-2.10231868</td>
-   </tr>
-   <tr>
-      <td>160</td>
-      <td>1.952364025</td>
-      <td>2.002024817</td>
-      <td>-2.234255275</td>
-   </tr>
-   <tr>
-      <td>165</td>
-      <td>1.974887646</td>
-      <td>1.8532794</td>
-      <td>-2.359100563</td>
-   </tr>
-   <tr>
-      <td>170</td>
-      <td>1.99619765</td>
-      <td>1.693764615</td>
-      <td>-2.476118218</td>
-   </tr>
-   <tr>
-      <td>175</td>
-      <td>2.016117734</td>
-      <td>1.523293436</td>
-      <td>-2.584487784</td>
-   </tr>
-   <tr>
-      <td>180</td>
-      <td>2.034443936</td>
-      <td>1.341640786</td>
-      <td>-2.683281573</td>
-   </tr>
-   <tr>
-      <td>185</td>
-      <td>2.050939135</td>
-      <td>1.148541591</td>
-      <td>-2.771435046</td>
-   </tr>
-   <tr>
-      <td>190</td>
-      <td>2.065326477</td>
-      <td>0.943691779</td>
-      <td>-2.847708873</td>
-   </tr>
-   <tr>
-      <td>195</td>
-      <td>2.077281554</td>
-      <td>0.726754602</td>
-      <td>-2.910640436</td>
-   </tr>
-   <tr>
-      <td>200</td>
-      <td>2.086423264</td>
-      <td>0.497376043</td>
-      <td>-2.958482224</td>
-   </tr>
-   <tr>
-      <td>205</td>
-      <td>2.092303368</td>
-      <td>0.255215338</td>
-      <td>-2.989124476</td>
-   </tr>
-   <tr>
-      <td>210</td>
-      <td>2.094395102</td>
-      <td>-1.1485E-15</td>
-      <td>-3</td>
-   </tr>
-   <tr>
-      <td>215</td>
-      <td>2.092081706</td>
-      <td>-0.268380304</td>
-      <td>-2.98797122</td>
-   </tr>
-   <tr>
-      <td>220</td>
-      <td>2.084646809</td>
-      <td>-0.549719909</td>
-      <td>-2.949204642</td>
-   </tr>
-   <tr>
-      <td>225</td>
-      <td>2.071270364</td>
-      <td>-0.843253913</td>
-      <td>-2.879048947</td>
-   </tr>
-   <tr>
-      <td>230</td>
-      <td>2.051036647</td>
-      <td>-1.147288675</td>
-      <td>-2.771953949</td>
-   </tr>
-   <tr>
-      <td>235</td>
-      <td>2.022965068</td>
-      <td>-1.458669382</td>
-      <td>-2.621504079</td>
-   </tr>
-   <tr>
-      <td>240</td>
-      <td>1.986079566</td>
-      <td>-1.772071484</td>
-      <td>-2.420694664</td>
-   </tr>
-   <tr>
-      <td>245</td>
-      <td>1.939536273</td>
-      <td>-2.07917744</td>
-      <td>-2.162642174</td>
-   </tr>
-   <tr>
-      <td>250</td>
-      <td>1.882826066</td>
-      <td>-2.367960099</td>
-      <td>-1.841945974</td>
-   </tr>
-   <tr>
-      <td>255</td>
-      <td>1.816048477</td>
-      <td>-2.622540252</td>
-      <td>-1.456805623</td>
-   </tr>
-   <tr>
-      <td>260</td>
-      <td>1.740206377</td>
-      <td>-2.824297227</td>
-      <td>-1.011605247</td>
-   </tr>
-   <tr>
-      <td>265</td>
-      <td>1.657404473</td>
-      <td>-2.954765565</td>
-      <td>-0.518999474</td>
-   </tr>
-   <tr>
-      <td>270</td>
-      <td>1.570796327</td>
-      <td>-3</td>
-      <td>-3.67545E-16</td>
-   </tr>
-   <tr>
-      <td>275</td>
-      <td>1.484188181</td>
-      <td>-2.954765565</td>
-      <td>0.518999474</td>
-   </tr>
-   <tr>
-      <td>280</td>
-      <td>1.401386276</td>
-      <td>-2.824297227</td>
-      <td>1.011605247</td>
-   </tr>
-   <tr>
-      <td>285</td>
-      <td>1.325544177</td>
-      <td>-2.622540252</td>
-      <td>1.456805623</td>
-   </tr>
-   <tr>
-      <td>290</td>
-      <td>1.258766587</td>
-      <td>-2.367960099</td>
-      <td>1.841945974</td>
-   </tr>
-   <tr>
-      <td>295</td>
-      <td>1.202056381</td>
-      <td>-2.07917744</td>
-      <td>2.162642174</td>
-   </tr>
-   <tr>
-      <td>300</td>
-      <td>1.155513088</td>
-      <td>-1.772071484</td>
-      <td>2.420694664</td>
-   </tr>
-   <tr>
-      <td>305</td>
-      <td>1.118627586</td>
-      <td>-1.458669382</td>
-      <td>2.621504079</td>
-   </tr>
-   <tr>
-      <td>310</td>
-      <td>1.090556007</td>
-      <td>-1.147288675</td>
-      <td>2.771953949</td>
-   </tr>
-   <tr>
-      <td>315</td>
-      <td>1.07032229</td>
-      <td>-0.843253913</td>
-      <td>2.879048947</td>
-   </tr>
-   <tr>
-      <td>320</td>
-      <td>1.056945844</td>
-      <td>-0.549719909</td>
-      <td>2.949204642</td>
-   </tr>
-   <tr>
-      <td>325</td>
-      <td>1.049510948</td>
-      <td>-0.268380304</td>
-      <td>2.98797122</td>
-   </tr>
-   <tr>
-      <td>330</td>
-      <td>1.047197551</td>
-      <td>-5.51317E-16</td>
-      <td>3</td>
-   </tr>
-   <tr>
-      <td>335</td>
-      <td>1.049289285</td>
-      <td>0.255215338</td>
-      <td>2.989124476</td>
-   </tr>
-   <tr>
-      <td>340</td>
-      <td>1.05516939</td>
-      <td>0.497376043</td>
-      <td>2.958482224</td>
-   </tr>
-   <tr>
-      <td>345</td>
-      <td>1.064311099</td>
-      <td>0.726754602</td>
-      <td>2.910640436</td>
-   </tr>
-   <tr>
-      <td>350</td>
-      <td>1.076266177</td>
-      <td>0.943691779</td>
-      <td>2.847708873</td>
-   </tr>
-   <tr>
-      <td>355</td>
-      <td>1.090653519</td>
-      <td>1.148541591</td>
-      <td>2.771435046</td>
-   </tr>
-   <tr>
-      <td>360</td>
-      <td>1.107148718</td>
-      <td>1.341640786</td>
-      <td>2.683281573</td>
-   </tr>
-   <tr>
-      <td></td>
-   </tr>
-</table>
-
-
-
-<h2 id="Matlab程序运算、作图"><a href="#Matlab程序运算、作图" class="headerlink" title="Matlab程序运算、作图"></a>Matlab程序运算、作图</h2><ul>
-<li><p>示例程序：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line">%已知：</span><br><span class="line">l1=0.6;</span><br><span class="line">l4=1.2;</span><br><span class="line">w1=3;</span><br><span class="line">th=[0:5:360]</span><br><span class="line">th1=deg2rad(th)</span><br><span class="line">th3=atan(((l4/l1)+sin(th1))./cos(th1));</span><br><span class="line">th3(th3&lt;0)=th3(th3&lt;0)+pi;</span><br><span class="line">om3=(w1.*cos(th3-th1));</span><br><span class="line">al3=w1.*sin(th3-th1)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">figure(1)       %得到机构3的转动角度\theta_3的角度</span><br><span class="line">plot(th,th3,&#x27;r&#x27;)</span><br><span class="line">title(&#x27;角位移图线&#x27;);</span><br><span class="line">xlabel(&#x27;原动杆转角 \theta_1 /\circ&#x27;)</span><br><span class="line">ylabel(&#x27;从动杆转角 \theta_2 &#x27;)</span><br><span class="line">grid on;</span><br><span class="line"></span><br><span class="line">figure(2)       %得到机构3的角速度\omega_3</span><br><span class="line">plot(th,om3,&#x27;b&#x27;)</span><br><span class="line">title(&#x27;角速度图像&#x27;);</span><br><span class="line">xlabel(&#x27;原动杆转动角度 \theta_1 /\circ&#x27;)</span><br><span class="line">ylabel(&#x27;从动杆转角速读 \omega_2 /rad/s&#x27;)</span><br><span class="line">grid on;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">figure(3)       %得到机构3的角加速度\alpha_3</span><br><span class="line">plot(th,al3,&#x27;black&#x27;)</span><br><span class="line">title(&#x27;角加速度图线&#x27;);</span><br><span class="line">xlabel(&#x27;原动杆转角度 \theta_1 /\circ&#x27;)</span><br><span class="line">ylabel(&#x27;从动杆转角加速度 \alpha_3 rad/s^2&#x27;)</span><br><span class="line">grid on;</span><br><span class="line"></span><br><span class="line">figure(4)       %合并以上三个图像</span><br><span class="line">plot(th,th3,&#x27;r&#x27;,th,om3,&#x27;b&#x27;,th,al3,&#x27;black&#x27;)</span><br><span class="line">title(&#x27;摆动导杆运动分析&#x27;);</span><br><span class="line">text(100,1.3,&#x27;\theta_3&#x27;)</span><br><span class="line">text(100,2.7,&#x27;\omega_3&#x27;)</span><br><span class="line">text(200,-2.5,&#x27;\alpha_3&#x27;)</span><br><span class="line">grid on;</span><br><span class="line"></span><br><span class="line">disp(&#x27;原转动角度 - 从转动角度 - 角速度 - 角加速度&#x27;)</span><br><span class="line">y=[th&#x27;,th3&#x27;,om3&#x27;,al3&#x27;];</span><br><span class="line">disp(y)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>得到以下图像：<br><img src="/images/zatan/2/2-9.png" alt="1"><br><img src="/images/zatan/2/2-10.png" alt="2"><br><img src="/images/zatan/2/2-4.png" alt="3"><br><img src="/images/zatan/2/2-5.png" alt="4">  </p>
-</li>
-<li><p>得到同Excel数据：(节选)<br> <img src="/images/zatan/2/2-6.png" alt="5"></p>
-</li>
-</ul>
-<h2 id="Adams运动分析"><a href="#Adams运动分析" class="headerlink" title="Adams运动分析"></a>Adams运动分析</h2><br>
-
-<br>
-
-<h4 id="模拟运动曲线"><a href="#模拟运动曲线" class="headerlink" title="模拟运动曲线"></a>模拟运动曲线</h4><br>
-
-<p><img src="/images/zatan/2/2-7.png" alt="2-7"></p>
-<h4 id="运动模拟"><a href="#运动模拟" class="headerlink" title="运动模拟"></a>运动模拟</h4><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe 
-src="/images/zatan/2/2-8.gif" scrolling="no" border="0" 
-frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
-height: 100%; left: 0; top: 0;"> </iframe></div>
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/01/Miscellaneous/yaodongbaogan/" data-id="cl3qp641o000az4qfgj2n5nuy" data-title="摇动摆杆运动分析" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-杂谈/xiaoxing" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/30/%E6%9D%82%E8%B0%88/xiaoxing/" class="article-date">
-  <time class="dt-published" datetime="2021-04-30T13:32:06.000Z" itemprop="datePublished">2021-04-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/30/%E6%9D%82%E8%B0%88/xiaoxing/">小新pro13Intel版Bios</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>&amp;emsp;&amp;emsp;在使用小新Pro13的过程中可能会遇到一些需求，比如将F1<del>F12从功能键调回普通的F1</del>F12；比如关闭关机充电，防止关机后插着键鼠、接收器电池掉电等，那就需要进入BIOS进行调节。可能不知道每一个选项都代表什么意义，于是我们把BIOS的主要选项翻译了一下，希望能对大家有所帮助。</p>
-<ul>
-<li>【BIOS是什么】</li>
-</ul>
-<p>&amp;emsp;&amp;emsp;BIOS是英文”Basic Input Output System”的缩略词，直译过来后中文名称就是”基本输入输出系统”。它是一组固化到计算机内主板上一个ROM芯片上的程序，它保存着计算机最重要的基本输入输出的程序、开机后自检程序和系统自启动程序。其主要功能是为计算机提供最底层的、最直接的硬件设置和控制。</p>
-<ul>
-<li>【Pro13如何进入BIOS】</li>
-</ul>
-<p>1.关机状态下，掀盖或按电源键开机后，立马连续按Fn+F2或F2，进入BIOS。</p>
-<p>2.关机状态下，用SIM卡针捅笔记本右侧面的一键恢复洞，在出来的菜单里，选择“BIOS Setup”。</p>
-<p>3.在Windows下按住Shift，然后点重启，进入蓝底界面后选择“疑难解答”→“高级选项”→“UEFI固件设置”→“重启”。</p>
-<p>BIOS设置完毕后按Fn+F10或F10保存BIOS并退出自动重启。</p>
-<p>值得说一句的是，Intel版的小新Pro 13这次使用了新版的图形化BIOS界面，不仅比传统的BIOS界面更美观，而且还可以使用鼠标进行操作了。</p>
-<p>下面我们来看一下小新Pro 13 Intel版本BIOS的主要内容：（Enabled开启 简称E，Disabled关闭 简称D）。需要提醒大家的是，BIOS设置会涉及到硬件的启动或关闭，请大家谨慎调整BIOS当中的内容。</p>
-<h2 id="1-Information信息菜单"><a href="#1-Information信息菜单" class="headerlink" title="1.Information信息菜单"></a>1.Information信息菜单</h2><p><img src="/images/zatan/1/1-1.png" alt="1-1"></p>
-<h2 id="2-Configuration配置菜单"><a href="#2-Configuration配置菜单" class="headerlink" title="2.Configuration配置菜单"></a>2.Configuration配置菜单</h2><p><img src="/images/zatan/1/1-2.png" alt="1-2"></p>
-<p><img src="/images/zatan/1/1-3.png" alt="1-3"></p>
-<p><img src="/images/zatan/1/1-4.png" alt="1-4"></p>
-<p><img src="/images/zatan/1/1-5.png" alt="1-5"></p>
-<h2 id="3-Security安全设置菜单"><a href="#3-Security安全设置菜单" class="headerlink" title="3.Security安全设置菜单"></a>3.Security安全设置菜单</h2><p><img src="/images/zatan/1/1-6.png" alt="1-6"></p>
-<p><img src="/images/zatan/1/1-7.png" alt="1-7"></p>
-<h2 id="4-Boot启动设置菜单"><a href="#4-Boot启动设置菜单" class="headerlink" title="4.Boot启动设置菜单"></a>4.Boot启动设置菜单</h2><p><img src="/images/zatan/1/1-8.png" alt="1-8"></p>
-<h2 id="5-Exit保存及退出菜单"><a href="#5-Exit保存及退出菜单" class="headerlink" title="5.Exit保存及退出菜单"></a>5.Exit保存及退出菜单</h2><p><img src="/images/zatan/1/1-9.png" alt="1-9"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/30/%E6%9D%82%E8%B0%88/xiaoxing/" data-id="cl3qp23pw001r10qf6y2thv7l" data-title="小新pro13Intel版Bios" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Miscellaneous/xiaoxing" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/30/Miscellaneous/xiaoxing/" class="article-date">
-  <time class="dt-published" datetime="2021-04-30T13:32:06.000Z" itemprop="datePublished">2021-04-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/30/Miscellaneous/xiaoxing/">小新pro13Intel版Bios</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>&amp;emsp;&amp;emsp;在使用小新Pro13的过程中可能会遇到一些需求，比如将F1<del>F12从功能键调回普通的F1</del>F12；比如关闭关机充电，防止关机后插着键鼠、接收器电池掉电等，那就需要进入BIOS进行调节。可能不知道每一个选项都代表什么意义，于是我们把BIOS的主要选项翻译了一下，希望能对大家有所帮助。</p>
-<ul>
-<li>【BIOS是什么】</li>
-</ul>
-<p>&amp;emsp;&amp;emsp;BIOS是英文”Basic Input Output System”的缩略词，直译过来后中文名称就是”基本输入输出系统”。它是一组固化到计算机内主板上一个ROM芯片上的程序，它保存着计算机最重要的基本输入输出的程序、开机后自检程序和系统自启动程序。其主要功能是为计算机提供最底层的、最直接的硬件设置和控制。</p>
-<ul>
-<li>【Pro13如何进入BIOS】</li>
-</ul>
-<p>1.关机状态下，掀盖或按电源键开机后，立马连续按Fn+F2或F2，进入BIOS。</p>
-<p>2.关机状态下，用SIM卡针捅笔记本右侧面的一键恢复洞，在出来的菜单里，选择“BIOS Setup”。</p>
-<p>3.在Windows下按住Shift，然后点重启，进入蓝底界面后选择“疑难解答”→“高级选项”→“UEFI固件设置”→“重启”。</p>
-<p>BIOS设置完毕后按Fn+F10或F10保存BIOS并退出自动重启。</p>
-<p>值得说一句的是，Intel版的小新Pro 13这次使用了新版的图形化BIOS界面，不仅比传统的BIOS界面更美观，而且还可以使用鼠标进行操作了。</p>
-<p>下面我们来看一下小新Pro 13 Intel版本BIOS的主要内容：（Enabled开启 简称E，Disabled关闭 简称D）。需要提醒大家的是，BIOS设置会涉及到硬件的启动或关闭，请大家谨慎调整BIOS当中的内容。</p>
-<h2 id="1-Information信息菜单"><a href="#1-Information信息菜单" class="headerlink" title="1.Information信息菜单"></a>1.Information信息菜单</h2><p><img src="/images/zatan/1/1-1.png" alt="1-1"></p>
-<h2 id="2-Configuration配置菜单"><a href="#2-Configuration配置菜单" class="headerlink" title="2.Configuration配置菜单"></a>2.Configuration配置菜单</h2><p><img src="/images/zatan/1/1-2.png" alt="1-2"></p>
-<p><img src="/images/zatan/1/1-3.png" alt="1-3"></p>
-<p><img src="/images/zatan/1/1-4.png" alt="1-4"></p>
-<p><img src="/images/zatan/1/1-5.png" alt="1-5"></p>
-<h2 id="3-Security安全设置菜单"><a href="#3-Security安全设置菜单" class="headerlink" title="3.Security安全设置菜单"></a>3.Security安全设置菜单</h2><p><img src="/images/zatan/1/1-6.png" alt="1-6"></p>
-<p><img src="/images/zatan/1/1-7.png" alt="1-7"></p>
-<h2 id="4-Boot启动设置菜单"><a href="#4-Boot启动设置菜单" class="headerlink" title="4.Boot启动设置菜单"></a>4.Boot启动设置菜单</h2><p><img src="/images/zatan/1/1-8.png" alt="1-8"></p>
-<h2 id="5-Exit保存及退出菜单"><a href="#5-Exit保存及退出菜单" class="headerlink" title="5.Exit保存及退出菜单"></a>5.Exit保存及退出菜单</h2><p><img src="/images/zatan/1/1-9.png" alt="1-9"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/30/Miscellaneous/xiaoxing/" data-id="cl3qp641l0002z4qf22tn0b8s" data-title="小新pro13Intel版Bios" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-matlab/matlab1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/17/matlab/matlab1/" class="article-date">
-  <time class="dt-published" datetime="2021-04-16T16:00:00.000Z" itemprop="datePublished">2021-04-17</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/17/matlab/matlab1/">Matlab基础</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="#1">字符认知</a></li>
-<li><a href="#2">创建函数</a></li>
-<li><a href="#3">数组运算</a></li>
-<li><a href="#4">矩阵的生成</a></li>
-<li><a href="#5">矩阵函数</a></li>
-<li><a href="#6">随机数</a></li>
-<li><a href="#7">数组运算</a></li>
-<li><a href="#8">数据读取</a></li>
-</ul>
-<p><font size= 7 color = black ><center>MATLAB计算基础</center></font>  </p>
-<h2 id="1"></h2>  
-
-<h2 id="1、字符认知"><a href="#1、字符认知" class="headerlink" title="1、字符认知"></a>1、字符认知</h2><p><font size= 4 color = red ><center>常用命令功能</center></font>  </p>
-<table>
-<thead>
-<tr>
-<th align="center">命令</th>
-<th align="center">说明</th>
-<th align="center">命令</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">cd</td>
-<td align="center">显示或改变当前工作文件夹</td>
-<td align="center">load</td>
-<td align="center">加载指定文件的变量</td>
-</tr>
-<tr>
-<td align="center">dir</td>
-<td align="center">显示当前文件夹或指定目录下的文件</td>
-<td align="center">diary</td>
-<td align="center">日志文件命令</td>
-</tr>
-<tr>
-<td align="center">clc</td>
-<td align="center">清除工作窗口中所有显示的内容</td>
-<td align="center">!</td>
-<td align="center">调用DOS命令</td>
-</tr>
-<tr>
-<td align="center">home</td>
-<td align="center">将光标移至命令行窗口的左上角</td>
-<td align="center">exit</td>
-<td align="center">退出matlab</td>
-</tr>
-<tr>
-<td align="center">clf</td>
-<td align="center">清楚图形窗口</td>
-<td align="center">quit</td>
-<td align="center">退出matlab</td>
-</tr>
-<tr>
-<td align="center">type</td>
-<td align="center">显示文件内容</td>
-<td align="center">pack</td>
-<td align="center">收敛内存碎片</td>
-</tr>
-<tr>
-<td align="center">clear</td>
-<td align="center">清理内存信息</td>
-<td align="center">hold</td>
-<td align="center">图形保持开关</td>
-</tr>
-<tr>
-<td align="center">echo</td>
-<td align="center">工作窗信息显示开关</td>
-<td align="center">path</td>
-<td align="center">显示搜索目录</td>
-</tr>
-<tr>
-<td align="center">disp</td>
-<td align="center">显示变量或文字内容</td>
-<td align="center">save</td>
-<td align="center">保存内存变量到指定位置</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-
-<p><font size= 4 color = red ><center>MATLAB默认常量</center></font> </p>
-<table>
-<thead>
-<tr>
-<th align="center">变量名</th>
-<th align="center">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">i &amp; j</td>
-<td align="center">虚数单位</td>
-</tr>
-<tr>
-<td align="center">pi</td>
-<td align="center">圆周率（Π）</td>
-</tr>
-<tr>
-<td align="center">ans</td>
-<td align="center">存放最近一次无赋值变量语句的预算结果</td>
-</tr>
-<tr>
-<td align="center">Inf</td>
-<td align="center">无穷大</td>
-</tr>
-<tr>
-<td align="center">eps</td>
-<td align="center">机器浮点运算误差限（如果某变量的绝对值小于eps，则视为0）</td>
-</tr>
-<tr>
-<td align="center">NaN</td>
-<td align="center">不定式（0&#x2F;0，或inf&#x2F;inf，或超出存储大小的值）</td>
-</tr>
-<tr>
-<td align="center">lasterr</td>
-<td align="center">存放最后一次的错误消息</td>
-</tr>
-<tr>
-<td align="center">lastwarn</td>
-<td align="center">存放最后一次警告消息</td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>1、变量名区分大小写，因此A和a表示的是不同的变量；  </p>
-</li>
-<li><p>2、变量名以英文字母开头，每一个字母后可使用字母、数字、下划线，但不可以使用空格和标点符号； </p>
-</li>
-<li><p>3、变量民不得超过31位，超过的部分将会被忽略；</p>
-</li>
-<li><p>4、某些常量也可以作为变量使用；</p>
-</li>
-</ul>
-<br>
-
-<br>
-
-<p><font size=4 color=red><center>MATLAB数据显示格式</center></font></p>
-<table>
-<thead>
-<tr>
-<th align="center">格式</th>
-<th align="center">含义</th>
-<th align="center">*</th>
-<th align="center">格式</th>
-<th align="center">含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">format(short)</td>
-<td align="center">短格式（5位定点数）</td>
-<td align="center">*</td>
-<td align="center">format lone e</td>
-<td align="center">长格式e方式</td>
-</tr>
-<tr>
-<td align="center">format long</td>
-<td align="center">长格式（15点定位数）</td>
-<td align="center">*</td>
-<td align="center">format bank</td>
-<td align="center">2位十进制格式</td>
-</tr>
-<tr>
-<td align="center">format short e</td>
-<td align="center">短格式e方程</td>
-<td align="center">*</td>
-<td align="center">format hex</td>
-<td align="center">十六进制格式</td>
-</tr>
-</tbody></table>
-<br>
-
-
-<table>
-<thead>
-<tr>
-<th align="center">format string</th>
-<th align="center">结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">%d</td>
-<td align="center">把值作为整数值来处理</td>
-</tr>
-<tr>
-<td align="center">%e</td>
-<td align="center">用科学计数法来显示数据</td>
-</tr>
-<tr>
-<td align="center">%f</td>
-<td align="center">用于格式化浮点数并显示这个数值</td>
-</tr>
-<tr>
-<td align="center">%g</td>
-<td align="center">用科学计数格式，或浮点数这个格式，根据哪个短，并显示</td>
-</tr>
-<tr>
-<td align="center">\n</td>
-<td align="center">转到新的一行</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<h2 id="2"></h2> 
-
-<h2 id="2、创建函数"><a href="#2、创建函数" class="headerlink" title="2、创建函数"></a>2、创建函数</h2><p><font size=4 color=red><center>数组的创建与操作</center></font>  </p>
-<center><img src="/images/matlab/1/1-1.png" width=80%" height=80%" align=center /></center>
-
-
-
-<p><font size=4 color=red><center>对数组进行访问</center></font> </p>
-<center><img src="/images/matlab/1/1-2.png" width=80%" height=80%" align=center /></center>  
-
-
-<p><font size=4 color=red><center>通过logspace和linspace创建数组</center></font>  </p>
-<p><img src="/images/matlab/1/1-3.png" alt="1-3"></p>
-<br>
- 
-<br>  
-
-<h2 id="3"></h2> 
-
-<h2 id="3、数组运算"><a href="#3、数组运算" class="headerlink" title="3、数组运算"></a>3、数组运算</h2><br>
-
-<p>&amp;emsp;&amp;emsp;在matlab中，常见的运算关系有算术运算、关系运算、逻辑运算: </p>
-<p>算术运算：<br>&amp;emsp;&amp;emsp;数组的运算是从单个的元素出发，针对每个元素进行运算。在MATLAB中，一维数组的算术运算包括加、减、乘、左除、右除和乘方。  </p>
-<p><img src="/images/matlab/1/1-4.png" alt="1-4"><br><img src="/images/matlab/1/1-5.png" alt="1-5"> </p>
-<br>
-
-<br>
-
-<p>&amp;emsp;&amp;emsp;通过dot函数可以实现点积运算，其等价于<code>.*</code>,但是运算规则要求数组A和数组B的维数相同。函数的调用格式为：  </p>
-<p>&amp;emsp;&amp;emsp;C&#x3D;dot(A,B)或C&#x3D;dot(A,B,dim),其中参数dim用于指定内积计算的维数。  </p>
-<center><img src="/images/matlab/1/1-6.png" width=80%" height=80%" align=center /></center>
-
-<br>
- 
-
-<h2 id="4"></h2> 
-
-<h2 id="4、矩阵的生成"><a href="#4、矩阵的生成" class="headerlink" title="4、矩阵的生成"></a>4、矩阵的生成</h2><br>
-
-<p><font size=4 color=red><center>直接输入</center></font></p>
-<center><img src="/images/matlab/1/1-8.png" width=80%" height=80%" align=center /></center>    
-*输入表达式将自动计算出结果 
-
-<br>
-
-<p><font size=4 color=red><center>常用特殊矩阵生成函数</center></font>  </p>
-<table>
-<thead>
-<tr>
-<th align="center">函数</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">one(n)</td>
-<td align="center">创建一个n x n的1矩阵</td>
-</tr>
-<tr>
-<td align="center">zeros(n)</td>
-<td align="center">创建一个n x n的0矩阵</td>
-</tr>
-<tr>
-<td align="center">eye(n)</td>
-<td align="center">创建一个n x n的单位矩阵</td>
-</tr>
-<tr>
-<td align="center">magic(n)</td>
-<td align="center">创建一个n x n的魔方矩阵，使其每一行、每一列元素之和相等</td>
-</tr>
-<tr>
-<td align="center">rand(n)</td>
-<td align="center">创建一个n x n的随机矩阵，其元素都在0-1之间随机分布</td>
-</tr>
-<tr>
-<td align="center">randn(n)</td>
-<td align="center">创建一个 n x n的矩阵，使元素为0-1零均值、单位方差的正态分布随机数</td>
-</tr>
-<tr>
-<td align="center">hilb(n)</td>
-<td align="center">创建一个n x n的hilbert矩阵</td>
-</tr>
-<tr>
-<td align="center">vander([1;2;3;x;y;z;])</td>
-<td align="center">矩阵最后一列全为1，倒数第二列是指定向量，其他各列是其后列与倒数第二列的点乘积</td>
-</tr>
-</tbody></table>
-<p>*希尔伯特矩阵会因原始数据的微小扰动而产生不可靠的计算结果。故在matlab中有一个专门用于求希尔伯特矩阵逆函数invhlib(n),其功能是求n阶希尔伯特函数的逆函数  </p>
-<p><font size=4 color=red><center>托普利兹矩阵：</center></font>  </p>
-<center><img src="/images/matlab/1/1-7.png" width=80%" height=80%" align=center /></center>
-
-
-
-
-<p><font size=4 color=red>矩阵的部分删除:</font><br>&amp;emsp;&amp;emsp;在MATLAB中，可以将矩阵的某行或某列赋值为空值而直接删除此行或此列。要是删除行或列的部分元素则矩阵将会出错。（孔赋值只能有一个非冒号引索）   </p>
-<center><img src="/images/matlab/1/1-9.png" width=80%" height=80%" align=center /></center></center>  
-  
-<br>  
-
-<h2 id="5"></h2> 
-
-<h2 id="5、矩阵函数："><a href="#5、矩阵函数：" class="headerlink" title="5、矩阵函数："></a>5、矩阵函数：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v=diag(A,k)</span><br></pre></td></tr></table></figure>
-<p>获取矩阵的对角线元素，默认k为0，当k&#x3D;1时，为主对角线右上的对角线。<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=tril(X,k)</span><br></pre></td></tr></table></figure>
-<p>只返回矩阵的下三角部分，其余部分用0补齐；当不为0时，则返回其对应的三角区域。<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=triu(X,k)</span><br></pre></td></tr></table></figure>
-<p>只返回矩阵的上三角部分，其余部分用0补齐；当不为0时，则返回其对应的三角区域。<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=rot90(A,k)</span><br></pre></td></tr></table></figure>
-<p>将矩阵A逆时针旋转90k°<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=fliplr(A)</span><br></pre></td></tr></table></figure>
-<p>将矩阵A实现左右翻转  </p>
-<br>  
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=flipud(A)</span><br></pre></td></tr></table></figure>
-将矩阵A实现上下翻转  
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=flipdim(A,dim)</span><br></pre></td></tr></table></figure>
-<p>· 当 dim&#x3D;1 时，数组上下翻转，相当于函数flipud(A)<br>· 当 dim&#x3D;2 时，数组左右翻转，相当于函数fliplr(A)<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B=inv(A)</span><br></pre></td></tr></table></figure>
-<p>求方阵A的逆矩阵，赋值给B<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=det(A)</span><br></pre></td></tr></table></figure>
-<p>求方阵A所对应行列式的函数值<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=rank(A)</span><br></pre></td></tr></table></figure>
-<p>求矩阵的秩<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=trace(A)</span><br></pre></td></tr></table></figure>
-<p>求矩阵的迹<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">norm(V)             计算向量V的2范数</span><br><span class="line">norm(V,1)           计算向量V的1范数</span><br><span class="line">norm(V,inf)         计算向量V的无穷范数</span><br></pre></td></tr></table></figure>
-<p>求矩阵的范数<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cond(A,1)           计算A的1范数下的条件数</span><br><span class="line">cond(A,2)           计算A的2范数下的条件数</span><br><span class="line">cond(A,inf)         计算A无穷范数下的条件数</span><br></pre></td></tr></table></figure>
-<p>计算范数的条件数<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E=eig(A)            求矩阵A的全部特征值，构成向量E</span><br><span class="line">[V,D]=eig(A)        求矩阵A的全部特征值，构成对叫矩阵D，并求A的所有特征向量</span><br><span class="line">[V,D]=eigs(A,k)     求矩阵A的前k个特征值构成对角矩阵D，并求A的前k个特征向量</span><br></pre></td></tr></table></figure>
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sqrtm(A)            计算矩阵A的平方根</span><br><span class="line">logm(A)             计算矩阵A的自然对数</span><br></pre></td></tr></table></figure>
-<p>矩阵的超越函数<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expm(A)             以矩阵A为对数的指数，e^A</span><br></pre></td></tr></table></figure>
-<p>矩阵指数<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">B=spares(A)         将矩阵A转换为稀疏存储的矩阵B</span><br><span class="line">nnz(B)              返回矩阵B中非0元素的个数</span><br><span class="line">full(B)             返回稀疏矩阵B的原矩阵，即A</span><br><span class="line">spy(B)              显示矩阵A中非零元素分布图</span><br></pre></td></tr></table></figure>
-<ul>
-<li>matlab中存在两种存储方式，完全存储方式和稀疏存储方式。</li>
-</ul>
-<br> 
-
-
-<h2 id="6"></h2>
-
-<h2 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h2><h3 id="1、在-0-1-之间的随机数"><a href="#1、在-0-1-之间的随机数" class="headerlink" title="1、在[0,1]之间的随机数"></a>1、在[0,1]之间的随机数</h3><p>rand(m,n)–产生m*n阶[0,1]之间的随机矩阵;</p>
-<h3 id="2-按概率产生随机数"><a href="#2-按概率产生随机数" class="headerlink" title="2.按概率产生随机数"></a>2.按概率产生随机数</h3><p>h&#x3D;randsrc(m)    %mxm阶矩阵<br>h&#x3D;randsrc(m,n)  %mxn阶矩阵<br>h&#x3D;randsrc(m,n[alphabet,prob])   %将’alphabet’中的值以’prob’的概率出现</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">alphabet=[52 53 54 55 56];</span><br><span class="line">prob=[0.05 0.25 0.4 0.25 0.05];</span><br><span class="line">l=randsrc(100000,1,[alphabet;prob]);</span><br><span class="line">a=sum(l(:)==52);</span><br><span class="line">b=sum(l(:)==53);</span><br><span class="line">c=sum(l(:)==54);</span><br><span class="line">d=sum(l(:)==55);</span><br><span class="line">e=sum(l(:)==56);</span><br><span class="line">A=[a,b,c,d,e]</span><br></pre></td></tr></table></figure>
-<p><img src="/images/matlab/1/1-10.png" alt="1-10"></p>
-<h3 id="3、均匀分布随机数"><a href="#3、均匀分布随机数" class="headerlink" title="3、均匀分布随机数"></a>3、均匀分布随机数</h3><p>nuifrnd(a,b,m,n)–产生m*n阶在[a,b]之间的随机数；</p>
-<h3 id="4、二项式矩阵"><a href="#4、二项式矩阵" class="headerlink" title="4、二项式矩阵"></a>4、二项式矩阵</h3><p>binornd(n,p[M,N,N,…])–生成的随机数服从参数为(N,p)的二项分布，这些随机数排列成M<em>N</em>P… 阶矩阵。如果只写M，则生成M*M矩阵；</p>
-<br>
-
-<br>
-
-<h2 id="7"></h2>
-
-<h2 id="数组的运算"><a href="#数组的运算" class="headerlink" title="数组的运算"></a>数组的运算</h2><h3 id="1、数组间交集"><a href="#1、数组间交集" class="headerlink" title="1、数组间交集"></a>1、数组间交集</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = intersect(A,B)</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="2、数组间并集"><a href="#2、数组间并集" class="headerlink" title="2、数组间并集"></a>2、数组间并集</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = union(A,B)</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="3、数组间补集"><a href="#3、数组间补集" class="headerlink" title="3、数组间补集"></a>3、数组间补集</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = setdiff(A,B)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>子集写后边</li>
-</ul>
-<br>
-
-<br>
-
-<h2 id="8"></h2>
-
-<h2 id="八、数据读取"><a href="#八、数据读取" class="headerlink" title="八、数据读取"></a>八、数据读取</h2><h3 id="8-1-从Excel中读取数据"><a href="#8-1-从Excel中读取数据" class="headerlink" title="8.1  从Excel中读取数据"></a>8.1  从Excel中读取数据</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = xlsread(&#x27;D:\CO2.xlsx&#x27;,Sheet1,&#x27;A1:B5&#x27;)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>其中，‘D:\CO2.xlsx’表示读入的EXCEL数据所在的路径以及EXCEL的文件名称；2表示位于sheet2；’A1:B5’表示需要读入的数据范围</li>
-</ul>
-<h3 id="8-2-时间格式在matlab可识别与可视时间切换"><a href="#8-2-时间格式在matlab可识别与可视时间切换" class="headerlink" title="8.2  时间格式在matlab可识别与可视时间切换"></a>8.2  时间格式在matlab可识别与可视时间切换</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a=StockSampleA1&#123;:,2&#125;;%注意：由于这是表数据，不能用小括号</span><br><span class="line">B=[];</span><br><span class="line">for I=1:n</span><br><span class="line">    y=floor(a(I)/10000);  </span><br><span class="line">    S=a(I)-y*10000;</span><br><span class="line">    m=floor(S/100);</span><br><span class="line">    d=S-m*100;</span><br><span class="line">    b=datenum(y,m,d);</span><br><span class="line">    B=[B;b]</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>b=datenum(y,m,d)</code>–函数可以将可视时间格式转换为Matlab可识别格式；  </li>
-<li><code>D=datetime(b)</code>–该函数可以将Matlab可识别时间格式转化为可视时间格式；</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/17/matlab/matlab1/" data-id="cl3qp23pe000910qf234je04m" data-title="Matlab基础" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">matlab基础知识</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Mathematical_modeling/matlab1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/17/Mathematical_modeling/matlab1/" class="article-date">
-  <time class="dt-published" datetime="2021-04-16T16:00:00.000Z" itemprop="datePublished">2021-04-17</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/17/Mathematical_modeling/matlab1/">Matlab基础</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="#1">字符认知</a></li>
-<li><a href="#2">创建函数</a></li>
-<li><a href="#3">数组运算</a></li>
-<li><a href="#4">矩阵的生成</a></li>
-<li><a href="#5">矩阵函数</a></li>
-<li><a href="#6">随机数</a></li>
-<li><a href="#7">数组运算</a></li>
-<li><a href="#8">数据读取</a></li>
-</ul>
-<p><font size= 7 color = black ><center>MATLAB计算基础</center></font>  </p>
-<h2 id="1"></h2>  
-
-<h2 id="1、字符认知"><a href="#1、字符认知" class="headerlink" title="1、字符认知"></a>1、字符认知</h2><p><font size= 4 color = red ><center>常用命令功能</center></font>  </p>
-<table>
-<thead>
-<tr>
-<th align="center">命令</th>
-<th align="center">说明</th>
-<th align="center">命令</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">cd</td>
-<td align="center">显示或改变当前工作文件夹</td>
-<td align="center">load</td>
-<td align="center">加载指定文件的变量</td>
-</tr>
-<tr>
-<td align="center">dir</td>
-<td align="center">显示当前文件夹或指定目录下的文件</td>
-<td align="center">diary</td>
-<td align="center">日志文件命令</td>
-</tr>
-<tr>
-<td align="center">clc</td>
-<td align="center">清除工作窗口中所有显示的内容</td>
-<td align="center">!</td>
-<td align="center">调用DOS命令</td>
-</tr>
-<tr>
-<td align="center">home</td>
-<td align="center">将光标移至命令行窗口的左上角</td>
-<td align="center">exit</td>
-<td align="center">退出matlab</td>
-</tr>
-<tr>
-<td align="center">clf</td>
-<td align="center">清楚图形窗口</td>
-<td align="center">quit</td>
-<td align="center">退出matlab</td>
-</tr>
-<tr>
-<td align="center">type</td>
-<td align="center">显示文件内容</td>
-<td align="center">pack</td>
-<td align="center">收敛内存碎片</td>
-</tr>
-<tr>
-<td align="center">clear</td>
-<td align="center">清理内存信息</td>
-<td align="center">hold</td>
-<td align="center">图形保持开关</td>
-</tr>
-<tr>
-<td align="center">echo</td>
-<td align="center">工作窗信息显示开关</td>
-<td align="center">path</td>
-<td align="center">显示搜索目录</td>
-</tr>
-<tr>
-<td align="center">disp</td>
-<td align="center">显示变量或文字内容</td>
-<td align="center">save</td>
-<td align="center">保存内存变量到指定位置</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-
-<p><font size= 4 color = red ><center>MATLAB默认常量</center></font> </p>
-<table>
-<thead>
-<tr>
-<th align="center">变量名</th>
-<th align="center">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">i &amp; j</td>
-<td align="center">虚数单位</td>
-</tr>
-<tr>
-<td align="center">pi</td>
-<td align="center">圆周率（Π）</td>
-</tr>
-<tr>
-<td align="center">ans</td>
-<td align="center">存放最近一次无赋值变量语句的预算结果</td>
-</tr>
-<tr>
-<td align="center">Inf</td>
-<td align="center">无穷大</td>
-</tr>
-<tr>
-<td align="center">eps</td>
-<td align="center">机器浮点运算误差限（如果某变量的绝对值小于eps，则视为0）</td>
-</tr>
-<tr>
-<td align="center">NaN</td>
-<td align="center">不定式（0&#x2F;0，或inf&#x2F;inf，或超出存储大小的值）</td>
-</tr>
-<tr>
-<td align="center">lasterr</td>
-<td align="center">存放最后一次的错误消息</td>
-</tr>
-<tr>
-<td align="center">lastwarn</td>
-<td align="center">存放最后一次警告消息</td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>1、变量名区分大小写，因此A和a表示的是不同的变量；  </p>
-</li>
-<li><p>2、变量名以英文字母开头，每一个字母后可使用字母、数字、下划线，但不可以使用空格和标点符号； </p>
-</li>
-<li><p>3、变量民不得超过31位，超过的部分将会被忽略；</p>
-</li>
-<li><p>4、某些常量也可以作为变量使用；</p>
-</li>
-</ul>
-<br>
-
-<br>
-
-<p><font size=4 color=red><center>MATLAB数据显示格式</center></font></p>
-<table>
-<thead>
-<tr>
-<th align="center">格式</th>
-<th align="center">含义</th>
-<th align="center">*</th>
-<th align="center">格式</th>
-<th align="center">含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">format(short)</td>
-<td align="center">短格式（5位定点数）</td>
-<td align="center">*</td>
-<td align="center">format lone e</td>
-<td align="center">长格式e方式</td>
-</tr>
-<tr>
-<td align="center">format long</td>
-<td align="center">长格式（15点定位数）</td>
-<td align="center">*</td>
-<td align="center">format bank</td>
-<td align="center">2位十进制格式</td>
-</tr>
-<tr>
-<td align="center">format short e</td>
-<td align="center">短格式e方程</td>
-<td align="center">*</td>
-<td align="center">format hex</td>
-<td align="center">十六进制格式</td>
-</tr>
-</tbody></table>
-<br>
-
-
-<table>
-<thead>
-<tr>
-<th align="center">format string</th>
-<th align="center">结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">%d</td>
-<td align="center">把值作为整数值来处理</td>
-</tr>
-<tr>
-<td align="center">%e</td>
-<td align="center">用科学计数法来显示数据</td>
-</tr>
-<tr>
-<td align="center">%f</td>
-<td align="center">用于格式化浮点数并显示这个数值</td>
-</tr>
-<tr>
-<td align="center">%g</td>
-<td align="center">用科学计数格式，或浮点数这个格式，根据哪个短，并显示</td>
-</tr>
-<tr>
-<td align="center">\n</td>
-<td align="center">转到新的一行</td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<h2 id="2"></h2> 
-
-<h2 id="2、创建函数"><a href="#2、创建函数" class="headerlink" title="2、创建函数"></a>2、创建函数</h2><p><font size=4 color=red><center>数组的创建与操作</center></font>  </p>
-<center><img src="/images/matlab/1/1-1.png" width=80%" height=80%" align=center /></center>
-
-
-
-<p><font size=4 color=red><center>对数组进行访问</center></font> </p>
-<center><img src="/images/matlab/1/1-2.png" width=80%" height=80%" align=center /></center>  
-
-
-<p><font size=4 color=red><center>通过logspace和linspace创建数组</center></font>  </p>
-<p><img src="/images/matlab/1/1-3.png" alt="1-3"></p>
-<br>
- 
-<br>  
-
-<h2 id="3"></h2> 
-
-<h2 id="3、数组运算"><a href="#3、数组运算" class="headerlink" title="3、数组运算"></a>3、数组运算</h2><br>
-
-<p>&amp;emsp;&amp;emsp;在matlab中，常见的运算关系有算术运算、关系运算、逻辑运算: </p>
-<p>算术运算：<br>&amp;emsp;&amp;emsp;数组的运算是从单个的元素出发，针对每个元素进行运算。在MATLAB中，一维数组的算术运算包括加、减、乘、左除、右除和乘方。  </p>
-<p><img src="/images/matlab/1/1-4.png" alt="1-4"><br><img src="/images/matlab/1/1-5.png" alt="1-5"> </p>
-<br>
-
-<br>
-
-<p>&amp;emsp;&amp;emsp;通过dot函数可以实现点积运算，其等价于<code>.*</code>,但是运算规则要求数组A和数组B的维数相同。函数的调用格式为：  </p>
-<p>&amp;emsp;&amp;emsp;C&#x3D;dot(A,B)或C&#x3D;dot(A,B,dim),其中参数dim用于指定内积计算的维数。  </p>
-<center><img src="/images/matlab/1/1-6.png" width=80%" height=80%" align=center /></center>
-
-<br>
- 
-
-<h2 id="4"></h2> 
-
-<h2 id="4、矩阵的生成"><a href="#4、矩阵的生成" class="headerlink" title="4、矩阵的生成"></a>4、矩阵的生成</h2><br>
-
-<p><font size=4 color=red><center>直接输入</center></font></p>
-<center><img src="/images/matlab/1/1-8.png" width=80%" height=80%" align=center /></center>    
-*输入表达式将自动计算出结果 
-
-<br>
-
-<p><font size=4 color=red><center>常用特殊矩阵生成函数</center></font>  </p>
-<table>
-<thead>
-<tr>
-<th align="center">函数</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">one(n)</td>
-<td align="center">创建一个n x n的1矩阵</td>
-</tr>
-<tr>
-<td align="center">zeros(n)</td>
-<td align="center">创建一个n x n的0矩阵</td>
-</tr>
-<tr>
-<td align="center">eye(n)</td>
-<td align="center">创建一个n x n的单位矩阵</td>
-</tr>
-<tr>
-<td align="center">magic(n)</td>
-<td align="center">创建一个n x n的魔方矩阵，使其每一行、每一列元素之和相等</td>
-</tr>
-<tr>
-<td align="center">rand(n)</td>
-<td align="center">创建一个n x n的随机矩阵，其元素都在0-1之间随机分布</td>
-</tr>
-<tr>
-<td align="center">randn(n)</td>
-<td align="center">创建一个 n x n的矩阵，使元素为0-1零均值、单位方差的正态分布随机数</td>
-</tr>
-<tr>
-<td align="center">hilb(n)</td>
-<td align="center">创建一个n x n的hilbert矩阵</td>
-</tr>
-<tr>
-<td align="center">vander([1;2;3;x;y;z;])</td>
-<td align="center">矩阵最后一列全为1，倒数第二列是指定向量，其他各列是其后列与倒数第二列的点乘积</td>
-</tr>
-</tbody></table>
-<p>*希尔伯特矩阵会因原始数据的微小扰动而产生不可靠的计算结果。故在matlab中有一个专门用于求希尔伯特矩阵逆函数invhlib(n),其功能是求n阶希尔伯特函数的逆函数  </p>
-<p><font size=4 color=red><center>托普利兹矩阵：</center></font>  </p>
-<center><img src="/images/matlab/1/1-7.png" width=80%" height=80%" align=center /></center>
-
-
-
-
-<p><font size=4 color=red>矩阵的部分删除:</font><br>&amp;emsp;&amp;emsp;在MATLAB中，可以将矩阵的某行或某列赋值为空值而直接删除此行或此列。要是删除行或列的部分元素则矩阵将会出错。（孔赋值只能有一个非冒号引索）   </p>
-<center><img src="/images/matlab/1/1-9.png" width=80%" height=80%" align=center /></center></center>  
-  
-<br>  
-
-<h2 id="5"></h2> 
-
-<h2 id="5、矩阵函数："><a href="#5、矩阵函数：" class="headerlink" title="5、矩阵函数："></a>5、矩阵函数：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v=diag(A,k)</span><br></pre></td></tr></table></figure>
-<p>获取矩阵的对角线元素，默认k为0，当k&#x3D;1时，为主对角线右上的对角线。<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=tril(X,k)</span><br></pre></td></tr></table></figure>
-<p>只返回矩阵的下三角部分，其余部分用0补齐；当不为0时，则返回其对应的三角区域。<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=triu(X,k)</span><br></pre></td></tr></table></figure>
-<p>只返回矩阵的上三角部分，其余部分用0补齐；当不为0时，则返回其对应的三角区域。<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=rot90(A,k)</span><br></pre></td></tr></table></figure>
-<p>将矩阵A逆时针旋转90k°<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=fliplr(A)</span><br></pre></td></tr></table></figure>
-<p>将矩阵A实现左右翻转  </p>
-<br>  
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=flipud(A)</span><br></pre></td></tr></table></figure>
-将矩阵A实现上下翻转  
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=flipdim(A,dim)</span><br></pre></td></tr></table></figure>
-<p>· 当 dim&#x3D;1 时，数组上下翻转，相当于函数flipud(A)<br>· 当 dim&#x3D;2 时，数组左右翻转，相当于函数fliplr(A)<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B=inv(A)</span><br></pre></td></tr></table></figure>
-<p>求方阵A的逆矩阵，赋值给B<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=det(A)</span><br></pre></td></tr></table></figure>
-<p>求方阵A所对应行列式的函数值<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=rank(A)</span><br></pre></td></tr></table></figure>
-<p>求矩阵的秩<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=trace(A)</span><br></pre></td></tr></table></figure>
-<p>求矩阵的迹<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">norm(V)             计算向量V的2范数</span><br><span class="line">norm(V,1)           计算向量V的1范数</span><br><span class="line">norm(V,inf)         计算向量V的无穷范数</span><br></pre></td></tr></table></figure>
-<p>求矩阵的范数<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cond(A,1)           计算A的1范数下的条件数</span><br><span class="line">cond(A,2)           计算A的2范数下的条件数</span><br><span class="line">cond(A,inf)         计算A无穷范数下的条件数</span><br></pre></td></tr></table></figure>
-<p>计算范数的条件数<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E=eig(A)            求矩阵A的全部特征值，构成向量E</span><br><span class="line">[V,D]=eig(A)        求矩阵A的全部特征值，构成对叫矩阵D，并求A的所有特征向量</span><br><span class="line">[V,D]=eigs(A,k)     求矩阵A的前k个特征值构成对角矩阵D，并求A的前k个特征向量</span><br></pre></td></tr></table></figure>
-<br>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sqrtm(A)            计算矩阵A的平方根</span><br><span class="line">logm(A)             计算矩阵A的自然对数</span><br></pre></td></tr></table></figure>
-<p>矩阵的超越函数<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expm(A)             以矩阵A为对数的指数，e^A</span><br></pre></td></tr></table></figure>
-<p>矩阵指数<br><br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">B=spares(A)         将矩阵A转换为稀疏存储的矩阵B</span><br><span class="line">nnz(B)              返回矩阵B中非0元素的个数</span><br><span class="line">full(B)             返回稀疏矩阵B的原矩阵，即A</span><br><span class="line">spy(B)              显示矩阵A中非零元素分布图</span><br></pre></td></tr></table></figure>
-<ul>
-<li>matlab中存在两种存储方式，完全存储方式和稀疏存储方式。</li>
-</ul>
-<br> 
-
-
-<h2 id="6"></h2>
-
-<h2 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h2><h3 id="1、在-0-1-之间的随机数"><a href="#1、在-0-1-之间的随机数" class="headerlink" title="1、在[0,1]之间的随机数"></a>1、在[0,1]之间的随机数</h3><p>rand(m,n)–产生m*n阶[0,1]之间的随机矩阵;</p>
-<h3 id="2-按概率产生随机数"><a href="#2-按概率产生随机数" class="headerlink" title="2.按概率产生随机数"></a>2.按概率产生随机数</h3><p>h&#x3D;randsrc(m)    %mxm阶矩阵<br>h&#x3D;randsrc(m,n)  %mxn阶矩阵<br>h&#x3D;randsrc(m,n[alphabet,prob])   %将’alphabet’中的值以’prob’的概率出现</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">alphabet=[52 53 54 55 56];</span><br><span class="line">prob=[0.05 0.25 0.4 0.25 0.05];</span><br><span class="line">l=randsrc(100000,1,[alphabet;prob]);</span><br><span class="line">a=sum(l(:)==52);</span><br><span class="line">b=sum(l(:)==53);</span><br><span class="line">c=sum(l(:)==54);</span><br><span class="line">d=sum(l(:)==55);</span><br><span class="line">e=sum(l(:)==56);</span><br><span class="line">A=[a,b,c,d,e]</span><br></pre></td></tr></table></figure>
-<p><img src="/images/matlab/1/1-10.png" alt="1-10"></p>
-<h3 id="3、均匀分布随机数"><a href="#3、均匀分布随机数" class="headerlink" title="3、均匀分布随机数"></a>3、均匀分布随机数</h3><p>nuifrnd(a,b,m,n)–产生m*n阶在[a,b]之间的随机数；</p>
-<h3 id="4、二项式矩阵"><a href="#4、二项式矩阵" class="headerlink" title="4、二项式矩阵"></a>4、二项式矩阵</h3><p>binornd(n,p[M,N,N,…])–生成的随机数服从参数为(N,p)的二项分布，这些随机数排列成M<em>N</em>P… 阶矩阵。如果只写M，则生成M*M矩阵；</p>
-<br>
-
-<br>
-
-<h2 id="7"></h2>
-
-<h2 id="数组的运算"><a href="#数组的运算" class="headerlink" title="数组的运算"></a>数组的运算</h2><h3 id="1、数组间交集"><a href="#1、数组间交集" class="headerlink" title="1、数组间交集"></a>1、数组间交集</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = intersect(A,B)</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="2、数组间并集"><a href="#2、数组间并集" class="headerlink" title="2、数组间并集"></a>2、数组间并集</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = union(A,B)</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="3、数组间补集"><a href="#3、数组间补集" class="headerlink" title="3、数组间补集"></a>3、数组间补集</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = setdiff(A,B)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>子集写后边</li>
-</ul>
-<br>
-
-<br>
-
-<h2 id="8"></h2>
-
-<h2 id="八、数据读取"><a href="#八、数据读取" class="headerlink" title="八、数据读取"></a>八、数据读取</h2><h3 id="8-1-从Excel中读取数据"><a href="#8-1-从Excel中读取数据" class="headerlink" title="8.1  从Excel中读取数据"></a>8.1  从Excel中读取数据</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = xlsread(&#x27;D:\CO2.xlsx&#x27;,Sheet1,&#x27;A1:B5&#x27;)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>其中，‘D:\CO2.xlsx’表示读入的EXCEL数据所在的路径以及EXCEL的文件名称；2表示位于sheet2；’A1:B5’表示需要读入的数据范围</li>
-</ul>
-<h3 id="8-2-时间格式在matlab可识别与可视时间切换"><a href="#8-2-时间格式在matlab可识别与可视时间切换" class="headerlink" title="8.2  时间格式在matlab可识别与可视时间切换"></a>8.2  时间格式在matlab可识别与可视时间切换</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a=StockSampleA1&#123;:,2&#125;;%注意：由于这是表数据，不能用小括号</span><br><span class="line">B=[];</span><br><span class="line">for I=1:n</span><br><span class="line">    y=floor(a(I)/10000);  </span><br><span class="line">    S=a(I)-y*10000;</span><br><span class="line">    m=floor(S/100);</span><br><span class="line">    d=S-m*100;</span><br><span class="line">    b=datenum(y,m,d);</span><br><span class="line">    B=[B;b]</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>b=datenum(y,m,d)</code>–函数可以将可视时间格式转换为Matlab可识别格式；  </li>
-<li><code>D=datetime(b)</code>–该函数可以将Matlab可识别时间格式转化为可视时间格式；</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/17/Mathematical_modeling/matlab1/" data-id="cl3qp6424000wz4qfg01d5a3n" data-title="Matlab基础" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">matlab基础知识</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-学习/Arduino" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/07/%E5%AD%A6%E4%B9%A0/Arduino/" class="article-date">
-  <time class="dt-published" datetime="2021-04-06T16:00:00.000Z" itemprop="datePublished">2021-04-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/07/%E5%AD%A6%E4%B9%A0/Arduino/">Arduino语言学习-结构</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>&amp;emsp;&amp;emsp;感谢太极创客团队对arduino的无私奉献，个人的全部所学均来自<a target="_blank" rel="noopener" href="http://www.taichi-maker.com/">太极创客</a>官方网站！  </p>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="#1">基本结构</a><ul>
-<li><a href="#11">setup函数</a></li>
-<li><a href="#12">loop函数</a></li>
-</ul>
-</li>
-<li><a href="#2">控制结构</a><ul>
-<li><a href="#21">if</a></li>
-<li><a href="#22">if···else</a></li>
-<li><a href="#23">for</a></li>
-<li><a href="#24">switch_case</a></li>
-<li><a href="#25">while</a></li>
-<li><a href="#26">do···while</a></li>
-<li><a href="#27">break</a></li>
-<li><a href="#28">continue</a></li>
-<li><a href="#29">return</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="1"></h2><font color=red size=6><center>基本结构</center></font>  
-
-<h2 id="11"></h2><font color=black size=5>1、Setup函数</font>    
-
-<h3 id="说明"><a href="#说明" class="headerlink" title="说明:"></a>说明:</h3><p>&amp;emsp;&amp;emsp;当Arduino程序开始运行时会调用setup()函数。通常我们setup()函数其中初始化一些变量、引脚状态及一些调用的库等。当Arduino控制器通电或复位后，setup函数会运行一次。  </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Setup() 示例程序</span><br><span class="line"></span><br><span class="line">int buttonPin = 3;  #指定引脚3</span><br><span class="line"></span><br><span class="line">void setup() &#123;</span><br><span class="line">    pinMode(buttonPin, INPUT);  // 当Arduino通电或复位后，这里的内容将运行一次</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void loop() &#123;</span><br><span class="line">    // 当Arduino通电或复位后，这里的内容将无限循环运行</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="12"></h2><font color=black size=5>2、Loop函数</font>  
-
-<h3 id="说明-1"><a href="#说明-1" class="headerlink" title="说明:"></a>说明:</h3><p>&amp;emsp;&amp;emsp;在setup()函数对程序完成了初始化后，loop()函数将会运行。loop函数是一个循环体，在Arduino启动后，loop()函数中的程序将会不断运行。通过loop()函数你可以利用你的程序来控制Arduino，并使Arduino根据你的程序进行相应的反应。  </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Loop() 说明程序</span><br><span class="line"></span><br><span class="line">const int buttonPin = 3; </span><br><span class="line"> </span><br><span class="line">// 当Arduino通电或复位后，Setup()函数中的内容将运行一次</span><br><span class="line">void setup() &#123;</span><br><span class="line">Serial.begin(9600);  // 串口通讯初始化</span><br><span class="line">pinMode(buttonPin, INPUT); //将“按钮”引脚设置为INPUT模式</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// loop函数不断循环检查是否按钮被按下</span><br><span class="line">// 一旦按钮按下，Arduino控制器将通过</span><br><span class="line">// 串口监视器显示字母“H”。否则显示字母“L”</span><br><span class="line">void loop() &#123;</span><br><span class="line">if (digitalRead(buttonPin) == HIGH)  //检查是否按钮被按下</span><br><span class="line">    Serial.write(&#x27;H&#x27;); // 串口监视器显示字母“H”</span><br><span class="line">else</span><br><span class="line">    Serial.write(&#x27;L&#x27;); //串口监视器显示字母“L”</span><br><span class="line">delay(1000);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-<h2 id="102"></h2><font color=red size=6><center>控制结构</center></font>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/07/%E5%AD%A6%E4%B9%A0/Arduino/" data-id="cl3qp23pl000p10qfbi915p6v" data-title="Arduino语言学习-结构" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arduino/" rel="tag">Arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" rel="tag">单片机</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Learn/Arduino" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/07/Learn/Arduino/" class="article-date">
-  <time class="dt-published" datetime="2021-04-06T16:00:00.000Z" itemprop="datePublished">2021-04-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/07/Learn/Arduino/">Arduino语言学习-结构</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>&amp;emsp;&amp;emsp;感谢太极创客团队对arduino的无私奉献，个人的全部所学均来自<a target="_blank" rel="noopener" href="http://www.taichi-maker.com/">太极创客</a>官方网站！  </p>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="#1">基本结构</a><ul>
-<li><a href="#11">setup函数</a></li>
-<li><a href="#12">loop函数</a></li>
-</ul>
-</li>
-<li><a href="#2">控制结构</a><ul>
-<li><a href="#21">if</a></li>
-<li><a href="#22">if···else</a></li>
-<li><a href="#23">for</a></li>
-<li><a href="#24">switch_case</a></li>
-<li><a href="#25">while</a></li>
-<li><a href="#26">do···while</a></li>
-<li><a href="#27">break</a></li>
-<li><a href="#28">continue</a></li>
-<li><a href="#29">return</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="1"></h2><font color=red size=6><center>基本结构</center></font>  
-
-<h2 id="11"></h2><font color=black size=5>1、Setup函数</font>    
-
-<h3 id="说明"><a href="#说明" class="headerlink" title="说明:"></a>说明:</h3><p>&amp;emsp;&amp;emsp;当Arduino程序开始运行时会调用setup()函数。通常我们setup()函数其中初始化一些变量、引脚状态及一些调用的库等。当Arduino控制器通电或复位后，setup函数会运行一次。  </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Setup() 示例程序</span><br><span class="line"></span><br><span class="line">int buttonPin = 3;  #指定引脚3</span><br><span class="line"></span><br><span class="line">void setup() &#123;</span><br><span class="line">    pinMode(buttonPin, INPUT);  // 当Arduino通电或复位后，这里的内容将运行一次</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void loop() &#123;</span><br><span class="line">    // 当Arduino通电或复位后，这里的内容将无限循环运行</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="12"></h2><font color=black size=5>2、Loop函数</font>  
-
-<h3 id="说明-1"><a href="#说明-1" class="headerlink" title="说明:"></a>说明:</h3><p>&amp;emsp;&amp;emsp;在setup()函数对程序完成了初始化后，loop()函数将会运行。loop函数是一个循环体，在Arduino启动后，loop()函数中的程序将会不断运行。通过loop()函数你可以利用你的程序来控制Arduino，并使Arduino根据你的程序进行相应的反应。  </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Loop() 说明程序</span><br><span class="line"></span><br><span class="line">const int buttonPin = 3; </span><br><span class="line"> </span><br><span class="line">// 当Arduino通电或复位后，Setup()函数中的内容将运行一次</span><br><span class="line">void setup() &#123;</span><br><span class="line">Serial.begin(9600);  // 串口通讯初始化</span><br><span class="line">pinMode(buttonPin, INPUT); //将“按钮”引脚设置为INPUT模式</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// loop函数不断循环检查是否按钮被按下</span><br><span class="line">// 一旦按钮按下，Arduino控制器将通过</span><br><span class="line">// 串口监视器显示字母“H”。否则显示字母“L”</span><br><span class="line">void loop() &#123;</span><br><span class="line">if (digitalRead(buttonPin) == HIGH)  //检查是否按钮被按下</span><br><span class="line">    Serial.write(&#x27;H&#x27;); // 串口监视器显示字母“H”</span><br><span class="line">else</span><br><span class="line">    Serial.write(&#x27;L&#x27;); //串口监视器显示字母“L”</span><br><span class="line">delay(1000);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-<h2 id="102"></h2><font color=red size=6><center>控制结构</center></font>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/07/Learn/Arduino/" data-id="cl3qp64270018z4qf4bud9m5z" data-title="Arduino语言学习-结构" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arduino/" rel="tag">Arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" rel="tag">单片机</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arduino/" rel="tag">Arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" rel="tag">Lingo案例分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">Matlab基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">matlab基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E5%BA%94%E7%94%A8/" rel="tag">matlab应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E7%A8%8B%E5%BA%8F/" rel="tag">matlab程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab%E7%BB%98%E5%9B%BE/" rel="tag">matlab绘图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" rel="tag">单片机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" rel="tag">微分方程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" rel="tag">机械设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" rel="tag">论文排版</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" rel="tag">遗传算法</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
+  <div class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Arduino/" style="font-size: 12.5px;">Arduino</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" style="font-size: 12.5px;">Lingo案例分析</a> <a href="/tags/Math/" style="font-size: 12.5px;">Math</a> <a href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 12.5px;">Matlab基础知识</a> <a href="/tags/Python/" style="font-size: 12.5px;">Python</a> <a href="/tags/markdown/" style="font-size: 12.5px;">markdown</a> <a href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 12.5px;">matlab基础知识</a> <a href="/tags/matlab%E5%BA%94%E7%94%A8/" style="font-size: 17.5px;">matlab应用</a> <a href="/tags/matlab%E7%A8%8B%E5%BA%8F/" style="font-size: 12.5px;">matlab程序</a> <a href="/tags/matlab%E7%BB%98%E5%9B%BE/" style="font-size: 12.5px;">matlab绘图</a> <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 12.5px;">单片机</a> <a href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" style="font-size: 12.5px;">微分方程</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" style="font-size: 20px;">机械原理</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" style="font-size: 12.5px;">机械设计</a> <a href="/tags/%E7%8E%A9%E6%9C%BA/" style="font-size: 12.5px;">玩机</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 15px;">算法</a> <a href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" style="font-size: 12.5px;">论文排版</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 12.5px;">语法</a> <a href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" style="font-size: 10px;">遗传算法</a>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Arduino/" style="font-size: 13.25px;">Arduino</a> <a href="/tags/Git/" style="font-size: 13.25px;">Git</a> <a href="/tags/Github/" style="font-size: 14px;">Github</a> <a href="/tags/Hexo/" style="font-size: 14px;">Hexo</a> <a href="/tags/Lingo%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" style="font-size: 13.25px;">Lingo案例分析</a> <a href="/tags/Math/" style="font-size: 13.25px;">Math</a> <a href="/tags/Matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 13.25px;">Matlab基础知识</a> <a href="/tags/Python/" style="font-size: 13.25px;">Python</a> <a href="/tags/markdown/" style="font-size: 13.25px;">markdown</a> <a href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 13.25px;">matlab基础知识</a> <a href="/tags/matlab%E5%BA%94%E7%94%A8/" style="font-size: 13.75px;">matlab应用</a> <a href="/tags/matlab%E7%A8%8B%E5%BA%8F/" style="font-size: 13.25px;">matlab程序</a> <a href="/tags/matlab%E7%BB%98%E5%9B%BE/" style="font-size: 13.25px;">matlab绘图</a> <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" style="font-size: 13.25px;">单片机</a> <a href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" style="font-size: 13.25px;">微分方程</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" style="font-size: 14px;">机械原理</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/" style="font-size: 13.25px;">机械设计</a> <a href="/tags/%E7%8E%A9%E6%9C%BA/" style="font-size: 13.25px;">玩机</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 13.5px;">算法</a> <a href="/tags/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/" style="font-size: 13.25px;">论文排版</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 13.25px;">语法</a> <a href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" style="font-size: 13px;">遗传算法</a>
     </div>
   </div>
 
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
+      
+  <div class="widget">
+    <h3 class="widget-title">Archive</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a><span class="archive-list-count">12</span></li></ul>
     </div>
   </div>
 
 
-  
     
-  <div class="widget-wrap">
+      
+  <div class="widget">
     <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
         
           <li>
-            <a href="/2022/05/29/Learn/math/">Mathjax渲染公式</a>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+              </p>
+              <p class="item-title">
+                <a href="/2022/05/29/Learn/math/" class="title">Mathjax渲染公式</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-05-29T02:42:59.527Z" itemprop="datePublished">2022-05-29</time>
+              </p>
+            </div>
           </li>
-        
+          
           <li>
-            <a href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/">Mathjax渲染公式</a>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+              </p>
+              <p class="item-title">
+                <a href="/2022/05/29/%E5%AD%A6%E4%B9%A0/math/" class="title">Mathjax渲染公式</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-05-29T02:39:39.834Z" itemprop="datePublished">2022-05-29</time>
+              </p>
+            </div>
           </li>
-        
+          
           <li>
-            <a href="/2022/05/29/hello-world/">Hello World</a>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2022/05/29/hello-world/" class="title">Hello World</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-05-29T02:07:02.804Z" itemprop="datePublished">2022-05-29</time>
+              </p>
+            </div>
           </li>
-        
+          
           <li>
-            <a href="/2021/08/24/Mathematical_modeling/11GA/">Genetic Algorithm</a>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/24/Mathematical_modeling/11GA/" class="title">Genetic Algorithm</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-24T01:04:29.000Z" itemprop="datePublished">2021-08-24</time>
+              </p>
+            </div>
           </li>
-        
+          
           <li>
-            <a href="/2021/08/15/Mathematical_modeling/10matlab/">Matlab微分方程</a>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/08/15/Mathematical_modeling/10matlab/" class="title">Matlab微分方程</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-08-15T02:51:42.000Z" itemprop="datePublished">2021-08-15</time>
+              </p>
+            </div>
           </li>
-        
+          
       </ul>
     </div>
   </div>
+  
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
     
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
+  </div>
+</aside>
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
+  <main class="main" role="main">
+  
+  <div class="content article-list">
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/23/%E6%9D%82%E8%B0%88/tulun/">凸轮轮廓线推导</a>
+    </h1>
+  
 
   </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/05/23/%E6%9D%82%E8%B0%88/tulun/" class="article-date">
+	  <time datetime="2021-05-23T15:28:52.000Z" itemprop="datePublished">May 23</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/05/23/%E6%9D%82%E8%B0%88/tulun/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/23/Miscellaneous/tulun/">凸轮轮廓线推导</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/05/23/Miscellaneous/tulun/" class="article-date">
+	  <time datetime="2021-05-23T15:28:52.000Z" itemprop="datePublished">May 23</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/05/23/Miscellaneous/tulun/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/01/%E6%9D%82%E8%B0%88/yaodongbaogan/">摇动摆杆运动分析</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/05/01/%E6%9D%82%E8%B0%88/yaodongbaogan/" class="article-date">
+	  <time datetime="2021-05-01T10:54:23.000Z" itemprop="datePublished">May 1</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/05/01/%E6%9D%82%E8%B0%88/yaodongbaogan/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/01/Miscellaneous/yaodongbaogan/">摇动摆杆运动分析</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/05/01/Miscellaneous/yaodongbaogan/" class="article-date">
+	  <time datetime="2021-05-01T10:54:23.000Z" itemprop="datePublished">May 1</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/" rel="tag">机械原理</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/05/01/Miscellaneous/yaodongbaogan/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/30/%E6%9D%82%E8%B0%88/xiaoxing/">小新pro13Intel版Bios</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/04/30/%E6%9D%82%E8%B0%88/xiaoxing/" class="article-date">
+	  <time datetime="2021-04-30T13:32:06.000Z" itemprop="datePublished">Apr 30</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/04/30/%E6%9D%82%E8%B0%88/xiaoxing/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/30/Miscellaneous/xiaoxing/">小新pro13Intel版Bios</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/04/30/Miscellaneous/xiaoxing/" class="article-date">
+	  <time datetime="2021-04-30T13:32:06.000Z" itemprop="datePublished">Apr 30</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/04/30/Miscellaneous/xiaoxing/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/17/matlab/matlab1/">Matlab基础</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/04/17/matlab/matlab1/" class="article-date">
+	  <time datetime="2021-04-16T16:00:00.000Z" itemprop="datePublished">Apr 17</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">matlab基础知识</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/04/17/matlab/matlab1/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/17/Mathematical_modeling/matlab1/">Matlab基础</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/04/17/Mathematical_modeling/matlab1/" class="article-date">
+	  <time datetime="2021-04-16T16:00:00.000Z" itemprop="datePublished">Apr 17</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">matlab基础知识</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/04/17/Mathematical_modeling/matlab1/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/07/%E5%AD%A6%E4%B9%A0/Arduino/">Arduino语言学习-结构</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/04/07/%E5%AD%A6%E4%B9%A0/Arduino/" class="article-date">
+	  <time datetime="2021-04-06T16:00:00.000Z" itemprop="datePublished">Apr 7</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Arduino/" rel="tag">Arduino</a>, <a class="article-tag-link-link" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" rel="tag">单片机</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/04/07/%E5%AD%A6%E4%B9%A0/Arduino/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/07/Learn/Arduino/">Arduino语言学习-结构</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/04/07/Learn/Arduino/" class="article-date">
+	  <time datetime="2021-04-06T16:00:00.000Z" itemprop="datePublished">Apr 7</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Arduino/" rel="tag">Arduino</a>, <a class="article-tag-link-link" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" rel="tag">单片机</a>
+  </span>
+
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/04/07/Learn/Arduino/#comments" class="article-comment-link">Comments</a></span>
+    
+  </p>
+</article>
+
+    
+  </div>
+
+  
+    
+    <nav class="bar bar-footer clearfix" data-stick-bottom>
+        <div class="bar-inner">
+        <ul class="pager pull-left">
+            
+            <li class="prev">
+                <a href="/page/2/">
+                    <i class="icon icon-angle-left"></i>
+                    Prev
+                </a>
+            </li>
+            
+            
+            <li class="next">
+                <a href="/page/4/">
+                    Next
+                    <i class="icon icon-angle-right"></i>
+                </a>
+            </li>
+            
+        </ul>
+        <div class="total-article bar-right">Page 3 of 5</div>
+        </div>
+    </nav>
+    
+ 
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/tuoxiao" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/6573256711" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/yunshengchu2" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://space.bilibili.com/488452389" target="_blank" title="Bilibili" data-toggle=tooltip data-placement=top><i class="icon icon-bilibili"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+  <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/clipboard_use.js"></script>
 </body>
 </html>
