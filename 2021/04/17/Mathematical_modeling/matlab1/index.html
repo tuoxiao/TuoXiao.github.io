@@ -18,12 +18,12 @@
   
   
   <title>Matlab基础 | TuTo&#39;Blog</title>
-  <meta name="description" content="目录 字符认知 创建函数 数组运算 矩阵的生成 矩阵函数 随机数 数组运算 数据读取  MATLAB计算基础       1、字符认知常用命令功能      命令 说明 命令 说明    cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将">
+  <meta name="description" content="目录 字符认知 创建函数 数组运算 矩阵的生成 矩阵函数 随机数 数组运算 数据读取  MATLAB计算基础        1、字符认知常用命令功能        命令 说明 命令 说明     cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   ho">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matlab基础">
 <meta property="og:url" content="http://example.com/2021/04/17/Mathematical_modeling/matlab1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="目录 字符认知 创建函数 数组运算 矩阵的生成 矩阵函数 随机数 数组运算 数据读取  MATLAB计算基础       1、字符认知常用命令功能      命令 说明 命令 说明    cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   home 将">
+<meta property="og:description" content="目录 字符认知 创建函数 数组运算 矩阵的生成 矩阵函数 随机数 数组运算 数据读取  MATLAB计算基础        1、字符认知常用命令功能        命令 说明 命令 说明     cd 显示或改变当前工作文件夹 load 加载指定文件的变量   dir 显示当前文件夹或指定目录下的文件 diary 日志文件命令   clc 清除工作窗口中所有显示的内容 ! 调用DOS命令   ho">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/matlab/1/1-1.png">
 <meta property="og:image" content="http://example.com/images/matlab/1/1-2.png">
@@ -367,120 +367,128 @@
 <li><a href="#7">数组运算</a></li>
 <li><a href="#8">数据读取</a></li>
 </ul>
-<p><font size= 7 color = black ><center>MATLAB计算基础</center></font>  </p>
+<font size= 7 color = black ><center>MATLAB计算基础</center></font>  
+
 <h2 id="1"></h2>  
 
-<h2 id="1、字符认知"><a href="#1、字符认知" class="headerlink" title="1、字符认知"></a>1、字符认知</h2><p><font size= 4 color = red ><center>常用命令功能</center></font>  </p>
+<h2 id="1、字符认知"><a href="#1、字符认知" class="headerlink" title="1、字符认知"></a>1、字符认知</h2><font size= 4 color = red ><center>常用命令功能</center></font>  
+
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">命令</th>
-<th align="center">说明</th>
-<th align="center">命令</th>
-<th align="center">说明</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">cd</td>
-<td align="center">显示或改变当前工作文件夹</td>
-<td align="center">load</td>
-<td align="center">加载指定文件的变量</td>
+<tbody>
+<tr>
+<td style="text-align:center">cd</td>
+<td style="text-align:center">显示或改变当前工作文件夹</td>
+<td style="text-align:center">load</td>
+<td style="text-align:center">加载指定文件的变量</td>
 </tr>
 <tr>
-<td align="center">dir</td>
-<td align="center">显示当前文件夹或指定目录下的文件</td>
-<td align="center">diary</td>
-<td align="center">日志文件命令</td>
+<td style="text-align:center">dir</td>
+<td style="text-align:center">显示当前文件夹或指定目录下的文件</td>
+<td style="text-align:center">diary</td>
+<td style="text-align:center">日志文件命令</td>
 </tr>
 <tr>
-<td align="center">clc</td>
-<td align="center">清除工作窗口中所有显示的内容</td>
-<td align="center">!</td>
-<td align="center">调用DOS命令</td>
+<td style="text-align:center">clc</td>
+<td style="text-align:center">清除工作窗口中所有显示的内容</td>
+<td style="text-align:center">!</td>
+<td style="text-align:center">调用DOS命令</td>
 </tr>
 <tr>
-<td align="center">home</td>
-<td align="center">将光标移至命令行窗口的左上角</td>
-<td align="center">exit</td>
-<td align="center">退出matlab</td>
+<td style="text-align:center">home</td>
+<td style="text-align:center">将光标移至命令行窗口的左上角</td>
+<td style="text-align:center">exit</td>
+<td style="text-align:center">退出matlab</td>
 </tr>
 <tr>
-<td align="center">clf</td>
-<td align="center">清楚图形窗口</td>
-<td align="center">quit</td>
-<td align="center">退出matlab</td>
+<td style="text-align:center">clf</td>
+<td style="text-align:center">清楚图形窗口</td>
+<td style="text-align:center">quit</td>
+<td style="text-align:center">退出matlab</td>
 </tr>
 <tr>
-<td align="center">type</td>
-<td align="center">显示文件内容</td>
-<td align="center">pack</td>
-<td align="center">收敛内存碎片</td>
+<td style="text-align:center">type</td>
+<td style="text-align:center">显示文件内容</td>
+<td style="text-align:center">pack</td>
+<td style="text-align:center">收敛内存碎片</td>
 </tr>
 <tr>
-<td align="center">clear</td>
-<td align="center">清理内存信息</td>
-<td align="center">hold</td>
-<td align="center">图形保持开关</td>
+<td style="text-align:center">clear</td>
+<td style="text-align:center">清理内存信息</td>
+<td style="text-align:center">hold</td>
+<td style="text-align:center">图形保持开关</td>
 </tr>
 <tr>
-<td align="center">echo</td>
-<td align="center">工作窗信息显示开关</td>
-<td align="center">path</td>
-<td align="center">显示搜索目录</td>
+<td style="text-align:center">echo</td>
+<td style="text-align:center">工作窗信息显示开关</td>
+<td style="text-align:center">path</td>
+<td style="text-align:center">显示搜索目录</td>
 </tr>
 <tr>
-<td align="center">disp</td>
-<td align="center">显示变量或文字内容</td>
-<td align="center">save</td>
-<td align="center">保存内存变量到指定位置</td>
+<td style="text-align:center">disp</td>
+<td style="text-align:center">显示变量或文字内容</td>
+<td style="text-align:center">save</td>
+<td style="text-align:center">保存内存变量到指定位置</td>
 </tr>
-</tbody></table>
-<br>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<p><br></p>
+<font size= 4 color = red ><center>MATLAB默认常量</center></font> 
 
-<br>
-
-
-<p><font size= 4 color = red ><center>MATLAB默认常量</center></font> </p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">变量名</th>
-<th align="center">默认值</th>
+<th style="text-align:center">变量名</th>
+<th style="text-align:center">默认值</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">i &amp; j</td>
-<td align="center">虚数单位</td>
+<tbody>
+<tr>
+<td style="text-align:center">i &amp; j</td>
+<td style="text-align:center">虚数单位</td>
 </tr>
 <tr>
-<td align="center">pi</td>
-<td align="center">圆周率（Π）</td>
+<td style="text-align:center">pi</td>
+<td style="text-align:center">圆周率（Π）</td>
 </tr>
 <tr>
-<td align="center">ans</td>
-<td align="center">存放最近一次无赋值变量语句的预算结果</td>
+<td style="text-align:center">ans</td>
+<td style="text-align:center">存放最近一次无赋值变量语句的预算结果</td>
 </tr>
 <tr>
-<td align="center">Inf</td>
-<td align="center">无穷大</td>
+<td style="text-align:center">Inf</td>
+<td style="text-align:center">无穷大</td>
 </tr>
 <tr>
-<td align="center">eps</td>
-<td align="center">机器浮点运算误差限（如果某变量的绝对值小于eps，则视为0）</td>
+<td style="text-align:center">eps</td>
+<td style="text-align:center">机器浮点运算误差限（如果某变量的绝对值小于eps，则视为0）</td>
 </tr>
 <tr>
-<td align="center">NaN</td>
-<td align="center">不定式（0&#x2F;0，或inf&#x2F;inf，或超出存储大小的值）</td>
+<td style="text-align:center">NaN</td>
+<td style="text-align:center">不定式（0/0，或inf/inf，或超出存储大小的值）</td>
 </tr>
 <tr>
-<td align="center">lasterr</td>
-<td align="center">存放最后一次的错误消息</td>
+<td style="text-align:center">lasterr</td>
+<td style="text-align:center">存放最后一次的错误消息</td>
 </tr>
 <tr>
-<td align="center">lastwarn</td>
-<td align="center">存放最后一次警告消息</td>
+<td style="text-align:center">lastwarn</td>
+<td style="text-align:center">存放最后一次警告消息</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>1、变量名区分大小写，因此A和a表示的是不同的变量；  </p>
 </li>
@@ -488,167 +496,169 @@
 </li>
 <li><p>3、变量民不得超过31位，超过的部分将会被忽略；</p>
 </li>
-<li><p>4、某些常量也可以作为变量使用；</p>
+<li><p>4、某些常量也可以作为变量使用； </p>
 </li>
 </ul>
-<br>
+<p><br></p>
+<p><br></p>
+<font size=4 color=red><center>MATLAB数据显示格式</center></font>
 
-<br>
-
-<p><font size=4 color=red><center>MATLAB数据显示格式</center></font></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">格式</th>
-<th align="center">含义</th>
-<th align="center">*</th>
-<th align="center">格式</th>
-<th align="center">含义</th>
+<th style="text-align:center">格式</th>
+<th style="text-align:center">含义</th>
+<th style="text-align:center">*</th>
+<th style="text-align:center">格式</th>
+<th style="text-align:center">含义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">format(short)</td>
-<td align="center">短格式（5位定点数）</td>
-<td align="center">*</td>
-<td align="center">format lone e</td>
-<td align="center">长格式e方式</td>
+<tbody>
+<tr>
+<td style="text-align:center">format(short)</td>
+<td style="text-align:center">短格式（5位定点数）</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">format lone e</td>
+<td style="text-align:center">长格式e方式</td>
 </tr>
 <tr>
-<td align="center">format long</td>
-<td align="center">长格式（15点定位数）</td>
-<td align="center">*</td>
-<td align="center">format bank</td>
-<td align="center">2位十进制格式</td>
+<td style="text-align:center">format long</td>
+<td style="text-align:center">长格式（15点定位数）</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">format bank</td>
+<td style="text-align:center">2位十进制格式</td>
 </tr>
 <tr>
-<td align="center">format short e</td>
-<td align="center">短格式e方程</td>
-<td align="center">*</td>
-<td align="center">format hex</td>
-<td align="center">十六进制格式</td>
+<td style="text-align:center">format short e</td>
+<td style="text-align:center">短格式e方程</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">format hex</td>
+<td style="text-align:center">十六进制格式</td>
 </tr>
-</tbody></table>
-<br>
-
-
+</tbody>
+</table>
+</div>
+<p><br></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">format string</th>
-<th align="center">结果</th>
+<th style="text-align:center">format string</th>
+<th style="text-align:center">结果</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">%d</td>
-<td align="center">把值作为整数值来处理</td>
+<tbody>
+<tr>
+<td style="text-align:center">%d</td>
+<td style="text-align:center">把值作为整数值来处理</td>
 </tr>
 <tr>
-<td align="center">%e</td>
-<td align="center">用科学计数法来显示数据</td>
+<td style="text-align:center">%e</td>
+<td style="text-align:center">用科学计数法来显示数据</td>
 </tr>
 <tr>
-<td align="center">%f</td>
-<td align="center">用于格式化浮点数并显示这个数值</td>
+<td style="text-align:center">%f</td>
+<td style="text-align:center">用于格式化浮点数并显示这个数值</td>
 </tr>
 <tr>
-<td align="center">%g</td>
-<td align="center">用科学计数格式，或浮点数这个格式，根据哪个短，并显示</td>
+<td style="text-align:center">%g</td>
+<td style="text-align:center">用科学计数格式，或浮点数这个格式，根据哪个短，并显示</td>
 </tr>
 <tr>
-<td align="center">\n</td>
-<td align="center">转到新的一行</td>
+<td style="text-align:center">\n</td>
+<td style="text-align:center">转到新的一行</td>
 </tr>
-</tbody></table>
-<br>
-
-<br>
-
+</tbody>
+</table>
+</div>
+<p><br></p>
+<p><br></p>
 <h2 id="2"></h2> 
 
-<h2 id="2、创建函数"><a href="#2、创建函数" class="headerlink" title="2、创建函数"></a>2、创建函数</h2><p><font size=4 color=red><center>数组的创建与操作</center></font>  </p>
+<h2 id="2、创建函数"><a href="#2、创建函数" class="headerlink" title="2、创建函数"></a>2、创建函数</h2><font size=4 color=red><center>数组的创建与操作</center></font>  
+
 <center><img src="/images/matlab/1/1-1.png" width=80%" height=80%" align=center /></center>
 
 
 
-<p><font size=4 color=red><center>对数组进行访问</center></font> </p>
+<font size=4 color=red><center>对数组进行访问</center></font> 
 <center><img src="/images/matlab/1/1-2.png" width=80%" height=80%" align=center /></center>  
 
 
-<p><font size=4 color=red><center>通过logspace和linspace创建数组</center></font>  </p>
-<p><img src="/images/matlab/1/1-3.png" alt="1-3"></p>
-<br>
- 
-<br>  
+<font size=4 color=red><center>通过logspace和linspace创建数组</center></font>  
 
+<p><img src="/images/matlab/1/1-3.png" alt="1-3"></p>
+<p><br></p>
+<p><br>  </p>
 <h2 id="3"></h2> 
 
-<h2 id="3、数组运算"><a href="#3、数组运算" class="headerlink" title="3、数组运算"></a>3、数组运算</h2><br>
-
-<p>&amp;emsp;&amp;emsp;在matlab中，常见的运算关系有算术运算、关系运算、逻辑运算: </p>
-<p>算术运算：<br>&amp;emsp;&amp;emsp;数组的运算是从单个的元素出发，针对每个元素进行运算。在MATLAB中，一维数组的算术运算包括加、减、乘、左除、右除和乘方。  </p>
+<h2 id="3、数组运算"><a href="#3、数组运算" class="headerlink" title="3、数组运算"></a>3、数组运算</h2><p><br></p>
+<p>&emsp;&emsp;在matlab中，常见的运算关系有算术运算、关系运算、逻辑运算: </p>
+<p>算术运算：<br>&emsp;&emsp;数组的运算是从单个的元素出发，针对每个元素进行运算。在MATLAB中，一维数组的算术运算包括加、减、乘、左除、右除和乘方。  </p>
 <p><img src="/images/matlab/1/1-4.png" alt="1-4"><br><img src="/images/matlab/1/1-5.png" alt="1-5"> </p>
-<br>
-
-<br>
-
-<p>&amp;emsp;&amp;emsp;通过dot函数可以实现点积运算，其等价于<code>.*</code>,但是运算规则要求数组A和数组B的维数相同。函数的调用格式为：  </p>
-<p>&amp;emsp;&amp;emsp;C&#x3D;dot(A,B)或C&#x3D;dot(A,B,dim),其中参数dim用于指定内积计算的维数。  </p>
+<p><br></p>
+<p><br></p>
+<p>&emsp;&emsp;通过dot函数可以实现点积运算，其等价于<code>.*</code>,但是运算规则要求数组A和数组B的维数相同。函数的调用格式为：  </p>
+<p>&emsp;&emsp;C=dot(A,B)或C=dot(A,B,dim),其中参数dim用于指定内积计算的维数。  </p>
 <center><img src="/images/matlab/1/1-6.png" width=80%" height=80%" align=center /></center>
 
-<br>
- 
-
+<p><br></p>
 <h2 id="4"></h2> 
 
-<h2 id="4、矩阵的生成"><a href="#4、矩阵的生成" class="headerlink" title="4、矩阵的生成"></a>4、矩阵的生成</h2><br>
-
-<p><font size=4 color=red><center>直接输入</center></font></p>
+<h2 id="4、矩阵的生成"><a href="#4、矩阵的生成" class="headerlink" title="4、矩阵的生成"></a>4、矩阵的生成</h2><p><br></p>
+<font size=4 color=red><center>直接输入</center></font>
 <center><img src="/images/matlab/1/1-8.png" width=80%" height=80%" align=center /></center>    
 *输入表达式将自动计算出结果 
 
 <br>
 
-<p><font size=4 color=red><center>常用特殊矩阵生成函数</center></font>  </p>
+<font size=4 color=red><center>常用特殊矩阵生成函数</center></font>  
+
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">函数</th>
-<th align="center">说明</th>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">one(n)</td>
-<td align="center">创建一个n x n的1矩阵</td>
+<tbody>
+<tr>
+<td style="text-align:center">one(n)</td>
+<td style="text-align:center">创建一个n x n的1矩阵</td>
 </tr>
 <tr>
-<td align="center">zeros(n)</td>
-<td align="center">创建一个n x n的0矩阵</td>
+<td style="text-align:center">zeros(n)</td>
+<td style="text-align:center">创建一个n x n的0矩阵</td>
 </tr>
 <tr>
-<td align="center">eye(n)</td>
-<td align="center">创建一个n x n的单位矩阵</td>
+<td style="text-align:center">eye(n)</td>
+<td style="text-align:center">创建一个n x n的单位矩阵</td>
 </tr>
 <tr>
-<td align="center">magic(n)</td>
-<td align="center">创建一个n x n的魔方矩阵，使其每一行、每一列元素之和相等</td>
+<td style="text-align:center">magic(n)</td>
+<td style="text-align:center">创建一个n x n的魔方矩阵，使其每一行、每一列元素之和相等</td>
 </tr>
 <tr>
-<td align="center">rand(n)</td>
-<td align="center">创建一个n x n的随机矩阵，其元素都在0-1之间随机分布</td>
+<td style="text-align:center">rand(n)</td>
+<td style="text-align:center">创建一个n x n的随机矩阵，其元素都在0-1之间随机分布</td>
 </tr>
 <tr>
-<td align="center">randn(n)</td>
-<td align="center">创建一个 n x n的矩阵，使元素为0-1零均值、单位方差的正态分布随机数</td>
+<td style="text-align:center">randn(n)</td>
+<td style="text-align:center">创建一个 n x n的矩阵，使元素为0-1零均值、单位方差的正态分布随机数</td>
 </tr>
 <tr>
-<td align="center">hilb(n)</td>
-<td align="center">创建一个n x n的hilbert矩阵</td>
+<td style="text-align:center">hilb(n)</td>
+<td style="text-align:center">创建一个n x n的hilbert矩阵</td>
 </tr>
 <tr>
-<td align="center">vander([1;2;3;x;y;z;])</td>
-<td align="center">矩阵最后一列全为1，倒数第二列是指定向量，其他各列是其后列与倒数第二列的点乘积</td>
+<td style="text-align:center">vander([1;2;3;x;y;z;])</td>
+<td style="text-align:center">矩阵最后一列全为1，倒数第二列是指定向量，其他各列是其后列与倒数第二列的点乘积</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>*希尔伯特矩阵会因原始数据的微小扰动而产生不可靠的计算结果。故在matlab中有一个专门用于求希尔伯特矩阵逆函数invhlib(n),其功能是求n阶希尔伯特函数的逆函数  </p>
 <p><font size=4 color=red><center>托普利兹矩阵：</center></font>  </p>
 <center><img src="/images/matlab/1/1-7.png" width=80%" height=80%" align=center /></center>
@@ -656,15 +666,14 @@
 
 
 
-<p><font size=4 color=red>矩阵的部分删除:</font><br>&amp;emsp;&amp;emsp;在MATLAB中，可以将矩阵的某行或某列赋值为空值而直接删除此行或此列。要是删除行或列的部分元素则矩阵将会出错。（孔赋值只能有一个非冒号引索）   </p>
+<p><font size=4 color=red>矩阵的部分删除:</font><br>&emsp;&emsp;在MATLAB中，可以将矩阵的某行或某列赋值为空值而直接删除此行或此列。要是删除行或列的部分元素则矩阵将会出错。（孔赋值只能有一个非冒号引索）   </p>
 <center><img src="/images/matlab/1/1-9.png" width=80%" height=80%" align=center /></center></center>  
-  
-<br>  
 
+<p><br>  </p>
 <h2 id="5"></h2> 
 
 <h2 id="5、矩阵函数："><a href="#5、矩阵函数：" class="headerlink" title="5、矩阵函数："></a>5、矩阵函数：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v=diag(A,k)</span><br></pre></td></tr></table></figure>
-<p>获取矩阵的对角线元素，默认k为0，当k&#x3D;1时，为主对角线右上的对角线。<br><br></p>
+<p>获取矩阵的对角线元素，默认k为0，当k=1时，为主对角线右上的对角线。<br><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=tril(X,k)</span><br></pre></td></tr></table></figure>
 <p>只返回矩阵的下三角部分，其余部分用0补齐；当不为0时，则返回其对应的三角区域。<br><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=triu(X,k)</span><br></pre></td></tr></table></figure>
@@ -673,13 +682,9 @@
 <p>将矩阵A逆时针旋转90k°<br><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=fliplr(A)</span><br></pre></td></tr></table></figure>
 <p>将矩阵A实现左右翻转  </p>
-<br>  
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=flipud(A)</span><br></pre></td></tr></table></figure>
-将矩阵A实现上下翻转  
-<br>
-
+<p><br><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=flipud(A)</span><br></pre></td></tr></table></figure><br>将矩阵A实现上下翻转<br><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=flipdim(A,dim)</span><br></pre></td></tr></table></figure>
-<p>· 当 dim&#x3D;1 时，数组上下翻转，相当于函数flipud(A)<br>· 当 dim&#x3D;2 时，数组左右翻转，相当于函数fliplr(A)<br><br></p>
+<p>· 当 dim=1 时，数组上下翻转，相当于函数flipud(A)<br>· 当 dim=2 时，数组左右翻转，相当于函数fliplr(A)<br><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B=inv(A)</span><br></pre></td></tr></table></figure>
 <p>求方阵A的逆矩阵，赋值给B<br><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L=det(A)</span><br></pre></td></tr></table></figure>
@@ -693,8 +698,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cond(A,1)           计算A的1范数下的条件数</span><br><span class="line">cond(A,2)           计算A的2范数下的条件数</span><br><span class="line">cond(A,inf)         计算A无穷范数下的条件数</span><br></pre></td></tr></table></figure>
 <p>计算范数的条件数<br><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E=eig(A)            求矩阵A的全部特征值，构成向量E</span><br><span class="line">[V,D]=eig(A)        求矩阵A的全部特征值，构成对叫矩阵D，并求A的所有特征向量</span><br><span class="line">[V,D]=eigs(A,k)     求矩阵A的前k个特征值构成对角矩阵D，并求A的前k个特征向量</span><br></pre></td></tr></table></figure>
-<br>
-
+<p><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sqrtm(A)            计算矩阵A的平方根</span><br><span class="line">logm(A)             计算矩阵A的自然对数</span><br></pre></td></tr></table></figure>
 <p>矩阵的超越函数<br><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expm(A)             以矩阵A为对数的指数，e^A</span><br></pre></td></tr></table></figure>
@@ -703,49 +707,37 @@
 <ul>
 <li>matlab中存在两种存储方式，完全存储方式和稀疏存储方式。</li>
 </ul>
-<br> 
-
-
+<p><br> </p>
 <h2 id="6"></h2>
 
-<h2 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h2><h3 id="1、在-0-1-之间的随机数"><a href="#1、在-0-1-之间的随机数" class="headerlink" title="1、在[0,1]之间的随机数"></a>1、在[0,1]之间的随机数</h3><p>rand(m,n)–产生m*n阶[0,1]之间的随机矩阵;</p>
-<h3 id="2-按概率产生随机数"><a href="#2-按概率产生随机数" class="headerlink" title="2.按概率产生随机数"></a>2.按概率产生随机数</h3><p>h&#x3D;randsrc(m)    %mxm阶矩阵<br>h&#x3D;randsrc(m,n)  %mxn阶矩阵<br>h&#x3D;randsrc(m,n[alphabet,prob])   %将’alphabet’中的值以’prob’的概率出现</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">alphabet=[52 53 54 55 56];</span><br><span class="line">prob=[0.05 0.25 0.4 0.25 0.05];</span><br><span class="line">l=randsrc(100000,1,[alphabet;prob]);</span><br><span class="line">a=sum(l(:)==52);</span><br><span class="line">b=sum(l(:)==53);</span><br><span class="line">c=sum(l(:)==54);</span><br><span class="line">d=sum(l(:)==55);</span><br><span class="line">e=sum(l(:)==56);</span><br><span class="line">A=[a,b,c,d,e]</span><br></pre></td></tr></table></figure>
-<p><img src="/images/matlab/1/1-10.png" alt="1-10"></p>
-<h3 id="3、均匀分布随机数"><a href="#3、均匀分布随机数" class="headerlink" title="3、均匀分布随机数"></a>3、均匀分布随机数</h3><p>nuifrnd(a,b,m,n)–产生m*n阶在[a,b]之间的随机数；</p>
-<h3 id="4、二项式矩阵"><a href="#4、二项式矩阵" class="headerlink" title="4、二项式矩阵"></a>4、二项式矩阵</h3><p>binornd(n,p[M,N,N,…])–生成的随机数服从参数为(N,p)的二项分布，这些随机数排列成M<em>N</em>P… 阶矩阵。如果只写M，则生成M*M矩阵；</p>
-<br>
-
-<br>
-
+<h2 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h2><h3 id="1、在-0-1-之间的随机数"><a href="#1、在-0-1-之间的随机数" class="headerlink" title="1、在[0,1]之间的随机数"></a>1、在[0,1]之间的随机数</h3><p>rand(m,n)—产生m*n阶[0,1]之间的随机矩阵;</p>
+<h3 id="2-按概率产生随机数"><a href="#2-按概率产生随机数" class="headerlink" title="2.按概率产生随机数"></a>2.按概率产生随机数</h3><p>h=randsrc(m)    %mxm阶矩阵<br>h=randsrc(m,n)  %mxn阶矩阵<br>h=randsrc(m,n[alphabet,prob])   %将’alphabet’中的值以’prob’的概率出现<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">alphabet=[52 53 54 55 56];</span><br><span class="line">prob=[0.05 0.25 0.4 0.25 0.05];</span><br><span class="line">l=randsrc(100000,1,[alphabet;prob]);</span><br><span class="line">a=sum(l(:)==52);</span><br><span class="line">b=sum(l(:)==53);</span><br><span class="line">c=sum(l(:)==54);</span><br><span class="line">d=sum(l(:)==55);</span><br><span class="line">e=sum(l(:)==56);</span><br><span class="line">A=[a,b,c,d,e]</span><br></pre></td></tr></table></figure><br><img src="/images/matlab/1/1-10.png" alt="1-10"></p>
+<h3 id="3、均匀分布随机数"><a href="#3、均匀分布随机数" class="headerlink" title="3、均匀分布随机数"></a>3、均匀分布随机数</h3><p>nuifrnd(a,b,m,n)—产生m*n阶在[a,b]之间的随机数；</p>
+<h3 id="4、二项式矩阵"><a href="#4、二项式矩阵" class="headerlink" title="4、二项式矩阵"></a>4、二项式矩阵</h3><p>binornd(n,p[M,N,N,…])—生成的随机数服从参数为(N,p)的二项分布，这些随机数排列成M<em>N</em>P… 阶矩阵。如果只写M，则生成M*M矩阵；</p>
+<p><br></p>
+<p><br></p>
 <h2 id="7"></h2>
 
 <h2 id="数组的运算"><a href="#数组的运算" class="headerlink" title="数组的运算"></a>数组的运算</h2><h3 id="1、数组间交集"><a href="#1、数组间交集" class="headerlink" title="1、数组间交集"></a>1、数组间交集</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = intersect(A,B)</span><br></pre></td></tr></table></figure>
-
-<br>
-
+<p><br></p>
 <h3 id="2、数组间并集"><a href="#2、数组间并集" class="headerlink" title="2、数组间并集"></a>2、数组间并集</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = union(A,B)</span><br></pre></td></tr></table></figure>
-
-<br>
-
+<p><br></p>
 <h3 id="3、数组间补集"><a href="#3、数组间补集" class="headerlink" title="3、数组间补集"></a>3、数组间补集</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = setdiff(A,B)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>子集写后边</li>
 </ul>
-<br>
-
-<br>
-
+<p><br></p>
+<p><br></p>
 <h2 id="8"></h2>
 
 <h2 id="八、数据读取"><a href="#八、数据读取" class="headerlink" title="八、数据读取"></a>八、数据读取</h2><h3 id="8-1-从Excel中读取数据"><a href="#8-1-从Excel中读取数据" class="headerlink" title="8.1  从Excel中读取数据"></a>8.1  从Excel中读取数据</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = xlsread(&#x27;D:\CO2.xlsx&#x27;,Sheet1,&#x27;A1:B5&#x27;)</span><br></pre></td></tr></table></figure>
 <ul>
-<li>其中，‘D:\CO2.xlsx’表示读入的EXCEL数据所在的路径以及EXCEL的文件名称；2表示位于sheet2；’A1:B5’表示需要读入的数据范围</li>
+<li>其中，‘D:\CO2.xlsx’表示读入的EXCEL数据所在的路径以及EXCEL的文件名称；2表示位于sheet2；’A1:B5’表示需要读入的数据范围  </li>
 </ul>
 <h3 id="8-2-时间格式在matlab可识别与可视时间切换"><a href="#8-2-时间格式在matlab可识别与可视时间切换" class="headerlink" title="8.2  时间格式在matlab可识别与可视时间切换"></a>8.2  时间格式在matlab可识别与可视时间切换</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a=StockSampleA1&#123;:,2&#125;;%注意：由于这是表数据，不能用小括号</span><br><span class="line">B=[];</span><br><span class="line">for I=1:n</span><br><span class="line">    y=floor(a(I)/10000);  </span><br><span class="line">    S=a(I)-y*10000;</span><br><span class="line">    m=floor(S/100);</span><br><span class="line">    d=S-m*100;</span><br><span class="line">    b=datenum(y,m,d);</span><br><span class="line">    B=[B;b]</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
 <ul>
-<li><code>b=datenum(y,m,d)</code>–函数可以将可视时间格式转换为Matlab可识别格式；  </li>
-<li><code>D=datetime(b)</code>–该函数可以将Matlab可识别时间格式转化为可视时间格式；</li>
+<li><code>b=datenum(y,m,d)</code>—函数可以将可视时间格式转换为Matlab可识别格式；  </li>
+<li><code>D=datetime(b)</code>—该函数可以将Matlab可识别时间格式转化为可视时间格式；</li>
 </ul>
 
       
@@ -805,12 +797,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2021/04/17/matlab/matlab1/" title="Matlab基础"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+      <a href="/2021/04/30/Miscellaneous/xiaoxing/" title="小新pro13Intel版Bios"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2021/04/07/Learn/Arduino/" title="Arduino语言学习-结构"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2021/04/17/matlab/matlab1/" title="Matlab基础"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
@@ -919,5 +911,20 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
   <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="/js/clipboard_use.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

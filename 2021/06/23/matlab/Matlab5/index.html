@@ -18,12 +18,12 @@
   
   
   <title>Matlab随手记 | TuTo&#39;Blog</title>
-  <meta name="description" content="1、将数组中小于某个值得数全部加上某个值：1theta3(theta3(:)&lt;0)&#x3D;theta3((theta3(:)&lt;0))+360   2、规定图像范围，改变x轴标记：123axis([80,440,-2.5,3.5]);set(gca, &amp;#x27;Xtick&amp;#x27;,80:30:440)set(gca,&amp;#x27;Xticklabel&amp;#x27;,&amp;#123;&amp;#x27;8">
+  <meta name="description" content="1、将数组中小于某个值得数全部加上某个值：1theta3(theta3(:)&lt;0)&#x3D;theta3((theta3(:)&lt;0))+360  2、规定图像范围，改变x轴标记：123axis([80,440,-2.5,3.5]);set(gca, &amp;#x27;Xtick&amp;#x27;,80:30:440)set(gca,&amp;#x27;Xticklabel&amp;#x27;,&amp;#123;&amp;#x27;80">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matlab随手记">
 <meta property="og:url" content="http://example.com/2021/06/23/matlab/Matlab5/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1、将数组中小于某个值得数全部加上某个值：1theta3(theta3(:)&lt;0)&#x3D;theta3((theta3(:)&lt;0))+360   2、规定图像范围，改变x轴标记：123axis([80,440,-2.5,3.5]);set(gca, &amp;#x27;Xtick&amp;#x27;,80:30:440)set(gca,&amp;#x27;Xticklabel&amp;#x27;,&amp;#123;&amp;#x27;8">
+<meta property="og:description" content="1、将数组中小于某个值得数全部加上某个值：1theta3(theta3(:)&lt;0)&#x3D;theta3((theta3(:)&lt;0))+360  2、规定图像范围，改变x轴标记：123axis([80,440,-2.5,3.5]);set(gca, &amp;#x27;Xtick&amp;#x27;,80:30:440)set(gca,&amp;#x27;Xticklabel&amp;#x27;,&amp;#123;&amp;#x27;80">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/matlab/5/5-1.png">
 <meta property="og:image" content="http://example.com/images/matlab/5/5-2.png">
@@ -350,45 +350,33 @@
     <div class="article-entry marked-body" itemprop="articleBody">
       
         <h2 id="1、将数组中小于某个值得数全部加上某个值："><a href="#1、将数组中小于某个值得数全部加上某个值：" class="headerlink" title="1、将数组中小于某个值得数全部加上某个值："></a>1、将数组中小于某个值得数全部加上某个值：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theta3(theta3(:)&lt;0)=theta3((theta3(:)&lt;0))+360</span><br></pre></td></tr></table></figure>
-<br>
-
+<p><br></p>
 <h2 id="2、规定图像范围，改变x轴标记："><a href="#2、规定图像范围，改变x轴标记：" class="headerlink" title="2、规定图像范围，改变x轴标记："></a>2、规定图像范围，改变x轴标记：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">axis([80,440,-2.5,3.5]);</span><br><span class="line">set(gca, &#x27;Xtick&#x27;,80:30:440)</span><br><span class="line">set(gca,&#x27;Xticklabel&#x27;,&#123;&#x27;80\circ&#x27;,&#x27;110\circ&#x27;,&#x27;140\circ&#x27;,&#x27;170\circ&#x27;,&#x27;200\circ&#x27;,&#x27;230\circ&#x27;,&#x27;260\circ&#x27;,&#x27;290\circ&#x27;,&#x27;320\circ&#x27;,&#x27;350\circ&#x27;,&#x27;20\circ&#x27;,&#x27;50\circ&#x27;,&#x27;80\circ&#x27;,&#125;)</span><br></pre></td></tr></table></figure>
-
-<br>
-
+<p><br></p>
 <h2 id="3、将x作图曲线从大到小排列"><a href="#3、将x作图曲线从大到小排列" class="headerlink" title="3、将x作图曲线从大到小排列"></a>3、将x作图曲线从大到小排列</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set(gca,&#x27;XDir&#x27;,&#x27;reverse&#x27;)</span><br></pre></td></tr></table></figure>
-
 <p><img src="/images/matlab/5/5-1.png" alt="5-1"></p>
-<br>
-
-<h2 id="4、取整函数"><a href="#4、取整函数" class="headerlink" title="4、取整函数"></a>4、取整函数</h2><p>&amp;emsp;&amp;emsp;· 1、fix(x):截尾取整；<br>&amp;emsp;&amp;emsp;· 2、floor(x):不超过x的最大整数；<br>&amp;emsp;&amp;emsp;· 3、ceil(x):不大于x的最小整数；<br>&amp;emsp;&amp;emsp;· 4、round(x):四舍五入取整； </p>
-<br>
-
+<p><br></p>
+<h2 id="4、取整函数"><a href="#4、取整函数" class="headerlink" title="4、取整函数"></a>4、取整函数</h2><p>&emsp;&emsp;· 1、fix(x):截尾取整；<br>&emsp;&emsp;· 2、floor(x):不超过x的最大整数；<br>&emsp;&emsp;· 3、ceil(x):不大于x的最小整数；<br>&emsp;&emsp;· 4、round(x):四舍五入取整； </p>
+<p><br></p>
 <h2 id="5、自动保存图片"><a href="#5、自动保存图片" class="headerlink" title="5、自动保存图片"></a>5、自动保存图片</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for t=1:n</span><br><span class="line">        h=figure(t);</span><br><span class="line">        plot(Ci,Cj,&#x27;R*-&#x27;);</span><br><span class="line">        name=[&#x27;figure&#x27;,num2str(t),&#x27;.jpg&#x27;];</span><br><span class="line">        saveas(h,name);</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-
-<br>
-
+<p><br></p>
 <h2 id="6、矩阵标准化"><a href="#6、矩阵标准化" class="headerlink" title="6、矩阵标准化"></a>6、矩阵标准化</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">a=xlsread(&#x27;D:\File\文档\MATLAB\A.xlsx&#x27;,&#x27;Sheet5&#x27;,&#x27;A1:D13&#x27;);</span><br><span class="line">[A,A_mean,A_std]=zscore(a)</span><br><span class="line">B=xlsread(&#x27;D:\File\文档\MATLAB\A.xlsx&#x27;,&#x27;Sheet4&#x27;,&#x27;A1:C4&#x27;)</span><br><span class="line">c=A*B;</span><br><span class="line">C=B&#x27;./A_std</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">syms X1 X2 X3 X4 F1 F2 F3</span><br><span class="line"></span><br><span class="line">F1=C(1,1)*(X1-A_mean(1))+C(1,2)*(X2-A_mean(2))+C(1,3)*(X3-A_mean(3))+C(1,4)*(X4-A_mean(4));</span><br><span class="line">F2=C(2,1)*(X1-A_mean(1))+C(2,2)*(X2-A_mean(2))+C(2,3)*(X3-A_mean(3))+C(2,4)*(X4-A_mean(4));</span><br><span class="line">F3=C(3,1)*(X1-A_mean(1))+C(3,2)*(X2-A_mean(2))+C(3,3)*(X3-A_mean(3))+C(3,4)*(X4-A_mean(4));</span><br><span class="line"></span><br><span class="line">y=95.423+9.883*F1+0.125*F2+4.555*F3;</span><br><span class="line"></span><br><span class="line">Y=vpa(y,4)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <ul>
-<li><code>A_mean</code> :&amp;ensp;均值    </li>
-<li><code>A_std</code> :&amp;ensp;标准方差  </li>
+<li><code>A_mean</code> :&ensp;均值    </li>
+<li><code>A_std</code> :&ensp;标准方差  </li>
 <li><code>vpa</code>函数:<ul>
 <li>1、控制精度，上述控制结果精度为4。  </li>
-<li>2、求根，上述已知X &amp; F关系，将以F为自变量转换为以X为自变量。</li>
+<li>2、求根，上述已知X &amp; F关系，将以F为自变量转换为以X为自变量。 </li>
 </ul>
 </li>
 </ul>
-<br>
-
+<p><br></p>
 <h2 id="7、求元素在数组中出现的频率"><a href="#7、求元素在数组中出现的频率" class="headerlink" title="7、求元素在数组中出现的频率"></a>7、求元素在数组中出现的频率</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ID,A]=xlsread(&#x27;D:\File\微云同步\数学建模\4数据挖掘\processedfile.xlsx&#x27;)</span><br><span class="line">B1=tabulate(A(2:end,1))</span><br></pre></td></tr></table></figure>
-
 <ul>
-<li><code>tabulate</code> : &amp;ensp;求元素在数组中出现的频率</li>
+<li><code>tabulate</code> : &ensp;求元素在数组中出现的频率  </li>
 </ul>
 <p><img src="/images/matlab/5/5-2.png" alt="5-2"></p>
-<br>
-
+<p><br></p>
 <h2 id="8、Matlab打开网页"><a href="#8、Matlab打开网页" class="headerlink" title="8、Matlab打开网页"></a>8、Matlab打开网页</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">web browser tuoxiao.github.io</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -447,12 +435,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2021/06/24/Miscellaneous/chouyouji/" title="曲柄平衡油梁式抽油机设计"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+      <a href="/2021/06/23/Mathematical_modeling/Matlab5/" title="Matlab随手记"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2021/06/23/Mathematical_modeling/Matlab5/" title="Matlab随手记"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2021/05/29/Mathematical_modeling/montecarlo7/" title="MonteCarlo模拟"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
@@ -561,5 +549,20 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
   <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="/js/clipboard_use.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

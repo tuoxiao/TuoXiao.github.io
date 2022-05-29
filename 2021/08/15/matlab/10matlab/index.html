@@ -18,12 +18,12 @@
   
   
   <title>Matlab微分方程 | TuTo&#39;Blog</title>
-  <meta name="description" content="微分方程求解一阶线性微分方程 形如 $y’+P(x)y&#x3D;Q(x)$的函数称之为一阶线性常微分方程。其中： $y’+P(x)y&#x3D;0$，被称为 齐次微分方程。 $y’+P(x)y&#x3D;Q(x)$，被称为 非齐次微分方程。    12345678910syms y(x)ode&#x3D;diff(y,x)-y&#x3D;&#x3D;0;     %写出函数cond&#x3D;y(0)&#x3D;&#x3D;1;           %定">
+  <meta name="description" content="微分方程求解一阶线性微分方程 形如 $y’+P(x)y&#x3D;Q(x)$的函数称之为一阶线性常微分方程。其中： $y’+P(x)y&#x3D;0$，被称为 齐次微分方程。 $y’+P(x)y&#x3D;Q(x)$，被称为 非齐次微分方程。    12345678910syms y(x)ode&#x3D;diff(y,x)-y&#x3D;&#x3D;0;     %写出函数cond&#x3D;y(0)&#x3D;&#x3D;1;           %定义初始条件A&#x3D;dsolve(o">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matlab微分方程">
 <meta property="og:url" content="http://example.com/2021/08/15/matlab/10matlab/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="微分方程求解一阶线性微分方程 形如 $y’+P(x)y&#x3D;Q(x)$的函数称之为一阶线性常微分方程。其中： $y’+P(x)y&#x3D;0$，被称为 齐次微分方程。 $y’+P(x)y&#x3D;Q(x)$，被称为 非齐次微分方程。    12345678910syms y(x)ode&#x3D;diff(y,x)-y&#x3D;&#x3D;0;     %写出函数cond&#x3D;y(0)&#x3D;&#x3D;1;           %定">
+<meta property="og:description" content="微分方程求解一阶线性微分方程 形如 $y’+P(x)y&#x3D;Q(x)$的函数称之为一阶线性常微分方程。其中： $y’+P(x)y&#x3D;0$，被称为 齐次微分方程。 $y’+P(x)y&#x3D;Q(x)$，被称为 非齐次微分方程。    12345678910syms y(x)ode&#x3D;diff(y,x)-y&#x3D;&#x3D;0;     %写出函数cond&#x3D;y(0)&#x3D;&#x3D;1;           %定义初始条件A&#x3D;dsolve(o">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/matlab/10/10-1.png">
 <meta property="og:image" content="http://example.com/images/matlab/10/10-2.png">
@@ -350,9 +350,9 @@
     <div class="article-entry marked-body" itemprop="articleBody">
       
         <h1 id="微分方程求解"><a href="#微分方程求解" class="headerlink" title="微分方程求解"></a>微分方程求解</h1><h2 id="一阶线性微分方程"><a href="#一阶线性微分方程" class="headerlink" title="一阶线性微分方程"></a>一阶线性微分方程</h2><ul>
-<li>形如 $y’+P(x)y&#x3D;Q(x)$的函数称之为一阶线性常微分方程。其中：<ul>
-<li>$y’+P(x)y&#x3D;0$，被称为 齐次微分方程。</li>
-<li>$y’+P(x)y&#x3D;Q(x)$，被称为 非齐次微分方程。</li>
+<li>形如 $y’+P(x)y=Q(x)$的函数称之为一阶线性常微分方程。其中：<ul>
+<li>$y’+P(x)y=0$，被称为 齐次微分方程。</li>
+<li>$y’+P(x)y=Q(x)$，被称为 非齐次微分方程。</li>
 </ul>
 </li>
 </ul>
@@ -361,21 +361,22 @@
 <li>结果<br><img src="/images/matlab/10/10-1.png" alt="10-1"></li>
 </ul>
 <h2 id="二阶微分方程"><a href="#二阶微分方程" class="headerlink" title="二阶微分方程"></a>二阶微分方程</h2><ul>
-<li>形如$y’’+py’+qy&#x3D;f(x)$的方程被称为：二阶常系数微分方程</li>
+<li>形如$y’’+py’+qy=f(x)$的方程被称为：二阶常系数微分方程</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">clear,clc,close all</span><br><span class="line"></span><br><span class="line">syms y(x)</span><br><span class="line">ode1=diff(y,x,2)-y==0;</span><br><span class="line">dy=diff(y,x)</span><br><span class="line">cond1=[y(0)==2,dy(0)==0];</span><br><span class="line">A=dsolve(ode1,cond1)</span><br><span class="line"></span><br><span class="line">syms y(x)</span><br><span class="line">ode2=x^2*diff(y,x,2)+x*diff(y,x)-y==0;</span><br><span class="line">cond2=[];</span><br><span class="line">B=dsolve(ode2,cond2)</span><br><span class="line">B1=diff(B,x)</span><br><span class="line">B2=diff(B,x,2)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>结果<br><img src="/images/matlab/10/10-2.png" alt="10-2"></li>
 </ul>
-<br>
-
-<h1 id="微分方程的数值解"><a href="#微分方程的数值解" class="headerlink" title="微分方程的数值解"></a>微分方程的数值解</h1><p>&amp;emsp;&amp;emsp;在工程和计算中常常需要求解微分方程，但微分方程的解析解通常很难得到，所以一种退而求其次的方法就是求其数值解。这里是使用Matlab中的ode45求解常微分方程数值解的简单说明。具体可使用”help ode45”命令查看它的帮助文档。</p>
+<p><br></p>
+<h1 id="微分方程的数值解"><a href="#微分方程的数值解" class="headerlink" title="微分方程的数值解"></a>微分方程的数值解</h1><p>&emsp;&emsp;在工程和计算中常常需要求解微分方程，但微分方程的解析解通常很难得到，所以一种退而求其次的方法就是求其数值解。这里是使用Matlab中的ode45求解常微分方程数值解的简单说明。具体可使用”help ode45”命令查看它的帮助文档。</p>
 <p>查看 Matlab Help 可以发现,<code>ode45</code>的用法如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[X,Y]=ode45(odefun,tspan,y0)</span><br></pre></td></tr></table></figure>
 <ul>
-<li>其中 </li>
+<li>其中 <ul>
 <li><code>odefun</code>通常指方程所在函数函数名；</li>
-<li><code>tspan</code>通常指</li>
+<li><code>tspan</code>通常指 </li>
+</ul>
+</li>
 </ul>
 
       
@@ -440,7 +441,7 @@
     
     
     <li class="next">
-      <a href="/2021/07/31/matlab/9latex/" title="Latex排版"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2021/07/31/Mathematical_modeling/9latex/" title="Latex排版"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
@@ -549,5 +550,20 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
   <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="/js/clipboard_use.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

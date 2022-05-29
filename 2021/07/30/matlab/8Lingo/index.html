@@ -366,21 +366,30 @@
 </ul>
 <center>
 
-<p>$Min&#x3D;x_1+x_2+x_3$</p>
+$Min=x_1+x_2+x_3$
+
 <br>
 
-<p>$$<br>\begin{cases} r_{11}x_1+r_{12}x_2+r_{13}x_3 \ge50 \r_{21}x_1+r_{22}x_2+r_{23}x_3 \ge10 \ r_{31}x_1+r_{32}x_2+r_{33}x_3 \ge20 \r_{41}x_1+r_{42}x_2+r_{43}x_3 \ge15 \end{cases}<br>$$</p>
+$$
+\begin{cases} r_{11}x_1+r_{12}x_2+r_{13}x_3 \ge50 \\r_{21}x_1+r_{22}x_2+r_{23}x_3 \ge10 \\ r_{31}x_1+r_{32}x_2+r_{33}x_3 \ge20 \\r_{41}x_1+r_{42}x_2+r_{43}x_3 \ge15 \end{cases}
+$$
+
 <br>
 
-<p>$$<br>\begin{cases}<br>16\leqq4r_{11}+5r_{21}+6r_{31}+8r_{41} \leqq19 \<br>16\leqq4r_{12}+5r_{22}+6r_{32}+8r_{42} \leqq19 \<br>16\leqq4r_{13}+5r_{23}+6r_{33}+8r_{43} \leqq19<br>\end{cases}<br>$$</p>
+$$
+\begin{cases} 
+16\leqq4r_{11}+5r_{21}+6r_{31}+8r_{41} \leqq19 \\
+16\leqq4r_{12}+5r_{22}+6r_{32}+8r_{42} \leqq19 \\
+16\leqq4r_{13}+5r_{23}+6r_{33}+8r_{43} \leqq19  
+\end{cases}
+$$
+
 <br>
 
 </center>
 
 
 <h3 id="1-3-Lingo编程求解"><a href="#1-3-Lingo编程求解" class="headerlink" title="1.3 Lingo编程求解"></a>1.3 Lingo编程求解</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sets:</span><br><span class="line">hang/<span class="number">1.</span><span class="number">.4</span>/:d,l;</span><br><span class="line">lie/<span class="number">1.</span><span class="number">.3</span>/:x;</span><br><span class="line">link(hang,lie):r;</span><br><span class="line">endsets</span><br><span class="line"></span><br><span class="line">data:</span><br><span class="line">d=<span class="number">50</span>,<span class="number">10</span>,<span class="number">20</span>,<span class="number">15</span>;</span><br><span class="line">l=<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>;</span><br><span class="line">enddata</span><br><span class="line"></span><br><span class="line">min=@sum(lie(j):x(j));</span><br><span class="line">@<span class="keyword">for</span>(hang(i):@sum(lie(j):r(i,j)*x(j))&gt;d(i));</span><br><span class="line">@<span class="keyword">for</span>(lie(j):@sum(hang(i):l(i)*r(i,j))&gt;<span class="number">16</span>);</span><br><span class="line">@<span class="keyword">for</span>(lie(j):@sum(hang(i):l(i)*r(i,j))&lt;<span class="number">19</span>);</span><br><span class="line">@<span class="keyword">for</span>(link(i,j):@gin(r(i,j)));</span><br><span class="line">@<span class="keyword">for</span>(link(i,j):@gin(r));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
 <h3 id="1-4-得到结果"><a href="#1-4-得到结果" class="headerlink" title="1.4 得到结果"></a>1.4 得到结果</h3><p><img src="/images/matlab/8/1.png" alt="1"></p>
 
       
@@ -440,12 +449,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2021/07/31/Mathematical_modeling/9latex/" title="Latex排版"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+      <a href="/2021/07/30/Mathematical_modeling/8Lingo/" title="Lingo"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2021/07/30/Mathematical_modeling/8Lingo/" title="Lingo"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2021/07/18/Mathematical_modeling/matlab6/" title="Matlab案例分析"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
@@ -554,5 +563,20 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
   <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="/js/clipboard_use.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
